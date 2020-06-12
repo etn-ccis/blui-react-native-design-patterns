@@ -1,4 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Header } from '@pxblue/react-native-components';
 
-export const Home = () => <Text>Hello</Text>;
+export const Home: React.FC = () => <Header title={'Design Pattern Examples'} />;

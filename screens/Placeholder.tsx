@@ -1,4 +1,10 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Header } from '@pxblue/react-native-components';
 
-export const Placeholder = () => <Text>Placeholder</Text>;
+type PlaceholderProps = {
+    title?: string;
+};
+export const Placeholder: React.FC<PlaceholderProps> = (props) => {
+    const { title = 'Coming Soon' } = props;
+    return <Header title={title} />;
+};
