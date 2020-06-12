@@ -4,7 +4,7 @@ import { Home } from '../screens/Home';
 import { Placeholder } from '../screens/Placeholder';
 import { ROUTES } from './routes';
 import { NavigationDrawer } from './drawer';
-import { CollapsibleAppbarScreen } from '../screens/examples/CollapsibleAppbar';
+import { CollapsibleAppbarScreen } from '../examples/collapsible-appbar/CollapsibleAppbar';
 
 const Drawer = createDrawerNavigator();
 
