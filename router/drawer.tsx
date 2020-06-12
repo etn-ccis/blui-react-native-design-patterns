@@ -42,7 +42,7 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                     hidePadding
                     items={[
                         {
-                            title: ROUTES.HOME.name,
+                            title: 'Home',
                             itemID: ROUTES.HOME.route,
                             onPress: (): void => goTo(ROUTES.HOME.route),
                         },
