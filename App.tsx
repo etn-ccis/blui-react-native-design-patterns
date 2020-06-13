@@ -1,11 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from '@use-expo/font';
 import { Provider as ThemeProvider } from 'react-native-paper';
 import * as PXBThemes from '@pxblue/react-native-themes';
 import { AppLoading } from 'expo';
+// import { MainRouter } from './router';
+import { MyDrawer } from './router';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function App() {
+const App: React.FC = () => {
     const [fontsLoaded] = useFonts({
         'OpenSans-ExtraBold': require('./assets/fonts/OpenSans-ExtraBold.ttf'),
         'OpenSans-Bold': require('./assets/fonts/OpenSans-Bold.ttf'),
@@ -18,18 +20,10 @@ export default function App() {
     }
     return (
         <ThemeProvider theme={PXBThemes.blue}>
-            <View style={styles.container}>
-                <Text>Open up App.tsx to start working on your app!</Text>
-            </View>
+            <NavigationContainer>
+                <MyDrawer />
+            </NavigationContainer>
         </ThemeProvider>
     );
-}
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
+};
+export default App;
