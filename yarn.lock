@@ -1453,10 +1453,10 @@
   resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.2.tgz#fb00503df6557b66c3d91d43c9101e614c35d2ec"
   integrity sha512-/3cLBoTjZs3kV1ATPA/Sp0tsL7XmlV/b8HW/qt0jqR/uP5+cdXL2YIhMXQngLRa7PhpSkEiRIYK5sl0rKsXTUg==
 
-"@pxblue/react-native-components@^3.0.0-beta.3":
-  version "3.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-3.0.0-beta.3.tgz#6f6cbb4a8182f9737e65f47bdc5cbdbebc0b99c7"
-  integrity sha512-L3Oaj7gga0V4CqmukMmFAGtibE6QK4FDv/L6M9ecqTdk7XLr71xX9au56+ZBdVM7QqNqzbf/K8D6KLIqiWJ8YQ==
+"@pxblue/react-native-components@^3.0.0":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-3.0.1.tgz#eff47b163d6cb1f55107e10171176eca0ddf956c"
+  integrity sha512-Fmfwl4m35c9xkAbE3IZQbJlOmrfCelMxUyLsoBKXq9HXghPLPrgUm7COAVP5nnC2131CgvrYZkTfKsChJ8N/qA==
   dependencies:
     "@pxblue/colors" "^3.0.0"
     color "^3.1.2"
@@ -1464,10 +1464,10 @@
     react-native-keyboard-aware-scroll-view "^0.8.0"
     react-native-status-bar-height "^2.3.1"
 
-"@pxblue/react-native-themes@^5.0.0-beta.0":
-  version "5.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-themes/-/react-native-themes-5.0.0-beta.0.tgz#3580bc2afcfe54be3bf4518143facff6f437559d"
-  integrity sha512-DiXs82Ex7ycxyAv7zAwb6UFQ+oqiTZi0k359lOu6q3Y4S32J6dTtZCpaZhy+PdaPhNKkAOa4osYtspPgCVzl6g==
+"@pxblue/react-native-themes@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-native-themes/-/react-native-themes-5.0.0.tgz#3e1fd93132536d691cf3f2657ef8edb80c6e7716"
+  integrity sha512-xw2MIZDKeyaQefFhFvMfzdNdjPTQz7LUTlkhYHbCixtSGXBonNpDY60vFiY2hMWdBJRS+YElVTmEjgx8DfOqMA==
   dependencies:
     "@pxblue/colors" "^3.0.0"
 
