@@ -29,7 +29,7 @@ export const MyDrawer: React.FC = () => (
         <Drawer.Screen name={ROUTES.ACTION_LIST.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.ACTION_LIST.name} />}
         </Drawer.Screen>
-        <Drawer.Screen name={ROUTES.DATA_LIST.route} component={DataListScreen}/>
+        <Drawer.Screen name={ROUTES.DATA_LIST.route} component={DataListScreen} />
         <Drawer.Screen name={ROUTES.MULTISELECT_LIST.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.MULTISELECT_LIST.name} />}
         </Drawer.Screen>
