@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Header } from '@pxblue/react-native-components';
 import { View, FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
@@ -32,8 +32,8 @@ export const DataListScreen: React.FC = () => {
             <Header title={'Data List'} />
             <FlatList
                 data={data}
-                keyExtractor={(item, index) => `${index}`}
-                renderItem={({ item }) => <ListItem title={item.name} rightTitle={`${item.value}`} />}
+                keyExtractor={(item, index): string => `${index}`}
+                renderItem={({ item }): ReactElement => <ListItem title={item.name} rightTitle={`${item.value}`} />}
             />
         </View>
     );
