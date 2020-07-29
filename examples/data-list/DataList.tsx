@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
-import { Header } from '@pxblue/react-native-components';
-import { View, FlatList } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { Header, InfoListItem } from '@pxblue/react-native-components';
+import { View, FlatList, Text } from 'react-native';
 
 export const DataListScreen: React.FC = () => {
     const data = [
@@ -33,8 +32,11 @@ export const DataListScreen: React.FC = () => {
             <FlatList
                 data={data}
                 keyExtractor={(item, index): string => `${index}`}
-                renderItem={({ item }): ReactElement => <ListItem title={item.name} rightTitle={`${item.value}`} />}
+                renderItem={({ item }): ReactElement => (
+                    <InfoListItem title={item.name} hidePadding={true} rightComponent={<Text>{item.value}</Text>} />
+                )}
             />
         </View>
     );
 };
+// use pxb info list item ^
