@@ -1,8 +1,14 @@
 import React, { ReactElement } from 'react';
-import { Header, InfoListItem } from '@pxblue/react-native-components';
+import { Header, InfoListItem, wrapIcon } from '@pxblue/react-native-components';
 import { View, FlatList, Text } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+
+const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
 export const DataListScreen: React.FC = () => {
+    const navigation = useNavigation();
+
     const data = [
         {
             name: 'George Washington',
@@ -26,9 +32,21 @@ export const DataListScreen: React.FC = () => {
         },
     ];
 
+    const toggleMenu = (): void => {
+        navigation.openDrawer();
+    };
+
     return (
         <View>
-            <Header title={'Data List'} />
+            <Header
+                title={'Data List'}
+                navigation={{
+                    icon: MenuIcon,
+                    onPress: (): void => {
+                        toggleMenu();
+                    },
+                }}
+            />
             <FlatList
                 data={data}
                 keyExtractor={(item, index): string => `${index}`}
@@ -39,4 +57,3 @@ export const DataListScreen: React.FC = () => {
         </View>
     );
 };
-// use pxb info list item ^
