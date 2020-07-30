@@ -41,6 +41,30 @@ exports[`Data List Tests Screen Renders 1`] = `
       }
     >
       <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 40,
+            "margin": -8,
+            "marginRight": 24,
+            "opacity": 1,
+            "padding": 8,
+            "width": 40,
+          }
+        }
+        testID="header-navigation"
+      >
+        <Text />
+      </View>
+      <View
         style={
           Object {
             "flex": 1,
