@@ -55,7 +55,7 @@
         "typescript": "~3.9.5"
     },
     "jest": {
-        "preset": "react-native"
+        "preset": "jest-expo"
     },
     "private": true,
     "prettier": "@pxblue/prettier-config"
