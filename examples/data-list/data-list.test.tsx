@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { DataListScreen } from './DataList';
 
 jest.mock('@react-navigation/native', () => ({
-    useNavigation: (): any => ({ openDrawer: jest.fn(() => true) })
+    useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),
 }));
 
 describe('Data List Tests', () => {
