@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { ActionListScreen, ListItem } from './ActionList';
 import Modal from 'react-native-modal';
-import { InfoListItem } from '@pxblue/react-native-components';
+import { InfoListItem, Header } from '@pxblue/react-native-components';
 import { FlatList } from 'react-native';
 import { render, fireEvent } from '@testing-library/react-native';
 
@@ -48,26 +48,27 @@ describe('Action List Tests', () => {
         expect(infoListItems).toHaveLength(10);
     });
 
-    xit('Should add an Item from empty state', () => {
-        const emptyData: ListItem[] = []
-        const instance = render(<ActionListScreen hardcodedData={emptyData}/>);
-        const addButton = instance.getByTestId("empty-state-add-button");
-        fireEvent.press(addButton);
+    // xit('Should add an Item from empty state', () => {
+    //     const emptyData: ListItem[] = []
+    //     const instance = render(<ActionListScreen hardcodedData={emptyData}/>);
+    //     const addButton = instance.getByTestId("empty-state-add-button");
+    //     fireEvent.press(addButton);
 
-        const flatList = instance.getByTestId("list");
-        const infoListItems = flatList.findByType(InfoListItem);
-        expect(infoListItems).toHaveLength(1);
-    });
+    //     const flatList = instance.getByTestId("list");
+    //     const infoListItems = flatList.findByType(InfoListItem);
+    //     expect(infoListItems).toHaveLength(1);
+    // });
 
-    xit('Should add an Item', () => {
-        const instance = render(<ActionListScreen />);
-        const header = instance.getByTestId("header");
-        const addButton = header.findAllByType("button")[2]; // just have to find the button... ahhhh!!!
-        fireEvent.press(addButton)
+    fit('Should add an Item', () => {  
+        const instance = renderer.create(<ActionListScreen />).root;
+        const header = instance.findByType(Header);
+        header.props.actionItems[1].onPress();
+        expect(true);
+      
 
-        const flatList = instance.getByType(FlatList);
-        const infoListItems = flatList.findAllByType(InfoListItem);
-        expect(infoListItems).toHaveLength(11);
+        // const flatList = instance.findByType(FlatList);
+        // const infoListItems = flatList.findAllByType(InfoListItem);
+        // expect(infoListItems).toHaveLength(11);
 
 
         // const instance = renderer.create(<ActionListScreen />).root;
