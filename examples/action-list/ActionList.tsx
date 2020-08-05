@@ -21,7 +21,7 @@ export type ListItem = {
 
 export type ActionListProps = {
     hardcodedData?: ListItem[];
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -39,7 +39,9 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
     };
 
     const prepareData = (): ListItem[] => {
-        if (hardcodedData) { return hardcodedData }
+        if (hardcodedData) {
+            return hardcodedData;
+        }
         const data = [];
         for (let i = 0; i < 10; i++) {
             data.push(createRandomItem());
@@ -119,17 +121,21 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                     )}
                 />
             ) : (
-                    <EmptyState
-                        title={'No Items found'}
-                        actions={
-                            <Button testID="empty-state-add-button" icon={(): JSX.Element => (
-                                <MaterialIcons name="add" color={Colors.white[50]}/>
-                              )} onPress={addItem} mode="contained" accessibilityStates="add an item">
-                                Add An Item
+                <EmptyState
+                    title={'No Items found'}
+                    actions={
+                        <Button
+                            testID="empty-state-add-button"
+                            icon={(): JSX.Element => <MaterialIcons name="add" color={Colors.white[50]} />}
+                            onPress={addItem}
+                            mode="contained"
+                            accessibilityStates="add an item"
+                        >
+                            Add An Item
                         </Button>
-                        }
-                    />
-                )}
+                    }
+                />
+            )}
             <SafeAreaView>
                 <Modal
                     isVisible={isModalVisible}

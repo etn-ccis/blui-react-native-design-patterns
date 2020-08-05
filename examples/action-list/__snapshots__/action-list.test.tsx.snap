@@ -35,6 +35,7 @@ exports[`Action List Tests Screen Renders 1`] = `
         "width": "100%",
       }
     }
+    testID="header"
   >
     <View
       style={
