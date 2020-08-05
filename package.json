@@ -21,8 +21,13 @@
         "@react-navigation/drawer": "^5.8.2",
         "@react-navigation/native": "^5.5.1",
         "@react-navigation/stack": "^5.5.1",
+        "@types/enzyme": "^3.10.5",
+        "@types/enzyme-adapter-react-16": "^1.0.6",
         "@use-expo/font": "^2.0.0",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.2",
         "expo": "^38.0.0",
+        "jest-enzyme": "^7.1.2",
         "react": "16.11.0",
         "react-dom": "16.11.0",
         "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
@@ -39,6 +44,7 @@
         "@babel/core": "^7.8.6",
         "@pxblue/eslint-config": "^2.0.0",
         "@pxblue/prettier-config": "^1.0.2",
+        "@testing-library/react-native": "^7.0.1",
         "@types/jest": "^26.0.0",
         "@types/react": "~16.9.41",
         "@types/react-native": "~0.62.13",
@@ -56,7 +62,10 @@
         "typescript": "~3.9.5"
     },
     "jest": {
-        "preset": "jest-expo"
+        "preset": "jest-expo",
+        "transformIgnorePatterns": [
+            "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+          ]
     },
     "private": true,
     "prettier": "@pxblue/prettier-config"

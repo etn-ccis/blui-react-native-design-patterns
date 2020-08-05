@@ -13,11 +13,15 @@ const AddIcon = wrapIcon({ IconClass: MaterialIcons, name: 'add' });
 const CancelIcon = wrapIcon({ IconClass: MaterialIcons, name: 'cancel' });
 const ClearIcon = wrapIcon({ IconClass: MaterialIcons, name: 'clear' });
 
-type ListItem = {
+export type ListItem = {
     id?: number;
     name?: string;
     details?: string;
 };
+
+export type ActionListProps = {
+    hardcodedData?: ListItem[];
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -26,13 +30,16 @@ const styles = StyleSheet.create({
     },
 });
 
-export const ActionListScreen: React.FC = () => {
+export const ActionListScreen: React.FC<ActionListProps> = (props) => {
+    const { hardcodedData } = props;
+
     const createRandomItem = (): ListItem => {
         const randomInt = parseInt(`${Math.random() * 100}`, 10);
         return { id: randomInt, name: `Item ${randomInt}`, details: `Item ${randomInt} occurred` };
     };
 
     const prepareData = (): ListItem[] => {
+        if (hardcodedData) { return hardcodedData }
         const data = [];
         for (let i = 0; i < 10; i++) {
             data.push(createRandomItem());
@@ -43,7 +50,7 @@ export const ActionListScreen: React.FC = () => {
     const navigation = useNavigation();
     const [data, setData] = useState(prepareData());
     const [isModalVisible, setIsMobileVisible] = useState(false);
-    const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+    const [selectedItemIndex, setSelectedItemIndex] = useState<number>(-1);
 
     const toggleMenu = (): void => {
         navigation.openDrawer();
@@ -51,7 +58,7 @@ export const ActionListScreen: React.FC = () => {
 
     const hideModal = (): void => {
         setIsMobileVisible(false);
-        setSelectedItemIndex(null);
+        setSelectedItemIndex(-1);
     };
 
     const showModal = (itemIndex: number): void => {
@@ -77,6 +84,7 @@ export const ActionListScreen: React.FC = () => {
     return (
         <View style={styles.container}>
             <Header
+                testID="header"
                 title={'Action List'}
                 navigation={{
                     icon: MenuIcon,
@@ -92,6 +100,7 @@ export const ActionListScreen: React.FC = () => {
             {data.length ? (
                 <FlatList
                     data={data}
+                    testID={'list'}
                     keyExtractor={(_item, index): string => `${index}`}
                     renderItem={({ item, index }): JSX.Element => (
                         <InfoListItem
@@ -110,15 +119,17 @@ export const ActionListScreen: React.FC = () => {
                     )}
                 />
             ) : (
-                <EmptyState
-                    title={'No Items found'}
-                    actions={
-                        <Button icon={AddIcon} onPress={addItem} mode="contained" accessibilityStates="add an item">
-                            Add An Item
+                    <EmptyState
+                        title={'No Items found'}
+                        actions={
+                            <Button testID="empty-state-add-button" icon={(): JSX.Element => (
+                                <MaterialIcons name="add" color={Colors.white[50]}/>
+                              )} onPress={addItem} mode="contained" accessibilityStates="add an item">
+                                Add An Item
                         </Button>
-                    }
-                />
-            )}
+                        }
+                    />
+                )}
             <SafeAreaView>
                 <Modal
                     isVisible={isModalVisible}
