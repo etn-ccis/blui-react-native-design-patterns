@@ -45,4 +45,26 @@ describe('Action List Tests', () => {
         const infoListItems = flatList.findAllByType(InfoListItem);
         expect(infoListItems).toHaveLength(10);
     });
+
+    // @TODO: Implement the following test cases:
+
+    // it('Should add an item', () => {
+
+    // });
+
+    // it('Should delete an item', () => {
+
+    // });
+
+    // it('Should delete all items', () => {
+
+    // });
+
+    // it('Should hide ActionsPanel by default', () => {
+
+    // })
+
+    // it('Should show ActionsPanel when clicking an items action button', () => {
+
+    // })
 });

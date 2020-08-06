@@ -229,7 +229,7 @@ exports[`Action List Tests Screen Renders 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#ffffff",
+              "backgroundColor": "transparent",
               "flexDirection": "row",
               "height": 72,
               "opacity": 1,
@@ -363,7 +363,7 @@ exports[`Action List Tests Screen Renders 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#ffffff",
+              "backgroundColor": "transparent",
               "flexDirection": "row",
               "height": 72,
               "opacity": 1,
@@ -497,7 +497,7 @@ exports[`Action List Tests Screen Renders 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#ffffff",
+              "backgroundColor": "transparent",
               "flexDirection": "row",
               "height": 72,
               "opacity": 1,
