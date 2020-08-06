@@ -7,6 +7,7 @@ import { NavigationDrawer } from './drawer';
 import { CollapsibleAppbarScreen } from '../examples/collapsible-appbar/CollapsibleAppbar';
 import { DataListScreen } from '../examples/data-list/DataList';
 import { AlarmsScreen } from '../examples/bottom-sheet/Alarms';
+import { ActionListScreen } from '../examples/action-list/ActionList';
 
 const Drawer = createDrawerNavigator();
 
@@ -27,9 +28,7 @@ export const MyDrawer: React.FC = () => (
         <Drawer.Screen name={ROUTES.I18N.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.I18N.name} />}
         </Drawer.Screen>
-        <Drawer.Screen name={ROUTES.ACTION_LIST.route}>
-            {(): JSX.Element => <Placeholder title={ROUTES.ACTION_LIST.name} />}
-        </Drawer.Screen>
+        <Drawer.Screen name={ROUTES.ACTION_LIST.route} component={ActionListScreen} />
         <Drawer.Screen name={ROUTES.DATA_LIST.route} component={DataListScreen} />
         <Drawer.Screen name={ROUTES.MULTISELECT_LIST.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.MULTISELECT_LIST.name} />}
