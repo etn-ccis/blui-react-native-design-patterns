@@ -42,7 +42,7 @@ export const MyDrawer: React.FC = () => (
         <Drawer.Screen name={ROUTES.RESPONSIVE_TABLE.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.RESPONSIVE_TABLE.name} />}
         </Drawer.Screen>
-        <Drawer.Screen name={ROUTES.BOTTOMSHEET.route} component={AlarmsScreen}/>
+        <Drawer.Screen name={ROUTES.BOTTOMSHEET.route} component={AlarmsScreen} />
         <Drawer.Screen name={ROUTES.COMPLEX_BOTTOMSHEET.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.COMPLEX_BOTTOMSHEET.name} />}
         </Drawer.Screen>

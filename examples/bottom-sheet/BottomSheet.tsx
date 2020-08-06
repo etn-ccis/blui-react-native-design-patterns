@@ -1,45 +1,31 @@
-import React, { useState, useCallback } from 'react';
-import { Animated, StyleSheet, SafeAreaView } from 'react-native';
-import * as Colors from '@pxblue/colors'
+import React, { ReactNode, useState, useEffect } from 'react';
+import { SafeAreaView, View } from 'react-native';
+import * as Colors from '@pxblue/colors';
+import Modal from 'react-native-modal';
 
 type BottomSheetProps = {
-    show: boolean;
-    style: any;
-    children?: any;
-}
-
-const styles = StyleSheet.create({
-    safeContainer: {
-        backgroundColor: Colors.white[100],
-        flex: 1,
-    }
-});
+    show?: boolean;
+    children?: ReactNode;
+};
 
 export const BottomSheetScreen: React.FC = (props: BottomSheetProps) => {
-    const { show, style, children } = props;
-    const [bounceValue, setBounceValue] = useState(new Animated.Value(show ? 0 : 200))
+    const { show, children } = props;
+    const [isBottomSheetVisible, setIsBottomSheetVisible] = useState(show ? true : false);
 
-    useCallback((prevProps: BottomSheetProps) => {
-        if (show !== prevProps.show) {
-            const newBounceValue = show ? 0 : 200;
-            Animated.timing(
-                newBounceValue,
-                {
-                    toValue: newBounceValue,
-                    duration: 200,
-                }
-            ).start();
-        }
+    useEffect((): void => {
+        setIsBottomSheetVisible(show ? true : false);
     }, [show]);
 
     return (
-        <Animated.View
-            style={[style,
-                { transform: [{ translateY: bounceValue }] }]}
-        >
-            <SafeAreaView style={styles.safeContainer}>
-                {children}
-            </SafeAreaView>
-        </Animated.View>
+        <SafeAreaView>
+            <Modal
+                isVisible={isBottomSheetVisible}
+                backdropOpacity={0.5}
+                supportedOrientations={['portrait', 'landscape']}
+                style={{ justifyContent: 'flex-end', margin: 0 }}
+            >
+                <View style={{ backgroundColor: Colors.white[50] }}>{children}</View>
+            </Modal>
+        </SafeAreaView>
     );
 };
