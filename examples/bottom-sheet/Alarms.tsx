@@ -17,7 +17,7 @@ import alarms, { formatDate } from './alarmData';
 import { BottomSheetScreen } from './BottomSheet';
 import { Theme, useTheme } from 'react-native-paper';
 
-export const AlarmsScreen: React.FC = () => {
+export const BottomSheetAlarmsScreen: React.FC = () => {
     const [showBottomSheet, setShowBottomSheet] = useState(false);
     const navigation = useNavigation();
     const theme: Theme = useTheme();
