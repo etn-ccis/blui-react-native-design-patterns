@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, View } from 'react-native';
+import { StyleSheet, ScrollView, SafeAreaView, View, ViewStyle } from 'react-native';
 import * as Colors from '@pxblue/colors';
 import { Header, InfoListItem, wrapIcon } from '@pxblue/react-native-components';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import alarms, { formatDate } from './alarmData';
+import { BottomSheetScreen } from './BottomSheet';
+import { Theme, useTheme } from 'react-native-paper';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 const MoreIcon = wrapIcon({ IconClass: MaterialIcons, name: 'more-vert' });
@@ -13,28 +16,30 @@ const DoneIcon = wrapIcon({ IconClass: MaterialIcons, name: 'done' });
 const GetAppIcon = wrapIcon({ IconClass: MaterialIcons, name: 'get-app' });
 const ClearIcon = wrapIcon({ IconClass: MaterialIcons, name: 'clear' });
 
-import alarms, { formatDate } from './alarmData';
-import { BottomSheetScreen } from './BottomSheet';
-import { Theme, useTheme } from 'react-native-paper';
-
-export const BottomSheetAlarmsScreen: React.FC = () => {
-    const [showBottomSheet, setShowBottomSheet] = useState(false);
-    const navigation = useNavigation();
-    const theme: Theme = useTheme();
-
-    const styles = StyleSheet.create({
+const useStyles = (
+    theme: Theme
+): StyleSheet.NamedStyles<{
+    container: ViewStyle;
+}> =>
+    StyleSheet.create({
         container: {
             flex: 1,
             backgroundColor: theme.colors.surface,
         },
     });
 
+export const BottomSheetAlarmsScreen: React.FC = () => {
+    const [showBottomSheet, setShowBottomSheet] = useState(false);
+    const navigation = useNavigation();
+    const theme = useTheme();
+    const defaultStyles = useStyles(theme);
+
     const toggleMenu = (): void => {
         navigation.openDrawer();
     };
 
     return (
-        <View style={styles.container}>
+        <View style={defaultStyles.container}>
             <Header
                 title={'Bottom Sheet'}
                 navigation={{
@@ -67,7 +72,7 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
                 ))}
             </ScrollView>
             <SafeAreaView>
-                <BottomSheetScreen show={showBottomSheet}>
+                <BottomSheetScreen show={showBottomSheet} dismissBottomSheet={(): void => setShowBottomSheet(false)}>
                     <InfoListItem
                         title={'Acknowledge All'}
                         IconClass={DoneIcon}

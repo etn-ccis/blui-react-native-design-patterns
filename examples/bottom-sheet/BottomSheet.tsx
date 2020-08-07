@@ -6,10 +6,11 @@ import Modal from 'react-native-modal';
 type BottomSheetProps = {
     show?: boolean;
     children?: ReactNode;
+    dismissBottomSheet?: () => void;
 };
 
 export const BottomSheetScreen: React.FC = (props: BottomSheetProps) => {
-    const { show, children } = props;
+    const { show, children, dismissBottomSheet } = props;
     const [isBottomSheetVisible, setIsBottomSheetVisible] = useState(show ? true : false);
 
     useEffect((): void => {
@@ -21,6 +22,7 @@ export const BottomSheetScreen: React.FC = (props: BottomSheetProps) => {
             <Modal
                 isVisible={isBottomSheetVisible}
                 backdropOpacity={0.5}
+                onBackdropPress={dismissBottomSheet}
                 supportedOrientations={['portrait', 'landscape']}
                 style={{ justifyContent: 'flex-end', margin: 0 }}
             >
