@@ -6,6 +6,7 @@ import { ROUTES } from './routes';
 import { NavigationDrawer } from './drawer';
 import { CollapsibleAppbarScreen } from '../examples/collapsible-appbar/CollapsibleAppbar';
 import { DataListScreen } from '../examples/data-list/DataList';
+import { BottomSheetAlarmsScreen } from '../examples/bottom-sheet/Alarms';
 import { ActionListScreen } from '../examples/action-list/ActionList';
 import { ComplexBottomSheetAlarmsScreen } from '../examples/complex-bottomsheet/Alarms';
 
@@ -42,10 +43,8 @@ export const MyDrawer: React.FC = () => (
         <Drawer.Screen name={ROUTES.RESPONSIVE_TABLE.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.RESPONSIVE_TABLE.name} />}
         </Drawer.Screen>
-        <Drawer.Screen name={ROUTES.BOTTOMSHEET.route}>
-            {(): JSX.Element => <Placeholder title={ROUTES.BOTTOMSHEET.name} />}
-        </Drawer.Screen>
         <Drawer.Screen name={ROUTES.COMPLEX_BOTTOMSHEET.route} component={ComplexBottomSheetAlarmsScreen} />
+        <Drawer.Screen name={ROUTES.BOTTOMSHEET.route} component={BottomSheetAlarmsScreen} />
         <Drawer.Screen name={ROUTES.DYNAMIC_STEPPER.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.DYNAMIC_STEPPER.name} />}
         </Drawer.Screen>
