@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         marginVertical: 8,
     },
     rowHeader: {
-        padding: 10,
+        padding: 8,
         backgroundColor: Colors.white[100],
     },
     footer: {
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
         position: 'absolute',
         display: 'flex',
         bottom: 0,
-        // right: 0,
         width: '100%',
         maxWidth: 600,
     },
