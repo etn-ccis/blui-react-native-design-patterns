@@ -138,6 +138,7 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                 <Modal
                     isVisible={isActionsPanelVisible}
                     backdropOpacity={0.5}
+                    onBackdropPress={hideActionsPanel}
                     supportedOrientations={['portrait', 'landscape']}
                     style={{ justifyContent: 'flex-end', margin: 0 }}
                 >
