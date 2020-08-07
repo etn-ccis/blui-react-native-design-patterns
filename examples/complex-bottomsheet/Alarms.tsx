@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
 import * as Colors from '@pxblue/colors';
-import { Divider, Icon, ListItem } from 'react-native-elements';
 import { Header, InfoListItem, wrapIcon, H6 } from '@pxblue/react-native-components';
 import SafeAreaView from 'react-native-safe-area-view';
-
-const MenuIcon = wrapIcon({ IconClass: Icon, name: 'menu' });
-const MoreIcon = wrapIcon({ IconClass: Icon, name: 'more-vert' });
-const NotificatonsIcon = wrapIcon({ IconClass: Icon, name: 'notifications' });
-const NotificatonsActiveIcon = wrapIcon({ IconClass: Icon, name: 'notifications-active' });
-const InfoIcon = wrapIcon({ IconClass: Icon, name: 'info' });
-const AccessTimeIcon = wrapIcon({ IconClass: Icon, name: 'access-time' });
-const SettingsIcon = wrapIcon({ IconClass: Icon, name: 'settings' });
-const UpdateIcon = wrapIcon({ IconClass: Icon, name: 'update' });
 import { ComplexBottomSheetScreen } from './BottomSheet';
+import { MaterialIcons } from '@expo/vector-icons';
 import IconToggle from './components/IconToggle';
-
 import alarms, { formatDate, AlarmDataObject } from './alarmData';
+import { useNavigation } from '@react-navigation/native';
+import { Divider } from 'react-native-paper';
+
+const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
+const MoreIcon = wrapIcon({ IconClass: MaterialIcons, name: 'more-vert' });
+const NotificatonsIcon = wrapIcon({ IconClass: MaterialIcons, name: 'notifications' });
+const NotificatonsActiveIcon = wrapIcon({ IconClass: MaterialIcons, name: 'notifications-active' });
+const InfoIcon = wrapIcon({ IconClass: MaterialIcons, name: 'info' });
+const AccessTimeIcon = wrapIcon({ IconClass: MaterialIcons, name: 'access-time' });
+const SettingsIcon = wrapIcon({ IconClass: MaterialIcons, name: 'settings' });
+const UpdateIcon = wrapIcon({ IconClass: MaterialIcons, name: 'update' });
+const ClearIcon = wrapIcon({ IconClass: MaterialIcons, name: 'clear' });
 
 const FILTERS = {
     TIME: 'time',
@@ -27,16 +29,6 @@ const TYPES = {
     ALARM: 'alarm',
     SESSION: 'session',
     EVENT: 'settings',
-};
-
-type AlarmsState = {
-    showBottomSheet: boolean;
-    alarmList: AlarmDataObject[];
-    currentSort: string;
-    showAlarms: boolean;
-    showActiveAlarms: boolean;
-    showEvents: boolean;
-    showSessions: boolean;
 };
 
 const styles = StyleSheet.create({
@@ -80,24 +72,21 @@ const styles = StyleSheet.create({
     },
 });
 
-class Alarms extends React.Component<{}, AlarmsState> {
-    constructor(props: {}) {
-        super(props);
-        this.state = {
-            showBottomSheet: false,
-            alarmList: alarms(20),
-            currentSort: 'time',
-            showAlarms: true,
-            showActiveAlarms: true,
-            showEvents: true,
-            showSessions: true,
-        };
-    }
+export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
+    const navigation = useNavigation();
+    const [showBottomSheet, setShowBottomSheet] = useState(false);
+    const [alarmList, setAlarmList] = useState(alarms(20));
+    const [currentSort, setCurrentSort] = useState('time');
+    const [showAlarms, setShowAlarms] = useState(true);
+    const [showActiveAlarms, setShowActiveAlarms] = useState(true);
+    const [showEvents, setShowEvents] = useState(true);
+    const [showSessions, setShowSessions] = useState(true);
 
-    sortedEvents(): AlarmDataObject[] {
-        switch (this.state.currentSort) {
+
+    const sortedEvents = (): AlarmDataObject[] => {
+        switch (currentSort) {
             case FILTERS.TYPE:
-                return this.state.alarmList.sort((a, b) => {
+                return alarmList.sort((a, b) => {
                     // primary sort by type
                     if (a.type < b.type) {
                         return -1;
@@ -117,146 +106,149 @@ class Alarms extends React.Component<{}, AlarmsState> {
                 });
             case FILTERS.TIME:
             default:
-                return this.state.alarmList.sort((a, b) => b.date - a.date);
+                return alarmList.sort((a, b) => b.date - a.date);
         }
     }
 
-    filteredEvents(events: AlarmDataObject[]): AlarmDataObject[] {
-        return events.filter((item: AlarmDataObject) => {
-            if (!this.state.showActiveAlarms && item.type === TYPES.ALARM && item.active) {
-                return false;
-            }
-            if (!this.state.showAlarms && item.type === TYPES.ALARM && !item.active) {
-                return false;
-            }
-            if (!this.state.showEvents && item.type === TYPES.EVENT) {
-                return false;
-            }
-            if (!this.state.showSessions && item.type === TYPES.SESSION) {
-                return false;
-            }
-            return true;
-        });
-    }
+    const filteredEvents = (events: AlarmDataObject[]): AlarmDataObject[] => events.filter((item: AlarmDataObject) => {
+        if (!showActiveAlarms && item.type === TYPES.ALARM && item.active) {
+            return false;
+        }
+        if (!showAlarms && item.type === TYPES.ALARM && !item.active) {
+            return false;
+        }
+        if (!showEvents && item.type === TYPES.EVENT) {
+            return false;
+        }
+        if (!showSessions && item.type === TYPES.SESSION) {
+            return false;
+        }
+        return true;
+    })
 
-    render(): JSX.Element {
-        const alarmList = this.filteredEvents(this.sortedEvents());
-        return (
-            <>
-                <Header
-                    navigation={{ icon: MenuIcon }}
-                    title={'Complex Bottom Sheet'}
-                    actionItems={[
-                        {
-                            icon: MoreIcon,
-                            onPress: (): void => {
-                                this.setState({ showBottomSheet: true });
-                            },
+    const filteredAlarmList = filteredEvents(sortedEvents());
+
+    const toggleMenu = (): void => {
+        navigation.openDrawer();
+    };
+
+    return (
+        <>
+            <Header
+                navigation={{
+                    icon: MenuIcon,
+                    onPress: (): void => {
+                        toggleMenu();
+                    },
+                }}
+                title={'Complex Bottom Sheet'}
+                actionItems={[
+                    {
+                        icon: MoreIcon,
+                        onPress: (): void => {
+                            setShowBottomSheet(true);
                         },
-                    ]}
-                />
-                <SafeAreaView style={styles.container}>
-                    <ScrollView>
-                        {alarmList.map((item, index) => (
-                            <InfoListItem
-                                key={index}
-                                title={`${item.active ? 'ACTIVE: ' : ''}${item.details}`}
-                                subtitle={formatDate(item.date)}
-                                backgroundColor={Colors.white[50]}
-                                IconClass={
-                                    (item.type === 'alarm' && item.active && NotificatonsActiveIcon) ||
-                                    (item.type === 'alarm' && !item.active && NotificatonsIcon) ||
-                                    (item.type === 'settings' && SettingsIcon) ||
-                                    (item.type === 'session' && UpdateIcon)
-                                }
-                                iconColor={item.active ? Colors.white[100] : Colors.black[500]}
-                                fontColor={item.active ? Colors.red[500] : Colors.black[500]}
-                                statusColor={item.active ? Colors.red[500] : Colors.white[50]}
-                                avatar={true}
-                            />
-                        ))}
-                    </ScrollView>
-                </SafeAreaView>
-                <ComplexBottomSheetScreen
-                    show={this.state.showBottomSheet}
-                    dismissBottomSheet={(): void => this.setState({ showBottomSheet: false })}
-                    style={styles.footer}
-                >
-                    <SafeAreaView forceInset={{ bottom: 'always' }}>
-                        <View style={styles.rowHeader}>
-                            <H6>Sort By: </H6>
-                            <View style={styles.row}>
-                                <IconToggle
-                                    IconComponent={AccessTimeIcon}
-                                    active={this.state.currentSort === FILTERS.TIME}
-                                    label={'Time'}
-                                    onPress={(): void => this.setState({ currentSort: FILTERS.TIME })}
-                                >
-                                    {' '}
-                                </IconToggle>
-                                <IconToggle
-                                    IconComponent={InfoIcon}
-                                    active={this.state.currentSort === FILTERS.TYPE}
-                                    label={'Type'}
-                                    onPress={(): void => this.setState({ currentSort: FILTERS.TYPE })}
-                                >
-                                    {' '}
-                                </IconToggle>
-                            </View>
-                        </View>
-                        <Divider />
-                        <View style={styles.rowHeader}>
-                            <H6>Show: </H6>
-                            <View style={styles.row}>
-                                <IconToggle
-                                    IconComponent={NotificatonsActiveIcon}
-                                    active={this.state.showActiveAlarms}
-                                    label={'Active Alarms'}
-                                    onPress={(): void =>
-                                        this.setState({ showActiveAlarms: !this.state.showActiveAlarms })
-                                    }
-                                >
-                                    {' '}
-                                </IconToggle>
-                                <IconToggle
-                                    IconComponent={NotificatonsIcon}
-                                    active={this.state.showAlarms}
-                                    label={'Alarms'}
-                                    onPress={(): void => this.setState({ showAlarms: !this.state.showAlarms })}
-                                >
-                                    {' '}
-                                </IconToggle>
-                                <IconToggle
-                                    IconComponent={SettingsIcon}
-                                    active={this.state.showEvents}
-                                    label={'Settings'}
-                                    onPress={(): void => this.setState({ showEvents: !this.state.showEvents })}
-                                >
-                                    {' '}
-                                </IconToggle>
-                                <IconToggle
-                                    IconComponent={UpdateIcon}
-                                    active={this.state.showSessions}
-                                    label={'Sessions'}
-                                    onPress={(): void => this.setState({ showSessions: !this.state.showSessions })}
-                                >
-                                    {' '}
-                                </IconToggle>
-                            </View>
-                        </View>
-                        <Divider />
-                        <ListItem
-                            title={'Close'}
-                            leftIcon={{ name: 'clear', color: Colors.black[500] }}
-                            onPress={(): void => this.setState({ showBottomSheet: false })}
-                            titleStyle={styles.bottomSheetItemTitle}
-                            testID={'cancel-button'}
+                    },
+                ]}
+            />
+            <SafeAreaView style={styles.container}>
+                <ScrollView>
+                    {filteredAlarmList.map((item, index) => (
+                        <InfoListItem
+                            key={index}
+                            title={`${item.active ? 'ACTIVE: ' : ''}${item.details}`}
+                            subtitle={formatDate(item.date)}
+                            backgroundColor={Colors.white[50]}
+                            IconClass={
+                                (item.type === 'alarm' && item.active && NotificatonsActiveIcon) ||
+                                (item.type === 'alarm' && !item.active && NotificatonsIcon) ||
+                                (item.type === 'settings' && SettingsIcon) ||
+                                (item.type === 'session' && UpdateIcon)
+                            }
+                            iconColor={item.active ? Colors.white[100] : Colors.black[500]}
+                            fontColor={item.active ? Colors.red[500] : Colors.black[500]}
+                            statusColor={item.active ? Colors.red[500] : Colors.white[50]}
+                            avatar={true}
                         />
-                    </SafeAreaView>
-                </BottomSheet>
-            </>
-        );
-    }
+                    ))}
+                </ScrollView>
+            </SafeAreaView>
+            <ComplexBottomSheetScreen
+                show={showBottomSheet}
+                dismissBottomSheet={(): void => setShowBottomSheet(false)}
+                style={styles.footer}
+            >
+                <SafeAreaView forceInset={{ bottom: 'always' }}>
+                    <View style={styles.rowHeader}>
+                        <H6>Sort By: </H6>
+                        <View style={styles.row}>
+                            <IconToggle
+                                IconComponent={AccessTimeIcon}
+                                active={currentSort === FILTERS.TIME}
+                                label={'Time'}
+                                onPress={(): void => setCurrentSort(FILTERS.TIME)}
+                            >
+                                {' '}
+                            </IconToggle>
+                            <IconToggle
+                                IconComponent={InfoIcon}
+                                active={currentSort === FILTERS.TYPE}
+                                label={'Type'}
+                                onPress={(): void => setCurrentSort(FILTERS.TYPE)}
+                            >
+                                {' '}
+                            </IconToggle>
+                        </View>
+                    </View>
+                    <Divider accessibilityStates />
+                    <View style={styles.rowHeader}>
+                        <H6>Show: </H6>
+                        <View style={styles.row}>
+                            <IconToggle
+                                IconComponent={NotificatonsActiveIcon}
+                                active={showActiveAlarms}
+                                label={'Active Alarms'}
+                                onPress={(): void =>
+                                    setShowActiveAlarms(!showActiveAlarms)
+                                }
+                            >
+                                {' '}
+                            </IconToggle>
+                            <IconToggle
+                                IconComponent={NotificatonsIcon}
+                                active={showAlarms}
+                                label={'Alarms'}
+                                onPress={(): void => setShowAlarms(!showAlarms)}
+                            >
+                                {' '}
+                            </IconToggle>
+                            <IconToggle
+                                IconComponent={SettingsIcon}
+                                active={showEvents}
+                                label={'Settings'}
+                                onPress={(): void => setShowEvents(!showEvents)}
+                            >
+                                {' '}
+                            </IconToggle>
+                            <IconToggle
+                                IconComponent={UpdateIcon}
+                                active={showSessions}
+                                label={'Sessions'}
+                                onPress={(): void => setShowSessions(!showSessions)}
+                            >
+                                {' '}
+                            </IconToggle>
+                        </View>
+                    </View>
+                    <Divider accessibilityStates />
+                    <InfoListItem
+                        title={'Close'}
+                        IconClass={ClearIcon}
+                        onPress={(): void => setShowBottomSheet(false)}
+                        testID={'cancel-button'}
+                    />
+                </SafeAreaView>
+            </ComplexBottomSheetScreen>
+        </>
+    );
 }
-
-export default Alarms;
