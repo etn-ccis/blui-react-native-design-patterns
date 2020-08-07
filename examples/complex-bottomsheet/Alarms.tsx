@@ -75,13 +75,12 @@ const styles = StyleSheet.create({
 export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
     const navigation = useNavigation();
     const [showBottomSheet, setShowBottomSheet] = useState(false);
-    const [alarmList, setAlarmList] = useState(alarms(20));
     const [currentSort, setCurrentSort] = useState('time');
     const [showAlarms, setShowAlarms] = useState(true);
     const [showActiveAlarms, setShowActiveAlarms] = useState(true);
     const [showEvents, setShowEvents] = useState(true);
     const [showSessions, setShowSessions] = useState(true);
-
+    const alarmList = alarms(20);
 
     const sortedEvents = (): AlarmDataObject[] => {
         switch (currentSort) {
@@ -108,23 +107,24 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
             default:
                 return alarmList.sort((a, b) => b.date - a.date);
         }
-    }
+    };
 
-    const filteredEvents = (events: AlarmDataObject[]): AlarmDataObject[] => events.filter((item: AlarmDataObject) => {
-        if (!showActiveAlarms && item.type === TYPES.ALARM && item.active) {
-            return false;
-        }
-        if (!showAlarms && item.type === TYPES.ALARM && !item.active) {
-            return false;
-        }
-        if (!showEvents && item.type === TYPES.EVENT) {
-            return false;
-        }
-        if (!showSessions && item.type === TYPES.SESSION) {
-            return false;
-        }
-        return true;
-    })
+    const filteredEvents = (events: AlarmDataObject[]): AlarmDataObject[] =>
+        events.filter((item: AlarmDataObject) => {
+            if (!showActiveAlarms && item.type === TYPES.ALARM && item.active) {
+                return false;
+            }
+            if (!showAlarms && item.type === TYPES.ALARM && !item.active) {
+                return false;
+            }
+            if (!showEvents && item.type === TYPES.EVENT) {
+                return false;
+            }
+            if (!showSessions && item.type === TYPES.SESSION) {
+                return false;
+            }
+            return true;
+        });
 
     const filteredAlarmList = filteredEvents(sortedEvents());
 
@@ -208,9 +208,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 IconComponent={NotificatonsActiveIcon}
                                 active={showActiveAlarms}
                                 label={'Active Alarms'}
-                                onPress={(): void =>
-                                    setShowActiveAlarms(!showActiveAlarms)
-                                }
+                                onPress={(): void => setShowActiveAlarms(!showActiveAlarms)}
                             >
                                 {' '}
                             </IconToggle>
@@ -251,4 +249,4 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
             </ComplexBottomSheetScreen>
         </>
     );
-}
+};
