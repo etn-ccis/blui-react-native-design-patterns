@@ -1,7 +1,7 @@
 import React, { ComponentType } from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import * as Colors from '@pxblue/colors';
-import { Body1 } from '@pxblue/react-native-components';
+import { Hero } from '@pxblue/react-native-components';
 
 type IconToggleProps = {
     IconComponent: ComponentType<{ size: number; color: string }>;
@@ -27,12 +27,7 @@ export const IconToggle: React.FC = (props: IconToggleProps) => {
 
     return (
         <View style={iconContainer}>
-            <TouchableOpacity onPress={onPress}>
-                <View>
-                    <IconComponent size={32} color={color} />
-                </View>
-            </TouchableOpacity>
-            <Body1 style={{ color: color, textAlign: 'center', marginTop: 8 }}>{label}</Body1>
+            <Hero IconClass={IconComponent} label={label} iconColor={color} onPress={onPress}></Hero>
         </View>
     );
 };
