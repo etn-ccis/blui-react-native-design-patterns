@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const sortedEvents = (currentSort: string, alarmList: AlarmDataObject[]): AlarmDataObject[] => {
+export const sortEvents = (currentSort: string, alarmList: AlarmDataObject[]): AlarmDataObject[] => {
     switch (currentSort) {
         case FILTERS.TYPE:
             return alarmList.sort((a: AlarmDataObject, b: AlarmDataObject) => {
@@ -98,7 +98,7 @@ const sortedEvents = (currentSort: string, alarmList: AlarmDataObject[]): AlarmD
     }
 };
 
-const filteredEvents = (
+export const filterEvents = (
     events: AlarmDataObject[],
     showActiveAlarms: boolean,
     showAlarms: boolean,
@@ -132,8 +132,8 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
     const [showEvents, setShowEvents] = useState(true);
     const [showSessions, setShowSessions] = useState(true);
 
-    const filteredAlarmList = filteredEvents(
-        sortedEvents(currentSort, alarmList),
+    const filteredAlarmList = filterEvents(
+        sortEvents(currentSort, alarmList),
         showActiveAlarms,
         showAlarms,
         showEvents,
