@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
         justifyContent: 'center',
+        flexWrap: 'wrap',
         marginVertical: 8,
     },
     rowHeader: {

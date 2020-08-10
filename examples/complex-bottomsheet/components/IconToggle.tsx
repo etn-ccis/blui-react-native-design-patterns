@@ -27,7 +27,13 @@ export const IconToggle: React.FC = (props: IconToggleProps) => {
 
     return (
         <View style={iconContainer}>
-            <Hero IconClass={IconComponent} label={label} iconColor={color} onPress={onPress}></Hero>
+            <Hero
+                IconClass={IconComponent}
+                style={{ maxWidth: 96 }}
+                label={label}
+                iconColor={color}
+                onPress={onPress}
+            ></Hero>
         </View>
     );
 };
