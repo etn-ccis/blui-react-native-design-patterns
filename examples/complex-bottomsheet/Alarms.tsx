@@ -5,8 +5,8 @@ import { Header, InfoListItem, wrapIcon, H6 } from '@pxblue/react-native-compone
 import SafeAreaView from 'react-native-safe-area-view';
 import { ComplexBottomSheetScreen } from './BottomSheet';
 import { MaterialIcons } from '@expo/vector-icons';
-import IconToggle from './components/IconToggle';
-import alarms, { formatDate, AlarmDataObject } from './alarmData';
+import { IconToggle } from './components/IconToggle';
+import { getAlarmList, formatDate, AlarmDataObject } from './alarmData';
 import { useNavigation } from '@react-navigation/native';
 import { Divider } from 'react-native-paper';
 
@@ -71,44 +71,34 @@ const styles = StyleSheet.create({
     },
 });
 
-export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
-    const navigation = useNavigation();
-    const [showBottomSheet, setShowBottomSheet] = useState(false);
-    const [currentSort, setCurrentSort] = useState('time');
-    const [showAlarms, setShowAlarms] = useState(true);
-    const [showActiveAlarms, setShowActiveAlarms] = useState(true);
-    const [showEvents, setShowEvents] = useState(true);
-    const [showSessions, setShowSessions] = useState(true);
-    const alarmList = alarms(20);
-
-    const sortedEvents = (): AlarmDataObject[] => {
-        switch (currentSort) {
-            case FILTERS.TYPE:
-                return alarmList.sort((a, b) => {
-                    // primary sort by type
-                    if (a.type < b.type) {
-                        return -1;
-                    } else if (a.type > b.type) {
-                        return 1;
-                    }
-                    // secondary sort by alarm active and/or date
-                    if (a.type !== TYPES.ALARM) {
-                        return b.date - a.date;
-                    }
-                    if (a.active && !b.active) {
-                        return -1;
-                    } else if (b.active && !a.active) {
-                        return 1;
-                    }
+const sortedEvents = (currentSort: string, alarmList: AlarmDataObject[]): AlarmDataObject[] => {
+    switch (currentSort) {
+        case FILTERS.TYPE:
+            return alarmList.sort((a: AlarmDataObject, b: AlarmDataObject) => {
+                // primary sort by type
+                if (a.type < b.type) {
+                    return -1;
+                } else if (a.type > b.type) {
+                    return 1;
+                }
+                // secondary sort by alarm active and/or date
+                if (a.type !== TYPES.ALARM) {
                     return b.date - a.date;
-                });
-            case FILTERS.TIME:
-            default:
-                return alarmList.sort((a, b) => b.date - a.date);
-        }
-    };
+                }
+                if (a.active && !b.active) {
+                    return -1;
+                } else if (b.active && !a.active) {
+                    return 1;
+                }
+                return b.date - a.date;
+            });
+        case FILTERS.TIME:
+        default:
+            return alarmList.sort((a: AlarmDataObject, b: AlarmDataObject) => b.date - a.date);
+    }
+};
 
-    const filteredEvents = (events: AlarmDataObject[]): AlarmDataObject[] =>
+const filteredEvents = (events: AlarmDataObject[], showActiveAlarms: boolean, showAlarms: boolean, showEvents: boolean, showSessions: boolean): AlarmDataObject[] =>
         events.filter((item: AlarmDataObject) => {
             if (!showActiveAlarms && item.type === TYPES.ALARM && item.active) {
                 return false;
@@ -125,7 +115,18 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
             return true;
         });
 
-    const filteredAlarmList = filteredEvents(sortedEvents());
+const alarmList = getAlarmList(20);
+
+export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
+    const navigation = useNavigation();
+    const [showBottomSheet, setShowBottomSheet] = useState(false);
+    const [currentSort, setCurrentSort] = useState('time');
+    const [showAlarms, setShowAlarms] = useState(true);
+    const [showActiveAlarms, setShowActiveAlarms] = useState(true);
+    const [showEvents, setShowEvents] = useState(true);
+    const [showSessions, setShowSessions] = useState(true);
+
+    const filteredAlarmList = filteredEvents(sortedEvents(currentSort, alarmList), showActiveAlarms, showAlarms, showEvents, showSessions);
 
     const toggleMenu = (): void => {
         navigation.openDrawer();

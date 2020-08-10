@@ -36,5 +36,3 @@ export const IconToggle: React.FC = (props: IconToggleProps) => {
         </View>
     );
 };
-
-export default IconToggle;

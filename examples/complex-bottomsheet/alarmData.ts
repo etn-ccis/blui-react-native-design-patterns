@@ -61,12 +61,10 @@ function getRandomData(): AlarmDataObject {
     }
 }
 
-function getAlarmList(count: number): AlarmDataObject[] {
+export function getAlarmList(count: number): AlarmDataObject[] {
     const data = [];
     for (let i = 0; i < count; i++) {
         data.push(getRandomData());
     }
     return data;
 }
-
-export default getAlarmList;
