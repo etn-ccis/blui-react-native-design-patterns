@@ -98,22 +98,28 @@ const sortedEvents = (currentSort: string, alarmList: AlarmDataObject[]): AlarmD
     }
 };
 
-const filteredEvents = (events: AlarmDataObject[], showActiveAlarms: boolean, showAlarms: boolean, showEvents: boolean, showSessions: boolean): AlarmDataObject[] =>
-        events.filter((item: AlarmDataObject) => {
-            if (!showActiveAlarms && item.type === TYPES.ALARM && item.active) {
-                return false;
-            }
-            if (!showAlarms && item.type === TYPES.ALARM && !item.active) {
-                return false;
-            }
-            if (!showEvents && item.type === TYPES.EVENT) {
-                return false;
-            }
-            if (!showSessions && item.type === TYPES.SESSION) {
-                return false;
-            }
-            return true;
-        });
+const filteredEvents = (
+    events: AlarmDataObject[],
+    showActiveAlarms: boolean,
+    showAlarms: boolean,
+    showEvents: boolean,
+    showSessions: boolean
+): AlarmDataObject[] =>
+    events.filter((item: AlarmDataObject) => {
+        if (!showActiveAlarms && item.type === TYPES.ALARM && item.active) {
+            return false;
+        }
+        if (!showAlarms && item.type === TYPES.ALARM && !item.active) {
+            return false;
+        }
+        if (!showEvents && item.type === TYPES.EVENT) {
+            return false;
+        }
+        if (!showSessions && item.type === TYPES.SESSION) {
+            return false;
+        }
+        return true;
+    });
 
 const alarmList = getAlarmList(20);
 
@@ -126,7 +132,13 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
     const [showEvents, setShowEvents] = useState(true);
     const [showSessions, setShowSessions] = useState(true);
 
-    const filteredAlarmList = filteredEvents(sortedEvents(currentSort, alarmList), showActiveAlarms, showAlarms, showEvents, showSessions);
+    const filteredAlarmList = filteredEvents(
+        sortedEvents(currentSort, alarmList),
+        showActiveAlarms,
+        showAlarms,
+        showEvents,
+        showSessions
+    );
 
     const toggleMenu = (): void => {
         navigation.openDrawer();
