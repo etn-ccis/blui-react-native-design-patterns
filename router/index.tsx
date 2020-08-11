@@ -6,7 +6,7 @@ import { ROUTES } from './routes';
 import { NavigationDrawer } from './drawer';
 import { CollapsibleAppbarScreen } from '../examples/collapsible-appbar/CollapsibleAppbar';
 import { DataListScreen } from '../examples/data-list/DataList';
-import { BottomSheetAlarmsScreen } from '../examples/bottom-sheet/Alarms';
+import { BottomSheetAlarmsScreen } from '../examples/bottom-sheet/BottomSheet';
 import { ActionListScreen } from '../examples/action-list/ActionList';
 import { ComplexBottomSheetAlarmsScreen } from '../examples/complex-bottomsheet/ComplexBottomSheet';
 
