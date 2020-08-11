@@ -3,10 +3,10 @@ import { StyleSheet, ScrollView, View } from 'react-native';
 import * as Colors from '@pxblue/colors';
 import { Header, InfoListItem, wrapIcon, H6 } from '@pxblue/react-native-components';
 import SafeAreaView from 'react-native-safe-area-view';
-import { ComplexBottomSheetScreen } from './BottomSheet';
+import { ComplexBottomSheetScreen } from './components/BottomSheet';
 import { MaterialIcons } from '@expo/vector-icons';
 import { IconToggle } from './components/IconToggle';
-import { getAlarmList, formatDate, AlarmDataObject } from './alarmData';
+import { getAlarmList, formatDate, AlarmDataObject } from './data/alarmData';
 import { useNavigation } from '@react-navigation/native';
 import { Divider } from 'react-native-paper';
 
@@ -177,10 +177,10 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 (item.type === 'settings' && SettingsIcon) ||
                                 (item.type === 'session' && UpdateIcon)
                             }
-                            iconColor={item.active ? Colors.white[100] : Colors.black[500]}
-                            fontColor={item.active ? Colors.red[500] : Colors.black[500]}
-                            statusColor={item.active ? Colors.red[500] : Colors.white[50]}
-                            avatar={true}
+                            iconColor={item.active ? Colors.white[100] : undefined}
+                            fontColor={item.active ? Colors.red[500] : undefined}
+                            statusColor={item.active ? Colors.red[500] : undefined}
+                            avatar={item.active}
                         />
                     ))}
                 </ScrollView>

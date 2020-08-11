@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { ComplexBottomSheetScreen } from './BottomSheet';
-import { sortEvents, filterEvents } from './Alarms';
+import { sortEvents, filterEvents } from '../ComplexBottomSheet';
 
 jest.mock('@react-navigation/native', () => ({
     useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),

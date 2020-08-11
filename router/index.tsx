@@ -8,7 +8,7 @@ import { CollapsibleAppbarScreen } from '../examples/collapsible-appbar/Collapsi
 import { DataListScreen } from '../examples/data-list/DataList';
 import { BottomSheetAlarmsScreen } from '../examples/bottom-sheet/Alarms';
 import { ActionListScreen } from '../examples/action-list/ActionList';
-import { ComplexBottomSheetAlarmsScreen } from '../examples/complex-bottomsheet/Alarms';
+import { ComplexBottomSheetAlarmsScreen } from '../examples/complex-bottomsheet/ComplexBottomSheet';
 
 const Drawer = createDrawerNavigator();
 
