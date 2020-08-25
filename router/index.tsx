@@ -1,14 +1,16 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Home } from '../screens/Home';
-import { Placeholder } from '../screens/Placeholder';
 import { ROUTES } from './routes';
 import { NavigationDrawer } from './drawer';
+import { Placeholder } from '../screens/Placeholder';
+// Screens
+import { Home } from '../screens/Home';
 import { CollapsibleAppbarScreen } from '../examples/collapsible-appbar/CollapsibleAppbar';
 import { DataListScreen } from '../examples/data-list/DataList';
 import { BottomSheetAlarmsScreen } from '../examples/bottom-sheet/BottomSheet';
 import { ActionListScreen } from '../examples/action-list/ActionList';
 import { ComplexBottomSheetAlarmsScreen } from '../examples/complex-bottomsheet/ComplexBottomSheet';
+import { StatusListScreen } from '../examples/status-list/StatusList';
 
 const Drawer = createDrawerNavigator();
 
@@ -37,9 +39,7 @@ export const MyDrawer: React.FC = () => (
         <Drawer.Screen name={ROUTES.SORTABLE_LIST.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.SORTABLE_LIST.name} />}
         </Drawer.Screen>
-        <Drawer.Screen name={ROUTES.STATUS_LIST.route}>
-            {(): JSX.Element => <Placeholder title={ROUTES.STATUS_LIST.name} />}
-        </Drawer.Screen>
+        <Drawer.Screen name={ROUTES.STATUS_LIST.route} component={StatusListScreen} />
         <Drawer.Screen name={ROUTES.RESPONSIVE_TABLE.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.RESPONSIVE_TABLE.name} />}
         </Drawer.Screen>
