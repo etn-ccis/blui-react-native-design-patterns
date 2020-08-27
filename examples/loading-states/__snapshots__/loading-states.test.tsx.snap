@@ -2,50 +2,118 @@
 
 exports[`Loading States Tests Screen Renders 1`] = `
 Array [
-  <View
+  <RCTSafeAreaView
+    accessible={true}
+    emulateUnlessSupported={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#007bc1",
-        "paddingTop": 0,
+        "backgroundColor": "#6200ee",
+        "elevation": 0,
+        "height": 76,
+        "shadowColor": "rgba(0, 0, 0, 0.3)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": "100%",
       }
     }
+    testID="header"
   >
-    <RCTSafeAreaView
-      accessible={true}
-      emulateUnlessSupported={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+    <View
       style={
         Object {
-          "backgroundColor": "#6200ee",
-          "elevation": 0,
-          "height": 76,
-          "shadowColor": "rgba(0, 0, 0, 0.3)",
-          "shadowOffset": Object {
-            "height": 1,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 2,
-          "width": "100%",
+          "flex": 1,
+          "flexDirection": "row",
+          "paddingBottom": 16,
+          "paddingHorizontal": 16,
+          "paddingTop": 16,
         }
       }
     >
       <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 40,
+            "margin": -8,
+            "marginRight": 24,
+            "opacity": 1,
+            "padding": 8,
+            "width": 40,
+          }
+        }
+        testID="header-navigation"
+      >
+        <Text />
+      </View>
+      <View
         style={
           Object {
             "flex": 1,
-            "flexDirection": "row",
-            "paddingBottom": 16,
-            "paddingHorizontal": 16,
-            "paddingTop": 16,
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+            "marginRight": 40,
           }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 0,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "System",
+                "fontSize": 20,
+                "lineHeight": 20,
+                "textAlign": "auto",
+                "writingDirection": "ltr",
+              }
+            }
+            testID="header-title"
+          >
+            Loading Example
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": 56,
+              "position": "absolute",
+              "right": 8,
+            },
+            undefined,
+          ]
         }
       >
         <View
@@ -61,114 +129,33 @@ Array [
           style={
             Object {
               "height": 40,
-              "margin": -8,
-              "marginRight": 24,
               "opacity": 1,
               "padding": 8,
               "width": 40,
             }
           }
-          testID="header-navigation"
+          testID="header-action-item0"
         >
           <Text />
         </View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-              "flexDirection": "column",
-              "justifyContent": "flex-end",
-              "marginRight": 40,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "flex": 0,
-                "justifyContent": "center",
-              }
-            }
-          >
-            <Text
-              ellipsizeMode="tail"
-              numberOfLines={1}
-              style={
-                Object {
-                  "color": "white",
-                  "fontFamily": "System",
-                  "fontSize": 20,
-                  "lineHeight": 20,
-                }
-              }
-              testID="header-title"
-            >
-              Loading Example
-            </Text>
-          </View>
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "height": 56,
-                "position": "absolute",
-                "right": 8,
-              },
-              undefined,
-            ]
-          }
-        >
-          <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "height": 40,
-                "opacity": 1,
-                "padding": 8,
-                "width": 40,
-              }
-            }
-            testID="header-action-item0"
-          >
-            <Text />
-          </View>
-        </View>
       </View>
-    </RCTSafeAreaView>
-  </View>,
+    </View>
+  </RCTSafeAreaView>,
   <RCTScrollView
     contentContainerStyle={
       Object {
-        "paddingBottom": 8,
-      }
-    }
-    style={
-      Object {
-        "margin": 4,
+        "padding": 16,
       }
     }
   >
     <View>
       <View
-        accessibilityStates={true}
-        containerStyle={Object {}}
         style={
           Object {
             "backgroundColor": "#ffffff",
             "borderRadius": 4,
             "elevation": 1,
-            "margin": 8,
+            "marginBottom": 16,
             "shadowColor": "#000000",
             "shadowOffset": Object {
               "height": 0.5,
@@ -201,7 +188,7 @@ Array [
               Object {
                 "flexDirection": "row",
                 "marginHorizontal": 5,
-                "marginVertical": 10,
+                "marginVertical": 24,
               }
             }
           >
@@ -209,7 +196,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -242,8 +229,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -266,9 +253,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -295,7 +282,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -328,8 +315,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -352,9 +339,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -381,7 +368,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -414,8 +401,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -438,9 +425,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -467,8 +454,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 0,
+                "margin": 16,
               }
             }
           >
@@ -495,9 +481,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -523,8 +509,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 5,
+                "margin": 16,
               }
             }
           >
@@ -551,9 +536,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -579,8 +564,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 5,
+                "margin": 16,
               }
             }
           >
@@ -607,9 +591,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -635,14 +619,12 @@ Array [
         </View>
       </View>
       <View
-        accessibilityStates={true}
-        containerStyle={Object {}}
         style={
           Object {
             "backgroundColor": "#ffffff",
             "borderRadius": 4,
             "elevation": 1,
-            "margin": 8,
+            "marginBottom": 16,
             "shadowColor": "#000000",
             "shadowOffset": Object {
               "height": 0.5,
@@ -675,7 +657,7 @@ Array [
               Object {
                 "flexDirection": "row",
                 "marginHorizontal": 5,
-                "marginVertical": 10,
+                "marginVertical": 24,
               }
             }
           >
@@ -683,7 +665,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -716,8 +698,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -740,9 +722,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -769,7 +751,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -802,8 +784,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -826,9 +808,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -855,7 +837,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -888,8 +870,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -912,9 +894,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -941,8 +923,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 0,
+                "margin": 16,
               }
             }
           >
@@ -969,9 +950,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -997,8 +978,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 5,
+                "margin": 16,
               }
             }
           >
@@ -1025,9 +1005,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -1053,8 +1033,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 5,
+                "margin": 16,
               }
             }
           >
@@ -1081,9 +1060,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -1109,14 +1088,12 @@ Array [
         </View>
       </View>
       <View
-        accessibilityStates={true}
-        containerStyle={Object {}}
         style={
           Object {
             "backgroundColor": "#ffffff",
             "borderRadius": 4,
             "elevation": 1,
-            "margin": 8,
+            "marginBottom": 16,
             "shadowColor": "#000000",
             "shadowOffset": Object {
               "height": 0.5,
@@ -1149,7 +1126,7 @@ Array [
               Object {
                 "flexDirection": "row",
                 "marginHorizontal": 5,
-                "marginVertical": 10,
+                "marginVertical": 24,
               }
             }
           >
@@ -1157,7 +1134,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -1190,8 +1167,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -1214,9 +1191,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1243,7 +1220,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -1276,8 +1253,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -1300,9 +1277,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1329,7 +1306,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -1362,8 +1339,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -1386,9 +1363,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1415,8 +1392,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 0,
+                "margin": 16,
               }
             }
           >
@@ -1443,9 +1419,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -1471,8 +1447,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 5,
+                "margin": 16,
               }
             }
           >
@@ -1499,9 +1474,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -1527,8 +1502,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 5,
+                "margin": 16,
               }
             }
           >
@@ -1555,9 +1529,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -1583,14 +1557,12 @@ Array [
         </View>
       </View>
       <View
-        accessibilityStates={true}
-        containerStyle={Object {}}
         style={
           Object {
             "backgroundColor": "#ffffff",
             "borderRadius": 4,
             "elevation": 1,
-            "margin": 8,
+            "marginBottom": 16,
             "shadowColor": "#000000",
             "shadowOffset": Object {
               "height": 0.5,
@@ -1623,7 +1595,7 @@ Array [
               Object {
                 "flexDirection": "row",
                 "marginHorizontal": 5,
-                "marginVertical": 10,
+                "marginVertical": 24,
               }
             }
           >
@@ -1631,7 +1603,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -1664,8 +1636,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -1688,9 +1660,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1717,7 +1689,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -1750,8 +1722,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -1774,9 +1746,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1803,7 +1775,7 @@ Array [
               style={
                 Object {
                   "flex": 1,
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                 }
               }
             >
@@ -1836,8 +1808,8 @@ Array [
                         },
                         Object {
                           "alignSelf": "center",
-                          "borderRadius": 20,
-                          "marginBottom": 15,
+                          "borderRadius": 24,
+                          "marginBottom": 16,
                         },
                         Object {
                           "overflow": "hidden",
@@ -1860,9 +1832,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 5,
-                          "height": 20,
-                          "marginBottom": 20,
+                          "borderRadius": 6,
+                          "height": 24,
+                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1889,8 +1861,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 0,
+                "margin": 16,
               }
             }
           >
@@ -1917,9 +1888,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -1945,8 +1916,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 5,
+                "margin": 16,
               }
             }
           >
@@ -1973,9 +1943,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
@@ -2001,8 +1971,7 @@ Array [
           <View
             style={
               Object {
-                "marginHorizontal": 10,
-                "marginTop": 5,
+                "margin": 16,
               }
             }
           >
@@ -2029,9 +1998,9 @@ Array [
                     Array [
                       Object {
                         "backgroundColor": "#efefef",
-                        "borderRadius": 5,
-                        "height": 20,
-                        "marginBottom": 20,
+                        "borderRadius": 4,
+                        "height": 16,
+                        "marginBottom": 16,
                         "width": "100%",
                       },
                       undefined,
