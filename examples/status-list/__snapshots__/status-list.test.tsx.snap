@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Action List Tests Screen Renders 1`] = `
+exports[`Status List Tests Screen Renders 1`] = `
 <View
   style={
     Object {
@@ -78,7 +78,7 @@ exports[`Action List Tests Screen Renders 1`] = `
             "flex": 1,
             "flexDirection": "column",
             "justifyContent": "flex-end",
-            "marginRight": 80,
+            "marginRight": 0,
           }
         }
       >
@@ -105,7 +105,7 @@ exports[`Action List Tests Screen Renders 1`] = `
             }
             testID="header-title"
           >
-            Action List
+            Status List
           </Text>
         </View>
       </View>
@@ -122,71 +122,40 @@ exports[`Action List Tests Screen Renders 1`] = `
             undefined,
           ]
         }
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "height": 40,
-              "opacity": 1,
-              "padding": 8,
-              "width": 40,
-            }
-          }
-          testID="header-action-item0"
-        >
-          <Text />
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "height": 40,
-              "opacity": 1,
-              "padding": 8,
-              "width": 40,
-            }
-          }
-          testID="header-action-item1"
-        >
-          <Text />
-        </View>
-      </View>
+      />
     </View>
   </RCTSafeAreaView>
   <RCTScrollView
     data={
       Array [
         Object {
-          "details": "item 1 details",
-          "id": 1,
-          "name": "item 1",
+          "IconClass": [Function],
+          "iconColor": "white",
+          "statusColor": "red",
+          "subtitle": "Subtitle 1",
+          "title": "Item 1",
         },
         Object {
-          "details": "item 2 details",
-          "id": 2,
-          "name": "item 2",
+          "IconClass": [Function],
+          "iconColor": "red",
+          "statusColor": "transparent",
+          "subtitle": "Subtitle 2",
+          "title": "Item 2",
         },
         Object {
-          "details": "item 3 details",
-          "id": 3,
-          "name": "item 3",
+          "iconColor": "rgba(255,255,255,0.5)",
+          "statusColor": "#000000",
+          "subtitle": "Subtitle 3",
+          "title": "Item 3",
+        },
+        Object {
+          "avatar": false,
+          "iconColor": "purple",
+          "subtitle": "Subtitle 4",
+          "title": "Item 4",
+        },
+        Object {
+          "title": "Item 5",
         },
       ]
     }
@@ -243,7 +212,7 @@ exports[`Action List Tests Screen Renders 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": undefined,
+                  "backgroundColor": "red",
                   "height": "100%",
                   "left": 0,
                   "position": "absolute",
@@ -254,6 +223,37 @@ exports[`Action List Tests Screen Renders 1`] = `
               ]
             }
           />
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "flex-start",
+                  "justifyContent": "center",
+                  "marginLeft": 16,
+                  "width": 40,
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "red",
+                    "borderRadius": 20,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <Text />
+            </View>
+          </View>
           <View
             style={
               Array [
@@ -297,7 +297,7 @@ exports[`Action List Tests Screen Renders 1`] = `
                 ]
               }
             >
-              item 1
+              Item 1
             </Text>
             <View
               style={
@@ -338,7 +338,7 @@ exports[`Action List Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                item 1 details
+                Subtitle 1
               </Text>
             </View>
             <View
@@ -353,7 +353,32 @@ exports[`Action List Tests Screen Renders 1`] = `
               }
             />
           </View>
-          <Text />
+          <View
+            style={
+              Object {
+                "alignItems": "stretch",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                    "height": 0.5,
+                  },
+                  Object {
+                    "marginLeft": 72,
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
         </View>
       </View>
       <View
@@ -385,7 +410,7 @@ exports[`Action List Tests Screen Renders 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": undefined,
+                  "backgroundColor": "transparent",
                   "height": "100%",
                   "left": 0,
                   "position": "absolute",
@@ -396,6 +421,37 @@ exports[`Action List Tests Screen Renders 1`] = `
               ]
             }
           />
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "flex-start",
+                  "justifyContent": "center",
+                  "marginLeft": 16,
+                  "width": 40,
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "borderRadius": 20,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <Text />
+            </View>
+          </View>
           <View
             style={
               Array [
@@ -439,7 +495,7 @@ exports[`Action List Tests Screen Renders 1`] = `
                 ]
               }
             >
-              item 2
+              Item 2
             </Text>
             <View
               style={
@@ -480,7 +536,7 @@ exports[`Action List Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                item 2 details
+                Subtitle 2
               </Text>
             </View>
             <View
@@ -495,7 +551,32 @@ exports[`Action List Tests Screen Renders 1`] = `
               }
             />
           </View>
-          <Text />
+          <View
+            style={
+              Object {
+                "alignItems": "stretch",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                    "height": 0.5,
+                  },
+                  Object {
+                    "marginLeft": 72,
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
         </View>
       </View>
       <View
@@ -527,7 +608,7 @@ exports[`Action List Tests Screen Renders 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": undefined,
+                  "backgroundColor": "#000000",
                   "height": "100%",
                   "left": 0,
                   "position": "absolute",
@@ -581,7 +662,7 @@ exports[`Action List Tests Screen Renders 1`] = `
                 ]
               }
             >
-              item 3
+              Item 3
             </Text>
             <View
               style={
@@ -622,7 +703,7 @@ exports[`Action List Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                item 3 details
+                Subtitle 3
               </Text>
             </View>
             <View
@@ -637,370 +718,338 @@ exports[`Action List Tests Screen Renders 1`] = `
               }
             />
           </View>
-          <Text />
+          <View
+            style={
+              Object {
+                "alignItems": "stretch",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                    "height": 0.5,
+                  },
+                  Object {
+                    "marginLeft": 72,
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "flexDirection": "row",
+              "height": 72,
+              "opacity": 1,
+              "paddingRight": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": 6,
+                },
+                undefined,
+              ]
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "paddingHorizontal": 16,
+                },
+                undefined,
+              ]
+            }
+          >
+            <Text
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "color": "#000000",
+                  },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
+                  Object {
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                  },
+                  Object {
+                    "fontFamily": "System",
+                    "fontWeight": "500",
+                  },
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Item 4
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                Subtitle 4
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "stretch",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                    "height": 0.5,
+                  },
+                  Object {
+                    "marginLeft": 72,
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "flexDirection": "row",
+              "height": 72,
+              "opacity": 1,
+              "paddingRight": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": 6,
+                },
+                undefined,
+              ]
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "paddingHorizontal": 16,
+                },
+                undefined,
+              ]
+            }
+          >
+            <Text
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "color": "#000000",
+                  },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
+                  Object {
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                  },
+                  Object {
+                    "fontFamily": "System",
+                    "fontWeight": "500",
+                  },
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Item 5
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "stretch",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                    "height": 0.5,
+                  },
+                  Object {
+                    "marginLeft": 72,
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
         </View>
       </View>
     </View>
   </RCTScrollView>
-  <RCTSafeAreaView
-    emulateUnlessSupported={true}
-  >
-    <Modal
-      animationType="none"
-      hardwareAccelerated={false}
-      hideModalContentWhileAnimating={false}
-      onModalHide={[Function]}
-      onModalWillHide={[Function]}
-      onModalWillShow={[Function]}
-      onRequestClose={[Function]}
-      scrollHorizontal={false}
-      scrollOffset={0}
-      scrollOffsetMax={0}
-      scrollTo={null}
-      supportedOrientations={
-        Array [
-          "portrait",
-          "landscape",
-        ]
-      }
-      swipeThreshold={100}
-      transparent={true}
-      visible={false}
-    >
-      <View
-        accessible={true}
-        focusable={true}
-        forwardedRef={[Function]}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "backgroundColor": "black",
-            "bottom": 0,
-            "height": 1334,
-            "left": 0,
-            "opacity": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": 750,
-          }
-        }
-      />
-      <View
-        forwardedRef={[Function]}
-        hideModalContentWhileAnimating={false}
-        onModalHide={[Function]}
-        onModalWillHide={[Function]}
-        onModalWillShow={[Function]}
-        pointerEvents="box-none"
-        scrollHorizontal={false}
-        scrollOffset={0}
-        scrollOffsetMax={0}
-        scrollTo={null}
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "flex-end",
-            "margin": 0,
-            "transform": Array [
-              Object {
-                "translateY": 0,
-              },
-            ],
-          }
-        }
-        supportedOrientations={
-          Array [
-            "portrait",
-            "landscape",
-          ]
-        }
-        swipeThreshold={100}
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-            }
-          }
-        >
-          <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "transparent",
-                "flexDirection": "row",
-                "height": 72,
-                "opacity": 1,
-                "paddingRight": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": undefined,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 6,
-                  },
-                  undefined,
-                ]
-              }
-            />
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "flex-start",
-                    "justifyContent": "center",
-                    "marginLeft": 16,
-                    "width": 40,
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "flex-start",
-                      "backgroundColor": "transparent",
-                      "justifyContent": "center",
-                      "width": 40,
-                    },
-                    undefined,
-                  ]
-                }
-              >
-                <Text />
-              </View>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "flex": 1,
-                    "paddingHorizontal": 16,
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <Text
-                ellipsizeMode="tail"
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 16,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "500",
-                    },
-                    undefined,
-                    Array [
-                      Object {
-                        "color": "#000000",
-                      },
-                      undefined,
-                    ],
-                  ]
-                }
-              >
-                Remove
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                    },
-                    undefined,
-                  ]
-                }
-              />
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                    },
-                    undefined,
-                  ]
-                }
-              />
-            </View>
-          </View>
-          <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "transparent",
-                "flexDirection": "row",
-                "height": 72,
-                "opacity": 1,
-                "paddingRight": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": undefined,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 6,
-                  },
-                  undefined,
-                ]
-              }
-            />
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "flex-start",
-                    "justifyContent": "center",
-                    "marginLeft": 16,
-                    "width": 40,
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "flex-start",
-                      "backgroundColor": "transparent",
-                      "justifyContent": "center",
-                      "width": 40,
-                    },
-                    undefined,
-                  ]
-                }
-              >
-                <Text />
-              </View>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "flex": 1,
-                    "paddingHorizontal": 16,
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <Text
-                ellipsizeMode="tail"
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 16,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "500",
-                    },
-                    undefined,
-                    Array [
-                      Object {
-                        "color": "#000000",
-                      },
-                      undefined,
-                    ],
-                  ]
-                }
-              >
-                Cancel
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                    },
-                    undefined,
-                  ]
-                }
-              />
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                    },
-                    undefined,
-                  ]
-                }
-              />
-            </View>
-          </View>
-        </View>
-      </View>
-    </Modal>
-  </RCTSafeAreaView>
 </View>
 `;

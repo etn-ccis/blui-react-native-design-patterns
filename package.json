@@ -10,7 +10,8 @@
         "lint:fix": "eslint \"**/**.{ts,tsx}\" --fix",
         "prettier": "prettier \"**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --write",
         "prettier:check": "prettier \"**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --check",
-        "test": "jest"
+        "test": "jest",
+        "precommit": "yarn prettier && yarn lint && yarn test"
     },
     "dependencies": {
         "@pxblue/colors": "^3.0.0",
