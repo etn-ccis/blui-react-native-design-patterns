@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loading States Tests Screen Renders 1`] = `
+exports[`Loading States Tests Screen Screen Renders 1`] = `
 Array [
   <RCTSafeAreaView
     accessible={true}
@@ -184,19 +184,280 @@ Array [
           }
         >
           <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "marginHorizontal": 5,
-                "marginVertical": 24,
-              }
-            }
+            testID="placeholder-hero-card"
           >
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "flexDirection": "row",
+                  "marginHorizontal": 5,
+                  "marginVertical": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "margin": 16,
                 }
               }
             >
@@ -223,39 +484,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -281,8 +512,7 @@ Array [
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "margin": 16,
                 }
               }
             >
@@ -309,39 +539,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -367,8 +567,7 @@ Array [
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "margin": 16,
                 }
               }
             >
@@ -395,39 +594,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -447,171 +616,6 @@ Array [
                       }
                     />
                   </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -653,19 +657,280 @@ Array [
           }
         >
           <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "marginHorizontal": 5,
-                "marginVertical": 24,
-              }
-            }
+            testID="placeholder-hero-card"
           >
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "flexDirection": "row",
+                  "marginHorizontal": 5,
+                  "marginVertical": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "margin": 16,
                 }
               }
             >
@@ -692,39 +957,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -750,8 +985,7 @@ Array [
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "margin": 16,
                 }
               }
             >
@@ -778,39 +1012,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -836,8 +1040,7 @@ Array [
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "margin": 16,
                 }
               }
             >
@@ -864,39 +1067,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -916,171 +1089,6 @@ Array [
                       }
                     />
                   </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -1122,19 +1130,280 @@ Array [
           }
         >
           <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "marginHorizontal": 5,
-                "marginVertical": 24,
-              }
-            }
+            testID="placeholder-hero-card"
           >
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "flexDirection": "row",
+                  "marginHorizontal": 5,
+                  "marginVertical": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "margin": 16,
                 }
               }
             >
@@ -1161,39 +1430,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1219,8 +1458,7 @@ Array [
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "margin": 16,
                 }
               }
             >
@@ -1247,39 +1485,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1305,8 +1513,7 @@ Array [
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "margin": 16,
                 }
               }
             >
@@ -1333,39 +1540,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1385,171 +1562,6 @@ Array [
                       }
                     />
                   </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -1591,19 +1603,280 @@ Array [
           }
         >
           <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "marginHorizontal": 5,
-                "marginVertical": 24,
-              }
-            }
+            testID="placeholder-hero-card"
           >
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "flexDirection": "row",
+                  "marginHorizontal": 5,
+                  "marginVertical": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginHorizontal": 8,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "flexDirection": "row",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 3,
+                            "height": 40,
+                            "width": 40,
+                          },
+                          Object {
+                            "alignSelf": "center",
+                            "borderRadius": 24,
+                            "marginBottom": 16,
+                          },
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#efefef",
+                            "borderRadius": 6,
+                            "height": 24,
+                            "marginBottom": 24,
+                            "width": "100%",
+                          },
+                          undefined,
+                          Object {
+                            "overflow": "hidden",
+                          },
+                        ]
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#dfdfdf",
+                            "height": "100%",
+                            "opacity": 0.5,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "margin": 16,
                 }
               }
             >
@@ -1630,39 +1903,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1688,8 +1931,7 @@ Array [
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "margin": 16,
                 }
               }
             >
@@ -1716,39 +1958,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1774,8 +1986,7 @@ Array [
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "marginHorizontal": 8,
+                  "margin": 16,
                 }
               }
             >
@@ -1802,39 +2013,9 @@ Array [
                       Array [
                         Object {
                           "backgroundColor": "#efefef",
-                          "borderRadius": 3,
-                          "height": 40,
-                          "width": 40,
-                        },
-                        Object {
-                          "alignSelf": "center",
-                          "borderRadius": 24,
+                          "borderRadius": 4,
+                          "height": 16,
                           "marginBottom": 16,
-                        },
-                        Object {
-                          "overflow": "hidden",
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#dfdfdf",
-                          "height": "100%",
-                          "opacity": 0.5,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "#efefef",
-                          "borderRadius": 6,
-                          "height": 24,
-                          "marginBottom": 24,
                           "width": "100%",
                         },
                         undefined,
@@ -1854,171 +2035,6 @@ Array [
                       }
                     />
                   </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  undefined,
-                  Object {
-                    "flexDirection": "row",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "#efefef",
-                        "borderRadius": 4,
-                        "height": 16,
-                        "marginBottom": 16,
-                        "width": "100%",
-                      },
-                      undefined,
-                      Object {
-                        "overflow": "hidden",
-                      },
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#dfdfdf",
-                        "height": "100%",
-                        "opacity": 0.5,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>

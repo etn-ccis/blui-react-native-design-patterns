@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { Placeholder, PlaceholderMedia, PlaceholderLine, Fade } from 'rn-placeholder';
 
 export const HeroPlaceholder: React.FC = () => (
-    <React.Fragment>
+    <View testID={'placeholder-hero-card'}>
         <View
             style={{
                 flexDirection: 'row',
@@ -63,5 +63,5 @@ export const HeroPlaceholder: React.FC = () => (
                 <PlaceholderLine height={16} />
             </Placeholder>
         </View>
-    </React.Fragment>
+    </View>
 );
