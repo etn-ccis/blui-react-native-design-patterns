@@ -7,7 +7,7 @@ export const HeroPlaceholder: React.FC = () => (
         <View
             style={{
                 flexDirection: 'row',
-                marginHorizontal: 5,
+                marginHorizontal: 8,
                 marginVertical: 24,
             }}
         >
