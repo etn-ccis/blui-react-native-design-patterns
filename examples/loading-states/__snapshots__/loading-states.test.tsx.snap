@@ -190,7 +190,7 @@ Array [
               style={
                 Object {
                   "flexDirection": "row",
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                   "marginVertical": 24,
                 }
               }
@@ -663,7 +663,7 @@ Array [
               style={
                 Object {
                   "flexDirection": "row",
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                   "marginVertical": 24,
                 }
               }
@@ -1136,7 +1136,7 @@ Array [
               style={
                 Object {
                   "flexDirection": "row",
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                   "marginVertical": 24,
                 }
               }
@@ -1609,7 +1609,7 @@ Array [
               style={
                 Object {
                   "flexDirection": "row",
-                  "marginHorizontal": 5,
+                  "marginHorizontal": 8,
                   "marginVertical": 24,
                 }
               }
