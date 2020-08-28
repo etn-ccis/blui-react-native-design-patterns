@@ -78,7 +78,7 @@ export const LoadingStatesScreen: React.FC = () => {
         <>
             <Header
                 testID="header"
-                title={'Loading Example'}
+                title={'Loading States'}
                 navigation={{
                     icon: MenuIcon,
                     onPress: (): void => {

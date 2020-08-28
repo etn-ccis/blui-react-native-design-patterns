@@ -27,6 +27,9 @@ export const MyDrawer: React.FC = () => (
             {(): JSX.Element => <Placeholder title={ROUTES.SEARCH_BAR.name} />}
         </Drawer.Screen>
         <Drawer.Screen name={ROUTES.LOADING_STATES.route} component={LoadingStatesScreen} />
+        <Drawer.Screen name={ROUTES.FORM_VALIDATION.route}>
+            {(): JSX.Element => <Placeholder title={ROUTES.FORM_VALIDATION.name} />}
+        </Drawer.Screen>
         <Drawer.Screen name={ROUTES.I18N.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.I18N.name} />}
         </Drawer.Screen>
