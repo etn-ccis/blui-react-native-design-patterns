@@ -12,6 +12,7 @@ import { ActionListScreen } from '../examples/action-list/ActionList';
 import { ComplexBottomSheetAlarmsScreen } from '../examples/complex-bottomsheet/ComplexBottomSheet';
 import { LoadingStatesScreen } from '../examples/loading-states/LoadingStates';
 import { StatusListScreen } from '../examples/status-list/StatusList';
+import { SearchbarScreen } from '../examples/searchbar/Searchbar';
 
 const Drawer = createDrawerNavigator();
 
@@ -23,9 +24,7 @@ export const MyDrawer: React.FC = () => (
     >
         <Drawer.Screen name={ROUTES.HOME.route} component={Home} />
         <Drawer.Screen name={ROUTES.COLLAPSIBLE_APPBAR.route} component={CollapsibleAppbarScreen} />
-        <Drawer.Screen name={ROUTES.SEARCH_BAR.route}>
-            {(): JSX.Element => <Placeholder title={ROUTES.SEARCH_BAR.name} />}
-        </Drawer.Screen>
+        <Drawer.Screen name={ROUTES.SEARCH_BAR.route} component={SearchbarScreen} />
         <Drawer.Screen name={ROUTES.LOADING_STATES.route} component={LoadingStatesScreen} />
         <Drawer.Screen name={ROUTES.FORM_VALIDATION.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.FORM_VALIDATION.name} />}
