@@ -5,6 +5,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@pxblue/colors';
 import { DataList } from './components/DataList';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
 });
 
 export const MultiselectListScreen: React.FC = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
 
     const toggleMenu = (): void => {
         navigation.openDrawer();
