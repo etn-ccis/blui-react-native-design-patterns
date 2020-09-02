@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { MultiselectListScreen } from './MultiselectList';
 import { ListItem } from './utilities';
+import { InfoListItem } from '@pxblue/react-native-components';
 
 jest.mock('@react-navigation/native', () => ({
     useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),
@@ -30,4 +31,20 @@ describe('Multiselect List Tests', () => {
         const tree = renderer.create(<MultiselectListScreen hardcodedData={hardcodedData} />).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    it('Should render 10 items by default', () => {
+        const instance = renderer.create(<MultiselectListScreen />).root;
+        const infoListItems = instance.findAllByType(InfoListItem);
+        expect(infoListItems).toHaveLength(10);
+    });
 });
+
+// @TODO implement these tests
+
+// it('Should delete an Item', () => {
+
+// });
+
+// it('Should clear all Items', () => {
+
+// });
