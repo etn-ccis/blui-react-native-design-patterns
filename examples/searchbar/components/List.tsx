@@ -5,6 +5,7 @@ import { Header, wrapIcon, InfoListItem } from '@pxblue/react-native-components'
 import { sampleData, Data } from '../data/data';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 const InfoIcon = wrapIcon({ IconClass: MaterialIcons, name: 'info' });
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
 });
 
 export const List: React.FC = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const [query, setQuery] = useState('');
     const [results, setResults] = useState(sampleData);
     const data = sampleData;
