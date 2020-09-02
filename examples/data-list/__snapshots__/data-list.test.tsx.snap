@@ -91,8 +91,6 @@ exports[`Data List Tests Screen Renders 1`] = `
                 "fontFamily": "System",
                 "fontSize": 20,
                 "lineHeight": 20,
-                "textAlign": "auto",
-                "writingDirection": "ltr",
               }
             }
             testID="header-title"
@@ -225,10 +223,6 @@ exports[`Data List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
-                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -337,10 +331,6 @@ exports[`Data List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
-                  Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -451,10 +441,6 @@ exports[`Data List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
-                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -564,10 +550,6 @@ exports[`Data List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
-                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -676,10 +658,6 @@ exports[`Data List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
-                  Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,

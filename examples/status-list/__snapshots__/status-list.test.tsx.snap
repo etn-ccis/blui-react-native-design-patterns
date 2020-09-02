@@ -99,8 +99,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                 "fontFamily": "System",
                 "fontSize": 20,
                 "lineHeight": 20,
-                "textAlign": "auto",
-                "writingDirection": "ltr",
               }
             }
             testID="header-title"
@@ -274,10 +272,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
-                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -317,10 +311,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -472,10 +462,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
-                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -515,10 +501,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -639,10 +621,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
-                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -682,10 +660,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -806,10 +780,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
-                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -849,10 +819,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -972,10 +938,6 @@ exports[`Status List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
-                  Object {
-                    "writingDirection": "ltr",
-                  },
-                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,

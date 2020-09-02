@@ -92,8 +92,6 @@ Array [
                 "fontFamily": "System",
                 "fontSize": 20,
                 "lineHeight": 20,
-                "textAlign": "auto",
-                "writingDirection": "ltr",
               }
             }
             testID="header-title"

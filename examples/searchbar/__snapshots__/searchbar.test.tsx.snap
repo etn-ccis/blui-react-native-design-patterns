@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Multiselect List Tests Screen Renders 1`] = `
+exports[`SearchBar Tests Screen Renders 1`] = `
 <View
   style={
     Object {

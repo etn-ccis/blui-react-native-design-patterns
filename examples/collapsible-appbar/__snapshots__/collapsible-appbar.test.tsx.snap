@@ -104,8 +104,6 @@ exports[`Collapsible Appbar Tests Screen Renders 1`] = `
               "fontFamily": "System",
               "fontSize": 30,
               "lineHeight": 30,
-              "textAlign": "auto",
-              "writingDirection": "ltr",
             }
           }
           testID="header-title"
@@ -122,8 +120,6 @@ exports[`Collapsible Appbar Tests Screen Renders 1`] = `
               "fontSize": 20,
               "lineHeight": 21,
               "opacity": 1,
-              "textAlign": "auto",
-              "writingDirection": "ltr",
             }
           }
           testID="header-info"
@@ -139,8 +135,6 @@ exports[`Collapsible Appbar Tests Screen Renders 1`] = `
               "fontFamily": "System",
               "fontSize": 18,
               "lineHeight": 18,
-              "textAlign": "auto",
-              "writingDirection": "ltr",
             }
           }
           testID="header-subtitle"
