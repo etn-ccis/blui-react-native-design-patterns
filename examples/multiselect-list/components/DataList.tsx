@@ -4,7 +4,7 @@ import * as Colors from '@pxblue/colors';
 import { IconButton, Button } from 'react-native-paper';
 import { InfoListItem, EmptyState, wrapIcon } from '@pxblue/react-native-components';
 import { SnackBar } from './SnackBar';
-import { generateData } from '../utilities';
+import { generateData, ListItem } from '../utilities';
 import { MaterialIcons } from '@expo/vector-icons';
 
 const Check = wrapIcon({ IconClass: MaterialIcons, name: 'check-box' });
@@ -36,20 +36,20 @@ export const DataList: React.FC = () => {
     const [list, setList] = useState(generateData());
     const [selectedItems, setSelectedItems]: any = useState([]);
 
-    const onSelect = (item: any): void => {
+    const onSelect = (item: ListItem): void => {
         const index = selectedItems.indexOf(item);
         if (index === -1) {
             setSelectedItems([...selectedItems, item]);
         } else {
-            setSelectedItems(selectedItems.filter((_: any, i: any) => i !== index));
+            setSelectedItems(selectedItems.filter((_: any, i: number) => i !== index));
         }
     };
 
-    const isSelected = (item: any): boolean => selectedItems.indexOf(item) !== -1;
+    const isSelected = (item: ListItem): boolean => selectedItems.indexOf(item) !== -1;
 
     const onDelete = (): void => {
         const updatedList = [...list];
-        selectedItems.forEach((item: any) => {
+        selectedItems.forEach((item: ListItem) => {
             const index = updatedList.indexOf(item);
             updatedList.splice(index, 1);
         });
@@ -70,7 +70,7 @@ export const DataList: React.FC = () => {
             <SafeAreaView style={styles.container}>
                 {list.length ? (
                     <ScrollView>
-                        {list.map((item: any, index: number) => (
+                        {list.map((item: ListItem, index: number) => (
                             <InfoListItem
                                 key={index}
                                 title={item.name}
