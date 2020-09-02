@@ -31,29 +31,3 @@ describe('Multiselect List Tests', () => {
         expect(tree).toMatchSnapshot();
     });
 });
-
-// @TODO implement these tests
-
-// it('Default renders 10 items', () => {
-//     const app = shallow(<DataList />);
-//     expect(app.state().list.length).toBe(10);
-//     expect(app.find(InfoListItem).length).toBe(10);
-// });
-
-// it('Delete an Item', () => {
-//     const app = shallow(<DataList />);
-//     app.instance().onSelect(1);
-//     app.instance().onSelect(2);
-//     app.instance().onDelete();
-//     expect(app.state().list.length).toBe(8);
-//     expect(app.find(InfoListItem).length).toBe(8);
-// });
-
-// it('Clear all Items', () => {
-//     const app = shallow(<DataList />);
-//     app.instance().onSelect(1);
-//     app.instance().onSelect(2);
-//     app.instance().onCancel();
-//     expect(app.state().selectedItems.length).toBe(0);
-//     expect(app.find(InfoListItem).length).toBe(10);
-// });
