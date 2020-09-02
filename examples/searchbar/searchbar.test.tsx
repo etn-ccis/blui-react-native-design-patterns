@@ -6,7 +6,7 @@ jest.mock('@react-navigation/native', () => ({
     useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),
 }));
 
-describe('Multiselect List Tests', () => {
+describe('SearchBar Tests', () => {
     it('Screen Renders', () => {
         const tree = renderer.create(<SearchbarScreen />).toJSON();
         expect(tree).toMatchSnapshot();

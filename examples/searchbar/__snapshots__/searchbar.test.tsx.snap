@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Multiselect List Tests Screen Renders 1`] = `
+exports[`SearchBar Tests Screen Renders 1`] = `
 <View
   style={
     Object {
@@ -98,6 +98,8 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                 "fontFamily": "System",
                 "fontSize": 20,
                 "lineHeight": 20,
+                "textAlign": "auto",
+                "writingDirection": "ltr",
               }
             }
             testID="header-title"
@@ -113,6 +115,8 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                 "fontFamily": "System",
                 "fontSize": 18,
                 "lineHeight": 18,
+                "textAlign": "auto",
+                "writingDirection": "ltr",
               }
             }
             testID="header-subtitle"
@@ -163,7 +167,7 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   "color": "white",
                   "fontSize": 24,
                 },
-                undefined,
+                Object {},
                 Object {
                   "fontFamily": "Material Icons",
                   "fontStyle": "normal",
@@ -667,7 +671,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -691,6 +705,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -731,6 +749,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -819,7 +841,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -843,6 +875,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -883,6 +919,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -971,7 +1011,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -995,6 +1045,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -1035,6 +1089,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -1123,7 +1181,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -1147,6 +1215,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -1187,6 +1259,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -1275,7 +1351,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -1299,6 +1385,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -1339,6 +1429,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -1427,7 +1521,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -1451,6 +1555,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -1491,6 +1599,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -1579,7 +1691,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -1603,6 +1725,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -1643,6 +1769,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -1731,7 +1861,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -1755,6 +1895,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -1795,6 +1939,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -1883,7 +2031,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -1907,6 +2065,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -1947,6 +2109,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -2035,7 +2201,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -2059,6 +2235,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   Object {
                     "color": "#000000",
                   },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -2099,6 +2279,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
