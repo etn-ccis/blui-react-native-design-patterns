@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@pxblue/colors';
 import { DataList } from './components/DataList';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { ListItem } from './utilities';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
@@ -16,8 +17,13 @@ const styles = StyleSheet.create({
     },
 });
 
-export const MultiselectListScreen: React.FC = () => {
+export type MultiselectListProps = {
+    hardcodedData?: ListItem[];
+};
+
+export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
+    const { hardcodedData } = props;
 
     const toggleMenu = (): void => {
         navigation.openDrawer();
@@ -34,7 +40,7 @@ export const MultiselectListScreen: React.FC = () => {
                     },
                 }}
             />
-            <DataList />
+            <DataList hardcodedData={hardcodedData} />
         </View>
     );
 };

@@ -32,8 +32,13 @@ const styles = StyleSheet.create({
     },
 });
 
-export const DataList: React.FC = () => {
-    const [list, setList] = useState(generateData());
+export type DataListProps = {
+    hardcodedData?: ListItem[];
+};
+
+export const DataList: React.FC<DataListProps> = (props) => {
+    const { hardcodedData } = props;
+    const [list, setList] = useState(hardcodedData ? hardcodedData : generateData());
     const [selectedItems, setSelectedItems]: any = useState([]);
 
     const onSelect = (item: ListItem): void => {

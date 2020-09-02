@@ -98,6 +98,8 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                 "fontFamily": "System",
                 "fontSize": 20,
                 "lineHeight": 20,
+                "textAlign": "auto",
+                "writingDirection": "ltr",
               }
             }
             testID="header-title"
@@ -183,7 +185,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -208,6 +220,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
+                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -227,7 +243,7 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                 ]
               }
             >
-              Item 14
+              item 1
             </Text>
             <View
               style={
@@ -248,6 +264,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                       "color": "#000000",
                     },
                     Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
                       "fontFamily": "System",
                       "fontSize": 14,
                       "fontWeight": "500",
@@ -264,7 +284,7 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Status: alarm
+                item 1 details
               </Text>
             </View>
             <View
@@ -330,7 +350,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -355,6 +385,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
+                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -374,7 +408,7 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                 ]
               }
             >
-              Item 96
+              item 2
             </Text>
             <View
               style={
@@ -395,6 +429,10 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                       "color": "#000000",
                     },
                     Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
                       "fontFamily": "System",
                       "fontSize": 14,
                       "fontWeight": "500",
@@ -411,7 +449,7 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Status: normal
+                item 2 details
               </Text>
             </View>
             <View
@@ -477,7 +515,17 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             }
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+              }
             >
               <Text />
             </View>
@@ -502,152 +550,9 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
-                    "fontFamily": "System",
-                    "fontSize": 16,
-                    "fontWeight": "400",
-                    "letterSpacing": 0,
+                    "writingDirection": "ltr",
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
-                  undefined,
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    undefined,
-                  ],
-                ]
-              }
-            >
-              Item 52
-            </Text>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <Text
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontWeight": "500",
-                      "letterSpacing": 0,
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
-                    undefined,
-                    Object {
-                      "color": "#000000",
-                    },
-                  ]
-                }
-              >
-                Status: normal
-              </Text>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            />
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffffff",
-              "flexDirection": "row",
-              "height": 72,
-              "opacity": 1,
-              "paddingRight": 16,
-            }
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": undefined,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 0,
-                  "width": 6,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          >
-            <View
-              style={null}
-            >
-              <Text />
-            </View>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "flex": 1,
-                  "paddingHorizontal": 16,
-                },
-                undefined,
-              ]
-            }
-          >
-            <Text
-              ellipsizeMode="tail"
-              numberOfLines={1}
-              style={
-                Array [
-                  Object {
-                    "color": "#000000",
-                  },
+                  Object {},
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
@@ -668,7 +573,7 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                 ]
               }
             >
-              Item 34
+              item 3
             </Text>
             <View
               style={
@@ -689,152 +594,9 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                       "color": "#000000",
                     },
                     Object {
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontWeight": "500",
-                      "letterSpacing": 0,
+                      "writingDirection": "ltr",
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
-                    undefined,
-                    Object {
-                      "color": "#000000",
-                    },
-                  ]
-                }
-              >
-                Status: normal
-              </Text>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            />
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffffff",
-              "flexDirection": "row",
-              "height": 72,
-              "opacity": 1,
-              "paddingRight": 16,
-            }
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": undefined,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 0,
-                  "width": 6,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          >
-            <View
-              style={null}
-            >
-              <Text />
-            </View>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "flex": 1,
-                  "paddingHorizontal": 16,
-                },
-                undefined,
-              ]
-            }
-          >
-            <Text
-              ellipsizeMode="tail"
-              numberOfLines={1}
-              style={
-                Array [
-                  Object {
-                    "color": "#000000",
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontSize": 16,
-                    "fontWeight": "400",
-                    "letterSpacing": 0,
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
-                  undefined,
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    undefined,
-                  ],
-                ]
-              }
-            >
-              Item 54
-            </Text>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <Text
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -852,742 +614,7 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Status: normal
-              </Text>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            />
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffffff",
-              "flexDirection": "row",
-              "height": 72,
-              "opacity": 1,
-              "paddingRight": 16,
-            }
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": undefined,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 0,
-                  "width": 6,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          >
-            <View
-              style={null}
-            >
-              <Text />
-            </View>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "flex": 1,
-                  "paddingHorizontal": 16,
-                },
-                undefined,
-              ]
-            }
-          >
-            <Text
-              ellipsizeMode="tail"
-              numberOfLines={1}
-              style={
-                Array [
-                  Object {
-                    "color": "#000000",
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontSize": 16,
-                    "fontWeight": "400",
-                    "letterSpacing": 0,
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
-                  undefined,
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    undefined,
-                  ],
-                ]
-              }
-            >
-              Item 45
-            </Text>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <Text
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontWeight": "500",
-                      "letterSpacing": 0,
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
-                    undefined,
-                    Object {
-                      "color": "#000000",
-                    },
-                  ]
-                }
-              >
-                Status: alarm
-              </Text>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            />
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffffff",
-              "flexDirection": "row",
-              "height": 72,
-              "opacity": 1,
-              "paddingRight": 16,
-            }
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": undefined,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 0,
-                  "width": 6,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          >
-            <View
-              style={null}
-            >
-              <Text />
-            </View>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "flex": 1,
-                  "paddingHorizontal": 16,
-                },
-                undefined,
-              ]
-            }
-          >
-            <Text
-              ellipsizeMode="tail"
-              numberOfLines={1}
-              style={
-                Array [
-                  Object {
-                    "color": "#000000",
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontSize": 16,
-                    "fontWeight": "400",
-                    "letterSpacing": 0,
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
-                  undefined,
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    undefined,
-                  ],
-                ]
-              }
-            >
-              Item 96
-            </Text>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <Text
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontWeight": "500",
-                      "letterSpacing": 0,
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
-                    undefined,
-                    Object {
-                      "color": "#000000",
-                    },
-                  ]
-                }
-              >
-                Status: normal
-              </Text>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            />
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffffff",
-              "flexDirection": "row",
-              "height": 72,
-              "opacity": 1,
-              "paddingRight": 16,
-            }
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": undefined,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 0,
-                  "width": 6,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          >
-            <View
-              style={null}
-            >
-              <Text />
-            </View>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "flex": 1,
-                  "paddingHorizontal": 16,
-                },
-                undefined,
-              ]
-            }
-          >
-            <Text
-              ellipsizeMode="tail"
-              numberOfLines={1}
-              style={
-                Array [
-                  Object {
-                    "color": "#000000",
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontSize": 16,
-                    "fontWeight": "400",
-                    "letterSpacing": 0,
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
-                  undefined,
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    undefined,
-                  ],
-                ]
-              }
-            >
-              Item 15
-            </Text>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <Text
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontWeight": "500",
-                      "letterSpacing": 0,
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
-                    undefined,
-                    Object {
-                      "color": "#000000",
-                    },
-                  ]
-                }
-              >
-                Status: normal
-              </Text>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            />
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffffff",
-              "flexDirection": "row",
-              "height": 72,
-              "opacity": 1,
-              "paddingRight": 16,
-            }
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": undefined,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 0,
-                  "width": 6,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          >
-            <View
-              style={null}
-            >
-              <Text />
-            </View>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "flex": 1,
-                  "paddingHorizontal": 16,
-                },
-                undefined,
-              ]
-            }
-          >
-            <Text
-              ellipsizeMode="tail"
-              numberOfLines={1}
-              style={
-                Array [
-                  Object {
-                    "color": "#000000",
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontSize": 16,
-                    "fontWeight": "400",
-                    "letterSpacing": 0,
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
-                  undefined,
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    undefined,
-                  ],
-                ]
-              }
-            >
-              Item 16
-            </Text>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <Text
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontWeight": "500",
-                      "letterSpacing": 0,
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
-                    undefined,
-                    Object {
-                      "color": "#000000",
-                    },
-                  ]
-                }
-              >
-                Status: alarm
-              </Text>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            />
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffffff",
-              "flexDirection": "row",
-              "height": 72,
-              "opacity": 1,
-              "paddingRight": 16,
-            }
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": undefined,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 0,
-                  "width": 6,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          >
-            <View
-              style={null}
-            >
-              <Text />
-            </View>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "flex": 1,
-                  "paddingHorizontal": 16,
-                },
-                undefined,
-              ]
-            }
-          >
-            <Text
-              ellipsizeMode="tail"
-              numberOfLines={1}
-              style={
-                Array [
-                  Object {
-                    "color": "#000000",
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontSize": 16,
-                    "fontWeight": "400",
-                    "letterSpacing": 0,
-                  },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
-                  undefined,
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    undefined,
-                  ],
-                ]
-              }
-            >
-              Item 9
-            </Text>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                  },
-                  undefined,
-                ]
-              }
-            >
-              <Text
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontWeight": "500",
-                      "letterSpacing": 0,
-                    },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
-                    undefined,
-                    Object {
-                      "color": "#000000",
-                    },
-                  ]
-                }
-              >
-                Status: normal
+                item 3 details
               </Text>
             </View>
             <View
