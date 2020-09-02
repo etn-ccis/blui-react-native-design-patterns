@@ -99,6 +99,8 @@ exports[`Action List Tests Screen Renders 1`] = `
                 "fontFamily": "System",
                 "fontSize": 20,
                 "lineHeight": 20,
+                "textAlign": "auto",
+                "writingDirection": "ltr",
               }
             }
             testID="header-title"
@@ -272,6 +274,10 @@ exports[`Action List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
+                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -311,6 +317,10 @@ exports[`Action List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -406,6 +416,10 @@ exports[`Action List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
+                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -445,6 +459,10 @@ exports[`Action List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -540,6 +558,10 @@ exports[`Action List Tests Screen Renders 1`] = `
                     "color": "#000000",
                   },
                   Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
+                  Object {
                     "fontFamily": "System",
                     "fontSize": 16,
                     "fontWeight": "400",
@@ -579,6 +601,10 @@ exports[`Action List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -754,7 +780,17 @@ exports[`Action List Tests Screen Renders 1`] = `
               }
             >
               <View
-                style={null}
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "flex-start",
+                      "backgroundColor": "transparent",
+                      "justifyContent": "center",
+                      "width": 40,
+                    },
+                    undefined,
+                  ]
+                }
               >
                 <Text />
               </View>
@@ -778,6 +814,10 @@ exports[`Action List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 16,
@@ -874,7 +914,17 @@ exports[`Action List Tests Screen Renders 1`] = `
               }
             >
               <View
-                style={null}
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "flex-start",
+                      "backgroundColor": "transparent",
+                      "justifyContent": "center",
+                      "width": 40,
+                    },
+                    undefined,
+                  ]
+                }
               >
                 <Text />
               </View>
@@ -898,6 +948,10 @@ exports[`Action List Tests Screen Renders 1`] = `
                     Object {
                       "color": "#000000",
                     },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
                     Object {
                       "fontFamily": "System",
                       "fontSize": 16,
