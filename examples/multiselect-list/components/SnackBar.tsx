@@ -1,14 +1,12 @@
-import React, { CSSProperties, ReactNode } from 'react';
-import { Animated } from 'react-native';
+import React from 'react';
+import { Animated, ViewProps } from 'react-native';
 
-export type SnackBarProps = {
+export type SnackBarProps = ViewProps & {
     show: boolean;
-    style: CSSProperties;
-    children: ReactNode;
 };
 
 export const SnackBar: React.FC<SnackBarProps> = (props) => {
-    const bounceValue = new Animated.Value(props.show ? 0 : 100);
+    const bounceValue = props.show ? 0 : 100;
 
     return props.show ? (
         <Animated.View style={[props.style, { transform: [{ translateY: bounceValue }] }]}>
