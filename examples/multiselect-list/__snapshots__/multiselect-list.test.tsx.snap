@@ -77,7 +77,7 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             "flex": 1,
             "flexDirection": "column",
             "justifyContent": "flex-end",
-            "marginRight": 0,
+            "marginRight": 40,
           }
         }
       >
@@ -121,14 +121,37 @@ exports[`Multiselect List Tests Screen Renders 1`] = `
             undefined,
           ]
         }
-      />
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "height": 40,
+              "opacity": 1,
+              "padding": 8,
+              "width": 40,
+            }
+          }
+          testID="header-action-item0"
+        >
+          <Text />
+        </View>
+      </View>
     </View>
   </RCTSafeAreaView>
   <RCTSafeAreaView
     emulateUnlessSupported={true}
     style={
       Object {
-        "backgroundColor": "#fdfdfd",
+        "backgroundColor": "#ffffff",
         "flex": 1,
       }
     }

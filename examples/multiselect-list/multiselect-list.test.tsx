@@ -8,6 +8,10 @@ jest.mock('@react-navigation/native', () => ({
     useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),
 }));
 
+jest.mock('react-native-safe-area-context', () => ({
+    useSafeArea: (): any => ({}),
+}));
+
 const hardcodedData: ListItem[] = [
     {
         id: 1,
