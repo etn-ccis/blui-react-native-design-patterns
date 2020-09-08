@@ -14,6 +14,7 @@ import { LoadingStatesScreen } from '../examples/loading-states/LoadingStates';
 import { StatusListScreen } from '../examples/status-list/StatusList';
 import { SearchbarScreen } from '../examples/searchbar/Searchbar';
 import { MultiselectListScreen } from '../examples/multiselect-list/MultiselectList';
+import { SortableListScreen } from '../examples/sortable-list/SortableList';
 
 const Drawer = createDrawerNavigator();
 
@@ -36,9 +37,7 @@ export const MyDrawer: React.FC = () => (
         <Drawer.Screen name={ROUTES.ACTION_LIST.route} component={ActionListScreen} />
         <Drawer.Screen name={ROUTES.DATA_LIST.route} component={DataListScreen} />
         <Drawer.Screen name={ROUTES.MULTISELECT_LIST.route} component={MultiselectListScreen} />
-        <Drawer.Screen name={ROUTES.SORTABLE_LIST.route}>
-            {(): JSX.Element => <Placeholder title={ROUTES.SORTABLE_LIST.name} />}
-        </Drawer.Screen>
+        <Drawer.Screen name={ROUTES.SORTABLE_LIST.route} component={SortableListScreen} />
         <Drawer.Screen name={ROUTES.STATUS_LIST.route} component={StatusListScreen} />
         <Drawer.Screen name={ROUTES.RESPONSIVE_TABLE.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.RESPONSIVE_TABLE.name} />}
