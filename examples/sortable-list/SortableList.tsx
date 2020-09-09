@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@pxblue/colors';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import DraggableFlatList from 'react-native-draggable-flatlist';
+import { Surface } from 'react-native-paper';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 const DragHandleIcon = wrapIcon({ IconClass: MaterialIcons, name: 'drag-handle' });
@@ -15,6 +16,21 @@ const EditIcon = wrapIcon({ IconClass: MaterialIcons, name: 'edit' });
 type ListItem = {
     name: string;
     value: number;
+};
+
+type DraggableItemProps = {
+    item: ListItem;
+    index: number;
+    drag: () => void;
+    isActive: boolean;
+};
+
+type ItemProps = {
+    item: ListItem;
+};
+
+type DataProps = {
+    data: ListItem[];
 };
 
 const exampleData: ListItem[] = [
@@ -45,47 +61,23 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: Colors.white[50],
     },
-    dragging: {
-        shadowColor: Colors.darkBlack[900],
-        shadowOffset: {
-            width: 0,
-            height: 5,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        elevation: 4,
-    },
 });
-
-type DraggableItemProps = {
-    item: ListItem;
-    index: number;
-    drag: () => void;
-    isActive: boolean;
-};
-
-type ItemProps = {
-    item: ListItem;
-};
-
-type DataProps = {
-    data: ListItem[];
-};
 
 export const SortableListScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const [sortableData, setSortableData] = useState(exampleData);
-    const [sortable, setSortable] = useState(false);
+    const [isSortable, setIsSortable] = useState(false);
 
     const renderDragableItem = ({ item, drag, isActive }: DraggableItemProps): JSX.Element => (
         <TouchableOpacity onLongPress={drag}>
-            <InfoListItem
-                title={item.name}
-                rightComponent={<Text>{item.value}</Text>}
-                IconClass={DragHandleIcon}
-                backgroundColor={Colors.white[50]}
-                style={isActive ? styles.dragging : {}}
-            />
+            <Surface accessibilityStates style={{ elevation: isActive ? 4 : 0 }}>
+                <InfoListItem
+                    title={item.name}
+                    rightComponent={<Text>{item.value}</Text>}
+                    IconClass={DragHandleIcon}
+                    backgroundColor={Colors.white[50]}
+                />
+            </Surface>
         </TouchableOpacity>
     );
 
@@ -94,7 +86,7 @@ export const SortableListScreen: React.FC = () => {
     );
 
     const toggleEdit = (): void => {
-        setSortable(!sortable);
+        setIsSortable(!isSortable);
     };
 
     const toggleMenu = (): void => {
@@ -113,14 +105,14 @@ export const SortableListScreen: React.FC = () => {
                 }}
                 actionItems={[
                     {
-                        icon: sortable ? SaveIcon : EditIcon,
+                        icon: isSortable ? SaveIcon : EditIcon,
                         onPress: (): void => {
                             toggleEdit();
                         },
                     },
                 ]}
             />
-            {sortable ? (
+            {isSortable ? (
                 <DraggableFlatList
                     data={sortableData}
                     renderItem={renderDragableItem}
