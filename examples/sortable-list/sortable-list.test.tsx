@@ -7,8 +7,22 @@ jest.mock('@react-navigation/native', () => ({
 }));
 
 describe('Sortable List Tests', () => {
-    it('Screen Renders', () => {
+    it('renders the screen', () => {
         const tree = renderer.create(<SortableListScreen />).toJSON();
         expect(tree).toMatchSnapshot();
     });
 });
+
+// @TODO: Implement the following test cases
+
+// it('enables sorting', () => {
+
+// });
+
+// it('disables sorting', () => {
+
+// });
+
+// it('sorts appropriately', () => {
+
+// });

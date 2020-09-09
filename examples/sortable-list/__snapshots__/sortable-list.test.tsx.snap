@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sortable List Tests Screen Renders 1`] = `
+exports[`Sortable List Tests renders the screen 1`] = `
 <View
   style={
     Object {
