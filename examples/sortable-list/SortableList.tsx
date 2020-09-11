@@ -82,7 +82,7 @@ export const SortableListScreen: React.FC = () => {
     );
 
     const renderItem = ({ item }: ItemProps): JSX.Element => (
-        <InfoListItem title={item.name} rightComponent={<Text>{item.value}</Text>} />
+        <InfoListItem title={item.name} rightComponent={<Text>{item.value}</Text>} hidePadding />
     );
 
     const toggleEdit = (): void => {

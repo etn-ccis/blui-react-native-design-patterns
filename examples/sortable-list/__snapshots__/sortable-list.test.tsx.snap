@@ -239,19 +239,6 @@ exports[`Sortable List Tests renders the screen 1`] = `
             style={
               Array [
                 Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
                   "flex": 1,
                   "paddingHorizontal": 16,
                 },
@@ -356,19 +343,6 @@ exports[`Sortable List Tests renders the screen 1`] = `
                   "position": "absolute",
                   "top": 0,
                   "width": 6,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
                 },
                 undefined,
               ]
@@ -491,19 +465,6 @@ exports[`Sortable List Tests renders the screen 1`] = `
             style={
               Array [
                 Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
                   "flex": 1,
                   "paddingHorizontal": 16,
                 },
@@ -617,19 +578,6 @@ exports[`Sortable List Tests renders the screen 1`] = `
             style={
               Array [
                 Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
                   "flex": 1,
                   "paddingHorizontal": 16,
                 },
@@ -734,19 +682,6 @@ exports[`Sortable List Tests renders the screen 1`] = `
                   "position": "absolute",
                   "top": 0,
                   "width": 6,
-                },
-                undefined,
-              ]
-            }
-          />
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "flex-start",
-                  "justifyContent": "center",
-                  "marginLeft": 16,
-                  "width": 40,
                 },
                 undefined,
               ]
