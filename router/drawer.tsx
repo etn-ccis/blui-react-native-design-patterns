@@ -6,7 +6,6 @@ import * as Colors from '@pxblue/colors';
 import { ROUTES } from './routes';
 import { View } from 'react-native';
 import bg from '../assets/images/topology.png';
-import pJSON from '../package.json';
 
 export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) => {
     const { navigation } = props;
@@ -22,7 +21,7 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
         <Drawer>
             <DrawerHeader
                 title={'PX Blue'}
-                subtitle={`React Native Code Examples (${pJSON.version})`}
+                subtitle={`React Native Code Examples (1.0.0)`}
                 styles={{
                     subtitle: { lineHeight: 16 },
                 }}
