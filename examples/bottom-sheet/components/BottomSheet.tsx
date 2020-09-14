@@ -1,5 +1,5 @@
 import React, { ReactNode, useState, useEffect } from 'react';
-import { SafeAreaView, View } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import * as Colors from '@pxblue/colors';
 import Modal from 'react-native-modal';
 
@@ -9,7 +9,7 @@ type BottomSheetProps = {
     dismissBottomSheet?: () => void;
 };
 
-export const BottomSheetScreen: React.FC = (props: BottomSheetProps) => {
+export const BottomSheetScreen: React.FC<BottomSheetProps> = (props) => {
     const { show, children, dismissBottomSheet } = props;
     const [isBottomSheetVisible, setIsBottomSheetVisible] = useState(show ? true : false);
 
@@ -18,16 +18,14 @@ export const BottomSheetScreen: React.FC = (props: BottomSheetProps) => {
     }, [show]);
 
     return (
-        <SafeAreaView>
-            <Modal
-                isVisible={isBottomSheetVisible}
-                backdropOpacity={0.5}
-                onBackdropPress={dismissBottomSheet}
-                supportedOrientations={['portrait', 'landscape']}
-                style={{ justifyContent: 'flex-end', margin: 0 }}
-            >
-                <View style={{ backgroundColor: Colors.white[50] }}>{children}</View>
-            </Modal>
-        </SafeAreaView>
+        <Modal
+            isVisible={isBottomSheetVisible}
+            backdropOpacity={0.5}
+            onBackdropPress={dismissBottomSheet}
+            supportedOrientations={['portrait', 'landscape']}
+            style={{ justifyContent: 'flex-end', margin: 0 }}
+        >
+            <SafeAreaView style={{ backgroundColor: Colors.white[50] }}>{children}</SafeAreaView>
+        </Modal>
     );
 };
