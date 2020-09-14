@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@pxblue/colors';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { ListItem, generateData, createRandomItem } from './utilities';
-import { useSafeArea } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { SnackBar } from './components/SnackBar';
 import { IconButton, Button } from 'react-native-paper';
 
@@ -62,7 +62,7 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const [list, setList] = useState(hardcodedData ? hardcodedData : generateData());
     const [selectedItems, setSelectedItems]: any = useState([]);
-    const insets = useSafeArea();
+    const insets = useSafeAreaInsets();
 
     const toggleMenu = (): void => {
         navigation.openDrawer();
@@ -90,15 +90,15 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
         });
         setList(updatedList);
         setSelectedItems([]);
-    }, [selectedItems]);
+    }, [selectedItems, list]);
 
     const onCancel = useCallback((): void => {
         setSelectedItems([]);
-    }, [selectedItems]);
+    }, [setSelectedItems]);
 
     const addItem = useCallback((): void => {
         setList([...list, createRandomItem()]);
-    }, [list]);
+    }, [list, setList]);
 
     return (
         <View style={styles.container}>
