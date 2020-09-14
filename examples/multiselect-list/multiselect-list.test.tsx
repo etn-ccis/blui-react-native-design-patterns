@@ -9,7 +9,7 @@ jest.mock('@react-navigation/native', () => ({
 }));
 
 jest.mock('react-native-safe-area-context', () => ({
-    useSafeArea: (): any => ({}),
+    useSafeAreaInsets: (): any => ({}),
 }));
 
 const hardcodedData: ListItem[] = [
