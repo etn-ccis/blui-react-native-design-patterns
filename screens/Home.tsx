@@ -2,9 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import { Header, wrapIcon, H2, Body1 } from '@pxblue/react-native-components';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { View, Text, Linking, StyleSheet, ScrollView, Animated } from 'react-native';
+import { View, Linking, StyleSheet, ScrollView, Animated } from 'react-native';
 import * as Colors from '@pxblue/colors';
 import { Button, Divider } from 'react-native-paper';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
@@ -12,6 +13,7 @@ const styles = StyleSheet.create({
     container: {
         paddingLeft: 16,
         paddingRight: 16,
+        paddingBottom: '100%',
     },
     header: {
         paddingTop: 48,
@@ -21,19 +23,24 @@ const styles = StyleSheet.create({
     },
     patternsMenuButton: {
         marginTop: 24,
-        marginBottom: 24,
+        marginBottom: 40,
         borderColor: Colors.blue[500],
     },
     divider: {
-        marginBottom: 24,
+        marginBottom: 32,
+        marginHorizontal: -16,
     },
     link: {
-        marginBottom: 8,
+        marginBottom: 16,
+        alignSelf: 'flex-start',
+    },
+    linkContent: {
+        color: Colors.black[500],
     },
 });
 
 export const Home: React.FC = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
 
     const toggleMenu = (): void => {
         navigation.openDrawer();
@@ -76,7 +83,7 @@ export const Home: React.FC = () => {
     return (
         <View style={{ flex: 1 }}>
             <Header
-                title={'Design Pattern Examples'}
+                title={'PX Blue Design Patterns'}
                 navigation={{
                     icon: MenuIcon,
                     onPress: (): void => {
@@ -87,23 +94,23 @@ export const Home: React.FC = () => {
             <ScrollView contentContainerStyle={styles.container} style={{ flex: 1 }}>
                 <Animated.View style={{ opacity: fadeAnimTitle }}>
                     <H2 style={styles.header}>
-                        The <Text style={{ color: Colors.blue[500] }}>Patterns</Text>.
+                        The <H2 color={'primary'}>Patterns</H2>.
                     </H2>
                 </Animated.View>
 
                 <Animated.View style={{ opacity: fadeAnimContent }}>
                     <Body1 style={styles.paragraph}>
-                        A <Text style={{ fontWeight: 'bold' }}>design pattern</Text> is a common interaction or behavior
-                        that should be consistent across applications. In general, we follow most of the design patterns
-                        and behavior from the Material Design system. PX Blue design patterns are patterns that
+                        A <Body1 font={'medium'}>design pattern</Body1> is a common interaction or behavior that should
+                        be consistent across applications. In general, we follow most of the design patterns and
+                        behavior from the Material Design system. PX Blue design patterns are patterns that
                         extend/modify those from Material or are specific to PX Blue applications.
                     </Body1>
 
                     <Body1 style={styles.paragraph}>
                         While everyone is encouraged to interact with the design pattern demos to become familiar with
                         the interactions and behaviors, this application is primarily intended for
-                        <Text style={{ fontWeight: 'bold' }}> React Native developers </Text> to provide examples of how
-                        to implement these patterns in their own applications.
+                        <Body1 font={'medium'}> React Native developers </Body1> to provide examples of how to implement
+                        these patterns in their own applications.
                     </Body1>
 
                     <Button
@@ -124,6 +131,7 @@ export const Home: React.FC = () => {
 
                     <Button
                         style={styles.link}
+                        labelStyle={styles.linkContent}
                         accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue.github.io/development/frameworks-mobile/react-native');
@@ -133,6 +141,7 @@ export const Home: React.FC = () => {
                     </Button>
                     <Button
                         style={styles.link}
+                        labelStyle={styles.linkContent}
                         accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue.github.io/patterns');
@@ -142,6 +151,7 @@ export const Home: React.FC = () => {
                     </Button>
                     <Button
                         style={styles.link}
+                        labelStyle={styles.linkContent}
                         accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue-components.github.io/react-native/');
@@ -151,6 +161,7 @@ export const Home: React.FC = () => {
                     </Button>
                     <Button
                         style={styles.link}
+                        labelStyle={styles.linkContent}
                         accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://github.com/pxblue');
@@ -160,6 +171,7 @@ export const Home: React.FC = () => {
                     </Button>
                     <Button
                         style={styles.link}
+                        labelStyle={styles.linkContent}
                         accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://github.com/pxblue/react-design-patterns');
@@ -169,6 +181,7 @@ export const Home: React.FC = () => {
                     </Button>
                     <Button
                         style={styles.link}
+                        labelStyle={styles.linkContent}
                         accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue.github.io/roadmap');
@@ -178,6 +191,7 @@ export const Home: React.FC = () => {
                     </Button>
                     <Button
                         style={styles.link}
+                        labelStyle={styles.linkContent}
                         accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue.github.io/community/contactus');
