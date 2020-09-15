@@ -10,7 +10,6 @@ const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
 const styles = StyleSheet.create({
     container: {
-        // paddingTop: 48,
         paddingLeft: 16,
         paddingRight: 16,
     },
