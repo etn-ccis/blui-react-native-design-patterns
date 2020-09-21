@@ -21,7 +21,7 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
         <Drawer>
             <DrawerHeader
                 title={'PX Blue'}
-                subtitle={'React Native Code Examples'}
+                subtitle={`React Native Code Examples (1.0.0)`}
                 styles={{
                     subtitle: { lineHeight: 16 },
                 }}

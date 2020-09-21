@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, ScrollView, View } from 'react-native';
+import { StyleSheet, ScrollView, View, SafeAreaView } from 'react-native';
 import * as Colors from '@pxblue/colors';
 import { Header, InfoListItem, wrapIcon, H6 } from '@pxblue/react-native-components';
-import SafeAreaView from 'react-native-safe-area-view';
 import { ComplexBottomSheetScreen } from './components/BottomSheet';
 import { MaterialIcons } from '@expo/vector-icons';
 import { IconToggle } from './components/IconToggle';
@@ -190,7 +189,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                 dismissBottomSheet={(): void => setShowBottomSheet(false)}
                 style={styles.footer}
             >
-                <SafeAreaView forceInset={{ bottom: 'always' }}>
+                <SafeAreaView>
                     <View style={styles.rowHeader}>
                         <H6>Sort By: </H6>
                         <View style={styles.row}>

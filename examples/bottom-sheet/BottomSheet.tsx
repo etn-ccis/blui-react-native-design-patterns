@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, View, ViewStyle } from 'react-native';
+import { StyleSheet, ScrollView, View, ViewStyle } from 'react-native';
 import * as Colors from '@pxblue/colors';
 import { Header, InfoListItem, wrapIcon } from '@pxblue/react-native-components';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -71,28 +71,26 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
                     />
                 ))}
             </ScrollView>
-            <SafeAreaView>
-                <BottomSheetScreen show={showBottomSheet} dismissBottomSheet={(): void => setShowBottomSheet(false)}>
-                    <InfoListItem
-                        title={'Acknowledge All'}
-                        IconClass={DoneIcon}
-                        onPress={(): void => setShowBottomSheet(false)}
-                        testID={'menu-item-button-0'}
-                    />
-                    <InfoListItem
-                        title={'Export'}
-                        IconClass={GetAppIcon}
-                        onPress={(): void => setShowBottomSheet(false)}
-                        testID={'menu-item-button-1'}
-                    />
-                    <InfoListItem
-                        title={'Cancel'}
-                        IconClass={ClearIcon}
-                        onPress={(): void => setShowBottomSheet(false)}
-                        testID={'cancel-button'}
-                    />
-                </BottomSheetScreen>
-            </SafeAreaView>
+            <BottomSheetScreen show={showBottomSheet} dismissBottomSheet={(): void => setShowBottomSheet(false)}>
+                <InfoListItem
+                    title={'Acknowledge All'}
+                    IconClass={DoneIcon}
+                    onPress={(): void => setShowBottomSheet(false)}
+                    testID={'menu-item-button-0'}
+                />
+                <InfoListItem
+                    title={'Export'}
+                    IconClass={GetAppIcon}
+                    onPress={(): void => setShowBottomSheet(false)}
+                    testID={'menu-item-button-1'}
+                />
+                <InfoListItem
+                    title={'Cancel'}
+                    IconClass={ClearIcon}
+                    onPress={(): void => setShowBottomSheet(false)}
+                    testID={'cancel-button'}
+                />
+            </BottomSheetScreen>
         </View>
     );
 };
