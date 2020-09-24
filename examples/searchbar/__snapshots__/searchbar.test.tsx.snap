@@ -41,7 +41,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
         Object {
           "flex": 1,
           "flexDirection": "row",
-          "paddingBottom": 12,
+          "paddingBottom": 16,
           "paddingHorizontal": 16,
           "paddingTop": 16,
         }
@@ -104,24 +104,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
             }
             testID="header-title"
           >
-            President
-          </Text>
-          <Text
-            ellipsizeMode="tail"
-            numberOfLines={1}
-            style={
-              Object {
-                "color": "white",
-                "fontFamily": "System",
-                "fontSize": 18,
-                "lineHeight": 18,
-                "textAlign": "auto",
-                "writingDirection": "ltr",
-              }
-            }
-            testID="header-subtitle"
-          >
-            Leader of the Free world
+            Search Bar
           </Text>
         </View>
       </View>
