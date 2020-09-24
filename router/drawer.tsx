@@ -1,11 +1,8 @@
 import React, { useCallback } from 'react';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import { Drawer, DrawerHeader, DrawerBody, DrawerNavGroup, DrawerFooter } from '@pxblue/react-native-components';
-import { IconButton } from 'react-native-paper';
-import * as Colors from '@pxblue/colors';
 import { ROUTES } from './routes';
 import { View } from 'react-native';
-import bg from '../assets/images/topology.png';
 
 export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) => {
     const { navigation } = props;
@@ -25,17 +22,6 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                 styles={{
                     subtitle: { lineHeight: 16 },
                 }}
-                backgroundImage={bg}
-                icon={
-                    <IconButton
-                        icon="menu"
-                        size={24}
-                        color={Colors.white[50]}
-                        onPress={(): void => {
-                            navigation.closeDrawer();
-                        }}
-                    />
-                }
             />
             <DrawerBody>
                 <DrawerNavGroup
