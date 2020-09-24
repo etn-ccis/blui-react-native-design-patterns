@@ -53,8 +53,7 @@ export const List: React.FC = () => {
     return (
         <View style={styles.container}>
             <Header
-                title={'President'}
-                subtitle={'Leader of the Free world'}
+                title={'Search Bar'}
                 navigation={{
                     icon: MenuIcon,
                     onPress: (): void => {

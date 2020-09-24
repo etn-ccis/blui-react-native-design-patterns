@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         paddingBottom: '100%',
     },
     header: {
-        paddingTop: 48,
+        paddingTop: 72,
     },
     paragraph: {
         marginTop: 24,
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         marginTop: 24,
         marginBottom: 40,
         borderColor: Colors.blue[500],
+        alignSelf: 'flex-start',
     },
     divider: {
         marginBottom: 32,

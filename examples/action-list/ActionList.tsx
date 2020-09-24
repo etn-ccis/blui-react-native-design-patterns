@@ -25,7 +25,7 @@ export type ActionListProps = {
 
 const createRandomItem = (): ListItem => {
     const randomInt = parseInt(`${Math.random() * 100}`, 10);
-    return { id: randomInt, name: `Item ${randomInt}`, details: `Item ${randomInt} occurred` };
+    return { id: randomInt, name: `Item ${randomInt}`, details: `Item ${randomInt} details` };
 };
 
 const prepareData = (): ListItem[] => {
