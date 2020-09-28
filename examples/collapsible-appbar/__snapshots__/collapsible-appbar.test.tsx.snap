@@ -30,11 +30,7 @@ exports[`Collapsible Appbar Tests Screen Renders 1`] = `
 >
   <Image
     resizeMethod="resize"
-    source={
-      Object {
-        "testUri": "../../../assets/images/farm.jpg",
-      }
-    }
+    source={1}
     style={
       Object {
         "height": 220,
@@ -57,6 +53,30 @@ exports[`Collapsible Appbar Tests Screen Renders 1`] = `
       }
     }
   >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 40,
+          "margin": -8,
+          "marginRight": 24,
+          "opacity": 1,
+          "padding": 8,
+          "width": 40,
+        }
+      }
+      testID="header-navigation"
+    >
+      <Text />
+    </View>
     <View
       style={
         Object {
@@ -84,6 +104,8 @@ exports[`Collapsible Appbar Tests Screen Renders 1`] = `
               "fontFamily": "System",
               "fontSize": 30,
               "lineHeight": 30,
+              "textAlign": "auto",
+              "writingDirection": "ltr",
             }
           }
           testID="header-title"
@@ -100,6 +122,8 @@ exports[`Collapsible Appbar Tests Screen Renders 1`] = `
               "fontSize": 20,
               "lineHeight": 21,
               "opacity": 1,
+              "textAlign": "auto",
+              "writingDirection": "ltr",
             }
           }
           testID="header-info"
@@ -115,6 +139,8 @@ exports[`Collapsible Appbar Tests Screen Renders 1`] = `
               "fontFamily": "System",
               "fontSize": 18,
               "lineHeight": 18,
+              "textAlign": "auto",
+              "writingDirection": "ltr",
             }
           }
           testID="header-subtitle"

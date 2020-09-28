@@ -1,14 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { CollapsibleAppbarScreen } from './CollapsibleAppbar';
+import { DataListScreen } from './DataList';
 
 jest.mock('@react-navigation/native', () => ({
     useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),
 }));
 
-describe('Collapsible Appbar Tests', () => {
+describe('Data List Tests', () => {
     it('Screen Renders', () => {
-        const tree = renderer.create(<CollapsibleAppbarScreen />).toJSON();
+        const tree = renderer.create(<DataListScreen />).toJSON();
         expect(tree).toMatchSnapshot();
     });
 });

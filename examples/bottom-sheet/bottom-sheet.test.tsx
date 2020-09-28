@@ -1,14 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { CollapsibleAppbarScreen } from './CollapsibleAppbar';
+import { BottomSheetScreen } from './components/BottomSheet';
 
 jest.mock('@react-navigation/native', () => ({
     useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),
 }));
 
-describe('Collapsible Appbar Tests', () => {
+describe('Bottom Sheet Tests', () => {
     it('Screen Renders', () => {
-        const tree = renderer.create(<CollapsibleAppbarScreen />).toJSON();
+        const tree = renderer.create(<BottomSheetScreen />).toJSON();
         expect(tree).toMatchSnapshot();
     });
 });

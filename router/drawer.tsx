@@ -1,11 +1,8 @@
 import React, { useCallback } from 'react';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import { Drawer, DrawerHeader, DrawerBody, DrawerNavGroup, DrawerFooter } from '@pxblue/react-native-components';
-import { IconButton } from 'react-native-paper';
-import * as Colors from '@pxblue/colors';
 import { ROUTES } from './routes';
 import { View } from 'react-native';
-import bg from '../assets/images/topology.png';
 
 export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) => {
     const { navigation } = props;
@@ -21,21 +18,10 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
         <Drawer>
             <DrawerHeader
                 title={'PX Blue'}
-                subtitle={'React Native Code Examples'}
+                subtitle={`React Native Design Patterns`}
                 styles={{
                     subtitle: { lineHeight: 16 },
                 }}
-                backgroundImage={bg}
-                icon={
-                    <IconButton
-                        icon="menu"
-                        size={24}
-                        color={Colors.white[50]}
-                        onPress={(): void => {
-                            navigation.closeDrawer();
-                        }}
-                    />
-                }
             />
             <DrawerBody>
                 <DrawerNavGroup
@@ -47,8 +33,8 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                             onPress: (): void => goTo(ROUTES.HOME.route),
                         },
                         {
-                            title: 'App Bars',
-                            itemID: 'app-bars',
+                            title: 'App Bar',
+                            itemID: 'app-bar',
                             items: [
                                 {
                                     title: ROUTES.COLLAPSIBLE_APPBAR.name,
@@ -67,16 +53,16 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                             itemID: ROUTES.LOADING_STATES.name,
                             onPress: (): void => goTo(ROUTES.LOADING_STATES.route),
                         },
-                        {
-                            title: ROUTES.FORM_VALIDATION.name,
-                            itemID: ROUTES.FORM_VALIDATION.name,
-                            onPress: (): void => goTo(ROUTES.FORM_VALIDATION.route),
-                        },
-                        {
-                            title: ROUTES.I18N.name,
-                            itemID: ROUTES.I18N.name,
-                            onPress: (): void => goTo(ROUTES.I18N.route),
-                        },
+                        // {
+                        //     title: ROUTES.FORM_VALIDATION.name,
+                        //     itemID: ROUTES.FORM_VALIDATION.name,
+                        //     onPress: (): void => goTo(ROUTES.FORM_VALIDATION.route),
+                        // },
+                        // {
+                        //     title: ROUTES.I18N.name,
+                        //     itemID: ROUTES.I18N.name,
+                        //     onPress: (): void => goTo(ROUTES.I18N.route),
+                        // },
                         {
                             title: 'Lists',
                             itemID: 'lists',
@@ -106,11 +92,11 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                                     itemID: ROUTES.STATUS_LIST.name,
                                     onPress: (): void => goTo(ROUTES.STATUS_LIST.route),
                                 },
-                                {
-                                    title: ROUTES.RESPONSIVE_TABLE.name,
-                                    itemID: ROUTES.RESPONSIVE_TABLE.name,
-                                    onPress: (): void => goTo(ROUTES.RESPONSIVE_TABLE.route),
-                                },
+                                // {
+                                //     title: ROUTES.RESPONSIVE_TABLE.name,
+                                //     itemID: ROUTES.RESPONSIVE_TABLE.name,
+                                //     onPress: (): void => goTo(ROUTES.RESPONSIVE_TABLE.route),
+                                // },
                             ],
                         },
                         {
@@ -129,11 +115,11 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                                 },
                             ],
                         },
-                        {
-                            title: ROUTES.DYNAMIC_STEPPER.name,
-                            itemID: ROUTES.DYNAMIC_STEPPER.name,
-                            onPress: (): void => goTo(ROUTES.DYNAMIC_STEPPER.route),
-                        },
+                        // {
+                        //     title: ROUTES.DYNAMIC_STEPPER.name,
+                        //     itemID: ROUTES.DYNAMIC_STEPPER.name,
+                        //     onPress: (): void => goTo(ROUTES.DYNAMIC_STEPPER.route),
+                        // },
                     ]}
                 />
             </DrawerBody>
