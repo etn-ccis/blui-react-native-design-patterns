@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView, View, SafeAreaView } from 'react-native';
 import * as Colors from '@pxblue/colors';
-import { Header, InfoListItem, wrapIcon, H6 } from '@pxblue/react-native-components';
+import { Header, InfoListItem, wrapIcon, H6, EmptyState } from '@pxblue/react-native-components';
 import { ComplexBottomSheetScreen } from './components/BottomSheet';
 import { MaterialIcons } from '@expo/vector-icons';
 import { IconToggle } from './components/IconToggle';
@@ -18,6 +18,7 @@ const AccessTimeIcon = wrapIcon({ IconClass: MaterialIcons, name: 'access-time' 
 const SettingsIcon = wrapIcon({ IconClass: MaterialIcons, name: 'settings' });
 const UpdateIcon = wrapIcon({ IconClass: MaterialIcons, name: 'update' });
 const ClearIcon = wrapIcon({ IconClass: MaterialIcons, name: 'clear' });
+const ErrorIcon = wrapIcon({ IconClass: MaterialIcons, name: 'error' });
 
 const FILTERS = {
     TIME: 'time',
@@ -163,26 +164,30 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                 ]}
             />
             <SafeAreaView style={styles.container}>
-                <ScrollView>
-                    {filteredAlarmList.map((item, index) => (
-                        <InfoListItem
-                            key={index}
-                            title={`${item.active ? 'ACTIVE: ' : ''}${item.details}`}
-                            subtitle={formatDate(item.date)}
-                            backgroundColor={Colors.white[50]}
-                            IconClass={
-                                (item.type === 'alarm' && item.active && NotificatonsActiveIcon) ||
-                                (item.type === 'alarm' && !item.active && NotificatonsIcon) ||
-                                (item.type === 'settings' && SettingsIcon) ||
-                                (item.type === 'session' && UpdateIcon)
-                            }
-                            iconColor={item.active ? Colors.white[100] : undefined}
-                            fontColor={item.active ? Colors.red[500] : undefined}
-                            statusColor={item.active ? Colors.red[500] : undefined}
-                            avatar={item.active}
-                        />
-                    ))}
-                </ScrollView>
+                {filteredAlarmList.length ? (
+                    <ScrollView>
+                        {filteredAlarmList.map((item, index) => (
+                            <InfoListItem
+                                key={index}
+                                title={`${item.active ? 'ACTIVE: ' : ''}${item.details}`}
+                                subtitle={formatDate(item.date)}
+                                backgroundColor={Colors.white[50]}
+                                IconClass={
+                                    (item.type === 'alarm' && item.active && NotificatonsActiveIcon) ||
+                                    (item.type === 'alarm' && !item.active && NotificatonsIcon) ||
+                                    (item.type === 'settings' && SettingsIcon) ||
+                                    (item.type === 'session' && UpdateIcon)
+                                }
+                                iconColor={item.active ? Colors.white[100] : undefined}
+                                fontColor={item.active ? Colors.red[500] : undefined}
+                                statusColor={item.active ? Colors.red[500] : undefined}
+                                avatar={item.active}
+                            />
+                        ))}
+                    </ScrollView>
+                ) : (
+                    <EmptyState title={'No Data Found'} IconClass={ErrorIcon} />
+                )}
             </SafeAreaView>
             <ComplexBottomSheetScreen
                 show={showBottomSheet}
