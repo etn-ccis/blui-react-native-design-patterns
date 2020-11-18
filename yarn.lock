@@ -2033,9 +2033,9 @@
   integrity sha512-/3cLBoTjZs3kV1ATPA/Sp0tsL7XmlV/b8HW/qt0jqR/uP5+cdXL2YIhMXQngLRa7PhpSkEiRIYK5sl0rKsXTUg==
 
 "@pxblue/react-native-components@^4.0.0-beta.1":
-  version "4.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-4.0.0-beta.1.tgz#30aafcbade3dcd71ceb564f937e18ac141622c71"
-  integrity sha512-MO0F2sK3Ln8RpuHMoNWwQPCeMbkkPYIQPCZwz/LvDQyfMNXlpixcIb8Oavcoz/s+nRDCyrTTKTLlLEMj9/eEpg==
+  version "4.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-4.0.0-beta.2.tgz#5686a13e3e7939c4cf98911dd1b307f57304cfb2"
+  integrity sha512-vAKNOR0YVDlsuxA3kt0Z31Vd1pPYaOZZWDyy8JBqdZFbHIQpoz0wGnciNkkjN+BCARR/Qixn4qro9jIy6cx+wA==
   dependencies:
     "@pxblue/colors" "^3.0.0"
     color "^3.1.2"
