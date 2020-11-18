@@ -142,27 +142,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
           }
           testID="header-action-item0"
         >
-          <Text
-            allowFontScaling={false}
-            style={
-              Array [
-                Object {
-                  "color": "white",
-                  "fontSize": 24,
-                },
-                Object {},
-                Object {
-                  "fontFamily": "Material Icons",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-            testID="icon"
-          >
-            
-          </Text>
+          <Text />
         </View>
       </View>
     </View>
