@@ -146,7 +146,6 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                                 )}
                                 onPress={addItem}
                                 mode="contained"
-                                accessibilityStates="add item"
                             >
                                 Add Item
                             </Button>
@@ -163,12 +162,10 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                         <IconButton
                             icon={(): JSX.Element => <MaterialIcons name="cancel" color={Colors.gray[800]} size={24} />}
                             onPress={onCancel}
-                            accessibilityStates
                         />
                         <IconButton
                             icon={(): JSX.Element => <MaterialIcons name="delete" color={Colors.gray[800]} size={24} />}
                             onPress={onDelete}
-                            accessibilityStates
                         />
                     </View>
                 </View>

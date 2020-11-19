@@ -216,7 +216,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                             </IconToggle>
                         </View>
                     </View>
-                    <Divider accessibilityStates />
+                    <Divider />
                     <View style={styles.rowHeader}>
                         <H6>Show: </H6>
                         <View style={styles.row}>
@@ -254,7 +254,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                             </IconToggle>
                         </View>
                     </View>
-                    <Divider accessibilityStates />
+                    <Divider />
                     <InfoListItem
                         title={'Close'}
                         IconClass={ClearIcon}

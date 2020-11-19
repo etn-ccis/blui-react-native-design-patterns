@@ -127,7 +127,6 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                             icon={(): JSX.Element => <MaterialIcons name="add" color={Colors.white[50]} size={24} />}
                             onPress={addItem}
                             mode="contained"
-                            accessibilityStates="add an item"
                         >
                             Add An Item
                         </Button>
