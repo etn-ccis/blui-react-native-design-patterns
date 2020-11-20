@@ -8,6 +8,7 @@ import { IconToggle } from './components/IconToggle';
 import { getAlarmList, formatDate, AlarmDataObject } from './data/alarmData';
 import { useNavigation } from '@react-navigation/native';
 import { Divider } from 'react-native-paper';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 const MoreIcon = wrapIcon({ IconClass: MaterialIcons, name: 'more-vert' });
@@ -124,7 +125,7 @@ export const filterEvents = (
 const alarmList = getAlarmList(20);
 
 export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const [showBottomSheet, setShowBottomSheet] = useState(false);
     const [currentSort, setCurrentSort] = useState('time');
     const [showAlarms, setShowAlarms] = useState(true);
@@ -176,7 +177,8 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                     (item.type === 'alarm' && item.active && NotificatonsActiveIcon) ||
                                     (item.type === 'alarm' && !item.active && NotificatonsIcon) ||
                                     (item.type === 'settings' && SettingsIcon) ||
-                                    (item.type === 'session' && UpdateIcon)
+                                    (item.type === 'session' && UpdateIcon) ||
+                                    undefined
                                 }
                                 iconColor={item.active ? Colors.white[100] : undefined}
                                 fontColor={item.active ? Colors.red[500] : undefined}

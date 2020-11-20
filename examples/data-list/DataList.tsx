@@ -3,11 +3,12 @@ import { Header, InfoListItem, wrapIcon } from '@pxblue/react-native-components'
 import { View, FlatList, Text } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
 export const DataListScreen: React.FC = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
 
     const data = [
         {

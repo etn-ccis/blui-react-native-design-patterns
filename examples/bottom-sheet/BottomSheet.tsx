@@ -6,7 +6,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import alarms, { formatDate } from './data/alarmData';
 import { BottomSheetScreen } from './components/BottomSheet';
-import { Theme, useTheme } from 'react-native-paper';
+import { useTheme } from 'react-native-paper';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 const MoreIcon = wrapIcon({ IconClass: MaterialIcons, name: 'more-vert' });
@@ -17,7 +18,7 @@ const GetAppIcon = wrapIcon({ IconClass: MaterialIcons, name: 'get-app' });
 const ClearIcon = wrapIcon({ IconClass: MaterialIcons, name: 'clear' });
 
 const useStyles = (
-    theme: Theme
+    theme: ReactNativePaper.Theme
 ): StyleSheet.NamedStyles<{
     container: ViewStyle;
 }> =>
@@ -30,7 +31,7 @@ const useStyles = (
 
 export const BottomSheetAlarmsScreen: React.FC = () => {
     const [showBottomSheet, setShowBottomSheet] = useState(false);
-    const navigation = useNavigation();
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const theme = useTheme();
     const defaultStyles = useStyles(theme);
 
