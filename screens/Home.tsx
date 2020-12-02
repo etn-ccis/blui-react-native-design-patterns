@@ -116,7 +116,6 @@ export const Home: React.FC = () => {
 
                     <Button
                         style={styles.patternsMenuButton}
-                        accessibilityStates
                         mode={'outlined'}
                         color={Colors.blue[500]}
                         onPress={(): void => {
@@ -128,12 +127,11 @@ export const Home: React.FC = () => {
                 </Animated.View>
 
                 <Animated.View style={{ opacity: fadeAnimLinks, paddingBottom: 16 }}>
-                    <Divider accessibilityStates style={styles.divider} />
+                    <Divider style={styles.divider} />
 
                     <Button
                         style={styles.link}
                         labelStyle={styles.linkContent}
-                        accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue.github.io/development/frameworks-mobile/react-native');
                         }}
@@ -143,7 +141,6 @@ export const Home: React.FC = () => {
                     <Button
                         style={styles.link}
                         labelStyle={styles.linkContent}
-                        accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue.github.io/patterns');
                         }}
@@ -153,7 +150,6 @@ export const Home: React.FC = () => {
                     <Button
                         style={styles.link}
                         labelStyle={styles.linkContent}
-                        accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue-components.github.io/react-native/');
                         }}
@@ -163,7 +159,6 @@ export const Home: React.FC = () => {
                     <Button
                         style={styles.link}
                         labelStyle={styles.linkContent}
-                        accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://github.com/pxblue');
                         }}
@@ -173,7 +168,6 @@ export const Home: React.FC = () => {
                     <Button
                         style={styles.link}
                         labelStyle={styles.linkContent}
-                        accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://github.com/pxblue/react-design-patterns');
                         }}
@@ -183,7 +177,6 @@ export const Home: React.FC = () => {
                     <Button
                         style={styles.link}
                         labelStyle={styles.linkContent}
-                        accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue.github.io/roadmap');
                         }}
@@ -193,7 +186,6 @@ export const Home: React.FC = () => {
                     <Button
                         style={styles.link}
                         labelStyle={styles.linkContent}
-                        accessibilityStates
                         onPress={(): void => {
                             void Linking.openURL('https://pxblue.github.io/community/contactus');
                         }}

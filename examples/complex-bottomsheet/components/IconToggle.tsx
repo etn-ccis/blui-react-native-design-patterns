@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export const IconToggle: React.FC = (props: IconToggleProps) => {
+export const IconToggle: React.FC<IconToggleProps> = (props) => {
     const { IconComponent, label, active, onPress } = props;
     const { iconContainer } = styles;
     const color = active ? Colors.blue['500'] : Colors.black['500'];

@@ -4,8 +4,9 @@ import { View, FlatList, SafeAreaView, StyleSheet } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@pxblue/colors';
-import { Button, useTheme, Theme } from 'react-native-paper';
+import { Button, useTheme } from 'react-native-paper';
 import Modal from 'react-native-modal';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 const DeleteIcon = wrapIcon({ IconClass: MaterialIcons, name: 'delete' });
@@ -37,7 +38,7 @@ const prepareData = (): ListItem[] => {
 };
 
 export const ActionListScreen: React.FC<ActionListProps> = (props) => {
-    const theme: Theme = useTheme();
+    const theme: ReactNativePaper.Theme = useTheme();
     const { hardcodedData } = props;
 
     const styles = StyleSheet.create({
@@ -47,7 +48,7 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
         },
     });
 
-    const navigation = useNavigation();
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const [data, setData] = useState(hardcodedData ? hardcodedData : prepareData());
     const [isActionsPanelVisible, setIsActionsPanelVisible] = useState(false);
     const [selectedItemIndex, setSelectedItemIndex] = useState<number>(-1);
@@ -127,7 +128,6 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                             icon={(): JSX.Element => <MaterialIcons name="add" color={Colors.white[50]} size={24} />}
                             onPress={addItem}
                             mode="contained"
-                            accessibilityStates="add an item"
                         >
                             Add An Item
                         </Button>
