@@ -40,7 +40,7 @@ describe('Loading States Tests', () => {
         // });
     });
     describe('Screen', () => {
-        it('Screen Renders', () => {
+        it('renders the screen', () => {
             const tree = renderer.create(<LoadingStatesScreen />).toJSON();
             expect(tree).toMatchSnapshot();
         });

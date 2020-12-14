@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loading States Tests Screen Screen Renders 1`] = `
+exports[`Loading States Tests Screen renders the screen 1`] = `
 Array [
   <RCTSafeAreaView
     accessible={true}

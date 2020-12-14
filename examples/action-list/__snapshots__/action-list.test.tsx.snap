@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Action List Tests Screen Renders 1`] = `
+exports[`Action List Tests renders the screen 1`] = `
 <View
   style={
     Object {

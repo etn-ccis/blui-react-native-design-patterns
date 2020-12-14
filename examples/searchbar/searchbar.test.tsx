@@ -7,7 +7,7 @@ jest.mock('@react-navigation/native', () => ({
 }));
 
 describe('SearchBar Tests', () => {
-    it('Screen Renders', () => {
+    it('renders the screen', () => {
         const tree = renderer.create(<SearchbarScreen />).toJSON();
         expect(tree).toMatchSnapshot();
     });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bottom Sheet Tests Screen Renders 1`] = `
+exports[`Bottom Sheet Tests renders the screen 1`] = `
 <Modal
   animationType="none"
   hardwareAccelerated={false}

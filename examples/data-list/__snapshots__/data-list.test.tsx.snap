@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Data List Tests Screen Renders 1`] = `
+exports[`Data List Tests renders the screen 1`] = `
 <View>
   <RCTSafeAreaView
     accessible={true}

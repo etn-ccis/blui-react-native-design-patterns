@@ -8,7 +8,7 @@ jest.mock('@react-navigation/native', () => ({
 }));
 
 describe('Complex Bottom Sheet Tests', () => {
-    it('Screen Renders', () => {
+    it('renders the screen', () => {
         const tree = renderer.create(<ComplexBottomSheetScreen />).toJSON();
         expect(tree).toMatchSnapshot();
     });

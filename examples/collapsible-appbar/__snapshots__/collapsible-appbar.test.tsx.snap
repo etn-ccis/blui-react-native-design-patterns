@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Collapsible Appbar Tests Screen Renders 1`] = `
+exports[`Collapsible Appbar Tests renders the screen 1`] = `
 <RCTSafeAreaView
   accessible={true}
   emulateUnlessSupported={true}
