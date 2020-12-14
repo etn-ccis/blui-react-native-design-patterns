@@ -27,7 +27,7 @@ const hardcodedData: ListItem[] = [
 ];
 
 describe('Action List Tests', () => {
-    it('Screen Renders', () => {
+    it('renders the screen', () => {
         const tree = renderer.create(<ActionListScreen hardcodedData={hardcodedData} />).toJSON();
         expect(tree).toMatchSnapshot();
     });

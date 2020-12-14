@@ -49,7 +49,7 @@ const hardcodedData: InfoListItemProps[] = [
 ];
 
 describe('Status List Tests', () => {
-    it('Screen Renders', () => {
+    it('renders the screen', () => {
         const tree = renderer
             .create(<StatusListScreen hardcodedData={hardcodedData} navigation={navigationMock} />)
             .toJSON();
