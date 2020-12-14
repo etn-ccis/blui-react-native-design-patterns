@@ -1,15 +1,15 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
 import * as Colors from '@pxblue/colors';
-import { Header, wrapIcon, InfoListItem } from '@pxblue/react-native-components';
+import { Header, wrapIcon, InfoListItem, EmptyState } from '@pxblue/react-native-components';
 import { sampleData, Data } from '../data/data';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const InfoIcon = wrapIcon({ IconClass: MaterialIcons, name: 'info' });
 const PersonIcon = wrapIcon({ IconClass: MaterialIcons, name: 'person' });
+const ErrorIcon = wrapIcon({ IconClass: MaterialIcons, name: 'error' });
 
 const styles = StyleSheet.create({
     container: {
@@ -69,7 +69,7 @@ export const List: React.FC = () => {
                 }}
             />
             {results.length === 0 ? (
-                <InfoListItem title={'0 Results'} subtitle={'No matching presidents'} IconClass={InfoIcon} />
+                <EmptyState title={'0 results'} IconClass={ErrorIcon} description={'No matching presidents'} />
             ) : (
                 <FlatList
                     data={results}
