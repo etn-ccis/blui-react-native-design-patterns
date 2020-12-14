@@ -77,7 +77,8 @@ export const List: React.FC = () => {
                     renderItem={({ item }): JSX.Element => (
                         <InfoListItem
                             title={item.president}
-                            subtitle={`${item.party} ${item.tookOffice}`}
+                            subtitle={item.party}
+                            info={item.tookOffice}
                             IconClass={PersonIcon}
                         />
                     )}

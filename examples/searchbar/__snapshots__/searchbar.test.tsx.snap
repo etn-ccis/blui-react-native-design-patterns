@@ -753,7 +753,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                No Party 1789-04-30
+                No Party
               </Text>
             </View>
             <View
@@ -766,7 +766,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1789-04-30
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -923,7 +954,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Federalist 1797-03-04
+                Federalist
               </Text>
             </View>
             <View
@@ -936,7 +967,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1797-03-04
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -1093,7 +1155,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Democratic-Republican 1801-03-04
+                Democratic-Republican
               </Text>
             </View>
             <View
@@ -1106,7 +1168,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1801-03-04
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -1263,7 +1356,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Democratic-Republican 1809-03-04
+                Democratic-Republican
               </Text>
             </View>
             <View
@@ -1276,7 +1369,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1809-03-04
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -1433,7 +1557,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Democratic-Republican 1817-03-04
+                Democratic-Republican
               </Text>
             </View>
             <View
@@ -1446,7 +1570,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1817-03-04
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -1603,7 +1758,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Democratic-Republican 1825-03-04
+                Democratic-Republican
               </Text>
             </View>
             <View
@@ -1616,7 +1771,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1825-03-04
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -1773,7 +1959,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Democratic 1829-03-04
+                Democratic
               </Text>
             </View>
             <View
@@ -1786,7 +1972,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1829-03-04
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -1943,7 +2160,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Democratic 1837-03-04
+                Democratic
               </Text>
             </View>
             <View
@@ -1956,7 +2173,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1837-03-04
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -2113,7 +2361,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Whig 1841-03-04
+                Whig
               </Text>
             </View>
             <View
@@ -2126,7 +2374,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1841-03-04
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -2283,7 +2562,7 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   ]
                 }
               >
-                Whig 1841-04-04
+                Whig
               </Text>
             </View>
             <View
@@ -2296,7 +2575,38 @@ exports[`SearchBar Tests Screen Renders 1`] = `
                   undefined,
                 ]
               }
-            />
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                    },
+                    Object {
+                      "writingDirection": "ltr",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 0,
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#000000",
+                    },
+                  ]
+                }
+              >
+                1841-04-04
+              </Text>
+            </View>
           </View>
         </View>
       </View>
