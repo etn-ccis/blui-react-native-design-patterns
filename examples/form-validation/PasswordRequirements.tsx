@@ -12,11 +12,11 @@ export type PasswordRequirement = {
     regex: RegExp;
 };
 
-const SPECIAL_CHAR_REGEX = /[!"#$%&'()*+,-./:;<=>?@[\]^`{|}~]+/;
-const LENGTH_REGEX = /^.{8,16}$/;
-const NUMBERS_REGEX = /[0-9]+/;
-const UPPER_CASE_REGEX = /[A-Z]+/;
-const LOWER_CASE_REGEX = /[a-z]+/;
+export const SPECIAL_CHAR_REGEX = /(!|@|#|\$|\^|&)+/;
+export const LENGTH_REGEX = /^.{8,16}$/;
+export const NUMBERS_REGEX = /[0-9]+/;
+export const UPPER_CASE_REGEX = /[A-Z]+/;
+export const LOWER_CASE_REGEX = /[a-z]+/;
 
 export const passwordRequirements: PasswordRequirement[] = [
     {

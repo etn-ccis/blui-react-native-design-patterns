@@ -28,14 +28,18 @@ export const RequirementCheck: React.FC<RequirementCheckProps> = (props) => {
     const theme = useTheme(props.theme);
     const styles = makeStyles();
 
-    function colorIfValid(valid: boolean): string {
-        return valid ? theme.colors.primary : Colors.gray['100'];
+    function iconColorIfValid(valid: boolean): string {
+        return valid ? theme.colors.primary : Colors.gray['200'];
+    }
+
+    function textColorIfValid(valid: boolean): string {
+        return valid ? Colors.gray['300'] : theme.colors.text;
     }
 
     return (
         <View style={styles.itemContainer}>
-            <MatIcon name={'check'} size={24} color={colorIfValid(isChecked)} />
-            <Subtitle2 font={'regular'} style={styles.text}>
+            <MatIcon name={'check'} size={24} color={iconColorIfValid(isChecked)} />
+            <Subtitle2 font={'regular'} style={[styles.text, { color: textColorIfValid(isChecked) }]}>
                 {text}
             </Subtitle2>
         </View>
