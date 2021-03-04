@@ -181,7 +181,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
               Object {},
               undefined,
               Object {
-                "marginBottom": 16,
+                "marginBottom": 24,
               },
             ]
           }
@@ -285,7 +285,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Input
+                    Input*
                   </Text>
                   <Text
                     numberOfLines={1}
@@ -317,7 +317,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Input
+                    Input*
                   </Text>
                 </View>
                 <TextInput
@@ -379,6 +379,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
               }
             >
               <Text
+                onLayout={[Function]}
                 style={
                   Array [
                     Object {
@@ -406,6 +407,9 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "position": "absolute",
                       },
                       undefined,
+                      Object {
+                        "bottom": 20,
+                      },
                     ],
                   ]
                 }
@@ -526,7 +530,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Enter Your Email
+                    Enter Your Email*
                   </Text>
                   <Text
                     numberOfLines={1}
@@ -558,7 +562,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Enter Your Email
+                    Enter Your Email*
                   </Text>
                 </View>
                 <TextInput
@@ -620,6 +624,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
               }
             >
               <Text
+                onLayout={[Function]}
                 style={
                   Array [
                     Object {
@@ -647,6 +652,9 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "position": "absolute",
                       },
                       undefined,
+                      Object {
+                        "bottom": 20,
+                      },
                     ],
                   ]
                 }
@@ -767,7 +775,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Phone Number
+                    Phone Number*
                   </Text>
                   <Text
                     numberOfLines={1}
@@ -799,7 +807,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Phone Number
+                    Phone Number*
                   </Text>
                 </View>
                 <TextInput
@@ -861,6 +869,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
               }
             >
               <Text
+                onLayout={[Function]}
                 style={
                   Array [
                     Object {
@@ -887,8 +896,9 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "paddingLeft": 13,
                         "position": "absolute",
                       },
+                      undefined,
                       Object {
-                        "bottom": -40,
+                        "bottom": 20,
                       },
                     ],
                   ]
@@ -967,7 +977,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
               Object {},
               undefined,
               Object {
-                "marginBottom": 16,
+                "marginBottom": 24,
               },
             ]
           }
@@ -1165,6 +1175,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
               }
             >
               <Text
+                onLayout={[Function]}
                 style={
                   Array [
                     Object {
@@ -1192,6 +1203,9 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "position": "absolute",
                       },
                       undefined,
+                      Object {
+                        "bottom": 20,
+                      },
                     ],
                   ]
                 }
@@ -1199,6 +1213,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 Max 30 characters
               </Text>
               <Text
+                onLayout={[Function]}
                 style={
                   Array [
                     Object {
@@ -1227,6 +1242,9 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "right": 0,
                       },
                       undefined,
+                      Object {
+                        "bottom": 20,
+                      },
                     ],
                   ]
                 }
@@ -1290,7 +1308,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
               Object {},
               undefined,
               Object {
-                "marginBottom": 16,
+                "marginBottom": 24,
               },
             ]
           }
@@ -1394,7 +1412,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Old Password
+                    Old Password*
                   </Text>
                   <Text
                     numberOfLines={1}
@@ -1426,7 +1444,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Old Password
+                    Old Password*
                   </Text>
                 </View>
                 <TextInput
@@ -1613,7 +1631,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    New Password
+                    New Password*
                   </Text>
                   <Text
                     numberOfLines={1}
@@ -1645,7 +1663,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    New Password
+                    New Password*
                   </Text>
                 </View>
                 <TextInput
@@ -2065,7 +2083,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Confirm Password
+                    Confirm Password*
                   </Text>
                   <Text
                     numberOfLines={1}
@@ -2097,7 +2115,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       }
                     }
                   >
-                    Confirm Password
+                    Confirm Password*
                   </Text>
                 </View>
                 <TextInput

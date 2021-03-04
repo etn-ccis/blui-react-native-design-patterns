@@ -28,7 +28,7 @@ const makeStyles = (): Record<string, any> =>
             marginBottom: 16,
         },
         info: {
-            marginBottom: 16,
+            marginBottom: 24,
         },
         formFieldWrapper: {
             marginBottom: 48,
@@ -282,7 +282,7 @@ export const FormValidationScreen: React.FC = () => {
                     </Body1>
                     <View style={styles.formFieldWrapper}>
                         <TextInput
-                            label="Input"
+                            label="Input*"
                             value={input}
                             onChangeText={(text): any => onInputChange(text)}
                             returnKeyType={'next'}
@@ -298,7 +298,7 @@ export const FormValidationScreen: React.FC = () => {
                     </View>
                     <View style={styles.formFieldWrapper}>
                         <TextInput
-                            label="Enter Your Email"
+                            label="Enter Your Email*"
                             style={styles.formField}
                             value={email}
                             onChangeText={(text): any => onEmailChange(text)}
@@ -315,9 +315,8 @@ export const FormValidationScreen: React.FC = () => {
                     </View>
                     <View style={styles.formFieldWrapper}>
                         <TextInput
-                            label="Phone Number"
+                            label="Phone Number*"
                             style={styles.formField}
-                            helperStyles={{ bottom: -40 }}
                             value={phoneNumber}
                             onChangeText={(text): any => onPhoneNumberChange(text)}
                             returnKeyType={'next'}
@@ -360,7 +359,7 @@ export const FormValidationScreen: React.FC = () => {
                     </Body1>
                     <View style={styles.formFieldWrapper}>
                         <TextInput
-                            label="Old Password"
+                            label="Old Password*"
                             style={styles.formField}
                             value={oldPassword}
                             onChangeText={(text): any => onOldPasswordChange(text)}
@@ -389,7 +388,7 @@ export const FormValidationScreen: React.FC = () => {
                     </View>
                     <View style={styles.newPasswordFormFieldWrapper}>
                         <TextInput
-                            label="New Password"
+                            label="New Password*"
                             style={styles.formField}
                             value={newPassword}
                             onChangeText={(text): any => onNewPasswordChange(text)}
@@ -420,7 +419,7 @@ export const FormValidationScreen: React.FC = () => {
 
                     <View style={styles.formFieldWrapper}>
                         <TextInput
-                            label="Confirm Password"
+                            label="Confirm Password*"
                             style={styles.formField}
                             value={confirmPassword}
                             onChangeText={(text): any => onConfirmPasswordChange(text)}

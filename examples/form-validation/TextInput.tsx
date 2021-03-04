@@ -1,4 +1,4 @@
-import React, { MutableRefObject } from 'react';
+import React, { MutableRefObject, useState } from 'react';
 import { View, StyleSheet, StyleProp, ViewStyle, TextInput as ReactTextInput, Platform } from 'react-native';
 import { TextInput as PaperTextInput, useTheme } from 'react-native-paper';
 import { TextInputProps } from 'react-native-paper/lib/typescript/src/components/TextInput/TextInput';
@@ -61,9 +61,17 @@ const ErrorText: React.FC<ErrorTextProps> = (props) => {
     const { errorText, style } = props;
     const theme = useTheme(props.theme);
     const styles = makeStyles(theme);
+    const [errorTextHeight, setErrorTextHeight] = useState(-20);
 
     return (
-        <Subtitle2 style={[styles.errorText, style]} font={'regular'}>
+        <Subtitle2
+            style={[styles.errorText, style, { bottom: -errorTextHeight }]}
+            font={'regular'}
+            onLayout={(event): void => {
+                const { height } = event.nativeEvent.layout;
+                setErrorTextHeight(height);
+            }}
+        >
             {errorText || null}
         </Subtitle2>
     );
@@ -80,14 +88,32 @@ const HelperText: React.FC<HelperTextProps> = (props) => {
     const { helperText, helperTextRight, style } = props;
     const theme = useTheme(props.theme);
     const styles = makeStyles(theme);
+    const [helperTextHeight, setHelperTextHeight] = useState(-20);
+    const [helperTextRightHeight, setHelperTextRightHeight] = useState(-20);
 
     return (
         <View style={{ flexDirection: helperTextRight ? 'row' : 'column' }}>
-            <Subtitle2 style={[styles.helperText, style]} font={'regular'}>
-                {helperText || null}
-            </Subtitle2>
+            {helperText && (
+                <Subtitle2
+                    style={[styles.helperText, style, { bottom: -helperTextHeight }]}
+                    font={'regular'}
+                    onLayout={(event): void => {
+                        const { height } = event.nativeEvent.layout;
+                        setHelperTextHeight(height);
+                    }}
+                >
+                    {helperText || null}
+                </Subtitle2>
+            )}
             {helperTextRight && (
-                <Subtitle2 style={[styles.helperTextRight, style]} font={'regular'}>
+                <Subtitle2
+                    style={[styles.helperTextRight, style, { bottom: -helperTextRightHeight }]}
+                    font={'regular'}
+                    onLayout={(event): void => {
+                        const { height } = event.nativeEvent.layout;
+                        setHelperTextRightHeight(height);
+                    }}
+                >
                     {helperTextRight}
                 </Subtitle2>
             )}
