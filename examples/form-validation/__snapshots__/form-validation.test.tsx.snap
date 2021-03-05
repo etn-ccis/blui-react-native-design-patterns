@@ -1121,6 +1121,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                   autoCapitalize="none"
                   editable={true}
                   keyboardType="default"
+                  maxLength={30}
                   multiline={false}
                   onBlur={[Function]}
                   onChangeText={[Function]}

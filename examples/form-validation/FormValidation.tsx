@@ -47,26 +47,20 @@ export const FormValidationScreen: React.FC = () => {
     const theme = useTheme();
     const [input, setInput] = useState('');
     const [inputErrorText, setInputErrorText] = useState('');
-    const [hasInputError, setHasInputError] = useState(false);
     const [email, setEmail] = useState('');
     const [emailErrorText, setEmailErrorText] = useState('');
-    const [hasEmailError, setHasEmailError] = useState(false);
     const [phoneNumber, setPhoneNumber] = useState('');
     const [phoneNumberErrorText, setPhoneNumberErrorText] = useState('');
-    const [hasPhoneNumberError, setHasPhoneNumberError] = useState(false);
     const [chars, setChars] = useState('');
-    const [charsCount, setCharsCount] = useState(0);
     const charsLimit = 30;
     const [oldPassword, setOldPassword] = useState('');
     const [oldPasswordErrorText, setOldPasswordErrorText] = useState('');
-    const [hasOldPasswordError, setHasOldPasswordError] = useState(false);
     const [isOldPasswordVisible, setIsOldPasswordVisible] = useState(false);
     const [newPassword, setNewPassword] = useState('');
     const [hasNewPasswordError, setHasNewPasswordError] = useState(false);
     const [isNewPasswordVisible, setIsNewPasswordVisible] = useState(false);
     const [confirmPassword, setConfirmPassword] = useState('');
     const [confirmPasswordErrorText, setConfirmPasswordErrorText] = useState('');
-    const [hasConfirmPasswordError, setHasConfirmPasswordError] = useState(false);
     const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false);
 
     const toggleMenu = (): void => {
@@ -77,13 +71,13 @@ export const FormValidationScreen: React.FC = () => {
         if (error) {
             return (
                 <View style={styles.rightIcon}>
-                    <MatIcon name={'close'} color={theme.colors.error} size={30} />
+                    <MatIcon name={'close'} color={theme.colors.error} size={24} />
                 </View>
             );
         } else if (value && !error) {
             return (
                 <View style={styles.rightIcon}>
-                    <MatIcon name={'done'} color={theme.colors.primary} size={30} />
+                    <MatIcon name={'done'} color={theme.colors.primary} size={24} />
                 </View>
             );
         }
@@ -98,9 +92,8 @@ export const FormValidationScreen: React.FC = () => {
                 tempInputError = 'required';
             }
             setInputErrorText(tempInputError);
-            setHasInputError(!tempInput.trim() ? true : false);
         },
-        [setInputErrorText, setHasInputError]
+        [setInputErrorText]
     );
 
     const onInputChange = useCallback(
@@ -125,9 +118,8 @@ export const FormValidationScreen: React.FC = () => {
                 tempEmailError = 'Invalid email address';
             }
             setEmailErrorText(tempEmailError);
-            setHasEmailError(!tempEmail.trim() || !EMAIL_REGEX.test(tempEmail) ? true : false);
         },
-        [setEmailErrorText, setHasEmailError]
+        [setEmailErrorText]
     );
 
     const onEmailChange = useCallback(
@@ -152,9 +144,8 @@ export const FormValidationScreen: React.FC = () => {
                 tempPhoneNumberError = 'Invalid phone number';
             }
             setPhoneNumberErrorText(tempPhoneNumberError);
-            setHasPhoneNumberError(!tempPhoneNumber.trim() || !PHONE_NUMBER_REGEX.test(tempPhoneNumber) ? true : false);
         },
-        [setPhoneNumberErrorText, setHasPhoneNumberError]
+        [setPhoneNumberErrorText]
     );
 
     const onPhoneNumberChange = useCallback(
@@ -173,10 +164,9 @@ export const FormValidationScreen: React.FC = () => {
 
     const onCharsChange = useCallback(
         (text: string) => {
-            setChars(text.substring(0, charsLimit));
-            setCharsCount(text.substring(0, charsLimit).length);
+            setChars(text);
         },
-        [setChars, setCharsCount]
+        [setChars]
     );
 
     const validateOldPassword = useCallback(
@@ -187,9 +177,8 @@ export const FormValidationScreen: React.FC = () => {
                 tempOldPasswordError = 'required';
             }
             setOldPasswordErrorText(tempOldPasswordError);
-            setHasOldPasswordError(!tempOldPassword.trim() ? true : false);
         },
-        [setOldPasswordErrorText, setHasOldPasswordError]
+        [setOldPasswordErrorText]
     );
 
     const onOldPasswordChange = useCallback(
@@ -243,11 +232,8 @@ export const FormValidationScreen: React.FC = () => {
                 tempConfirmPasswordError = 'passwords do not match';
             }
             setConfirmPasswordErrorText(tempConfirmPasswordError);
-            setHasConfirmPasswordError(
-                !tempConfirmPassword.trim() || tempConfirmPassword !== newPassword ? true : false
-            );
         },
-        [setConfirmPasswordErrorText, setHasConfirmPasswordError, newPassword]
+        [setConfirmPasswordErrorText, newPassword]
     );
 
     const onConfirmPasswordChange = useCallback(
@@ -284,16 +270,14 @@ export const FormValidationScreen: React.FC = () => {
                         <TextInput
                             label="Input*"
                             value={input}
-                            onChangeText={(text): any => onInputChange(text)}
+                            onChangeText={onInputChange}
                             returnKeyType={'next'}
                             keyboardType={'default'}
                             helperText={'This is a regular input field.'}
-                            error={hasInputError}
+                            error={inputErrorText !== ''}
                             errorText={inputErrorText}
-                            onBlur={(): void => {
-                                onInputBlur();
-                            }}
-                            rightIcon={getValidationIcon(hasInputError, input)}
+                            onBlur={onInputBlur}
+                            rightIcon={getValidationIcon(inputErrorText !== '', input)}
                         />
                     </View>
                     <View style={styles.formFieldWrapper}>
@@ -301,16 +285,14 @@ export const FormValidationScreen: React.FC = () => {
                             label="Enter Your Email*"
                             style={styles.formField}
                             value={email}
-                            onChangeText={(text): any => onEmailChange(text)}
+                            onChangeText={onEmailChange}
                             returnKeyType={'next'}
                             keyboardType={'email-address'}
                             helperText={'This field throws an error if the email format is incorrect.'}
-                            error={hasEmailError}
+                            error={emailErrorText !== ''}
                             errorText={emailErrorText}
-                            onBlur={(): void => {
-                                onEmailBlur();
-                            }}
-                            rightIcon={getValidationIcon(hasEmailError, email)}
+                            onBlur={onEmailBlur}
+                            rightIcon={getValidationIcon(emailErrorText !== '', email)}
                         />
                     </View>
                     <View style={styles.formFieldWrapper}>
@@ -318,18 +300,16 @@ export const FormValidationScreen: React.FC = () => {
                             label="Phone Number*"
                             style={styles.formField}
                             value={phoneNumber}
-                            onChangeText={(text): any => onPhoneNumberChange(text)}
+                            onChangeText={onPhoneNumberChange}
                             returnKeyType={'next'}
                             keyboardType={'phone-pad'}
                             helperText={
                                 'This field throws an error if the phone number format is incorrect. (Needs to be a valid U.S. number)'
                             }
-                            error={hasPhoneNumberError}
+                            error={phoneNumberErrorText !== ''}
                             errorText={phoneNumberErrorText}
-                            onBlur={(): void => {
-                                onPhoneNumberBlur();
-                            }}
-                            rightIcon={getValidationIcon(hasPhoneNumberError, phoneNumber)}
+                            onBlur={onPhoneNumberBlur}
+                            rightIcon={getValidationIcon(phoneNumberErrorText !== '', phoneNumber)}
                         />
                     </View>
                 </View>
@@ -343,11 +323,12 @@ export const FormValidationScreen: React.FC = () => {
                         <TextInput
                             label="Enter Some Text"
                             value={chars}
-                            onChangeText={(text): any => onCharsChange(text)}
+                            onChangeText={onCharsChange}
                             returnKeyType={'next'}
                             keyboardType={'default'}
-                            helperText={'Max 30 characters'}
-                            helperTextRight={`${charsCount}/${charsLimit}`}
+                            helperText={`Max ${charsLimit} characters`}
+                            helperTextRight={`${chars.length}/${charsLimit}`}
+                            maxLength={charsLimit}
                         />
                     </View>
                 </View>
@@ -362,14 +343,12 @@ export const FormValidationScreen: React.FC = () => {
                             label="Old Password*"
                             style={styles.formField}
                             value={oldPassword}
-                            onChangeText={(text): any => onOldPasswordChange(text)}
+                            onChangeText={onOldPasswordChange}
                             returnKeyType={'next'}
                             keyboardType={'default'}
-                            error={hasOldPasswordError}
+                            error={oldPasswordErrorText !== ''}
                             errorText={oldPasswordErrorText}
-                            onBlur={(): void => {
-                                onOldPasswordBlur();
-                            }}
+                            onBlur={onOldPasswordBlur}
                             secureTextEntry={!isOldPasswordVisible}
                             rightIcon={
                                 <TouchableOpacity
@@ -380,7 +359,7 @@ export const FormValidationScreen: React.FC = () => {
                                     <MatIcon
                                         name={!isOldPasswordVisible ? 'visibility-off' : 'visibility'}
                                         color={theme.colors.placeholder}
-                                        size={30}
+                                        size={24}
                                     />
                                 </TouchableOpacity>
                             }
@@ -391,13 +370,11 @@ export const FormValidationScreen: React.FC = () => {
                             label="New Password*"
                             style={styles.formField}
                             value={newPassword}
-                            onChangeText={(text): any => onNewPasswordChange(text)}
+                            onChangeText={onNewPasswordChange}
                             returnKeyType={'next'}
                             keyboardType={'default'}
                             error={hasNewPasswordError}
-                            onBlur={(): void => {
-                                onNewPasswordBlur();
-                            }}
+                            onBlur={onNewPasswordBlur}
                             secureTextEntry={!isNewPasswordVisible}
                             rightIcon={
                                 <TouchableOpacity
@@ -408,7 +385,7 @@ export const FormValidationScreen: React.FC = () => {
                                     <MatIcon
                                         name={!isNewPasswordVisible ? 'visibility-off' : 'visibility'}
                                         color={theme.colors.placeholder}
-                                        size={30}
+                                        size={24}
                                     />
                                 </TouchableOpacity>
                             }
@@ -422,14 +399,12 @@ export const FormValidationScreen: React.FC = () => {
                             label="Confirm Password*"
                             style={styles.formField}
                             value={confirmPassword}
-                            onChangeText={(text): any => onConfirmPasswordChange(text)}
+                            onChangeText={onConfirmPasswordChange}
                             returnKeyType={'done'}
                             keyboardType={'default'}
-                            error={hasConfirmPasswordError}
+                            error={confirmPasswordErrorText !== ''}
                             errorText={confirmPasswordErrorText}
-                            onBlur={(): void => {
-                                onConfirmPasswordBlur();
-                            }}
+                            onBlur={onConfirmPasswordBlur}
                             secureTextEntry={!isConfirmPasswordVisible}
                             rightIcon={
                                 <TouchableOpacity
@@ -440,7 +415,7 @@ export const FormValidationScreen: React.FC = () => {
                                     <MatIcon
                                         name={!isConfirmPasswordVisible ? 'visibility-off' : 'visibility'}
                                         color={theme.colors.placeholder}
-                                        size={30}
+                                        size={24}
                                     />
                                 </TouchableOpacity>
                             }
