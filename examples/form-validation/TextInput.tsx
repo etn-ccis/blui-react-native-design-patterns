@@ -29,16 +29,6 @@ const makeStyles = (theme: ReactNativePaper.Theme): Record<string, any> =>
             right: 0,
             paddingRight: 13,
         },
-        rightIcon: {
-            position: 'absolute',
-            right: 0,
-            bottom: 10,
-            height: 50,
-            width: 50,
-            padding: 5,
-            flex: 1,
-            justifyContent: 'center',
-        },
     });
 
 export type TextInputRenderProps = Omit<TextInputProps, 'theme'> & {
@@ -46,7 +36,8 @@ export type TextInputRenderProps = Omit<TextInputProps, 'theme'> & {
     helperText?: string;
     helperStyles?: ViewStyle;
     helperTextRight?: string;
-    rightIcon?: JSX.Element;
+    rightIcon?: InputIconType;
+    rightIconOnPress?: () => void;
     theme?: ReactNativePaper.Theme;
     testID?: string;
 };
@@ -55,6 +46,12 @@ type ErrorTextProps = {
     errorText: string | undefined | null;
     style?: StyleProp<ViewStyle>;
     theme?: ReactNativePaper.Theme;
+};
+
+export type InputIconType = {
+    name?: string;
+    color?: string;
+    onPress?: () => void;
 };
 
 const ErrorText: React.FC<ErrorTextProps> = (props) => {
@@ -161,13 +158,23 @@ const TextInputRender: React.ForwardRefRenderFunction<{}, TextInputRenderProps> 
                 textContentType={props.secureTextEntry ? 'oneTimeCode' : 'none'} // "oneTimeCode" is workaround to avoid iOS 12 "strong password" autofill overlay on secure input password fields (ISSUE TRACKING: https://github.com/facebook/react-native/issues/21911)
                 underlineColor={Colors.gray['100']}
                 selectionColor={selectionColor}
+                right={
+                    rightIcon &&
+                    rightIcon.name && (
+                        <PaperTextInput.Icon
+                            name={rightIcon.name}
+                            forceTextInputFocus={false}
+                            onPress={rightIcon?.onPress}
+                            color={rightIcon?.color}
+                        />
+                    )
+                }
                 {...inputProps}
             />
             {props.error ? <ErrorText errorText={errorText} /> : null}
             {props.helperText && !props.error ? (
                 <HelperText helperText={helperText} helperTextRight={helperTextRight} style={helperStyles} />
             ) : null}
-            {rightIcon && <View style={styles.rightIcon}>{rightIcon}</View>}
         </View>
     );
 };

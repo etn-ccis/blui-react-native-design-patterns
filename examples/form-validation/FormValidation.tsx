@@ -1,13 +1,12 @@
 import React, { useCallback, useState } from 'react';
 import { Body1, H6, Header, wrapIcon } from '@pxblue/react-native-components';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-import { TextInput } from './TextInput';
+import { InputIconType, TextInput } from './TextInput';
 import { ScrollView } from 'react-native-gesture-handler';
 import { PasswordRequirement, passwordRequirements, PasswordRequirements } from './PasswordRequirements';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useTheme } from 'react-native-paper';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
@@ -67,21 +66,19 @@ export const FormValidationScreen: React.FC = () => {
         navigation.openDrawer();
     };
 
-    const getValidationIcon = (error: boolean, value?: string): JSX.Element => {
+    const getValidationIcon = (error: boolean, value?: string): InputIconType => {
         if (error) {
-            return (
-                <View style={styles.rightIcon}>
-                    <MatIcon name={'close'} color={theme.colors.error} size={24} />
-                </View>
-            );
+            return {
+                name: 'close',
+                color: theme.colors.error,
+            };
         } else if (value && !error) {
-            return (
-                <View style={styles.rightIcon}>
-                    <MatIcon name={'done'} color={theme.colors.primary} size={24} />
-                </View>
-            );
+            return {
+                name: 'check',
+                color: theme.colors.primary,
+            };
         }
-        return <></>;
+        return {};
     };
 
     const validateInput = useCallback(
@@ -350,19 +347,10 @@ export const FormValidationScreen: React.FC = () => {
                             errorText={oldPasswordErrorText}
                             onBlur={onOldPasswordBlur}
                             secureTextEntry={!isOldPasswordVisible}
-                            rightIcon={
-                                <TouchableOpacity
-                                    activeOpacity={0.8}
-                                    style={styles.rightIcon}
-                                    onPress={(): void => setIsOldPasswordVisible(!isOldPasswordVisible)}
-                                >
-                                    <MatIcon
-                                        name={!isOldPasswordVisible ? 'visibility-off' : 'visibility'}
-                                        color={theme.colors.placeholder}
-                                        size={24}
-                                    />
-                                </TouchableOpacity>
-                            }
+                            rightIcon={{
+                                name: !isOldPasswordVisible ? 'eye-off' : 'eye',
+                                onPress: (): void => setIsOldPasswordVisible(!isOldPasswordVisible),
+                            }}
                         />
                     </View>
                     <View style={styles.newPasswordFormFieldWrapper}>
@@ -376,19 +364,10 @@ export const FormValidationScreen: React.FC = () => {
                             error={hasNewPasswordError}
                             onBlur={onNewPasswordBlur}
                             secureTextEntry={!isNewPasswordVisible}
-                            rightIcon={
-                                <TouchableOpacity
-                                    activeOpacity={0.8}
-                                    style={styles.rightIcon}
-                                    onPress={(): void => setIsNewPasswordVisible(!isNewPasswordVisible)}
-                                >
-                                    <MatIcon
-                                        name={!isNewPasswordVisible ? 'visibility-off' : 'visibility'}
-                                        color={theme.colors.placeholder}
-                                        size={24}
-                                    />
-                                </TouchableOpacity>
-                            }
+                            rightIcon={{
+                                name: !isNewPasswordVisible ? 'eye-off' : 'eye',
+                                onPress: (): void => setIsNewPasswordVisible(!isNewPasswordVisible),
+                            }}
                         />
                     </View>
 
@@ -406,19 +385,10 @@ export const FormValidationScreen: React.FC = () => {
                             errorText={confirmPasswordErrorText}
                             onBlur={onConfirmPasswordBlur}
                             secureTextEntry={!isConfirmPasswordVisible}
-                            rightIcon={
-                                <TouchableOpacity
-                                    activeOpacity={0.8}
-                                    style={styles.rightIcon}
-                                    onPress={(): void => setIsConfirmPasswordVisible(!isConfirmPasswordVisible)}
-                                >
-                                    <MatIcon
-                                        name={!isConfirmPasswordVisible ? 'visibility-off' : 'visibility'}
-                                        color={theme.colors.placeholder}
-                                        size={24}
-                                    />
-                                </TouchableOpacity>
-                            }
+                            rightIcon={{
+                                name: !isConfirmPasswordVisible ? 'eye-off' : 'eye',
+                                onPress: (): void => setIsConfirmPasswordVisible(!isConfirmPasswordVisible),
+                            }}
                         />
                     </View>
                 </View>

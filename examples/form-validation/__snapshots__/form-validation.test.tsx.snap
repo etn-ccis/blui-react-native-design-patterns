@@ -417,20 +417,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 This is a regular input field.
               </Text>
             </View>
-            <View
-              style={
-                Object {
-                  "bottom": 10,
-                  "flex": 1,
-                  "height": 50,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "position": "absolute",
-                  "right": 0,
-                  "width": 50,
-                }
-              }
-            />
           </View>
         </View>
         <View
@@ -662,20 +648,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 This field throws an error if the email format is incorrect.
               </Text>
             </View>
-            <View
-              style={
-                Object {
-                  "bottom": 10,
-                  "flex": 1,
-                  "height": 50,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "position": "absolute",
-                  "right": 0,
-                  "width": 50,
-                }
-              }
-            />
           </View>
         </View>
         <View
@@ -907,20 +879,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 This field throws an error if the phone number format is incorrect. (Needs to be a valid U.S. number)
               </Text>
             </View>
-            <View
-              style={
-                Object {
-                  "bottom": 10,
-                  "flex": 1,
-                  "height": 50,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "position": "absolute",
-                  "right": 0,
-                  "width": 50,
-                }
-              }
-            />
           </View>
         </View>
       </View>
@@ -1394,7 +1352,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "left": 0,
                         "opacity": 0,
                         "paddingLeft": 12,
-                        "paddingRight": 12,
+                        "paddingRight": 44,
                         "position": "absolute",
                         "textAlign": "left",
                         "top": 35,
@@ -1426,7 +1384,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "left": 0,
                         "opacity": 0,
                         "paddingLeft": 12,
-                        "paddingRight": 12,
+                        "paddingRight": 44,
                         "position": "absolute",
                         "textAlign": "left",
                         "top": 35,
@@ -1473,7 +1431,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       },
                       Object {
                         "paddingLeft": 12,
-                        "paddingRight": 12,
+                        "paddingRight": 44,
                       },
                       Object {
                         "height": 70,
@@ -1489,9 +1447,10 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontWeight": undefined,
                         "textAlignVertical": "center",
                       },
-                      Array [
-                        Object {},
-                      ],
+                      Object {
+                        "marginRight": 36,
+                        "paddingRight": 8,
+                      },
                     ]
                   }
                   textContentType="oneTimeCode"
@@ -1499,38 +1458,76 @@ exports[`Form Validation Tests renders the screen 1`] = `
                   value=""
                 />
               </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "bottom": 10,
-                  "flex": 1,
-                  "height": 50,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "position": "absolute",
-                  "right": 0,
-                  "width": 50,
-                }
-              }
-            >
               <View
-                accessible={true}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
-                    "opacity": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "height": 24,
+                      "justifyContent": "center",
+                      "position": "absolute",
+                      "width": 24,
+                    },
+                    Object {
+                      "right": 12,
+                      "top": 23,
+                    },
+                  ]
                 }
               >
-                <Text />
+                <View
+                  accessibilityRole="button"
+                  accessibilityState={
+                    Object {
+                      "disabled": undefined,
+                    }
+                  }
+                  accessible={true}
+                  focusable={true}
+                  hitSlop={
+                    Object {
+                      "bottom": 6,
+                      "left": 6,
+                      "right": 6,
+                      "top": 6,
+                    }
+                  }
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "overflow": "hidden",
+                      },
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "justifyContent": "center",
+                          "margin": 6,
+                          "overflow": "hidden",
+                        },
+                        Object {
+                          "borderRadius": 18,
+                          "height": 36,
+                          "width": 36,
+                        },
+                        undefined,
+                        Object {
+                          "margin": 0,
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  <View>
+                    <Text />
+                  </View>
+                </View>
               </View>
             </View>
           </View>
@@ -1613,7 +1610,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "left": 0,
                         "opacity": 0,
                         "paddingLeft": 12,
-                        "paddingRight": 12,
+                        "paddingRight": 44,
                         "position": "absolute",
                         "textAlign": "left",
                         "top": 35,
@@ -1645,7 +1642,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "left": 0,
                         "opacity": 0,
                         "paddingLeft": 12,
-                        "paddingRight": 12,
+                        "paddingRight": 44,
                         "position": "absolute",
                         "textAlign": "left",
                         "top": 35,
@@ -1692,7 +1689,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       },
                       Object {
                         "paddingLeft": 12,
-                        "paddingRight": 12,
+                        "paddingRight": 44,
                       },
                       Object {
                         "height": 70,
@@ -1708,9 +1705,10 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontWeight": undefined,
                         "textAlignVertical": "center",
                       },
-                      Array [
-                        Object {},
-                      ],
+                      Object {
+                        "marginRight": 36,
+                        "paddingRight": 8,
+                      },
                     ]
                   }
                   textContentType="oneTimeCode"
@@ -1718,38 +1716,76 @@ exports[`Form Validation Tests renders the screen 1`] = `
                   value=""
                 />
               </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "bottom": 10,
-                  "flex": 1,
-                  "height": 50,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "position": "absolute",
-                  "right": 0,
-                  "width": 50,
-                }
-              }
-            >
               <View
-                accessible={true}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
-                    "opacity": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "height": 24,
+                      "justifyContent": "center",
+                      "position": "absolute",
+                      "width": 24,
+                    },
+                    Object {
+                      "right": 12,
+                      "top": 23,
+                    },
+                  ]
                 }
               >
-                <Text />
+                <View
+                  accessibilityRole="button"
+                  accessibilityState={
+                    Object {
+                      "disabled": undefined,
+                    }
+                  }
+                  accessible={true}
+                  focusable={true}
+                  hitSlop={
+                    Object {
+                      "bottom": 6,
+                      "left": 6,
+                      "right": 6,
+                      "top": 6,
+                    }
+                  }
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "overflow": "hidden",
+                      },
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "justifyContent": "center",
+                          "margin": 6,
+                          "overflow": "hidden",
+                        },
+                        Object {
+                          "borderRadius": 18,
+                          "height": 36,
+                          "width": 36,
+                        },
+                        undefined,
+                        Object {
+                          "margin": 0,
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  <View>
+                    <Text />
+                  </View>
+                </View>
               </View>
             </View>
           </View>
@@ -2065,7 +2101,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "left": 0,
                         "opacity": 0,
                         "paddingLeft": 12,
-                        "paddingRight": 12,
+                        "paddingRight": 44,
                         "position": "absolute",
                         "textAlign": "left",
                         "top": 35,
@@ -2097,7 +2133,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "left": 0,
                         "opacity": 0,
                         "paddingLeft": 12,
-                        "paddingRight": 12,
+                        "paddingRight": 44,
                         "position": "absolute",
                         "textAlign": "left",
                         "top": 35,
@@ -2144,7 +2180,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       },
                       Object {
                         "paddingLeft": 12,
-                        "paddingRight": 12,
+                        "paddingRight": 44,
                       },
                       Object {
                         "height": 70,
@@ -2160,9 +2196,10 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontWeight": undefined,
                         "textAlignVertical": "center",
                       },
-                      Array [
-                        Object {},
-                      ],
+                      Object {
+                        "marginRight": 36,
+                        "paddingRight": 8,
+                      },
                     ]
                   }
                   textContentType="oneTimeCode"
@@ -2170,38 +2207,76 @@ exports[`Form Validation Tests renders the screen 1`] = `
                   value=""
                 />
               </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "bottom": 10,
-                  "flex": 1,
-                  "height": 50,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "position": "absolute",
-                  "right": 0,
-                  "width": 50,
-                }
-              }
-            >
               <View
-                accessible={true}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
-                    "opacity": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "height": 24,
+                      "justifyContent": "center",
+                      "position": "absolute",
+                      "width": 24,
+                    },
+                    Object {
+                      "right": 12,
+                      "top": 23,
+                    },
+                  ]
                 }
               >
-                <Text />
+                <View
+                  accessibilityRole="button"
+                  accessibilityState={
+                    Object {
+                      "disabled": undefined,
+                    }
+                  }
+                  accessible={true}
+                  focusable={true}
+                  hitSlop={
+                    Object {
+                      "bottom": 6,
+                      "left": 6,
+                      "right": 6,
+                      "top": 6,
+                    }
+                  }
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "overflow": "hidden",
+                      },
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "justifyContent": "center",
+                          "margin": 6,
+                          "overflow": "hidden",
+                        },
+                        Object {
+                          "borderRadius": 18,
+                          "height": 36,
+                          "width": 36,
+                        },
+                        undefined,
+                        Object {
+                          "margin": 0,
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  <View>
+                    <Text />
+                  </View>
+                </View>
               </View>
             </View>
           </View>
