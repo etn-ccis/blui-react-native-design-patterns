@@ -30,10 +30,7 @@ const makeStyles = (): Record<string, any> =>
             marginBottom: 24,
         },
         formFieldWrapper: {
-            marginBottom: 48,
-        },
-        newPasswordFormFieldWrapper: {
-            marginBottom: 16,
+            marginBottom: 24,
         },
         passwordRequirements: {
             paddingBottom: 32,
@@ -353,7 +350,7 @@ export const FormValidationScreen: React.FC = () => {
                             }}
                         />
                     </View>
-                    <View style={styles.newPasswordFormFieldWrapper}>
+                    <View>
                         <TextInput
                             label="New Password*"
                             style={styles.formField}

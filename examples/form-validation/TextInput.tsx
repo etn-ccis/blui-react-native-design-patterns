@@ -1,11 +1,18 @@
-import React, { MutableRefObject, useState } from 'react';
-import { View, StyleSheet, StyleProp, ViewStyle, TextInput as ReactTextInput, Platform } from 'react-native';
-import { TextInput as PaperTextInput, useTheme } from 'react-native-paper';
+import React, { MutableRefObject } from 'react';
+import { View, StyleSheet, ViewStyle, TextInput as ReactTextInput, Platform, TextStyle } from 'react-native';
+import { HelperText, TextInput as PaperTextInput, useTheme } from 'react-native-paper';
 import { TextInputProps } from 'react-native-paper/lib/typescript/src/components/TextInput/TextInput';
-import { Subtitle2 } from '@pxblue/react-native-components';
 import * as Colors from '@pxblue/colors';
+import { Caption } from '@pxblue/react-native-components';
 
-const makeStyles = (theme: ReactNativePaper.Theme): Record<string, any> =>
+const makeStyles = (
+    theme: ReactNativePaper.Theme
+): StyleSheet.NamedStyles<{
+    textInput: TextStyle;
+    errorText: TextStyle;
+    helperText: TextStyle;
+    helperTextRight: TextStyle;
+}> =>
     StyleSheet.create({
         textInput: {
             height: 70,
@@ -13,21 +20,14 @@ const makeStyles = (theme: ReactNativePaper.Theme): Record<string, any> =>
             backgroundColor: Colors.white['200'],
         },
         errorText: {
-            position: 'absolute',
-            bottom: -20,
-            paddingLeft: 13,
             color: theme.colors.error,
         },
         helperText: {
-            position: 'absolute',
-            bottom: -20,
-            paddingLeft: 13,
+            color: Colors.gray[500],
         },
         helperTextRight: {
-            position: 'absolute',
-            bottom: -20,
-            right: 0,
             paddingRight: 13,
+            color: Colors.gray[500],
         },
     });
 
@@ -42,80 +42,10 @@ export type TextInputRenderProps = Omit<TextInputProps, 'theme'> & {
     testID?: string;
 };
 
-type ErrorTextProps = {
-    errorText: string | undefined | null;
-    style?: StyleProp<ViewStyle>;
-    theme?: ReactNativePaper.Theme;
-};
-
 export type InputIconType = {
     name?: string;
     color?: string;
     onPress?: () => void;
-};
-
-const ErrorText: React.FC<ErrorTextProps> = (props) => {
-    const { errorText, style } = props;
-    const theme = useTheme(props.theme);
-    const styles = makeStyles(theme);
-    const [errorTextHeight, setErrorTextHeight] = useState(-20);
-
-    return (
-        <Subtitle2
-            style={[styles.errorText, style, { bottom: -errorTextHeight }]}
-            font={'regular'}
-            onLayout={(event): void => {
-                const { height } = event.nativeEvent.layout;
-                setErrorTextHeight(height);
-            }}
-        >
-            {errorText || null}
-        </Subtitle2>
-    );
-};
-
-type HelperTextProps = {
-    helperText: string | undefined | null;
-    helperTextRight?: string | undefined | null;
-    style?: StyleProp<ViewStyle>;
-    theme?: ReactNativePaper.Theme;
-};
-
-const HelperText: React.FC<HelperTextProps> = (props) => {
-    const { helperText, helperTextRight, style } = props;
-    const theme = useTheme(props.theme);
-    const styles = makeStyles(theme);
-    const [helperTextHeight, setHelperTextHeight] = useState(-20);
-    const [helperTextRightHeight, setHelperTextRightHeight] = useState(-20);
-
-    return (
-        <View style={{ flexDirection: helperTextRight ? 'row' : 'column' }}>
-            {helperText && (
-                <Subtitle2
-                    style={[styles.helperText, style, { bottom: -helperTextHeight }]}
-                    font={'regular'}
-                    onLayout={(event): void => {
-                        const { height } = event.nativeEvent.layout;
-                        setHelperTextHeight(height);
-                    }}
-                >
-                    {helperText || null}
-                </Subtitle2>
-            )}
-            {helperTextRight && (
-                <Subtitle2
-                    style={[styles.helperTextRight, style, { bottom: -helperTextRightHeight }]}
-                    font={'regular'}
-                    onLayout={(event): void => {
-                        const { height } = event.nativeEvent.layout;
-                        setHelperTextRightHeight(height);
-                    }}
-                >
-                    {helperTextRight}
-                </Subtitle2>
-            )}
-        </View>
-    );
 };
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -128,9 +58,9 @@ const TextInputRender: React.ForwardRefRenderFunction<{}, TextInputRenderProps> 
         keyboardType = 'default',
         autoCapitalize = 'none',
         returnKeyType = 'done',
+        error,
         errorText,
         helperText,
-        helperStyles,
         helperTextRight,
         rightIcon,
         theme: customTheme,
@@ -169,12 +99,19 @@ const TextInputRender: React.ForwardRefRenderFunction<{}, TextInputRenderProps> 
                         />
                     )
                 }
+                error={error}
                 {...inputProps}
             />
-            {props.error ? <ErrorText errorText={errorText} /> : null}
-            {props.helperText && !props.error ? (
-                <HelperText helperText={helperText} helperTextRight={helperTextRight} style={helperStyles} />
-            ) : null}
+            {helperText && !error && (
+                <HelperText type="info">
+                    <Caption styles={{ root: styles.helperText }}>{helperText}</Caption>
+                    {helperTextRight && <Caption styles={{ root: styles.helperTextRight }}> {helperTextRight}</Caption>}
+                </HelperText>
+            )}
+
+            <HelperText type="error" visible={error}>
+                <Caption style={styles.errorText}>{errorText}</Caption>
+            </HelperText>
         </View>
     );
 };
