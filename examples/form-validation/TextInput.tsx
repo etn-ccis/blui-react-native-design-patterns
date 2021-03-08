@@ -121,9 +121,11 @@ const TextInputRender: React.ForwardRefRenderFunction<{}, TextInputRenderProps> 
                 </View>
             )}
 
-            <HelperText type="error" visible={error}>
-                <Caption style={styles.errorText}>{errorText}</Caption>
-            </HelperText>
+            {error && errorText && (
+                <HelperText type="error">
+                    <Caption style={styles.errorText}>{errorText}</Caption>
+                </HelperText>
+            )}
         </View>
     );
 };

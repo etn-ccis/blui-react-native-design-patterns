@@ -424,51 +424,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 </Text>
               </Text>
             </View>
-            <Text
-              onLayout={[Function]}
-              style={
-                Object {
-                  "color": "#B00020",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 0,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
-                }
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    undefined,
-                    Object {
-                      "color": "#B00020",
-                      "fontSize": 12,
-                    },
-                  ]
-                }
-              >
-                
-              </Text>
-            </Text>
           </View>
         </View>
         <View
@@ -707,51 +662,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 </Text>
               </Text>
             </View>
-            <Text
-              onLayout={[Function]}
-              style={
-                Object {
-                  "color": "#B00020",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 0,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
-                }
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    undefined,
-                    Object {
-                      "color": "#B00020",
-                      "fontSize": 12,
-                    },
-                  ]
-                }
-              >
-                
-              </Text>
-            </Text>
           </View>
         </View>
         <View
@@ -990,51 +900,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 </Text>
               </Text>
             </View>
-            <Text
-              onLayout={[Function]}
-              style={
-                Object {
-                  "color": "#B00020",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 0,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
-                }
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    undefined,
-                    Object {
-                      "color": "#B00020",
-                      "fontSize": 12,
-                    },
-                  ]
-                }
-              >
-                
-              </Text>
-            </Text>
           </View>
         </View>
       </View>
@@ -1395,53 +1260,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 </Text>
               </Text>
             </View>
-            <Text
-              onLayout={[Function]}
-              style={
-                Object {
-                  "color": "#B00020",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 1,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [
-                    Object {
-                      "translateY": -0,
-                    },
-                  ],
-                  "writingDirection": "ltr",
-                }
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    undefined,
-                    Object {
-                      "color": "#B00020",
-                      "fontSize": 12,
-                    },
-                  ]
-                }
-              />
-            </Text>
           </View>
         </View>
       </View>
@@ -1761,54 +1579,15 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 </View>
               </View>
             </View>
-            <Text
-              onLayout={[Function]}
-              style={
-                Object {
-                  "color": "#B00020",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 0,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
-                }
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    undefined,
-                    Object {
-                      "color": "#B00020",
-                      "fontSize": 12,
-                    },
-                  ]
-                }
-              >
-                
-              </Text>
-            </Text>
           </View>
         </View>
-        <View>
+        <View
+          style={
+            Object {
+              "marginBottom": 8,
+            }
+          }
+        >
           <View>
             <View
               style={
@@ -2058,49 +1837,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 </View>
               </View>
             </View>
-            <Text
-              onLayout={[Function]}
-              style={
-                Object {
-                  "color": "#B00020",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 0,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
-                }
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    undefined,
-                    Object {
-                      "color": "#B00020",
-                      "fontSize": 12,
-                    },
-                  ]
-                }
-              />
-            </Text>
           </View>
         </View>
         <View
@@ -2592,51 +2328,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 </View>
               </View>
             </View>
-            <Text
-              onLayout={[Function]}
-              style={
-                Object {
-                  "color": "#B00020",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 0,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
-                }
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    undefined,
-                    Object {
-                      "color": "#B00020",
-                      "fontSize": 12,
-                    },
-                  ]
-                }
-              >
-                
-              </Text>
-            </Text>
           </View>
         </View>
       </View>
