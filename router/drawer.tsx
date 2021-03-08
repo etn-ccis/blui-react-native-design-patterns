@@ -54,11 +54,11 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                             itemID: ROUTES.LOADING_STATES.name,
                             onPress: (): void => goTo(ROUTES.LOADING_STATES.route),
                         },
-                        // {
-                        //     title: ROUTES.FORM_VALIDATION.name,
-                        //     itemID: ROUTES.FORM_VALIDATION.name,
-                        //     onPress: (): void => goTo(ROUTES.FORM_VALIDATION.route),
-                        // },
+                        {
+                            title: ROUTES.FORM_VALIDATION.name,
+                            itemID: ROUTES.FORM_VALIDATION.name,
+                            onPress: (): void => goTo(ROUTES.FORM_VALIDATION.route),
+                        },
                         // {
                         //     title: ROUTES.I18N.name,
                         //     itemID: ROUTES.I18N.name,
