@@ -371,50 +371,59 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 />
               </View>
             </View>
-            <Text
-              onLayout={[Function]}
+            <View
               style={
                 Object {
-                  "color": "rgba(0, 0, 0, 0.54)",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 1,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
+                  "flexDirection": "row",
                 }
               }
             >
               <Text
+                onLayout={[Function]}
                 style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    Object {
-                      "color": "#727e84",
-                    },
-                    undefined,
-                  ]
+                  Object {
+                    "color": "rgba(0, 0, 0, 0.54)",
+                    "fontFamily": "System",
+                    "fontSize": 12,
+                    "fontWeight": "400",
+                    "opacity": 1,
+                    "paddingHorizontal": 12,
+                    "paddingVertical": 4,
+                    "textAlign": "left",
+                    "transform": Array [],
+                    "writingDirection": "ltr",
+                  }
                 }
               >
-                This is a regular input field.
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                      },
+                      Object {
+                        "writingDirection": "ltr",
+                      },
+                      Object {},
+                      Object {
+                        "fontFamily": "System",
+                        "fontSize": 10,
+                        "fontWeight": "400",
+                        "letterSpacing": 0,
+                      },
+                      Object {},
+                      Object {
+                        "color": "#727e84",
+                        "fontSize": 12,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  This is a regular input field.
+                </Text>
               </Text>
-            </Text>
+            </View>
             <Text
               onLayout={[Function]}
               style={
@@ -452,6 +461,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                     undefined,
                     Object {
                       "color": "#B00020",
+                      "fontSize": 12,
                     },
                   ]
                 }
@@ -644,50 +654,59 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 />
               </View>
             </View>
-            <Text
-              onLayout={[Function]}
+            <View
               style={
                 Object {
-                  "color": "rgba(0, 0, 0, 0.54)",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 1,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
+                  "flexDirection": "row",
                 }
               }
             >
               <Text
+                onLayout={[Function]}
                 style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    Object {
-                      "color": "#727e84",
-                    },
-                    undefined,
-                  ]
+                  Object {
+                    "color": "rgba(0, 0, 0, 0.54)",
+                    "fontFamily": "System",
+                    "fontSize": 12,
+                    "fontWeight": "400",
+                    "opacity": 1,
+                    "paddingHorizontal": 12,
+                    "paddingVertical": 4,
+                    "textAlign": "left",
+                    "transform": Array [],
+                    "writingDirection": "ltr",
+                  }
                 }
               >
-                This field throws an error if the email format is incorrect.
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                      },
+                      Object {
+                        "writingDirection": "ltr",
+                      },
+                      Object {},
+                      Object {
+                        "fontFamily": "System",
+                        "fontSize": 10,
+                        "fontWeight": "400",
+                        "letterSpacing": 0,
+                      },
+                      Object {},
+                      Object {
+                        "color": "#727e84",
+                        "fontSize": 12,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  This field throws an error if the email format is incorrect.
+                </Text>
               </Text>
-            </Text>
+            </View>
             <Text
               onLayout={[Function]}
               style={
@@ -725,6 +744,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                     undefined,
                     Object {
                       "color": "#B00020",
+                      "fontSize": 12,
                     },
                   ]
                 }
@@ -917,50 +937,59 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 />
               </View>
             </View>
-            <Text
-              onLayout={[Function]}
+            <View
               style={
                 Object {
-                  "color": "rgba(0, 0, 0, 0.54)",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 1,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
+                  "flexDirection": "row",
                 }
               }
             >
               <Text
+                onLayout={[Function]}
                 style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    Object {
-                      "color": "#727e84",
-                    },
-                    undefined,
-                  ]
+                  Object {
+                    "color": "rgba(0, 0, 0, 0.54)",
+                    "fontFamily": "System",
+                    "fontSize": 12,
+                    "fontWeight": "400",
+                    "opacity": 1,
+                    "paddingHorizontal": 12,
+                    "paddingVertical": 4,
+                    "textAlign": "left",
+                    "transform": Array [],
+                    "writingDirection": "ltr",
+                  }
                 }
               >
-                This field throws an error if the phone number format is incorrect. (Needs to be a valid U.S. number)
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                      },
+                      Object {
+                        "writingDirection": "ltr",
+                      },
+                      Object {},
+                      Object {
+                        "fontFamily": "System",
+                        "fontSize": 10,
+                        "fontWeight": "400",
+                        "letterSpacing": 0,
+                      },
+                      Object {},
+                      Object {
+                        "color": "#727e84",
+                        "fontSize": 12,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  This field throws an error if the phone number format is incorrect. (Needs to be a valid U.S. number)
+                </Text>
               </Text>
-            </Text>
+            </View>
             <Text
               onLayout={[Function]}
               style={
@@ -998,6 +1027,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                     undefined,
                     Object {
                       "color": "#B00020",
+                      "fontSize": 12,
                     },
                   ]
                 }
@@ -1252,78 +1282,119 @@ exports[`Form Validation Tests renders the screen 1`] = `
                 />
               </View>
             </View>
-            <Text
-              onLayout={[Function]}
+            <View
               style={
                 Object {
-                  "color": "rgba(0, 0, 0, 0.54)",
-                  "fontFamily": "System",
-                  "fontSize": 12,
-                  "fontWeight": "400",
-                  "opacity": 1,
-                  "paddingHorizontal": 12,
-                  "paddingVertical": 4,
-                  "textAlign": "left",
-                  "transform": Array [],
-                  "writingDirection": "ltr",
+                  "flexDirection": "row",
                 }
               }
             >
               <Text
+                onLayout={[Function]}
+                style={
+                  Object {
+                    "color": "rgba(0, 0, 0, 0.54)",
+                    "fontFamily": "System",
+                    "fontSize": 12,
+                    "fontWeight": "400",
+                    "opacity": 1,
+                    "paddingHorizontal": 12,
+                    "paddingVertical": 4,
+                    "textAlign": "left",
+                    "transform": Array [],
+                    "writingDirection": "ltr",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                      },
+                      Object {
+                        "writingDirection": "ltr",
+                      },
+                      Object {},
+                      Object {
+                        "fontFamily": "System",
+                        "fontSize": 10,
+                        "fontWeight": "400",
+                        "letterSpacing": 0,
+                      },
+                      Object {},
+                      Object {
+                        "color": "#727e84",
+                        "fontSize": 12,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  Max 30 characters
+                </Text>
+              </Text>
+              <View
                 style={
                   Array [
                     Object {
-                      "color": "#000000",
+                      "flex": 1,
+                      "height": "auto",
+                      "width": "auto",
                     },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    Object {
-                      "color": "#727e84",
-                    },
+                    undefined,
                     undefined,
                   ]
                 }
-              >
-                Max 30 characters
-              </Text>
+                testID="spacer-root"
+              />
               <Text
+                onLayout={[Function]}
                 style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                    },
-                    Object {
-                      "writingDirection": "ltr",
-                    },
-                    Object {},
-                    Object {
-                      "fontFamily": "System",
-                      "fontSize": 10,
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                    },
-                    Object {},
-                    Object {
-                      "color": "#727e84",
-                      "paddingRight": 13,
-                    },
-                    undefined,
-                  ]
+                  Object {
+                    "color": "rgba(0, 0, 0, 0.54)",
+                    "fontFamily": "System",
+                    "fontSize": 12,
+                    "fontWeight": "400",
+                    "opacity": 1,
+                    "paddingHorizontal": 12,
+                    "paddingVertical": 4,
+                    "textAlign": "left",
+                    "transform": Array [],
+                    "writingDirection": "ltr",
+                  }
                 }
               >
-                 
-                0/30
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                      },
+                      Object {
+                        "writingDirection": "ltr",
+                      },
+                      Object {},
+                      Object {
+                        "fontFamily": "System",
+                        "fontSize": 10,
+                        "fontWeight": "400",
+                        "letterSpacing": 0,
+                      },
+                      Object {},
+                      Object {
+                        "color": "#727e84",
+                        "fontSize": 12,
+                        "paddingRight": 13,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  0/30
+                </Text>
               </Text>
-            </Text>
+            </View>
             <Text
               onLayout={[Function]}
               style={
@@ -1365,6 +1436,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                     undefined,
                     Object {
                       "color": "#B00020",
+                      "fontSize": 12,
                     },
                   ]
                 }
@@ -1726,6 +1798,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                     undefined,
                     Object {
                       "color": "#B00020",
+                      "fontSize": 12,
                     },
                   ]
                 }
@@ -2022,6 +2095,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                     undefined,
                     Object {
                       "color": "#B00020",
+                      "fontSize": 12,
                     },
                   ]
                 }
@@ -2555,6 +2629,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                     undefined,
                     Object {
                       "color": "#B00020",
+                      "fontSize": 12,
                     },
                   ]
                 }

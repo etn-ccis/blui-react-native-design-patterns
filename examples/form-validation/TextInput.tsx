@@ -3,7 +3,7 @@ import { View, StyleSheet, ViewStyle, TextInput as ReactTextInput, Platform, Tex
 import { HelperText, TextInput as PaperTextInput, useTheme } from 'react-native-paper';
 import { TextInputProps } from 'react-native-paper/lib/typescript/src/components/TextInput/TextInput';
 import * as Colors from '@pxblue/colors';
-import { Caption } from '@pxblue/react-native-components';
+import { Caption, Spacer } from '@pxblue/react-native-components';
 
 const makeStyles = (
     theme: ReactNativePaper.Theme
@@ -21,13 +21,16 @@ const makeStyles = (
         },
         errorText: {
             color: theme.colors.error,
+            fontSize: 12,
         },
         helperText: {
             color: Colors.gray[500],
+            fontSize: 12,
         },
         helperTextRight: {
             paddingRight: 13,
             color: Colors.gray[500],
+            fontSize: 12,
         },
     });
 
@@ -103,10 +106,19 @@ const TextInputRender: React.ForwardRefRenderFunction<{}, TextInputRenderProps> 
                 {...inputProps}
             />
             {helperText && !error && (
-                <HelperText type="info">
-                    <Caption styles={{ root: styles.helperText }}>{helperText}</Caption>
-                    {helperTextRight && <Caption styles={{ root: styles.helperTextRight }}> {helperTextRight}</Caption>}
-                </HelperText>
+                <View style={{ flexDirection: 'row' }}>
+                    <HelperText type="info">
+                        <Caption styles={{ root: styles.helperText }}>{helperText}</Caption>
+                    </HelperText>
+                    {helperTextRight && (
+                        <>
+                            <Spacer flex={1} />
+                            <HelperText type="info">
+                                <Caption styles={{ root: styles.helperTextRight }}>{helperTextRight}</Caption>
+                            </HelperText>
+                        </>
+                    )}
+                </View>
             )}
 
             <HelperText type="error" visible={error}>
