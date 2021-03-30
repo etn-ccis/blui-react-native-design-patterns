@@ -5,7 +5,6 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { InputIconType, TextInput } from './TextInput';
-// import { ScrollView } from 'react-native-gesture-handler';
 import { PasswordRequirement, passwordRequirements, PasswordRequirements } from './PasswordRequirements';
 import { useTheme } from 'react-native-paper';
 
