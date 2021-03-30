@@ -2096,10 +2096,10 @@
   resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.2.tgz#fb00503df6557b66c3d91d43c9101e614c35d2ec"
   integrity sha512-/3cLBoTjZs3kV1ATPA/Sp0tsL7XmlV/b8HW/qt0jqR/uP5+cdXL2YIhMXQngLRa7PhpSkEiRIYK5sl0rKsXTUg==
 
-"@pxblue/react-native-components@^5.0.0-beta.3":
-  version "5.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-5.0.0-beta.5.tgz#a4005c6074559e39a284a45b733ff4129af44e33"
-  integrity sha512-JXd6U5Kztdkj6XxLJLhsRfY2xemlVQ05evsnYO4ic2l6LlddgQG34JKUJ7LDtHyxUwyXrq3lVzn7x23vrcQgXA==
+"@pxblue/react-native-components@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-5.0.0.tgz#fff45023b5041e1ba6cbdec693c9702e62bd6fc7"
+  integrity sha512-uWCWqNlDoNmz0z9Cp6FckYRwUy3miPJJ8RQeBqG6F3aCb6rqZZryx2kyfLsVebrSeCuye/UAS3QaZb6brKmUCg==
   dependencies:
     "@pxblue/colors" "^3.0.0"
     color "^3.1.2"
@@ -9322,7 +9322,7 @@ react-test-renderer@^16.0.0-0:
     react-is "^16.8.6"
     scheduler "^0.19.1"
 
-react-test-renderer@^17.0.2:
+react-test-renderer@^17.0.0:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-17.0.2.tgz#4cd4ae5ef1ad5670fc0ef776e8cc7e1231d9866c"
   integrity sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ==

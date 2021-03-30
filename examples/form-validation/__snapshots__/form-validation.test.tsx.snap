@@ -17,7 +17,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
       Object {
         "backgroundColor": "#6200ee",
         "elevation": 0,
-        "height": 76,
+        "height": 132,
         "shadowColor": "rgba(0, 0, 0, 0.3)",
         "shadowOffset": Object {
           "height": 1,
@@ -34,9 +34,10 @@ exports[`Form Validation Tests renders the screen 1`] = `
         Object {
           "flex": 1,
           "flexDirection": "row",
-          "paddingBottom": 16,
+          "minHeight": 112,
+          "paddingBottom": 32,
           "paddingHorizontal": 16,
-          "paddingTop": 16,
+          "paddingVertical": 32,
         }
       }
     >
@@ -52,12 +53,12 @@ exports[`Form Validation Tests renders the screen 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "height": 40,
-            "margin": -8,
+            "height": 80,
+            "margin": -16,
             "marginRight": 24,
             "opacity": 1,
-            "padding": 8,
-            "width": 40,
+            "padding": 16,
+            "width": 80,
           }
         }
         testID="header-navigation"
@@ -71,6 +72,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
             "flexDirection": "column",
             "justifyContent": "flex-end",
             "marginRight": 0,
+            "marginTop": 0,
           }
         }
       >
@@ -107,7 +109,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
             Object {
               "alignItems": "center",
               "flexDirection": "row",
-              "height": 56,
+              "height": 112,
               "position": "absolute",
               "right": 8,
             },
@@ -118,9 +120,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
     </View>
   </RCTSafeAreaView>
   <RCTScrollView
-    collapsable={false}
-    onGestureHandlerEvent={[Function]}
-    onGestureHandlerStateChange={[Function]}
     style={
       Object {
         "marginBottom": 128,
@@ -229,11 +228,15 @@ exports[`Form Validation Tests renders the screen 1`] = `
               />
               <View
                 style={
-                  Object {
-                    "minHeight": 70,
-                    "paddingBottom": 0,
-                    "paddingTop": 0,
-                  }
+                  Array [
+                    Object {
+                      "paddingBottom": 0,
+                      "paddingTop": 0,
+                    },
+                    Object {
+                      "minHeight": 70,
+                    },
+                  ]
                 }
               >
                 <View
@@ -339,7 +342,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {
                         "flexGrow": 1,
                         "margin": 0,
-                        "textAlign": "left",
                         "zIndex": 1,
                       },
                       Object {
@@ -358,6 +360,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontFamily": "System",
                         "fontSize": 18,
                         "fontWeight": undefined,
+                        "textAlign": "left",
                         "textAlignVertical": "center",
                       },
                       Array [
@@ -407,7 +410,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {},
                       Object {
                         "fontFamily": "System",
-                        "fontSize": 10,
+                        "fontSize": 12,
                         "fontWeight": "400",
                         "letterSpacing": 0,
                       },
@@ -467,11 +470,15 @@ exports[`Form Validation Tests renders the screen 1`] = `
               />
               <View
                 style={
-                  Object {
-                    "minHeight": 70,
-                    "paddingBottom": 0,
-                    "paddingTop": 0,
-                  }
+                  Array [
+                    Object {
+                      "paddingBottom": 0,
+                      "paddingTop": 0,
+                    },
+                    Object {
+                      "minHeight": 70,
+                    },
+                  ]
                 }
               >
                 <View
@@ -577,7 +584,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {
                         "flexGrow": 1,
                         "margin": 0,
-                        "textAlign": "left",
                         "zIndex": 1,
                       },
                       Object {
@@ -596,6 +602,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontFamily": "System",
                         "fontSize": 18,
                         "fontWeight": undefined,
+                        "textAlign": "left",
                         "textAlignVertical": "center",
                       },
                       Array [
@@ -645,7 +652,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {},
                       Object {
                         "fontFamily": "System",
-                        "fontSize": 10,
+                        "fontSize": 12,
                         "fontWeight": "400",
                         "letterSpacing": 0,
                       },
@@ -705,11 +712,15 @@ exports[`Form Validation Tests renders the screen 1`] = `
               />
               <View
                 style={
-                  Object {
-                    "minHeight": 70,
-                    "paddingBottom": 0,
-                    "paddingTop": 0,
-                  }
+                  Array [
+                    Object {
+                      "paddingBottom": 0,
+                      "paddingTop": 0,
+                    },
+                    Object {
+                      "minHeight": 70,
+                    },
+                  ]
                 }
               >
                 <View
@@ -815,7 +826,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {
                         "flexGrow": 1,
                         "margin": 0,
-                        "textAlign": "left",
                         "zIndex": 1,
                       },
                       Object {
@@ -834,6 +844,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontFamily": "System",
                         "fontSize": 18,
                         "fontWeight": undefined,
+                        "textAlign": "left",
                         "textAlignVertical": "center",
                       },
                       Array [
@@ -883,7 +894,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {},
                       Object {
                         "fontFamily": "System",
-                        "fontSize": 10,
+                        "fontSize": 12,
                         "fontWeight": "400",
                         "letterSpacing": 0,
                       },
@@ -1004,11 +1015,15 @@ exports[`Form Validation Tests renders the screen 1`] = `
               />
               <View
                 style={
-                  Object {
-                    "minHeight": 70,
-                    "paddingBottom": 0,
-                    "paddingTop": 0,
-                  }
+                  Array [
+                    Object {
+                      "paddingBottom": 0,
+                      "paddingTop": 0,
+                    },
+                    Object {
+                      "minHeight": 70,
+                    },
+                  ]
                 }
               >
                 <View
@@ -1115,7 +1130,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {
                         "flexGrow": 1,
                         "margin": 0,
-                        "textAlign": "left",
                         "zIndex": 1,
                       },
                       Object {
@@ -1134,6 +1148,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontFamily": "System",
                         "fontSize": 18,
                         "fontWeight": undefined,
+                        "textAlign": "left",
                         "textAlignVertical": "center",
                       },
                       Array [
@@ -1183,7 +1198,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {},
                       Object {
                         "fontFamily": "System",
-                        "fontSize": 10,
+                        "fontSize": 12,
                         "fontWeight": "400",
                         "letterSpacing": 0,
                       },
@@ -1242,7 +1257,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {},
                       Object {
                         "fontFamily": "System",
-                        "fontSize": 10,
+                        "fontSize": 12,
                         "fontWeight": "400",
                         "letterSpacing": 0,
                       },
@@ -1364,11 +1379,15 @@ exports[`Form Validation Tests renders the screen 1`] = `
               />
               <View
                 style={
-                  Object {
-                    "minHeight": 70,
-                    "paddingBottom": 0,
-                    "paddingTop": 0,
-                  }
+                  Array [
+                    Object {
+                      "paddingBottom": 0,
+                      "paddingTop": 0,
+                    },
+                    Object {
+                      "minHeight": 70,
+                    },
+                  ]
                 }
               >
                 <View
@@ -1475,7 +1494,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {
                         "flexGrow": 1,
                         "margin": 0,
-                        "textAlign": "left",
                         "zIndex": 1,
                       },
                       Object {
@@ -1494,6 +1512,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontFamily": "System",
                         "fontSize": 18,
                         "fontWeight": undefined,
+                        "textAlign": "left",
                         "textAlignVertical": "center",
                       },
                       Object {
@@ -1622,11 +1641,15 @@ exports[`Form Validation Tests renders the screen 1`] = `
               />
               <View
                 style={
-                  Object {
-                    "minHeight": 70,
-                    "paddingBottom": 0,
-                    "paddingTop": 0,
-                  }
+                  Array [
+                    Object {
+                      "paddingBottom": 0,
+                      "paddingTop": 0,
+                    },
+                    Object {
+                      "minHeight": 70,
+                    },
+                  ]
                 }
               >
                 <View
@@ -1733,7 +1756,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {
                         "flexGrow": 1,
                         "margin": 0,
-                        "textAlign": "left",
                         "zIndex": 1,
                       },
                       Object {
@@ -1752,6 +1774,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontFamily": "System",
                         "fontSize": 18,
                         "fontWeight": undefined,
+                        "textAlign": "left",
                         "textAlignVertical": "center",
                       },
                       Object {
@@ -2113,11 +2136,15 @@ exports[`Form Validation Tests renders the screen 1`] = `
               />
               <View
                 style={
-                  Object {
-                    "minHeight": 70,
-                    "paddingBottom": 0,
-                    "paddingTop": 0,
-                  }
+                  Array [
+                    Object {
+                      "paddingBottom": 0,
+                      "paddingTop": 0,
+                    },
+                    Object {
+                      "minHeight": 70,
+                    },
+                  ]
                 }
               >
                 <View
@@ -2224,7 +2251,6 @@ exports[`Form Validation Tests renders the screen 1`] = `
                       Object {
                         "flexGrow": 1,
                         "margin": 0,
-                        "textAlign": "left",
                         "zIndex": 1,
                       },
                       Object {
@@ -2243,6 +2269,7 @@ exports[`Form Validation Tests renders the screen 1`] = `
                         "fontFamily": "System",
                         "fontSize": 18,
                         "fontWeight": undefined,
+                        "textAlign": "left",
                         "textAlignVertical": "center",
                       },
                       Object {

@@ -24,7 +24,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
       Object {
         "backgroundColor": "#6200ee",
         "elevation": 0,
-        "height": 76,
+        "height": 132,
         "shadowColor": "rgba(0, 0, 0, 0.3)",
         "shadowOffset": Object {
           "height": 1,
@@ -41,9 +41,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
         Object {
           "flex": 1,
           "flexDirection": "row",
-          "paddingBottom": 16,
+          "minHeight": 112,
+          "paddingBottom": 32,
           "paddingHorizontal": 16,
-          "paddingTop": 16,
+          "paddingVertical": 32,
         }
       }
     >
@@ -59,12 +60,12 @@ exports[`SearchBar Tests renders the screen 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "height": 40,
-            "margin": -8,
+            "height": 80,
+            "margin": -16,
             "marginRight": 24,
             "opacity": 1,
-            "padding": 8,
-            "width": 40,
+            "padding": 16,
+            "width": 80,
           }
         }
         testID="header-navigation"
@@ -77,7 +78,8 @@ exports[`SearchBar Tests renders the screen 1`] = `
             "flex": 1,
             "flexDirection": "column",
             "justifyContent": "flex-end",
-            "marginRight": 40,
+            "marginRight": 64,
+            "marginTop": 0,
           }
         }
       >
@@ -114,7 +116,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
             Object {
               "alignItems": "center",
               "flexDirection": "row",
-              "height": 56,
+              "height": 112,
               "position": "absolute",
               "right": 8,
             },
@@ -134,16 +136,17 @@ exports[`SearchBar Tests renders the screen 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "height": 40,
+              "height": 80,
               "opacity": 1,
-              "padding": 8,
-              "width": 40,
+              "paddingHorizontal": 8,
+              "paddingVertical": 16,
+              "width": 64,
             }
           }
           testID="header-action-item0"
         >
           <Text
-            allowFontScaling={false}
+            allowFontScaling={true}
             style={
               Array [
                 Object {
@@ -619,7 +622,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -647,7 +650,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -660,7 +663,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -695,13 +698,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -720,6 +720,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -739,13 +740,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -781,13 +779,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -820,7 +815,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -848,7 +843,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -861,7 +856,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -896,13 +891,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -921,6 +913,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -940,13 +933,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -982,13 +972,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1021,7 +1008,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -1049,7 +1036,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -1062,7 +1049,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -1097,13 +1084,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -1122,6 +1106,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -1141,13 +1126,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1183,13 +1165,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1222,7 +1201,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -1250,7 +1229,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -1263,7 +1242,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -1298,13 +1277,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -1323,6 +1299,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -1342,13 +1319,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1384,13 +1358,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1423,7 +1394,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -1451,7 +1422,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -1464,7 +1435,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -1499,13 +1470,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -1524,6 +1492,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -1543,13 +1512,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1585,13 +1551,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1624,7 +1587,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -1652,7 +1615,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -1665,7 +1628,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -1700,13 +1663,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -1725,6 +1685,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -1744,13 +1705,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1786,13 +1744,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1825,7 +1780,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -1853,7 +1808,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -1866,7 +1821,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -1901,13 +1856,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -1926,6 +1878,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -1945,13 +1898,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -1987,13 +1937,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -2026,7 +1973,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -2054,7 +2001,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -2067,7 +2014,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -2102,13 +2049,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -2127,6 +2071,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -2146,13 +2091,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -2188,13 +2130,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -2227,7 +2166,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -2255,7 +2194,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -2268,7 +2207,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -2303,13 +2242,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -2328,6 +2264,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -2347,13 +2284,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -2389,13 +2323,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -2428,7 +2359,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
               "alignItems": "center",
               "backgroundColor": "transparent",
               "flexDirection": "row",
-              "height": 72,
+              "minHeight": 144,
               "opacity": 1,
               "paddingRight": 16,
             }
@@ -2456,7 +2387,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   "alignItems": "flex-start",
                   "justifyContent": "center",
                   "marginLeft": 16,
-                  "width": 40,
+                  "width": 80,
                 },
                 undefined,
               ]
@@ -2469,7 +2400,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     "alignItems": "flex-start",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
-                    "width": 40,
+                    "width": 80,
                   },
                   undefined,
                 ]
@@ -2504,13 +2435,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "fontFamily": "System",
                     "fontSize": 16,
-                    "fontWeight": "400",
+                    "fontWeight": "500",
                     "letterSpacing": 0,
                   },
-                  Object {
-                    "fontFamily": "System",
-                    "fontWeight": "500",
-                  },
+                  Object {},
                   undefined,
                   Array [
                     Object {
@@ -2529,6 +2457,7 @@ exports[`SearchBar Tests renders the screen 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
+                    "overflow": "hidden",
                   },
                   undefined,
                 ]
@@ -2548,13 +2477,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",
@@ -2590,13 +2516,10 @@ exports[`SearchBar Tests renders the screen 1`] = `
                     Object {
                       "fontFamily": "System",
                       "fontSize": 14,
-                      "fontWeight": "500",
+                      "fontWeight": "400",
                       "letterSpacing": 0,
                     },
-                    Object {
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
+                    Object {},
                     undefined,
                     Object {
                       "color": "#000000",

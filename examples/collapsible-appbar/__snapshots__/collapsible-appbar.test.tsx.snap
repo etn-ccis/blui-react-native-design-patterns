@@ -16,7 +16,7 @@ exports[`Collapsible Appbar Tests renders the screen 1`] = `
     Object {
       "backgroundColor": "#6200ee",
       "elevation": 0,
-      "height": 220,
+      "height": 420,
       "shadowColor": "rgba(0, 0, 0, 0.3)",
       "shadowOffset": Object {
         "height": 1,
@@ -33,7 +33,7 @@ exports[`Collapsible Appbar Tests renders the screen 1`] = `
     source={1}
     style={
       Object {
-        "height": 220,
+        "height": 420,
         "opacity": 0.3,
         "position": "absolute",
         "resizeMode": "cover",
@@ -47,9 +47,10 @@ exports[`Collapsible Appbar Tests renders the screen 1`] = `
       Object {
         "flex": 1,
         "flexDirection": "row",
+        "minHeight": 112,
         "paddingBottom": 28,
         "paddingHorizontal": 16,
-        "paddingTop": 16,
+        "paddingVertical": 32,
       }
     }
   >
@@ -65,12 +66,12 @@ exports[`Collapsible Appbar Tests renders the screen 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "height": 40,
-          "margin": -8,
+          "height": 80,
+          "margin": -16,
           "marginRight": 24,
           "opacity": 1,
-          "padding": 8,
-          "width": 40,
+          "padding": 16,
+          "width": 80,
         }
       }
       testID="header-navigation"
@@ -84,6 +85,7 @@ exports[`Collapsible Appbar Tests renders the screen 1`] = `
           "flexDirection": "column",
           "justifyContent": "flex-end",
           "marginRight": 0,
+          "marginTop": 20,
         }
       }
     >
@@ -155,7 +157,7 @@ exports[`Collapsible Appbar Tests renders the screen 1`] = `
           Object {
             "alignItems": "center",
             "flexDirection": "row",
-            "height": 56,
+            "height": 112,
             "position": "absolute",
             "right": 8,
           },
