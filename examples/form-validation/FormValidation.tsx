@@ -1,11 +1,10 @@
 import React, { useCallback, useState } from 'react';
 import { Body1, H6, Header, wrapIcon } from '@pxblue/react-native-components';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { InputIconType, TextInput } from './TextInput';
-import { ScrollView } from 'react-native-gesture-handler';
 import { PasswordRequirement, passwordRequirements, PasswordRequirements } from './PasswordRequirements';
 import { useTheme } from 'react-native-paper';
 
