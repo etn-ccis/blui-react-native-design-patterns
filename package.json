@@ -14,6 +14,7 @@
         "precommit": "yarn prettier && yarn lint && yarn test"
     },
     "dependencies": {
+        "@expo/metro-config": "^0.1.61",
         "@pxblue/colors": "^3.0.0",
         "@pxblue/icons-svg": "^1.2.0",
         "@pxblue/react-native-components": "^5.0.0",
@@ -24,7 +25,6 @@
         "@react-navigation/stack": "^5.14.0",
         "expo": "^40.0.0",
         "expo-app-loading": "^1.0.1",
-        "expo-font": "~8.4.0",
         "expo-status-bar": "~1.0.3",
         "jest-enzyme": "^7.1.2",
         "react": "16.13.1",

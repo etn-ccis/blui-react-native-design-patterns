@@ -5,6 +5,7 @@ import * as PXBThemes from '@pxblue/react-native-themes';
 import AppLoading from 'expo-app-loading';
 import { MyDrawer } from './router';
 import { NavigationContainer } from '@react-navigation/native';
+import { H6 } from '@pxblue/react-native-components';
 
 const App: React.FC = () => {
     const [fontsLoaded] = useFonts({
