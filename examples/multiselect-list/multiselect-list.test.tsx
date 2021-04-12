@@ -31,7 +31,7 @@ const hardcodedData: ListItem[] = [
 ];
 
 describe('Multiselect List Tests', () => {
-    it('Screen Renders', () => {
+    it('renders the screen', () => {
         const tree = renderer.create(<MultiselectListScreen hardcodedData={hardcodedData} />).toJSON();
         expect(tree).toMatchSnapshot();
     });

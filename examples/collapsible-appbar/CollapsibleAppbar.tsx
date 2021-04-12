@@ -3,11 +3,12 @@ import { Header, wrapIcon } from '@pxblue/react-native-components';
 import bg from '../../assets/images/farm.jpg';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
 export const CollapsibleAppbarScreen: React.FC = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
 
     const toggleMenu = (): void => {
         navigation.openDrawer();

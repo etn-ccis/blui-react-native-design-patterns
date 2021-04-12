@@ -3,6 +3,7 @@ import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import { Drawer, DrawerHeader, DrawerBody, DrawerNavGroup, DrawerFooter } from '@pxblue/react-native-components';
 import { ROUTES } from './routes';
 import { View } from 'react-native';
+import * as appConfig from '../app.json';
 
 export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) => {
     const { navigation } = props;
@@ -18,7 +19,7 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
         <Drawer>
             <DrawerHeader
                 title={'PX Blue'}
-                subtitle={`React Native Design Patterns`}
+                subtitle={`React Native Design Patterns v${appConfig.expo.version}`}
                 styles={{
                     subtitle: { lineHeight: 16 },
                 }}
@@ -53,11 +54,11 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                             itemID: ROUTES.LOADING_STATES.name,
                             onPress: (): void => goTo(ROUTES.LOADING_STATES.route),
                         },
-                        // {
-                        //     title: ROUTES.FORM_VALIDATION.name,
-                        //     itemID: ROUTES.FORM_VALIDATION.name,
-                        //     onPress: (): void => goTo(ROUTES.FORM_VALIDATION.route),
-                        // },
+                        {
+                            title: ROUTES.FORM_VALIDATION.name,
+                            itemID: ROUTES.FORM_VALIDATION.name,
+                            onPress: (): void => goTo(ROUTES.FORM_VALIDATION.route),
+                        },
                         // {
                         //     title: ROUTES.I18N.name,
                         //     itemID: ROUTES.I18N.name,

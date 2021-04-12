@@ -7,7 +7,7 @@ jest.mock('@react-navigation/native', () => ({
 }));
 
 describe('Collapsible Appbar Tests', () => {
-    it('Screen Renders', () => {
+    it('renders the screen', () => {
         const tree = renderer.create(<CollapsibleAppbarScreen />).toJSON();
         expect(tree).toMatchSnapshot();
     });

@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Complex Bottom Sheet Tests Screen Renders 1`] = `
+exports[`Complex Bottom Sheet Tests renders the screen 1`] = `
 <Modal
   animationType="none"
+  deviceHeight={null}
+  deviceWidth={null}
   hardwareAccelerated={false}
   hideModalContentWhileAnimating={false}
+  onBackdropPress={[Function]}
   onModalHide={[Function]}
   onModalWillHide={[Function]}
   onModalWillShow={[Function]}
   onRequestClose={[Function]}
+  panResponderThreshold={4}
   scrollHorizontal={false}
   scrollOffset={0}
   scrollOffsetMax={0}
@@ -49,11 +53,15 @@ exports[`Complex Bottom Sheet Tests Screen Renders 1`] = `
     }
   />
   <View
+    deviceHeight={null}
+    deviceWidth={null}
     forwardedRef={[Function]}
     hideModalContentWhileAnimating={false}
+    onBackdropPress={[Function]}
     onModalHide={[Function]}
     onModalWillHide={[Function]}
     onModalWillShow={[Function]}
+    panResponderThreshold={4}
     pointerEvents="box-none"
     scrollHorizontal={false}
     scrollOffset={0}

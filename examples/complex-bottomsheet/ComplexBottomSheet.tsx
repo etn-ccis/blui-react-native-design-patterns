@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView, View, SafeAreaView } from 'react-native';
 import * as Colors from '@pxblue/colors';
-import { Header, InfoListItem, wrapIcon, H6 } from '@pxblue/react-native-components';
+import { Header, InfoListItem, wrapIcon, H6, EmptyState } from '@pxblue/react-native-components';
 import { ComplexBottomSheetScreen } from './components/BottomSheet';
 import { MaterialIcons } from '@expo/vector-icons';
 import { IconToggle } from './components/IconToggle';
 import { getAlarmList, formatDate, AlarmDataObject } from './data/alarmData';
 import { useNavigation } from '@react-navigation/native';
 import { Divider } from 'react-native-paper';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 const MoreIcon = wrapIcon({ IconClass: MaterialIcons, name: 'more-vert' });
@@ -18,6 +19,7 @@ const AccessTimeIcon = wrapIcon({ IconClass: MaterialIcons, name: 'access-time' 
 const SettingsIcon = wrapIcon({ IconClass: MaterialIcons, name: 'settings' });
 const UpdateIcon = wrapIcon({ IconClass: MaterialIcons, name: 'update' });
 const ClearIcon = wrapIcon({ IconClass: MaterialIcons, name: 'clear' });
+const ErrorIcon = wrapIcon({ IconClass: MaterialIcons, name: 'error' });
 
 const FILTERS = {
     TIME: 'time',
@@ -123,7 +125,7 @@ export const filterEvents = (
 const alarmList = getAlarmList(20);
 
 export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const [showBottomSheet, setShowBottomSheet] = useState(false);
     const [currentSort, setCurrentSort] = useState('time');
     const [showAlarms, setShowAlarms] = useState(true);
@@ -163,26 +165,31 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                 ]}
             />
             <SafeAreaView style={styles.container}>
-                <ScrollView>
-                    {filteredAlarmList.map((item, index) => (
-                        <InfoListItem
-                            key={index}
-                            title={`${item.active ? 'ACTIVE: ' : ''}${item.details}`}
-                            subtitle={formatDate(item.date)}
-                            backgroundColor={Colors.white[50]}
-                            IconClass={
-                                (item.type === 'alarm' && item.active && NotificatonsActiveIcon) ||
-                                (item.type === 'alarm' && !item.active && NotificatonsIcon) ||
-                                (item.type === 'settings' && SettingsIcon) ||
-                                (item.type === 'session' && UpdateIcon)
-                            }
-                            iconColor={item.active ? Colors.white[100] : undefined}
-                            fontColor={item.active ? Colors.red[500] : undefined}
-                            statusColor={item.active ? Colors.red[500] : undefined}
-                            avatar={item.active}
-                        />
-                    ))}
-                </ScrollView>
+                {filteredAlarmList.length ? (
+                    <ScrollView>
+                        {filteredAlarmList.map((item, index) => (
+                            <InfoListItem
+                                key={index}
+                                title={`${item.active ? 'ACTIVE: ' : ''}${item.details}`}
+                                subtitle={formatDate(item.date)}
+                                backgroundColor={Colors.white[50]}
+                                IconClass={
+                                    (item.type === 'alarm' && item.active && NotificatonsActiveIcon) ||
+                                    (item.type === 'alarm' && !item.active && NotificatonsIcon) ||
+                                    (item.type === 'settings' && SettingsIcon) ||
+                                    (item.type === 'session' && UpdateIcon) ||
+                                    undefined
+                                }
+                                iconColor={item.active ? Colors.white[100] : undefined}
+                                fontColor={item.active ? Colors.red[500] : undefined}
+                                statusColor={item.active ? Colors.red[500] : undefined}
+                                avatar={item.active}
+                            />
+                        ))}
+                    </ScrollView>
+                ) : (
+                    <EmptyState title={'No Data Found'} IconClass={ErrorIcon} />
+                )}
             </SafeAreaView>
             <ComplexBottomSheetScreen
                 show={showBottomSheet}
@@ -211,7 +218,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                             </IconToggle>
                         </View>
                     </View>
-                    <Divider accessibilityStates />
+                    <Divider />
                     <View style={styles.rowHeader}>
                         <H6>Show: </H6>
                         <View style={styles.row}>
@@ -249,7 +256,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                             </IconToggle>
                         </View>
                     </View>
-                    <Divider accessibilityStates />
+                    <Divider />
                     <InfoListItem
                         title={'Close'}
                         IconClass={ClearIcon}

@@ -70,7 +70,7 @@ export const SortableListScreen: React.FC = () => {
 
     const renderDragableItem = ({ item, drag, isActive }: DraggableItemProps): JSX.Element => (
         <TouchableOpacity onLongPress={drag}>
-            <Surface accessibilityStates style={{ elevation: isActive ? 4 : 0 }}>
+            <Surface style={{ elevation: isActive ? 4 : 0 }}>
                 <InfoListItem
                     title={item.name}
                     rightComponent={<Text>{item.value}</Text>}

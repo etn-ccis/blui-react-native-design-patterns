@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { View, FlatList, StyleSheet, ViewStyle } from 'react-native';
 import { Header, wrapIcon, InfoListItem, EmptyState, ListItemTag } from '@pxblue/react-native-components';
-import { useTheme, Theme } from 'react-native-paper';
+import { useTheme } from 'react-native-paper';
 import { MaterialIcons } from '@expo/vector-icons';
 import { InfoListItemProps } from '@pxblue/react-native-components/core/info-list-item/info-list-item';
 import * as Colors from '@pxblue/colors';
@@ -17,7 +17,7 @@ export type ActionListProps = {
     navigation: DrawerNavigationProp<Record<string, undefined>>;
 };
 
-const useStyles = (theme: Theme): StyleSheet.NamedStyles<{ container: ViewStyle }> =>
+const useStyles = (theme: ReactNativePaper.Theme): StyleSheet.NamedStyles<{ container: ViewStyle }> =>
     StyleSheet.create({
         container: {
             flex: 1,
@@ -75,7 +75,7 @@ for (let i = 0; i < 20; i++) {
 
 export const StatusListScreen: React.FC<ActionListProps> = (props) => {
     const { hardcodedData: data = list, navigation } = props;
-    const theme: Theme = useTheme();
+    const theme: ReactNativePaper.Theme = useTheme();
     const styles = useStyles(theme);
 
     const toggleMenu = useCallback((): void => {

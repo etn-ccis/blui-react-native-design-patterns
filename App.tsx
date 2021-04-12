@@ -1,9 +1,8 @@
 import React from 'react';
-import { useFonts } from '@use-expo/font';
+import { useFonts } from 'expo-font';
 import { Provider as ThemeProvider } from 'react-native-paper';
 import * as PXBThemes from '@pxblue/react-native-themes';
-import { AppLoading } from 'expo';
-// import { MainRouter } from './router';
+import AppLoading from 'expo-app-loading';
 import { MyDrawer } from './router';
 import { NavigationContainer } from '@react-navigation/native';
 
