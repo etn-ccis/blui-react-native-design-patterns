@@ -59,6 +59,17 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                             itemID: ROUTES.FORM_VALIDATION.name,
                             onPress: (): void => goTo(ROUTES.FORM_VALIDATION.route),
                         },
+                        {
+                            title: ROUTES.FORMS_AND_VALIDATION.name,
+                            itemID: ROUTES.FORMS_AND_VALIDATION.name,
+                            items: [
+                                {
+                                    title: ROUTES.PASSWORD_VALIDATION.name,
+                                    itemID: ROUTES.PASSWORD_VALIDATION.name,
+                                    onPress: (): void => goTo(ROUTES.PASSWORD_VALIDATION.route),
+                                },
+                            ],
+                        },
                         // {
                         //     title: ROUTES.I18N.name,
                         //     itemID: ROUTES.I18N.name,
