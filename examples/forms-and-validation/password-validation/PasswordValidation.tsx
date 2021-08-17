@@ -162,6 +162,12 @@ export const PasswordValidationScreen: React.FC = () => {
         validateConfirmPassword(confirmPassword);
     }, [validateConfirmPassword, confirmPassword]);
 
+    const canSubmit = useCallback((): boolean => !(
+            currentPassword.length !== 0 && currentPasswordErrorText === ''
+            && newPassword.length !== 0 && !hasNewPasswordError
+            && confirmPassword.length !== 0 && confirmPasswordErrorText === ''
+        ), [currentPassword, currentPasswordErrorText, newPassword, hasNewPasswordError, confirmPassword, confirmPasswordErrorText]);
+
     return (
         <View style={{ flex: 1 }}>
             <Header
@@ -254,6 +260,7 @@ export const PasswordValidationScreen: React.FC = () => {
                         mode="contained"
                         style={styles.submitButton}
                         onPress={(): void => {}}
+                        disabled={canSubmit()}
                     >
                         Submit
                     </Button>
