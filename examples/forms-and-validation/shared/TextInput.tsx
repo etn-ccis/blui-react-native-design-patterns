@@ -93,14 +93,14 @@ const TextInputRender: React.ForwardRefRenderFunction<{}, TextInputRenderProps> 
                 selectionColor={selectionColor}
                 right={
                     rightIcon &&
-                    rightIcon.name && (
+                    rightIcon.name ? (
                         <PaperTextInput.Icon
                             name={rightIcon.name}
                             forceTextInputFocus={false}
                             onPress={rightIcon?.onPress}
                             color={rightIcon?.color}
                         />
-                    )
+                    ) : rightIcon
                 }
                 error={error}
                 {...inputProps}
