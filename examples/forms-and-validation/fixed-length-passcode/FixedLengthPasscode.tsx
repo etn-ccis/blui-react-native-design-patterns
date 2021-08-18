@@ -137,7 +137,6 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
                                 label="Passcode *"
                                 value={passcode}
                                 onChangeText={onPasscodeChange}
-                                returnKeyType={'next'}
                                 keyboardType={'numeric'}
                                 error={passcodeErrorText !== ''}
                                 errorText={passcodeErrorText}
