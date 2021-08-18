@@ -409,7 +409,7 @@ exports[`Fixed Length Passcode Tests renders the screen 1`] = `
                     placeholder=""
                     placeholderTextColor="rgba(0, 0, 0, 0.54)"
                     rejectResponderTermination={true}
-                    returnKeyType="next"
+                    returnKeyType="done"
                     selectionColor="#6200ee"
                     style={
                       Array [
