@@ -5,12 +5,11 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { TextInput } from '../shared/TextInput';
-import { ActivityIndicator, Button, Divider } from 'react-native-paper';
+import { Button, Divider } from 'react-native-paper';
 import * as Colors from '@pxblue/colors';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 const RefreshIcon = wrapIcon({ IconClass: MaterialIcons, name: 'refresh' });
-const DoneIcon = wrapIcon({ IconClass: MaterialIcons, name: 'done' });
 
 const makeStyles = (): StyleSheet.NamedStyles<{
     section: ViewStyle;
@@ -36,7 +35,7 @@ const makeStyles = (): StyleSheet.NamedStyles<{
             marginBottom: 0,
         },
         resetFormButton: {
-            marginTop: 16
+            marginTop: 16,
         },
     });
 
@@ -48,6 +47,7 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [passcodeSubmitted, setPasscodeSubmitted] = useState(false);
     const [passcodeSuccess, setPasscodeSuccess] = useState(false);
+    const [shouldValidate, setShouldValidate] = useState(false);
 
     const toggleMenu = (): void => {
         navigation.openDrawer();
@@ -57,11 +57,8 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
         (value: string): void => {
             const tempPasscode = value;
             let tempPasscodeError = '';
-            if (!tempPasscode.trim()) {
+            if (tempPasscode.trim().length < 6) {
                 tempPasscodeError = 'Please enter a six-digit-passcode';
-            }
-            if (passcodeSubmitted && !passcodeSuccess) {
-                tempPasscodeError = 'Invalid Passcode';
             }
             setPasscodeErrorText(tempPasscodeError);
         },
@@ -69,52 +66,42 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
     );
 
     const verifyPasscode = (text: string): void => {
-        // eslint-disable-next-line no-console
-                console.log(text);
+        setPasscodeErrorText('');
         setIsLoading(true);
         setTimeout((): void => {
-            if (passcode === '123456') {
-                 // eslint-disable-next-line no-console
-                console.log('setting to true');
+            if (text === '123456') {
                 setPasscodeSuccess(true);
+                setPasscodeErrorText('');
+            } else {
+                setPasscodeSuccess(false);
+                setPasscodeErrorText('Invalid Passcode');
             }
             setPasscodeSubmitted(true);
             setIsLoading(false);
-            validatePasscode(text);
         }, 3000);
     };
 
     const onPasscodeChange = useCallback(
         (text: string) => {
             setPasscode(text);
-            validatePasscode(text);
-
-            if (text.length === 6) {
-                verifyPasscode((text));
-            }
+            if (shouldValidate) validatePasscode(text);
+            if (text.length === 6) verifyPasscode(text);
         },
-        [setPasscode, validatePasscode]
+        [setPasscode, validatePasscode, shouldValidate, verifyPasscode]
     );
 
     const onPasscodeBlur = useCallback((): void => {
+        setShouldValidate(true);
         validatePasscode(passcode);
-    }, [validatePasscode, passcode]);
-
-    // const getPasscodeRightIcon = useCallback((): React.ReactNode => {
-    //     if (isLoading) {
-    //         return <ActivityIndicator animating={true} color={Colors.blue[500]} size={20} />;
-    //     }
-    //     if (!isLoading && passcodeSubmitted && passcodeSuccess) {
-    //         return <DoneIcon color={Colors.green[500]} size={20} />;
-    //     }
-    // }, [isLoading, passcodeSubmitted, passcodeSuccess]);
+    }, [setShouldValidate, validatePasscode, passcode]);
 
     const resetForm = (): void => {
         setPasscode('');
         setPasscodeErrorText('');
         setPasscodeSubmitted(false);
         setPasscodeSuccess(false);
-    }
+        setShouldValidate(false);
+    };
 
     return (
         <View style={{ flex: 1 }}>
@@ -155,7 +142,17 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
                                 error={passcodeErrorText !== ''}
                                 errorText={passcodeErrorText}
                                 onBlur={onPasscodeBlur}
-                                rightIcon={isLoading ? <ActivityIndicator animating={true} color={Colors.blue[500]} size={20} /> : !isLoading && passcodeSubmitted && passcodeSuccess ? <DoneIcon color={Colors.green[500]} size={20} /> : <></>}
+                                rightIcon={{
+                                    name: !isLoading && passcodeSubmitted && passcodeSuccess ? 'check' : undefined,
+                                    color:
+                                        !isLoading && passcodeSubmitted && passcodeSuccess
+                                            ? Colors.green[500]
+                                            : undefined,
+                                }}
+                                rightText={{
+                                    text: isLoading ? 'verifying...' : '',
+                                    style: { color: isLoading ? Colors.gray[500] : '' },
+                                }}
                                 maxLength={6}
                                 disabled={isLoading || (passcodeSubmitted && passcodeSuccess)}
                             />
