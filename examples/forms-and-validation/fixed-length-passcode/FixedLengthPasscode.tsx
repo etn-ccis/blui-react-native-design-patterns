@@ -24,7 +24,7 @@ const makeStyles = (): StyleSheet.NamedStyles<{
             marginBottom: 32,
         },
         topDivider: {
-            marginTop: 24,
+            marginTop: 40,
             marginBottom: 32,
             marginHorizontal: -16,
         },

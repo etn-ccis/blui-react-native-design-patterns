@@ -256,7 +256,7 @@ exports[`Fixed Length Passcode Tests renders the screen 1`] = `
                 Object {
                   "marginBottom": 32,
                   "marginHorizontal": -16,
-                  "marginTop": 24,
+                  "marginTop": 40,
                 },
               ]
             }
