@@ -7,6 +7,7 @@ import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { TextInput } from '../shared/TextInput';
 import { PasswordRequirement, passwordRequirements, PasswordRequirements } from './PasswordRequirements';
 import { Button, Divider } from 'react-native-paper';
+import * as Colors from '@pxblue/colors';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
@@ -183,7 +184,7 @@ export const PasswordValidationScreen: React.FC = () => {
     );
 
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: Colors.white[50] }}>
             <Header
                 title={'Password Validation'}
                 navigation={{

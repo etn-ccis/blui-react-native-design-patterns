@@ -104,7 +104,7 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
     };
 
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: Colors.white[50] }}>
             <Header
                 title={'Fixed Length Passcode'}
                 navigation={{
