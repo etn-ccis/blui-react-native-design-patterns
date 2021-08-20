@@ -17,6 +17,7 @@ import { MultiselectListScreen } from '../examples/multiselect-list/MultiselectL
 import { SortableListScreen } from '../examples/sortable-list/SortableList';
 import { FormValidationScreen } from '../examples/form-validation/FormValidation';
 import { PasswordValidationScreen } from '../examples/forms-and-validation/password-validation/PasswordValidation';
+import { FormInAListScreen } from '../examples/forms-and-validation/form-in-a-list/FormInAList';
 
 const Drawer = createDrawerNavigator();
 
@@ -32,6 +33,7 @@ export const MyDrawer: React.FC = () => (
         <Drawer.Screen name={ROUTES.LOADING_STATES.route} component={LoadingStatesScreen} />
         <Drawer.Screen name={ROUTES.FORM_VALIDATION.route} component={FormValidationScreen} />
         <Drawer.Screen name={ROUTES.PASSWORD_VALIDATION.route} component={PasswordValidationScreen} />
+        <Drawer.Screen name={ROUTES.FORM_IN_A_LIST.route} component={FormInAListScreen} />
         <Drawer.Screen name={ROUTES.I18N.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.I18N.name} />}
         </Drawer.Screen>
