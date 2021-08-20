@@ -133,10 +133,18 @@ exports[`Fixed Length Passcode Tests renders the screen 1`] = `
       <View>
         <View
           style={
-            Object {
-              "marginBottom": 32,
-              "padding": 16,
-            }
+            Array [
+              Object {
+                "marginBottom": 32,
+                "padding": 16,
+              },
+              Object {
+                "alignSelf": "center",
+                "maxWidth": 480,
+                "paddingTop": 40,
+                "width": "100%",
+              },
+            ]
           }
         >
           <Text

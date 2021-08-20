@@ -1,6 +1,6 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Body1, Header, wrapIcon } from '@pxblue/react-native-components';
-import { View, StyleSheet, ScrollView, ViewStyle, TextStyle, SafeAreaView } from 'react-native';
+import { View, StyleSheet, ScrollView, ViewStyle, TextStyle, SafeAreaView, Dimensions } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
@@ -13,6 +13,7 @@ const RefreshIcon = wrapIcon({ IconClass: MaterialIcons, name: 'refresh' });
 
 const makeStyles = (): StyleSheet.NamedStyles<{
     section: ViewStyle;
+    sectionTablet: ViewStyle;
     topDivider: ViewStyle;
     passcodeFormFieldWrapper: TextStyle;
     passcodeErrorFormFieldWrapper: TextStyle;
@@ -22,6 +23,12 @@ const makeStyles = (): StyleSheet.NamedStyles<{
         section: {
             padding: 16,
             marginBottom: 32,
+        },
+        sectionTablet: {
+            width: '100%',
+            maxWidth: 480,
+            alignSelf: 'center',
+            paddingTop: 40,
         },
         topDivider: {
             marginTop: 40,
@@ -42,12 +49,20 @@ const makeStyles = (): StyleSheet.NamedStyles<{
 export const FixedLengthPasscodeScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const styles = makeStyles();
+    const [dimensions, setDimensions] = useState({ window: Dimensions.get('window') });
     const [passcode, setPasscode] = useState('');
     const [passcodeErrorText, setPasscodeErrorText] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [passcodeSubmitted, setPasscodeSubmitted] = useState(false);
     const [passcodeSuccess, setPasscodeSuccess] = useState(false);
     const [shouldValidate, setShouldValidate] = useState(false);
+
+    useEffect(() => {
+        const subscription = Dimensions.addEventListener('change', ({ window }) => {
+            setDimensions({ window });
+        });
+        return (): void => subscription?.remove();
+    });
 
     const toggleMenu = (): void => {
         navigation.openDrawer();
@@ -113,7 +128,7 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
             />
             <SafeAreaView>
                 <ScrollView>
-                    <View style={styles.section}>
+                    <View style={[styles.section, dimensions.window.width < 600 ? {} : styles.sectionTablet]}>
                         <Body1>
                             Please enter the <Body1 font={'medium'}>six-digit passcode</Body1> we just send to you. The
                             passcode is valid for 15 minutes.
