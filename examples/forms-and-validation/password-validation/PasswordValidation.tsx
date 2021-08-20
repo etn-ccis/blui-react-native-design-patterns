@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Body1, Header, wrapIcon } from '@pxblue/react-native-components';
-import { View, StyleSheet, ScrollView, ViewStyle, TextStyle, SafeAreaView } from 'react-native';
+import { View, StyleSheet, ScrollView, ViewStyle, SafeAreaView } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
@@ -14,12 +14,12 @@ const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 const makeStyles = (): StyleSheet.NamedStyles<{
     section: ViewStyle;
     topDivider: ViewStyle;
-    currentPasswordFormFieldWrapper: TextStyle;
-    currentPasswordErrorFormFieldWrapper: TextStyle;
-    newPasswordFormFieldWrapper: TextStyle;
+    currentPasswordFormFieldWrapper: ViewStyle;
+    currentPasswordErrorFormFieldWrapper: ViewStyle;
+    newPasswordFormFieldWrapper: ViewStyle;
     passwordRequirements: ViewStyle;
-    confirmPasswordFormFieldWrapper: TextStyle;
-    confirmPasswordErrorFormFieldWrapper: TextStyle;
+    confirmPasswordFormFieldWrapper: ViewStyle;
+    confirmPasswordErrorFormFieldWrapper: ViewStyle;
     buttonContainer: ViewStyle;
     bottomDivider: ViewStyle;
     submitButton: ViewStyle;

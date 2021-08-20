@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Body1, Header, wrapIcon } from '@pxblue/react-native-components';
-import { View, StyleSheet, ScrollView, ViewStyle, TextStyle, SafeAreaView, Dimensions } from 'react-native';
+import { View, StyleSheet, ScrollView, ViewStyle, SafeAreaView, Dimensions } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
@@ -15,8 +15,8 @@ const makeStyles = (): StyleSheet.NamedStyles<{
     section: ViewStyle;
     sectionTablet: ViewStyle;
     topDivider: ViewStyle;
-    passcodeFormFieldWrapper: TextStyle;
-    passcodeErrorFormFieldWrapper: TextStyle;
+    passcodeFormFieldWrapper: ViewStyle;
+    passcodeErrorFormFieldWrapper: ViewStyle;
     resetFormButton: ViewStyle;
 }> =>
     StyleSheet.create({
