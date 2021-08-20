@@ -53,17 +53,14 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
         navigation.openDrawer();
     };
 
-    const validatePasscode = useCallback(
-        (value: string): void => {
-            const tempPasscode = value;
-            let tempPasscodeError = '';
-            if (tempPasscode.trim().length < 6) {
-                tempPasscodeError = 'Please enter a six-digit-passcode';
-            }
-            setPasscodeErrorText(tempPasscodeError);
-        },
-        [setPasscodeErrorText]
-    );
+    const validatePasscode = useCallback((value: string): void => {
+        const tempPasscode = value;
+        let tempPasscodeError = '';
+        if (tempPasscode.trim().length < 6) {
+            tempPasscodeError = 'Please enter a six-digit-passcode';
+        }
+        setPasscodeErrorText(tempPasscodeError);
+    }, []);
 
     const verifyPasscode = (text: string): void => {
         setPasscodeErrorText('');
@@ -87,13 +84,13 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
             if (shouldValidate) validatePasscode(text);
             if (text.length === 6) verifyPasscode(text);
         },
-        [setPasscode, validatePasscode, shouldValidate, verifyPasscode]
+        [validatePasscode, shouldValidate, verifyPasscode]
     );
 
     const onPasscodeBlur = useCallback((): void => {
         setShouldValidate(true);
         validatePasscode(passcode);
-    }, [setShouldValidate, validatePasscode, passcode]);
+    }, [validatePasscode, passcode]);
 
     const resetForm = (): void => {
         setPasscode('');

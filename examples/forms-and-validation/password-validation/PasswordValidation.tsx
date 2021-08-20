@@ -84,53 +84,47 @@ export const PasswordValidationScreen: React.FC = () => {
         navigation.openDrawer();
     };
 
-    const validateCurrentPassword = useCallback(
-        (value: string): void => {
-            const tempCurrentPassword = value;
-            let tempCurrentPasswordError = '';
-            if (!tempCurrentPassword.trim()) {
-                tempCurrentPasswordError = 'required';
-            }
-            setCurrentPasswordErrorText(tempCurrentPasswordError);
-        },
-        [setCurrentPasswordErrorText]
-    );
+    const validateCurrentPassword = useCallback((value: string): void => {
+        const tempCurrentPassword = value;
+        let tempCurrentPasswordError = '';
+        if (!tempCurrentPassword.trim()) {
+            tempCurrentPasswordError = 'required';
+        }
+        setCurrentPasswordErrorText(tempCurrentPasswordError);
+    }, []);
 
     const onCurrentPasswordChange = useCallback(
         (text: string) => {
             setCurrentPassword(text);
             validateCurrentPassword(text);
         },
-        [setCurrentPassword, validateCurrentPassword]
+        [validateCurrentPassword]
     );
 
     const onCurrentPasswordBlur = useCallback((): void => {
         validateCurrentPassword(currentPassword);
     }, [validateCurrentPassword, currentPassword]);
 
-    const validateNewPassword = useCallback(
-        (value: string): void => {
-            const tempNewPassword = value;
-            let tempNewPasswordError = false;
-            setHasNewPasswordError(false);
+    const validateNewPassword = useCallback((value: string): void => {
+        const tempNewPassword = value;
+        let tempNewPasswordError = false;
+        setHasNewPasswordError(false);
 
-            passwordRequirements.forEach((requirement: PasswordRequirement) => {
-                if (!requirement.regex.test(tempNewPassword)) {
-                    tempNewPasswordError = true;
-                }
-            });
+        passwordRequirements.forEach((requirement: PasswordRequirement) => {
+            if (!requirement.regex.test(tempNewPassword)) {
+                tempNewPasswordError = true;
+            }
+        });
 
-            setHasNewPasswordError(tempNewPasswordError);
-        },
-        [setHasNewPasswordError]
-    );
+        setHasNewPasswordError(tempNewPasswordError);
+    }, []);
 
     const onNewPasswordChange = useCallback(
         (text: string) => {
             setNewPassword(text);
             validateNewPassword(text);
         },
-        [setNewPassword, validateNewPassword]
+        [validateNewPassword]
     );
 
     const onNewPasswordBlur = useCallback((): void => {
@@ -148,7 +142,7 @@ export const PasswordValidationScreen: React.FC = () => {
             }
             setConfirmPasswordErrorText(tempConfirmPasswordError);
         },
-        [setConfirmPasswordErrorText, newPassword]
+        [newPassword]
     );
 
     const onConfirmPasswordChange = useCallback(
@@ -156,7 +150,7 @@ export const PasswordValidationScreen: React.FC = () => {
             setConfirmPassword(text);
             validateConfirmPassword(text);
         },
-        [setConfirmPassword, validateConfirmPassword]
+        [validateConfirmPassword]
     );
 
     const onConfirmPasswordBlur = useCallback((): void => {
