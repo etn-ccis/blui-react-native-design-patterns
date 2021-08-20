@@ -13,13 +13,9 @@ const DNSIcon = wrapIcon({ IconClass: MaterialIcons, name: 'dns' });
 const InsightsIcon = wrapIcon({ IconClass: MaterialIcons, name: 'insights' });
 
 const makeStyles = (): StyleSheet.NamedStyles<{
-    infoListItem: ViewStyle;
     textInput: ViewStyle;
 }> =>
     StyleSheet.create({
-        infoListItem: {
-            backgroundColor: Colors.white[50],
-        },
         textInput: {
             height: 40,
             width: 136,
@@ -56,19 +52,19 @@ export const FormInAListScreen: React.FC = () => {
             <SafeAreaView>
                 <ScrollView>
                     <InfoListItem
-                        style={styles.infoListItem}
                         title={'IP Address'}
                         IconClass={DNSIcon}
                         divider={'partial'}
+                        backgroundColor={Colors.white[50]}
                         rightComponent={
                             <TextInput value={ipAddress} onChangeText={onIPAddressChange} style={styles.textInput} />
                         }
                     />
                     <InfoListItem
-                        style={styles.infoListItem}
                         title={'Insight Report'}
                         subtitle={'Auto-report every 2 months'}
                         IconClass={InsightsIcon}
+                        backgroundColor={Colors.white[50]}
                         rightComponent={<Switch value={isSwitchOn} onValueChange={onSwitchToggle} />}
                     />
                 </ScrollView>
