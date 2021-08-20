@@ -52,7 +52,7 @@ export const FormInAListScreen: React.FC = () => {
         const subscription = Dimensions.addEventListener('change', ({ window }) => {
             setDimensions({ window });
         });
-        return (): any => subscription?.remove();
+        return (): void => subscription?.remove();
     });
 
     const toggleMenu = (): void => {
