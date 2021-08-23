@@ -6,6 +6,7 @@ export const ROUTES = {
     FORM_VALIDATION: { name: 'Form Validation', route: 'form-validation' },
     FORMS_AND_VALIDATION: { name: 'Forms and Validation' },
     PASSWORD_VALIDATION: { name: 'Password', route: 'password' },
+    FIXED_LENGTH_PASSCODE: { name: 'Fixed Length Passcode', route: 'fixed-length-passcode' },
     I18N: { name: 'Internationalization', route: 'internationalization' },
     ACTION_LIST: { name: 'Action List', route: 'action-list' },
     DATA_LIST: { name: 'Data List', route: 'data-list' },
