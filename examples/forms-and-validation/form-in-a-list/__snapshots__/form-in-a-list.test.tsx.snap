@@ -395,9 +395,10 @@ exports[`Password Validation Tests renders the screen 1`] = `
                               "textAlign": "left",
                               "textAlignVertical": "center",
                             },
-                            Array [
-                              Object {},
-                            ],
+                            Object {
+                              "marginRight": 36,
+                              "paddingRight": 8,
+                            },
                           ]
                         }
                         textContentType="none"
