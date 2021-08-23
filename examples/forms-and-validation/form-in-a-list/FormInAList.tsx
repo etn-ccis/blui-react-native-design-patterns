@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Header, InfoListItem, wrapIcon } from '@pxblue/react-native-components';
-import { View, StyleSheet, ViewStyle, SafeAreaView, Dimensions } from 'react-native';
+import { View, StyleSheet, ViewStyle, SafeAreaView, Dimensions, ScrollView } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
@@ -77,30 +77,32 @@ export const FormInAListScreen: React.FC = () => {
                 }}
             />
             <SafeAreaView>
-                <View style={[styles.cardWrapper, dimensions.window.width < 600 ? {} : styles.cardWrapperTablet]}>
-                    <Card style={[styles.card, dimensions.window.width < 600 ? {} : styles.cardTablet]}>
-                        <InfoListItem
-                            title={'IP Address'}
-                            IconClass={DNSIcon}
-                            divider={'partial'}
-                            backgroundColor={Colors.white[50]}
-                            rightComponent={
-                                <TextInput
-                                    value={ipAddress}
-                                    onChangeText={onIPAddressChange}
-                                    style={styles.textInput}
-                                />
-                            }
-                        />
-                        <InfoListItem
-                            title={'Insight Report'}
-                            subtitle={'Auto-report every 2 months'}
-                            IconClass={InsightsIcon}
-                            backgroundColor={Colors.white[50]}
-                            rightComponent={<Switch value={isSwitchOn} onValueChange={onSwitchToggle} />}
-                        />
-                    </Card>
-                </View>
+                <ScrollView>
+                    <View style={[styles.cardWrapper, dimensions.window.width < 600 ? {} : styles.cardWrapperTablet]}>
+                        <Card style={[styles.card, dimensions.window.width < 600 ? {} : styles.cardTablet]}>
+                            <InfoListItem
+                                title={'IP Address'}
+                                IconClass={DNSIcon}
+                                divider={'partial'}
+                                backgroundColor={Colors.white[50]}
+                                rightComponent={
+                                    <TextInput
+                                        value={ipAddress}
+                                        onChangeText={onIPAddressChange}
+                                        style={styles.textInput}
+                                    />
+                                }
+                            />
+                            <InfoListItem
+                                title={'Insight Report'}
+                                subtitle={'Auto-report every 2 months'}
+                                IconClass={InsightsIcon}
+                                backgroundColor={Colors.white[50]}
+                                rightComponent={<Switch value={isSwitchOn} onValueChange={onSwitchToggle} />}
+                            />
+                        </Card>
+                    </View>
+                </ScrollView>
             </SafeAreaView>
         </View>
     );
