@@ -40,6 +40,7 @@ export type TextInputRenderProps = Omit<TextInputProps, 'theme'> & {
     helperStyles?: ViewStyle;
     helperTextRight?: string;
     rightIcon?: InputIconType;
+    rightText?: InputTextType;
     rightIconOnPress?: () => void;
     theme?: ReactNativePaper.Theme;
     testID?: string;
@@ -49,6 +50,11 @@ export type InputIconType = {
     name?: string;
     color?: string;
     onPress?: () => void;
+};
+
+export type InputTextType = {
+    text?: string;
+    style?: TextStyle;
 };
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -66,6 +72,7 @@ const TextInputRender: React.ForwardRefRenderFunction<{}, TextInputRenderProps> 
         helperText,
         helperTextRight,
         rightIcon,
+        rightText,
         theme: customTheme,
         ...inputProps
     } = props;
@@ -92,14 +99,17 @@ const TextInputRender: React.ForwardRefRenderFunction<{}, TextInputRenderProps> 
                 underlineColor={Colors.gray['100']}
                 selectionColor={selectionColor}
                 right={
-                    rightIcon &&
-                    rightIcon.name && (
+                    rightIcon && rightIcon.name ? (
                         <PaperTextInput.Icon
                             name={rightIcon.name}
                             forceTextInputFocus={false}
                             onPress={rightIcon?.onPress}
                             color={rightIcon?.color}
                         />
+                    ) : rightText && rightText.text ? (
+                        <PaperTextInput.Affix text={rightText.text} textStyle={rightText.style} />
+                    ) : (
+                        <></>
                     )
                 }
                 error={error}

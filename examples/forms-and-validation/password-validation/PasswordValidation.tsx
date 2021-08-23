@@ -1,24 +1,25 @@
 import React, { useCallback, useState } from 'react';
 import { Body1, Header, wrapIcon } from '@pxblue/react-native-components';
-import { View, StyleSheet, ScrollView, ViewStyle, TextStyle, SafeAreaView } from 'react-native';
+import { View, StyleSheet, ScrollView, ViewStyle, SafeAreaView } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { TextInput } from '../shared/TextInput';
 import { PasswordRequirement, passwordRequirements, PasswordRequirements } from './PasswordRequirements';
 import { Button, Divider } from 'react-native-paper';
+import * as Colors from '@pxblue/colors';
 
 const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
 const makeStyles = (): StyleSheet.NamedStyles<{
     section: ViewStyle;
     topDivider: ViewStyle;
-    currentPasswordFormFieldWrapper: TextStyle;
-    currentPasswordErrorFormFieldWrapper: TextStyle;
-    newPasswordFormFieldWrapper: TextStyle;
+    currentPasswordFormFieldWrapper: ViewStyle;
+    currentPasswordErrorFormFieldWrapper: ViewStyle;
+    newPasswordFormFieldWrapper: ViewStyle;
     passwordRequirements: ViewStyle;
-    confirmPasswordFormFieldWrapper: TextStyle;
-    confirmPasswordErrorFormFieldWrapper: TextStyle;
+    confirmPasswordFormFieldWrapper: ViewStyle;
+    confirmPasswordErrorFormFieldWrapper: ViewStyle;
     buttonContainer: ViewStyle;
     bottomDivider: ViewStyle;
     submitButton: ViewStyle;
@@ -29,7 +30,7 @@ const makeStyles = (): StyleSheet.NamedStyles<{
             marginBottom: 32,
         },
         topDivider: {
-            marginTop: 24,
+            marginTop: 40,
             marginBottom: 32,
             marginHorizontal: -16,
         },
@@ -83,53 +84,47 @@ export const PasswordValidationScreen: React.FC = () => {
         navigation.openDrawer();
     };
 
-    const validateCurrentPassword = useCallback(
-        (value: string): void => {
-            const tempCurrentPassword = value;
-            let tempCurrentPasswordError = '';
-            if (!tempCurrentPassword.trim()) {
-                tempCurrentPasswordError = 'required';
-            }
-            setCurrentPasswordErrorText(tempCurrentPasswordError);
-        },
-        [setCurrentPasswordErrorText]
-    );
+    const validateCurrentPassword = useCallback((value: string): void => {
+        const tempCurrentPassword = value;
+        let tempCurrentPasswordError = '';
+        if (!tempCurrentPassword.trim()) {
+            tempCurrentPasswordError = 'required';
+        }
+        setCurrentPasswordErrorText(tempCurrentPasswordError);
+    }, []);
 
     const onCurrentPasswordChange = useCallback(
         (text: string) => {
             setCurrentPassword(text);
             validateCurrentPassword(text);
         },
-        [setCurrentPassword, validateCurrentPassword]
+        [validateCurrentPassword]
     );
 
     const onCurrentPasswordBlur = useCallback((): void => {
         validateCurrentPassword(currentPassword);
     }, [validateCurrentPassword, currentPassword]);
 
-    const validateNewPassword = useCallback(
-        (value: string): void => {
-            const tempNewPassword = value;
-            let tempNewPasswordError = false;
-            setHasNewPasswordError(false);
+    const validateNewPassword = useCallback((value: string): void => {
+        const tempNewPassword = value;
+        let tempNewPasswordError = false;
+        setHasNewPasswordError(false);
 
-            passwordRequirements.forEach((requirement: PasswordRequirement) => {
-                if (!requirement.regex.test(tempNewPassword)) {
-                    tempNewPasswordError = true;
-                }
-            });
+        passwordRequirements.forEach((requirement: PasswordRequirement) => {
+            if (!requirement.regex.test(tempNewPassword)) {
+                tempNewPasswordError = true;
+            }
+        });
 
-            setHasNewPasswordError(tempNewPasswordError);
-        },
-        [setHasNewPasswordError]
-    );
+        setHasNewPasswordError(tempNewPasswordError);
+    }, []);
 
     const onNewPasswordChange = useCallback(
         (text: string) => {
             setNewPassword(text);
             validateNewPassword(text);
         },
-        [setNewPassword, validateNewPassword]
+        [validateNewPassword]
     );
 
     const onNewPasswordBlur = useCallback((): void => {
@@ -147,7 +142,7 @@ export const PasswordValidationScreen: React.FC = () => {
             }
             setConfirmPasswordErrorText(tempConfirmPasswordError);
         },
-        [setConfirmPasswordErrorText, newPassword]
+        [newPassword]
     );
 
     const onConfirmPasswordChange = useCallback(
@@ -155,7 +150,7 @@ export const PasswordValidationScreen: React.FC = () => {
             setConfirmPassword(text);
             validateConfirmPassword(text);
         },
-        [setConfirmPassword, validateConfirmPassword]
+        [validateConfirmPassword]
     );
 
     const onConfirmPasswordBlur = useCallback((): void => {
@@ -183,7 +178,7 @@ export const PasswordValidationScreen: React.FC = () => {
     );
 
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: Colors.white[50] }}>
             <Header
                 title={'Password Validation'}
                 navigation={{

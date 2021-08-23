@@ -69,6 +69,11 @@ export const NavigationDrawer: React.FC<DrawerContentComponentProps> = (props) =
                                     onPress: (): void => goTo(ROUTES.PASSWORD_VALIDATION.route),
                                 },
                                 {
+                                    title: ROUTES.FIXED_LENGTH_PASSCODE.name,
+                                    itemID: ROUTES.FIXED_LENGTH_PASSCODE.name,
+                                    onPress: (): void => goTo(ROUTES.FIXED_LENGTH_PASSCODE.route),
+                                },
+                                {
                                     title: ROUTES.FORM_IN_A_LIST.name,
                                     itemID: ROUTES.FORM_IN_A_LIST.name,
                                     onPress: (): void => goTo(ROUTES.FORM_IN_A_LIST.route),
