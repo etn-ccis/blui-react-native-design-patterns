@@ -108,9 +108,7 @@ const TextInputRender: React.ForwardRefRenderFunction<{}, TextInputRenderProps> 
                         />
                     ) : rightText && rightText.text ? (
                         <PaperTextInput.Affix text={rightText.text} textStyle={rightText.style} />
-                    ) : (
-                        undefined
-                    )
+                    ) : undefined
                 }
                 error={error}
                 {...inputProps}
