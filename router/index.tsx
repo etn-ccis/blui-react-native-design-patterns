@@ -19,6 +19,7 @@ import { FormValidationScreen } from '../examples/form-validation/FormValidation
 import { PasswordValidationScreen } from '../examples/forms-and-validation/password-validation/PasswordValidation';
 import { FixedLengthPasscodeScreen } from '../examples/forms-and-validation/fixed-length-passcode/FixedLengthPasscode';
 import { VerifyOnSubmitScreen } from '../examples/forms-and-validation/verify-on-submit/VerifyOnSubmit';
+import { FormInAListScreen } from '../examples/forms-and-validation/form-in-a-list/FormInAList';
 
 const Drawer = createDrawerNavigator();
 
@@ -36,6 +37,7 @@ export const MyDrawer: React.FC = () => (
         <Drawer.Screen name={ROUTES.PASSWORD_VALIDATION.route} component={PasswordValidationScreen} />
         <Drawer.Screen name={ROUTES.FIXED_LENGTH_PASSCODE.route} component={FixedLengthPasscodeScreen} />
         <Drawer.Screen name={ROUTES.VERIFY_ON_SUBMIT.route} component={VerifyOnSubmitScreen} />
+        <Drawer.Screen name={ROUTES.FORM_IN_A_LIST.route} component={FormInAListScreen} />
         <Drawer.Screen name={ROUTES.I18N.route}>
             {(): JSX.Element => <Placeholder title={ROUTES.I18N.name} />}
         </Drawer.Screen>
