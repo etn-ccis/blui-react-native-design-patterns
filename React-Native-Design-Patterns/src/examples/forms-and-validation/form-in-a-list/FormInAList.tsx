@@ -1,16 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Header, InfoListItem, wrapIcon } from '@brightlayer-ui/react-native-components';
+import { Header, InfoListItem } from '@brightlayer-ui/react-native-components';
 import { View, StyleSheet, ViewStyle, SafeAreaView, Dimensions, ScrollView } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { TextInput } from '../shared/TextInput';
 import { Card, Switch } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const DNSIcon = wrapIcon({ IconClass: MaterialIcons, name: 'dns' });
-const InsightsIcon = wrapIcon({ IconClass: MaterialIcons, name: 'insights' });
 
 const makeStyles = (): StyleSheet.NamedStyles<{
     cardWrapper: ViewStyle;
@@ -70,7 +66,7 @@ export const FormInAListScreen: React.FC = () => {
             <Header
                 title={'In A List'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },
@@ -82,7 +78,7 @@ export const FormInAListScreen: React.FC = () => {
                         <Card style={[styles.card, dimensions.window.width < 600 ? {} : styles.cardTablet]}>
                             <InfoListItem
                                 title={'IP Address'}
-                                IconClass={DNSIcon}
+                                icon={<MatIcon name="dns" />}
                                 divider={'partial'}
                                 backgroundColor={Colors.white[50]}
                                 rightComponent={
@@ -96,7 +92,7 @@ export const FormInAListScreen: React.FC = () => {
                             <InfoListItem
                                 title={'Insight Report'}
                                 subtitle={'Auto-report every 2 months'}
-                                IconClass={InsightsIcon}
+                                icon={<MatIcon name="insights" />}
                                 backgroundColor={Colors.white[50]}
                                 rightComponent={<Switch value={isSwitchOn} onValueChange={onSwitchToggle} />}
                             />

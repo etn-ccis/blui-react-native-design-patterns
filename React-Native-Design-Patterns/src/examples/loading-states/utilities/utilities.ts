@@ -1,12 +1,4 @@
-import { ComponentType } from 'react';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { wrapIcon } from '@brightlayer-ui/react-native-components';
-import { WrapIconProps } from '@brightlayer-ui/react-native-components/core/icon-wrapper/icon-wrapper';
 import { red, yellow, green } from '@brightlayer-ui/colors';
-
-const AGradeIcon = wrapIcon({ IconClass: MaterialCommunityIcons, name: 'alpha-a' });
-const BGradeIcon = wrapIcon({ IconClass: MaterialCommunityIcons, name: 'alpha-b' });
-const CGradeIcon = wrapIcon({ IconClass: MaterialCommunityIcons, name: 'alpha-c' });
 
 export const getIcon = (value: number): string => {
     if (value >= 90) return 'A';
@@ -29,15 +21,15 @@ export const getGradeColor = (value: number): string => {
     return red[500];
 };
 
-export const getGradeIcon = (letter: string): ComponentType<WrapIconProps> => {
+export const getGradeIcon = (letter: string): string => {
     switch (letter) {
         case 'A':
-            return AGradeIcon;
+            return 'alpha-a';
         case 'B':
-            return BGradeIcon;
+            return 'alpha-b';
         case 'C':
-            return CGradeIcon;
+            return 'alpha-c';
         default:
-            return AGradeIcon;
+            return 'alpha-a';
     }
 };

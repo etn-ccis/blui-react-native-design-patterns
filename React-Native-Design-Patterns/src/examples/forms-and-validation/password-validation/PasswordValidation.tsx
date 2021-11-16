@@ -1,15 +1,13 @@
 import React, { useCallback, useState } from 'react';
-import { Body1, Header, wrapIcon } from '@brightlayer-ui/react-native-components';
+import { Body1, Header } from '@brightlayer-ui/react-native-components';
 import { View, StyleSheet, ScrollView, ViewStyle, SafeAreaView } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { TextInput } from '../shared/TextInput';
 import { PasswordRequirement, passwordRequirements, PasswordRequirements } from './PasswordRequirements';
 import { Button, Divider } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
 const makeStyles = (): StyleSheet.NamedStyles<{
     section: ViewStyle;
@@ -182,7 +180,7 @@ export const PasswordValidationScreen: React.FC = () => {
             <Header
                 title={'Password Validation'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },

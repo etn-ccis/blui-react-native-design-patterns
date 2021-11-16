@@ -1,17 +1,8 @@
-import { MaterialIcons } from '@expo/vector-icons';
-import { wrapIcon } from '@brightlayer-ui/react-native-components';
-import { ComponentType } from 'react';
-import { WrapIconProps } from '@brightlayer-ui/react-native-components/core/icon-wrapper/icon-wrapper';
-
-const SunnyIcon = wrapIcon({ IconClass: MaterialIcons, name: 'wb-sunny' });
-const BrightnessHighIcon = wrapIcon({ IconClass: MaterialIcons, name: 'brightness-high' });
-const IncandescentIcon = wrapIcon({ IconClass: MaterialIcons, name: 'wb-incandescent' });
-
 export type ChannelItem = {
     label: string;
     value: number;
     units: string;
-    icon: ComponentType<WrapIconProps>;
+    icon: string;
 };
 export type DeviceData = {
     heroValue: number;
@@ -37,19 +28,19 @@ export const cardData: Device[] = [
                     label: 'Temperature',
                     value: 68,
                     units: '°F',
-                    icon: SunnyIcon,
+                    icon: 'wb-sunny',
                 },
                 {
                     label: 'Output Voltage',
                     value: 480,
                     units: 'V',
-                    icon: BrightnessHighIcon,
+                    icon: 'brightness-high',
                 },
                 {
                     label: 'Output Current',
                     value: 15,
                     units: 'A',
-                    icon: IncandescentIcon,
+                    icon: 'wb-incandescent',
                 },
             ],
         },
@@ -65,19 +56,19 @@ export const cardData: Device[] = [
                     label: 'Temperature',
                     value: 68,
                     units: '°F',
-                    icon: SunnyIcon,
+                    icon: 'wb-sunny',
                 },
                 {
                     label: 'Output Voltage',
                     value: 480,
                     units: 'V',
-                    icon: BrightnessHighIcon,
+                    icon: 'brightness-high',
                 },
                 {
                     label: 'Output Current',
                     value: 15,
                     units: 'A',
-                    icon: IncandescentIcon,
+                    icon: 'wb-incandescent',
                 },
             ],
         },
@@ -93,19 +84,19 @@ export const cardData: Device[] = [
                     label: 'Temperature',
                     value: 69,
                     units: '°F',
-                    icon: SunnyIcon,
+                    icon: 'wb-sunny',
                 },
                 {
                     label: 'Output Voltage',
                     value: 492,
                     units: 'V',
-                    icon: BrightnessHighIcon,
+                    icon: 'brightness-high',
                 },
                 {
                     label: 'Output Current',
                     value: 14.6,
                     units: 'A',
-                    icon: IncandescentIcon,
+                    icon: 'wb-incandescent',
                 },
             ],
         },
@@ -121,19 +112,19 @@ export const cardData: Device[] = [
                     label: 'Temperature',
                     value: 50,
                     units: '°F',
-                    icon: SunnyIcon,
+                    icon: 'wb-sunny',
                 },
                 {
                     label: 'Output Voltage',
                     value: 680,
                     units: 'V',
-                    icon: BrightnessHighIcon,
+                    icon: 'brightness-high',
                 },
                 {
                     label: 'Output Current',
                     value: 13,
                     units: 'A',
-                    icon: IncandescentIcon,
+                    icon: 'wb-incandescent',
                 },
             ],
         },

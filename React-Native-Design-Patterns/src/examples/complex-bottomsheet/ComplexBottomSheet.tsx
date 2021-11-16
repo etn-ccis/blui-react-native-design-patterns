@@ -1,25 +1,14 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView, View, SafeAreaView } from 'react-native';
 import * as Colors from '@brightlayer-ui/colors';
-import { Header, InfoListItem, wrapIcon, H6, EmptyState } from '@brightlayer-ui/react-native-components';
+import { Header, InfoListItem, H6, EmptyState } from '@brightlayer-ui/react-native-components';
 import { ComplexBottomSheetScreen } from './components/BottomSheet';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { IconToggle } from './components/IconToggle';
 import { getAlarmList, formatDate, AlarmDataObject } from './data/alarmData';
 import { useNavigation } from '@react-navigation/native';
 import { Divider } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const MoreIcon = wrapIcon({ IconClass: MaterialIcons, name: 'more-vert' });
-const NotificatonsIcon = wrapIcon({ IconClass: MaterialIcons, name: 'notifications' });
-const NotificatonsActiveIcon = wrapIcon({ IconClass: MaterialIcons, name: 'notifications-active' });
-const InfoIcon = wrapIcon({ IconClass: MaterialIcons, name: 'info' });
-const AccessTimeIcon = wrapIcon({ IconClass: MaterialIcons, name: 'access-time' });
-const SettingsIcon = wrapIcon({ IconClass: MaterialIcons, name: 'settings' });
-const UpdateIcon = wrapIcon({ IconClass: MaterialIcons, name: 'update' });
-const ClearIcon = wrapIcon({ IconClass: MaterialIcons, name: 'clear' });
-const ErrorIcon = wrapIcon({ IconClass: MaterialIcons, name: 'error' });
 
 const FILTERS = {
     TIME: 'time',
@@ -149,7 +138,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
         <>
             <Header
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },
@@ -157,7 +146,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                 title={'Complex Bottom Sheet'}
                 actionItems={[
                     {
-                        icon: MoreIcon,
+                        icon: <MatIcon name="more-vert" />,
                         onPress: (): void => {
                             setShowBottomSheet(true);
                         },
@@ -173,11 +162,11 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 title={`${item.active ? 'ACTIVE: ' : ''}${item.details}`}
                                 subtitle={formatDate(item.date)}
                                 backgroundColor={Colors.white[50]}
-                                IconClass={
-                                    (item.type === 'alarm' && item.active && NotificatonsActiveIcon) ||
-                                    (item.type === 'alarm' && !item.active && NotificatonsIcon) ||
-                                    (item.type === 'settings' && SettingsIcon) ||
-                                    (item.type === 'session' && UpdateIcon) ||
+                                icon={
+                                    (item.type === 'alarm' && item.active && <MatIcon name="notifications-active" />) ||
+                                    (item.type === 'alarm' && !item.active && <MatIcon name="notifications" />) ||
+                                    (item.type === 'settings' && <MatIcon name="settings" />) ||
+                                    (item.type === 'session' && <MatIcon name="update" />) ||
                                     undefined
                                 }
                                 iconColor={item.active ? Colors.white[100] : undefined}
@@ -188,7 +177,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                         ))}
                     </ScrollView>
                 ) : (
-                    <EmptyState title={'No Data Found'} IconClass={ErrorIcon} />
+                    <EmptyState title={'No Data Found'} icon={<MatIcon name="error" />} />
                 )}
             </SafeAreaView>
             <ComplexBottomSheetScreen
@@ -201,7 +190,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                         <H6>Sort By: </H6>
                         <View style={styles.row}>
                             <IconToggle
-                                IconComponent={AccessTimeIcon}
+                                icon={<MatIcon name="access-time" />}
                                 active={currentSort === FILTERS.TIME}
                                 label={'Time'}
                                 onPress={(): void => setCurrentSort(FILTERS.TIME)}
@@ -209,7 +198,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 {' '}
                             </IconToggle>
                             <IconToggle
-                                IconComponent={InfoIcon}
+                                icon={<MatIcon name="info" />}
                                 active={currentSort === FILTERS.TYPE}
                                 label={'Type'}
                                 onPress={(): void => setCurrentSort(FILTERS.TYPE)}
@@ -223,7 +212,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                         <H6>Show: </H6>
                         <View style={styles.row}>
                             <IconToggle
-                                IconComponent={NotificatonsActiveIcon}
+                                icon={<MatIcon name="notifications-active" />}
                                 active={showActiveAlarms}
                                 label={'Active Alarms'}
                                 onPress={(): void => setShowActiveAlarms(!showActiveAlarms)}
@@ -231,7 +220,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 {' '}
                             </IconToggle>
                             <IconToggle
-                                IconComponent={NotificatonsIcon}
+                                icon={<MatIcon name="notifications" />}
                                 active={showAlarms}
                                 label={'Alarms'}
                                 onPress={(): void => setShowAlarms(!showAlarms)}
@@ -239,7 +228,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 {' '}
                             </IconToggle>
                             <IconToggle
-                                IconComponent={SettingsIcon}
+                                icon={<MatIcon name="settings" />}
                                 active={showEvents}
                                 label={'Settings'}
                                 onPress={(): void => setShowEvents(!showEvents)}
@@ -247,7 +236,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 {' '}
                             </IconToggle>
                             <IconToggle
-                                IconComponent={UpdateIcon}
+                                icon={<MatIcon name="update" />}
                                 active={showSessions}
                                 label={'Sessions'}
                                 onPress={(): void => setShowSessions(!showSessions)}
@@ -259,7 +248,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                     <Divider />
                     <InfoListItem
                         title={'Close'}
-                        IconClass={ClearIcon}
+                        icon={<MatIcon name="clear" />}
                         onPress={(): void => setShowBottomSheet(false)}
                         testID={'cancel-button'}
                     />

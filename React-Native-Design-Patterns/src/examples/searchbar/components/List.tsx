@@ -1,15 +1,11 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
 import * as Colors from '@brightlayer-ui/colors';
-import { Header, wrapIcon, InfoListItem, EmptyState } from '@brightlayer-ui/react-native-components';
+import { Header, InfoListItem, EmptyState } from '@brightlayer-ui/react-native-components';
 import { sampleData, Data } from '../data/data';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const PersonIcon = wrapIcon({ IconClass: MaterialIcons, name: 'person' });
-const ErrorIcon = wrapIcon({ IconClass: MaterialIcons, name: 'error' });
 
 const styles = StyleSheet.create({
     container: {
@@ -55,7 +51,7 @@ export const List: React.FC = () => {
             <Header
                 title={'Search Bar'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },
@@ -69,7 +65,11 @@ export const List: React.FC = () => {
                 }}
             />
             {results.length === 0 ? (
-                <EmptyState title={'0 results'} IconClass={ErrorIcon} description={'No matching presidents'} />
+                <EmptyState
+                    title={'0 results'}
+                    icon={<MatIcon name="error" />}
+                    description={'No matching presidents'}
+                />
             ) : (
                 <FlatList
                     data={results}
@@ -79,7 +79,7 @@ export const List: React.FC = () => {
                             title={item.president}
                             subtitle={item.party}
                             info={item.tookOffice}
-                            IconClass={PersonIcon}
+                            icon={<MatIcon name="person" />}
                         />
                     )}
                 />

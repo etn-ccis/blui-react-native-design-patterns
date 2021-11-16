@@ -1,14 +1,12 @@
 import React, { useCallback, useState } from 'react';
-import { Body1, H6, Header, wrapIcon } from '@brightlayer-ui/react-native-components';
+import { Body1, H6, Header } from '@brightlayer-ui/react-native-components';
 import { View, StyleSheet, ScrollView } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { InputIconType, TextInput } from './TextInput';
 import { PasswordRequirement, passwordRequirements, PasswordRequirements } from './PasswordRequirements';
 import { useTheme } from 'react-native-paper';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
 export const EMAIL_REGEX = new RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i);
 export const PHONE_NUMBER_REGEX = new RegExp(/^((\(\d{3}\)?)|(\d{3}))([\s-./]?)(\d{3})([\s-./]?)(\d{4})$/);
@@ -249,7 +247,7 @@ export const FormValidationScreen: React.FC = () => {
             <Header
                 title={'Form Validation'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },

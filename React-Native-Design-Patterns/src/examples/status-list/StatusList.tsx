@@ -1,16 +1,11 @@
 import React, { useCallback } from 'react';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { View, FlatList, StyleSheet, ViewStyle } from 'react-native';
-import { Header, wrapIcon, InfoListItem, EmptyState, ListItemTag } from '@brightlayer-ui/react-native-components';
+import { Header, InfoListItem, EmptyState, ListItemTag } from '@brightlayer-ui/react-native-components';
 import { useTheme } from 'react-native-paper';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { InfoListItemProps } from '@brightlayer-ui/react-native-components/core/info-list-item/info-list-item';
 import * as Colors from '@brightlayer-ui/colors';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const NotificationIcon = wrapIcon({ IconClass: MaterialIcons, name: 'notifications' });
-const HomeIcon = wrapIcon({ IconClass: MaterialIcons, name: 'home' });
-const WarningIcon = wrapIcon({ IconClass: MaterialIcons, name: 'warning' });
 
 export type ActionListProps = {
     hardcodedData?: InfoListItemProps[];
@@ -31,7 +26,7 @@ const createInfoListItemConfig = (index: number, randomStatus: string, tag?: boo
             return {
                 title: `Item ${index}`,
                 subtitle: `Status: ${randomStatus}`,
-                IconClass: NotificationIcon,
+                icon: <MatIcon name="notifications" />,
                 iconColor: tag ? Colors.white[50] : Colors.red[500],
                 statusColor: tag ? Colors.red[500] : 'transparent',
                 rightComponent: tag ? <ListItemTag label={'NEW'} backgroundColor={Colors.red[500]} /> : undefined,
@@ -40,7 +35,7 @@ const createInfoListItemConfig = (index: number, randomStatus: string, tag?: boo
             return {
                 title: `Item ${index}`,
                 subtitle: `Status: ${randomStatus}`,
-                IconClass: WarningIcon,
+                icon: <MatIcon name="warning" />,
                 iconColor: Colors.orange[500],
             };
         case 'normal':
@@ -48,7 +43,7 @@ const createInfoListItemConfig = (index: number, randomStatus: string, tag?: boo
             return {
                 title: `Item ${index}`,
                 subtitle: `Status: ${randomStatus}`,
-                IconClass: HomeIcon,
+                icon: <MatIcon name="home" />,
             };
     }
 };
@@ -88,7 +83,7 @@ export const StatusListScreen: React.FC<ActionListProps> = (props) => {
                 testID="header"
                 title={'Status List'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },

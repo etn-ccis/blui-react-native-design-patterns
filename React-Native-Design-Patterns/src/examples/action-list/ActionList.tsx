@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
-import { Header, wrapIcon, InfoListItem, EmptyState } from '@brightlayer-ui/react-native-components';
+import { Header, InfoListItem, EmptyState } from '@brightlayer-ui/react-native-components';
 import { View, FlatList, SafeAreaView, StyleSheet } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@brightlayer-ui/colors';
 import { Button, useTheme } from 'react-native-paper';
 import Modal from 'react-native-modal';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const DeleteIcon = wrapIcon({ IconClass: MaterialIcons, name: 'delete' });
-const AddIcon = wrapIcon({ IconClass: MaterialIcons, name: 'add' });
-const CancelIcon = wrapIcon({ IconClass: MaterialIcons, name: 'cancel' });
-const ClearIcon = wrapIcon({ IconClass: MaterialIcons, name: 'clear' });
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 
 export type ListItem = {
     id?: number;
@@ -88,14 +82,14 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                 testID="header"
                 title={'Action List'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },
                 }}
                 actionItems={[
-                    { icon: DeleteIcon, onPress: deleteAll },
-                    { icon: AddIcon, onPress: addItem },
+                    { icon: <MatIcon name="delete" />, onPress: deleteAll },
+                    { icon: <MatIcon name="add" />, onPress: addItem },
                 ]}
             />
             {data.length ? (
@@ -109,7 +103,7 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                             hidePadding={true}
                             subtitle={item.details}
                             rightComponent={
-                                <MaterialIcons
+                                <MatIcon
                                     name="more-vert"
                                     onPress={(): void => showActionsPanel(index)}
                                     color={Colors.black[500]}
@@ -125,7 +119,7 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                     actions={
                         <Button
                             testID="empty-state-add-button"
-                            icon={(): JSX.Element => <MaterialIcons name="add" color={Colors.white[50]} size={24} />}
+                            icon={(): JSX.Element => <MatIcon name="add" color={Colors.white[50]} size={24} />}
                             onPress={addItem}
                             mode="contained"
                         >
@@ -143,8 +137,8 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                     style={{ justifyContent: 'flex-end', margin: 0 }}
                 >
                     <View style={{ backgroundColor: Colors.white[50] }}>
-                        <InfoListItem title={'Remove'} IconClass={CancelIcon} onPress={onDelete} />
-                        <InfoListItem title={'Cancel'} IconClass={ClearIcon} onPress={hideActionsPanel} />
+                        <InfoListItem title={'Remove'} icon={<MatIcon name="cancel" />} onPress={onDelete} />
+                        <InfoListItem title={'Cancel'} icon={<MatIcon name="clear" />} onPress={hideActionsPanel} />
                     </View>
                 </Modal>
             </SafeAreaView>

@@ -1,21 +1,13 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView, View, ViewStyle } from 'react-native';
 import * as Colors from '@brightlayer-ui/colors';
-import { Header, InfoListItem, wrapIcon } from '@brightlayer-ui/react-native-components';
-import { MaterialIcons } from '@expo/vector-icons';
+import { Header, InfoListItem } from '@brightlayer-ui/react-native-components';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import alarms, { formatDate } from './data/alarmData';
 import { BottomSheetScreen } from './components/BottomSheet';
 import { useTheme } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const MoreIcon = wrapIcon({ IconClass: MaterialIcons, name: 'more-vert' });
-const NotificatonsIcon = wrapIcon({ IconClass: MaterialIcons, name: 'notifications' });
-const NotificatonsActiveIcon = wrapIcon({ IconClass: MaterialIcons, name: 'notifications-active' });
-const DoneIcon = wrapIcon({ IconClass: MaterialIcons, name: 'done' });
-const GetAppIcon = wrapIcon({ IconClass: MaterialIcons, name: 'get-app' });
-const ClearIcon = wrapIcon({ IconClass: MaterialIcons, name: 'clear' });
 
 const useStyles = (
     theme: ReactNativePaper.Theme
@@ -44,14 +36,14 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
             <Header
                 title={'Bottom Sheet'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },
                 }}
                 actionItems={[
                     {
-                        icon: MoreIcon,
+                        icon: <MatIcon name="more-vert" />,
                         onPress: (): void => {
                             setShowBottomSheet(true);
                         },
@@ -64,7 +56,7 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
                         key={index}
                         title={`${item.active ? 'ACTIVE: ' : ''}${item.details}`}
                         subtitle={formatDate(item.date)}
-                        IconClass={item.active ? NotificatonsActiveIcon : NotificatonsIcon}
+                        icon={item.active ? <MatIcon name="notifications-active" /> : <MatIcon name="notifications" />}
                         iconColor={item.active ? Colors.white[100] : Colors.black[500]}
                         fontColor={item.active ? Colors.red[500] : Colors.black[500]}
                         statusColor={item.active ? Colors.red[500] : Colors.white[100]}
@@ -75,19 +67,19 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
             <BottomSheetScreen show={showBottomSheet} dismissBottomSheet={(): void => setShowBottomSheet(false)}>
                 <InfoListItem
                     title={'Acknowledge All'}
-                    IconClass={DoneIcon}
+                    icon={<MatIcon name="done" />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-0'}
                 />
                 <InfoListItem
                     title={'Export'}
-                    IconClass={GetAppIcon}
+                    icon={<MatIcon name="get-app" />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-1'}
                 />
                 <InfoListItem
                     title={'Cancel'}
-                    IconClass={ClearIcon}
+                    icon={<MatIcon name="clear" />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'cancel-button'}
                 />

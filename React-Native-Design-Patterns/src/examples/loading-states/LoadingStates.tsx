@@ -1,25 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import {
-    Header,
-    wrapIcon,
-    HeroBanner,
-    Hero,
-    ChannelValue,
-    InfoListItem,
-} from '@brightlayer-ui/react-native-components';
+import { Header, HeroBanner, Hero, ChannelValue, InfoListItem } from '@brightlayer-ui/react-native-components';
 import { ScrollView } from 'react-native';
-import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { cardData, emptyData, Device, ChannelItem } from './data/cardData';
 import { getIcon, getColor, getGradeColor, getGradeIcon } from './utilities/utilities';
 import { HeroPlaceholder } from './components/hero-placeholder';
 import { Card } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const RefreshIcon = wrapIcon({ IconClass: MaterialIcons, name: 'refresh' });
-const BatteryIcon = wrapIcon({ IconClass: MaterialCommunityIcons, name: 'battery-50' });
-const PieIcon = wrapIcon({ IconClass: MaterialCommunityIcons, name: 'chart-pie' });
 
 export const getCardContent = (device: Device): JSX.Element => {
     if (device.name === undefined || device.data === undefined) return <HeroPlaceholder />;
@@ -28,33 +16,30 @@ export const getCardContent = (device: Device): JSX.Element => {
             <HeroBanner>
                 <Hero
                     label={'Grade'}
-                    IconClass={getGradeIcon(getIcon(device.data.heroValue))}
+                    icon={<MatIcon name={getGradeIcon(getIcon(device.data.heroValue))} />}
                     iconColor={getGradeColor(device.data.heroValue)}
                     iconSize={36}
-                    value={device.data.heroValue.toString()}
-                    units={'/100'}
+                    ChannelValueProps={{ value: device.data.heroValue.toString(), units: '/100' }}
                 />
                 <Hero
                     label={'Load'}
-                    IconClass={PieIcon}
+                    icon={<MatIcon name="chart-pie" />}
                     iconColor={getColor(device.data.loadValue)}
                     iconSize={36}
-                    value={device.data.loadValue.toString()}
-                    units={'%'}
+                    ChannelValueProps={{ value: device.data.loadValue.toString(), units: '%' }}
                 />
                 <Hero
                     label={'Battery'}
-                    IconClass={BatteryIcon}
+                    icon={<MatIcon name="battery-50" />}
                     iconColor={getColor(device.data.battery)}
                     iconSize={36}
-                    value={device.data.battery.toString()}
-                    units={'%'}
+                    ChannelValueProps={{ value: device.data.battery.toString(), units: '%' }}
                 />
             </HeroBanner>
             {device.data.channels.map((channel: ChannelItem, cind: number) => (
                 <InfoListItem
                     key={`_c${cind}`}
-                    IconClass={channel.icon}
+                    icon={<MatIcon name={channel.icon} />}
                     title={channel.label}
                     divider={'full'}
                     rightComponent={<ChannelValue value={channel.value} units={channel.units} />}
@@ -87,12 +72,12 @@ export const LoadingStatesScreen: React.FC = () => {
                 testID="header"
                 title={'Loading States'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },
                 }}
-                actionItems={[{ icon: RefreshIcon, onPress: (): void => refreshData() }]}
+                actionItems={[{ icon: <MatIcon name="refresh" />, onPress: (): void => refreshData() }]}
             />
             <ScrollView contentContainerStyle={{ padding: 16 }}>
                 {data.map((device: Device, dind: number) => (

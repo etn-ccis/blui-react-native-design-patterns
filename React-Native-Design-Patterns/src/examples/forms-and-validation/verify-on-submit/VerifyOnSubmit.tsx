@@ -1,15 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Body1, EmptyState, H6, Header, wrapIcon } from '@brightlayer-ui/react-native-components';
+import { Body1, EmptyState, H6, Header } from '@brightlayer-ui/react-native-components';
 import { View, StyleSheet, ScrollView, ViewStyle, SafeAreaView, Dimensions } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { TextInput } from '../shared/TextInput';
 import { Button } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const SearchIcon = wrapIcon({ IconClass: MaterialIcons, name: 'search' });
 
 const makeStyles = (): StyleSheet.NamedStyles<{
     section: ViewStyle;
@@ -129,7 +126,7 @@ export const VerifyOnSubmitScreen: React.FC = () => {
                 onPress={(): void => searchDevice(serialNumber)}
                 icon={(): JSX.Element =>
                     !isLoading ? (
-                        <SearchIcon color={!serialNumber ? Colors.gray[500] : Colors.white[50]} size={24} />
+                        <MatIcon name="search" color={!serialNumber ? Colors.gray[500] : Colors.white[50]} size={24} />
                     ) : (
                         <></>
                     )
@@ -147,10 +144,10 @@ export const VerifyOnSubmitScreen: React.FC = () => {
             <EmptyState
                 title={'Success'}
                 description={'Device "123" has been added.'}
-                IconClass={(): JSX.Element => <MaterialIcons name="check-circle" color={Colors.gray[500]} size={100} />}
+                icon={(): JSX.Element => <MatIcon name="check-circle" color={Colors.gray[500]} size={100} />}
                 actions={
                     <Button
-                        icon={(): JSX.Element => <MaterialIcons name="add" color={Colors.blue[500]} size={24} />}
+                        icon={(): JSX.Element => <MatIcon name="add" color={Colors.blue[500]} size={24} />}
                         onPress={resetForm}
                         mode="outlined"
                     >
@@ -166,7 +163,7 @@ export const VerifyOnSubmitScreen: React.FC = () => {
             <Header
                 title={'Verify On Submit'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },

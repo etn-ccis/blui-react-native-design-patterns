@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
-import { Header, wrapIcon, InfoListItem, EmptyState } from '@brightlayer-ui/react-native-components';
+import { Header, InfoListItem, EmptyState } from '@brightlayer-ui/react-native-components';
 import { View, StyleSheet, SafeAreaView, ScrollView, Text } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@brightlayer-ui/colors';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
@@ -9,12 +9,6 @@ import { ListItem, generateData, createRandomItem } from './utilities';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { SnackBar } from './components/SnackBar';
 import { IconButton, Button } from 'react-native-paper';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const Check = wrapIcon({ IconClass: MaterialIcons, name: 'check-box' });
-const UnCheck = wrapIcon({ IconClass: MaterialIcons, name: 'check-box-outline-blank' });
-const ErrorIcon = wrapIcon({ IconClass: MaterialIcons, name: 'error' });
-const AddIcon = wrapIcon({ IconClass: MaterialIcons, name: 'add' });
 
 const styles = StyleSheet.create({
     container: {
@@ -105,7 +99,7 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
             <Header
                 title={'Multiselect List'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },
@@ -130,7 +124,13 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                                 onPress={(): void => onSelect(item)}
                                 backgroundColor={Colors.white[50]}
                                 rightComponent={<></>}
-                                IconClass={isSelected(item) ? Check : UnCheck}
+                                icon={
+                                    isSelected(item) ? (
+                                        <MatIcon name="check-box" />
+                                    ) : (
+                                        <MatIcon name="check-box-outline-blank" />
+                                    )
+                                }
                                 iconColor={isSelected(item) ? Colors.blue[500] : ''}
                             />
                         ))}
@@ -138,12 +138,10 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                 ) : (
                     <EmptyState
                         title={'No Data Found'}
-                        IconClass={ErrorIcon}
+                        icon={<MatIcon name="error" />}
                         actions={
                             <Button
-                                icon={(): JSX.Element => (
-                                    <MaterialIcons name="add" color={Colors.white[50]} size={24} />
-                                )}
+                                icon={(): JSX.Element => <MatIcon name="add" color={Colors.white[50]} size={24} />}
                                 onPress={addItem}
                                 mode="contained"
                             >
@@ -160,11 +158,11 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                     </View>
                     <View style={styles.footerIcons}>
                         <IconButton
-                            icon={(): JSX.Element => <MaterialIcons name="cancel" color={Colors.gray[800]} size={24} />}
+                            icon={(): JSX.Element => <MatIcon name="cancel" color={Colors.gray[800]} size={24} />}
                             onPress={onCancel}
                         />
                         <IconButton
-                            icon={(): JSX.Element => <MaterialIcons name="delete" color={Colors.gray[800]} size={24} />}
+                            icon={(): JSX.Element => <MatIcon name="delete" color={Colors.gray[800]} size={24} />}
                             onPress={onDelete}
                         />
                     </View>

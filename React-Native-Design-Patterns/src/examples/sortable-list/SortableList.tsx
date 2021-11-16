@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
-import { Header, wrapIcon, InfoListItem } from '@brightlayer-ui/react-native-components';
+import { Header, InfoListItem } from '@brightlayer-ui/react-native-components';
 import { View, StyleSheet, TouchableOpacity, Text, FlatList } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@brightlayer-ui/colors';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import DraggableFlatList from 'react-native-draggable-flatlist';
 import { Surface } from 'react-native-paper';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const DragHandleIcon = wrapIcon({ IconClass: MaterialIcons, name: 'drag-handle' });
-const SaveIcon = wrapIcon({ IconClass: MaterialIcons, name: 'check' });
-const EditIcon = wrapIcon({ IconClass: MaterialIcons, name: 'edit' });
 
 type ListItem = {
     name: string;
@@ -74,7 +69,7 @@ export const SortableListScreen: React.FC = () => {
                 <InfoListItem
                     title={item.name}
                     rightComponent={<Text>{item.value}</Text>}
-                    IconClass={DragHandleIcon}
+                    icon={<MatIcon name="drag-handle" />}
                     backgroundColor={Colors.white[50]}
                 />
             </Surface>
@@ -98,14 +93,14 @@ export const SortableListScreen: React.FC = () => {
             <Header
                 title={'Sortable List'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },
                 }}
                 actionItems={[
                     {
-                        icon: isSortable ? SaveIcon : EditIcon,
+                        icon: isSortable ? <MatIcon name="check" /> : <MatIcon name="edit" />,
                         onPress: (): void => {
                             toggleEdit();
                         },

@@ -1,159 +1,199 @@
-import React, { useCallback } from 'react';
-import {
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Linking,
-    TextStyle,
-    ViewStyle,
-    View,
-    Animated,
-    Easing,
-} from 'react-native';
-import { Button, Divider, useTheme } from 'react-native-paper';
-import { Body1, H4, Header, IconFamily } from '@brightlayer-ui/react-native-components';
-import { Theme } from 'react-native-paper/lib/typescript/types';
-import Logo from '../../assets/images/Logo.svg';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigation';
+import React, { useRef, useEffect } from 'react';
+import { Header, H2, Body1 } from '@brightlayer-ui/react-native-components';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
+import { View, Linking, StyleSheet, ScrollView, Animated } from 'react-native';
+import * as Colors from '@brightlayer-ui/colors';
+import { Button, Divider } from 'react-native-paper';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
-const MenuIcon: IconFamily = { name: 'menu', direction: 'ltr' };
+const styles = StyleSheet.create({
+    container: {
+        paddingLeft: 16,
+        paddingRight: 16,
+        paddingBottom: '100%',
+    },
+    header: {
+        paddingTop: 72,
+    },
+    paragraph: {
+        marginTop: 24,
+    },
+    patternsMenuButton: {
+        marginTop: 24,
+        marginBottom: 40,
+        borderColor: Colors.blue[500],
+        alignSelf: 'flex-start',
+    },
+    divider: {
+        marginBottom: 32,
+        marginHorizontal: -16,
+    },
+    link: {
+        marginBottom: 16,
+        alignSelf: 'flex-start',
+    },
+    linkContent: {
+        color: Colors.black[500],
+    },
+});
 
-const styles = (
-    theme: Theme
-): StyleSheet.NamedStyles<{
-    content: ViewStyle;
-    pxbLogoWrapper: ViewStyle;
-    pxbLogo: ViewStyle;
-    title: TextStyle;
-    subtitle: TextStyle;
-    bold: TextStyle;
-    divider: ViewStyle;
-    openURLButtonText: TextStyle;
-}> =>
-    StyleSheet.create({
-        content: {
-            flex: 1,
-        },
-        pxbLogoWrapper: {
-            justifyContent: 'center',
-            marginTop: 16,
-        },
-        pxbLogo: {
-            alignSelf: 'center',
-            height: 100,
-            width: 100,
-        },
-        title: {
-            textAlign: 'center',
-            marginBottom: 16,
-        },
-        subtitle: {
-            textAlign: 'center',
-        },
-        bold: {
-            fontWeight: 'bold',
-        },
-        divider: {
-            marginVertical: 24,
-        },
-        openURLButtonText: {
-            color: theme.colors.text,
-            padding: 8,
-        },
-    });
+export const Home: React.FC = () => {
+    const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
 
-const OpenURLButton = (props: any): JSX.Element => {
-    const { url, title } = props;
-    const theme = useTheme();
-    const defaultStyles = styles(theme);
+    const toggleMenu = (): void => {
+        navigation.openDrawer();
+    };
 
-    const handlePress = useCallback(async () => {
-        await Linking.openURL(url);
-    }, [url]);
+    const fadeAnimTitle = useRef(new Animated.Value(0)).current;
+    const fadeAnimContent = useRef(new Animated.Value(0)).current;
+    const fadeAnimLinks = useRef(new Animated.Value(0)).current;
 
-    return (
-        <Button
-            onPress={(): Promise<void> => handlePress()}
-            labelStyle={defaultStyles.openURLButtonText}
-            uppercase={false}
-        >
-            {title}
-        </Button>
-    );
-};
-
-type AppProps = {
-    navigation: StackNavigationProp<RootStackParamList, 'Home'>;
-};
-
-const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
-    const theme = useTheme();
-    const defaultStyles = styles(theme);
-    const spinValue = new Animated.Value(0);
-
-    Animated.loop(
-        Animated.timing(spinValue, {
+    const fadeInTitle = (): any => {
+        Animated.timing(fadeAnimTitle, {
             toValue: 1,
-            duration: 2500,
-            easing: Easing.linear,
-            useNativeDriver: true,
-        })
-    ).start();
+            duration: 500,
+            useNativeDriver: false,
+        }).start();
+    };
 
-    const spin = spinValue.interpolate({
-        inputRange: [0, 1],
-        outputRange: ['0deg', '360deg'],
-    });
+    const fadeInContent = (): any => {
+        Animated.timing(fadeAnimContent, {
+            toValue: 1,
+            duration: 1500,
+            useNativeDriver: false,
+        }).start();
+    };
+
+    const fadeInLinks = (): any => {
+        Animated.timing(fadeAnimLinks, {
+            toValue: 1,
+            duration: 1000,
+            useNativeDriver: false,
+        }).start();
+    };
+
+    useEffect(() => {
+        setTimeout(fadeInTitle, 250);
+        setTimeout(fadeInContent, 500);
+        setTimeout(fadeInLinks, 1250);
+    }, []);
 
     return (
-        <>
+        <View style={{ flex: 1 }}>
             <Header
-                title={'Home Page'}
-                icon={MenuIcon}
-                onIconPress={(): void => {
-                    navigation.openDrawer();
+                title={'Brightlayer UI Design Patterns'}
+                navigation={{
+                    icon: <MatIcon name="menu" />,
+                    onPress: (): void => {
+                        toggleMenu();
+                    },
                 }}
             />
-            <SafeAreaView style={defaultStyles.content}>
-                <ScrollView>
-                    <View style={defaultStyles.pxbLogoWrapper}>
-                        <Animated.View style={[defaultStyles.pxbLogo, { transform: [{ rotate: spin }] }]}>
-                            <Logo height={100} width={100} fill={'#007bc1'} />
-                        </Animated.View>
-                    </View>
-                    <H4 style={defaultStyles.title}>Welcome to Brightlayer UI.</H4>
-                    <Body1 style={defaultStyles.subtitle}>
-                        Edit <Body1 style={defaultStyles.bold}>screens/home.tsx</Body1> and save to reload.
+            <ScrollView contentContainerStyle={styles.container} style={{ flex: 1 }}>
+                <Animated.View style={{ opacity: fadeAnimTitle }}>
+                    <H2 style={styles.header}>
+                        The <H2 color={'primary'}>Patterns</H2>.
+                    </H2>
+                </Animated.View>
+
+                <Animated.View style={{ opacity: fadeAnimContent }}>
+                    <Body1 style={styles.paragraph}>
+                        A <Body1 font={'medium'}>design pattern</Body1> is a common interaction or behavior that should
+                        be consistent across applications. In general, we follow most of the design patterns and
+                        behavior from the Material Design system. Brightlayer UI design patterns are patterns that
+                        extend/modify those from Material or are specific to Brightlayer UI applications.
                     </Body1>
-                    <Divider style={defaultStyles.divider} />
-                    <OpenURLButton title={'Brightlayer UI Documentation'} url={'https://brightlayer-ui.github.io/'} />
-                    <OpenURLButton
-                        title={'React Native Getting Started Guide'}
-                        url={'https://brightlayer-ui.github.io/development/frameworks-mobile/react-native'}
-                    />
-                    <OpenURLButton
-                        title={'Design Pattern Descriptions'}
-                        url={'https://brightlayer-ui.github.io/patterns'}
-                    />
-                    <OpenURLButton
-                        title={'Brightlayer UI React Native Component Library'}
-                        url={'https://brightlayer-ui-components.github.io/react-native/'}
-                    />
-                    <OpenURLButton title={'Visit Us on GitHub'} url={'https://github.com/brightlayer-ui'} />
-                    <OpenURLButton
-                        title={'Design Pattern Source on GitHub'}
-                        url={'https://github.com/brightlayer-ui/react-native-design-patterns'}
-                    />
-                    <OpenURLButton title={'Release Roadmap'} url={'https://brightlayer-ui.github.io/roadmap'} />
-                    <OpenURLButton
-                        title={'Send Feedback or Suggestions'}
-                        url={'https://brightlayer-ui.github.io/community/contactus'}
-                    />
-                </ScrollView>
-            </SafeAreaView>
-        </>
+
+                    <Body1 style={styles.paragraph}>
+                        While everyone is encouraged to interact with the design pattern demos to become familiar with
+                        the interactions and behaviors, this application is primarily intended for
+                        <Body1 font={'medium'}> React Native developers </Body1> to provide examples of how to implement
+                        these patterns in their own applications.
+                    </Body1>
+
+                    <Button
+                        style={styles.patternsMenuButton}
+                        mode={'outlined'}
+                        color={Colors.blue[500]}
+                        onPress={(): void => {
+                            toggleMenu();
+                        }}
+                    >
+                        Explore Brightlayer UI Design Patterns
+                    </Button>
+                </Animated.View>
+
+                <Animated.View style={{ opacity: fadeAnimLinks, paddingBottom: 16 }}>
+                    <Divider style={styles.divider} />
+
+                    <Button
+                        style={styles.link}
+                        labelStyle={styles.linkContent}
+                        onPress={(): void => {
+                            void Linking.openURL(
+                                'https://brightlayer-ui.github.io/development/frameworks-mobile/react-native'
+                            );
+                        }}
+                    >
+                        React Native Getting Started Guide
+                    </Button>
+                    <Button
+                        style={styles.link}
+                        labelStyle={styles.linkContent}
+                        onPress={(): void => {
+                            void Linking.openURL('https://brightlayer-ui.github.io/patterns');
+                        }}
+                    >
+                        Design Pattern Descriptions
+                    </Button>
+                    <Button
+                        style={styles.link}
+                        labelStyle={styles.linkContent}
+                        onPress={(): void => {
+                            void Linking.openURL('https://brightlayer-ui-components.github.io/react-native/');
+                        }}
+                    >
+                        Brightlayer UI React Native Component Library
+                    </Button>
+                    <Button
+                        style={styles.link}
+                        labelStyle={styles.linkContent}
+                        onPress={(): void => {
+                            void Linking.openURL('https://github.com/brightlayer-ui');
+                        }}
+                    >
+                        Visit Us on GitHub
+                    </Button>
+                    <Button
+                        style={styles.link}
+                        labelStyle={styles.linkContent}
+                        onPress={(): void => {
+                            void Linking.openURL('https://github.com/brightlayer-ui/react-design-patterns');
+                        }}
+                    >
+                        Design Pattern Source on GitHub
+                    </Button>
+                    <Button
+                        style={styles.link}
+                        labelStyle={styles.linkContent}
+                        onPress={(): void => {
+                            void Linking.openURL('https://brightlayer-ui.github.io/roadmap');
+                        }}
+                    >
+                        Release Roadmap
+                    </Button>
+                    <Button
+                        style={styles.link}
+                        labelStyle={styles.linkContent}
+                        onPress={(): void => {
+                            void Linking.openURL('https://brightlayer-ui.github.io/community/contactus');
+                        }}
+                    >
+                        Send Feedback or Suggestions
+                    </Button>
+                </Animated.View>
+            </ScrollView>
+        </View>
     );
 };
-
-export default Home;

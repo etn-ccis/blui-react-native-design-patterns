@@ -1,11 +1,9 @@
 import React, { ReactElement } from 'react';
-import { Header, InfoListItem, wrapIcon } from '@brightlayer-ui/react-native-components';
+import { Header, InfoListItem } from '@brightlayer-ui/react-native-components';
 import { View, FlatList, Text } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
 
 export const DataListScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
@@ -42,7 +40,7 @@ export const DataListScreen: React.FC = () => {
             <Header
                 title={'Data List'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },

@@ -1,15 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Body1, Header, wrapIcon } from '@brightlayer-ui/react-native-components';
+import { Body1, Header } from '@brightlayer-ui/react-native-components';
 import { View, StyleSheet, ScrollView, ViewStyle, SafeAreaView, Dimensions } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { TextInput } from '../shared/TextInput';
 import { Button, Divider } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
-
-const MenuIcon = wrapIcon({ IconClass: MaterialIcons, name: 'menu' });
-const RefreshIcon = wrapIcon({ IconClass: MaterialIcons, name: 'refresh' });
 
 const makeStyles = (): StyleSheet.NamedStyles<{
     section: ViewStyle;
@@ -120,7 +117,7 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
             <Header
                 title={'Fixed Length Passcode'}
                 navigation={{
-                    icon: MenuIcon,
+                    icon: <MatIcon name="menu" />,
                     onPress: (): void => {
                         toggleMenu();
                     },
@@ -172,7 +169,7 @@ export const FixedLengthPasscodeScreen: React.FC = () => {
                             mode="outlined"
                             style={styles.resetFormButton}
                             onPress={resetForm}
-                            icon={(): JSX.Element => <RefreshIcon color={Colors.blue[500]} size={24} />}
+                            icon={(): JSX.Element => <MatIcon name="refresh" color={Colors.blue[500]} size={24} />}
                         >
                             Reset Form
                         </Button>

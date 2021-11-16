@@ -1,11 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { StatusListScreen } from './StatusList';
-import { InfoListItemProps, InfoListItem, wrapIcon } from '@brightlayer-ui/react-native-components';
+import { InfoListItemProps, InfoListItem } from '@brightlayer-ui/react-native-components';
 import { FlatList } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
-
-const NotificationIcon = wrapIcon({ IconClass: MaterialIcons, name: 'notifications' });
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 
 jest.mock('@react-navigation/native', () => ({
     useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),
@@ -22,14 +20,14 @@ const hardcodedData: InfoListItemProps[] = [
         subtitle: 'Subtitle 1',
         iconColor: 'white',
         statusColor: 'red',
-        IconClass: NotificationIcon,
+        icon: <MatIcon name="notifications" />,
     },
     {
         title: 'Item 2',
         subtitle: 'Subtitle 2',
         iconColor: 'red',
         statusColor: 'transparent',
-        IconClass: NotificationIcon,
+        icon: <MatIcon name="notifications" />,
     },
     {
         title: 'Item 3',
@@ -64,8 +62,9 @@ describe('Status List Tests', () => {
     });
 
     it('Should render 5 items if 5 items are passed in', () => {
-        const instance = renderer.create(<StatusListScreen hardcodedData={hardcodedData} navigation={navigationMock} />)
-            .root;
+        const instance = renderer.create(
+            <StatusListScreen hardcodedData={hardcodedData} navigation={navigationMock} />
+        ).root;
         const flatList = instance.findByType(FlatList);
         const infoListItems = flatList.findAllByType(InfoListItem);
         expect(infoListItems).toHaveLength(5);
