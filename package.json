@@ -14,11 +14,11 @@
         "precommit": "yarn prettier && yarn lint && yarn test"
     },
     "dependencies": {
+        "@brightlayer-ui/colors": "^3.0.1",
+        "@brightlayer-ui/icons-svg": "^1.7.0",
+        "@brightlayer-ui/react-native-components": "^6.0.1",
+        "@brightlayer-ui/react-native-themes": "^6.0.0",
         "@expo/metro-config": "^0.1.61",
-        "@pxblue/colors": "^3.0.0",
-        "@pxblue/icons-svg": "^1.2.0",
-        "@pxblue/react-native-components": "^5.0.0",
-        "@pxblue/react-native-themes": "^5.1.0",
         "@react-native-community/masked-view": "0.1.10",
         "@react-navigation/drawer": "^5.12.0",
         "@react-navigation/native": "^5.9.0",
@@ -45,8 +45,8 @@
     },
     "devDependencies": {
         "@babel/core": "~7.9.0",
-        "@pxblue/eslint-config": "^2.0.2",
-        "@pxblue/prettier-config": "^1.0.2",
+        "@brightlayer-ui/eslint-config": "^2.0.5",
+        "@brightlayer-ui/prettier-config": "^1.0.3",
         "@testing-library/react-native": "^7.0.1",
         "@types/enzyme": "^3.10.5",
         "@types/enzyme-adapter-react-16": "^1.0.6",
@@ -77,5 +77,5 @@
         ]
     },
     "private": true,
-    "prettier": "@pxblue/prettier-config"
+    "prettier": "@brightlayer-ui/prettier-config"
 }

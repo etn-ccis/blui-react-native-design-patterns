@@ -1,0 +1,573 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fixed Length Passcode Tests renders the screen 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+    }
+  }
+>
+  <RCTSafeAreaView
+    accessible={true}
+    emulateUnlessSupported={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#6200ee",
+        "elevation": 0,
+        "height": 132,
+        "shadowColor": "rgba(0, 0, 0, 0.3)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "minHeight": 112,
+          "paddingBottom": 32,
+          "paddingHorizontal": 16,
+          "paddingVertical": 32,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "height": 80,
+            "margin": -16,
+            "marginRight": 24,
+            "opacity": 1,
+            "padding": 16,
+            "width": 80,
+          }
+        }
+        testID="header-navigation"
+      >
+        <Text />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+            "marginRight": 0,
+            "marginTop": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 0,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "System",
+                "fontSize": 20,
+                "lineHeight": 20,
+                "textAlign": "auto",
+                "writingDirection": "ltr",
+              }
+            }
+            testID="header-title"
+          >
+            Fixed Length Passcode
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": 112,
+              "position": "absolute",
+              "right": 8,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </RCTSafeAreaView>
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "marginBottom": 32,
+                "padding": 16,
+              },
+              Object {
+                "alignSelf": "center",
+                "maxWidth": 480,
+                "paddingTop": 40,
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                },
+                Object {
+                  "writingDirection": "ltr",
+                },
+                Object {},
+                Object {
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                },
+                Object {},
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            Please enter the 
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000000",
+                  },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
+                  Object {
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                  },
+                  Object {
+                    "fontFamily": "System",
+                    "fontWeight": "500",
+                  },
+                  undefined,
+                  undefined,
+                ]
+              }
+            >
+              six-digit passcode
+            </Text>
+             we just send to you. The passcode is valid for 15 minutes.
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                },
+                Object {
+                  "writingDirection": "ltr",
+                },
+                Object {},
+                Object {
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                },
+                Object {},
+                undefined,
+                Object {
+                  "marginTop": 8,
+                },
+              ]
+            }
+          >
+            For the purpose of this demonstration, passcode 
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000000",
+                  },
+                  Object {
+                    "writingDirection": "ltr",
+                  },
+                  Object {},
+                  Object {
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                  },
+                  Object {
+                    "fontFamily": "System",
+                    "fontWeight": "500",
+                  },
+                  undefined,
+                  undefined,
+                ]
+              }
+            >
+              123456
+            </Text>
+             will pass. Any other 6 digit passcode will fail.
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                  "height": 0.5,
+                },
+                undefined,
+                Object {
+                  "marginBottom": 32,
+                  "marginHorizontal": -16,
+                  "marginTop": 40,
+                },
+              ]
+            }
+          />
+          <View
+            style={
+              Object {
+                "marginBottom": 24.5,
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(231, 231, 231)",
+                      "borderTopLeftRadius": 4,
+                      "borderTopRightRadius": 4,
+                    },
+                    Object {
+                      "backgroundColor": "#f7f8f8",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#d5d8da",
+                      "bottom": 0,
+                      "height": 2,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "transform": Array [
+                        Object {
+                          "scaleY": 0.5,
+                        },
+                      ],
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "paddingBottom": 0,
+                        "paddingTop": 0,
+                      },
+                      Object {
+                        "minHeight": 70,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "opacity": 1,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "translateX": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      numberOfLines={1}
+                      onLayout={[Function]}
+                      style={
+                        Object {
+                          "color": "#6200ee",
+                          "fontFamily": "System",
+                          "fontSize": 18,
+                          "fontWeight": undefined,
+                          "left": 0,
+                          "opacity": 0,
+                          "paddingLeft": 12,
+                          "paddingRight": 12,
+                          "position": "absolute",
+                          "textAlign": "left",
+                          "top": 35,
+                          "transform": Array [
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                            Object {
+                              "scale": 1,
+                            },
+                          ],
+                          "writingDirection": "ltr",
+                        }
+                      }
+                    >
+                      Passcode *
+                    </Text>
+                    <Text
+                      numberOfLines={1}
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.54)",
+                          "fontFamily": "System",
+                          "fontSize": 18,
+                          "fontWeight": undefined,
+                          "left": 0,
+                          "opacity": 0,
+                          "paddingLeft": 12,
+                          "paddingRight": 12,
+                          "position": "absolute",
+                          "textAlign": "left",
+                          "top": 35,
+                          "transform": Array [
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                            Object {
+                              "scale": 1,
+                            },
+                          ],
+                          "writingDirection": "ltr",
+                        }
+                      }
+                    >
+                      Passcode *
+                    </Text>
+                  </View>
+                  <TextInput
+                    allowFontScaling={true}
+                    autoCapitalize="none"
+                    editable={true}
+                    keyboardType="numeric"
+                    maxLength={6}
+                    multiline={false}
+                    onBlur={[Function]}
+                    onChangeText={[Function]}
+                    onFocus={[Function]}
+                    placeholder=""
+                    placeholderTextColor="rgba(0, 0, 0, 0.54)"
+                    rejectResponderTermination={true}
+                    returnKeyType="done"
+                    selectionColor="#6200ee"
+                    style={
+                      Array [
+                        Object {
+                          "flexGrow": 1,
+                          "margin": 0,
+                          "zIndex": 1,
+                        },
+                        Object {
+                          "paddingLeft": 12,
+                          "paddingRight": 12,
+                        },
+                        Object {
+                          "height": 70,
+                        },
+                        Object {
+                          "paddingBottom": 4,
+                          "paddingTop": 24,
+                        },
+                        Object {
+                          "color": "#000000",
+                          "fontFamily": "System",
+                          "fontSize": 18,
+                          "fontWeight": undefined,
+                          "textAlign": "left",
+                          "textAlignVertical": "center",
+                        },
+                        Array [
+                          Object {},
+                        ],
+                      ]
+                    }
+                    textContentType="none"
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "borderColor": "rgba(0, 0, 0, 0.29)",
+                "borderRadius": 4,
+                "borderStyle": "solid",
+                "borderWidth": 0.5,
+                "elevation": 0,
+                "marginTop": 16,
+                "minWidth": 64,
+              }
+            }
+          >
+            <View
+              accessibilityRole="button"
+              accessibilityState={
+                Object {
+                  "disabled": undefined,
+                }
+              }
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "borderRadius": 4,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginLeft": 12,
+                      "marginRight": -4,
+                    }
+                  }
+                >
+                  <Text />
+                </View>
+                <Text
+                  numberOfLines={1}
+                  selectable={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontFamily": "System",
+                        "fontWeight": "400",
+                      },
+                      Object {
+                        "textAlign": "left",
+                      },
+                      Array [
+                        Object {
+                          "letterSpacing": 1,
+                          "marginHorizontal": 16,
+                          "marginVertical": 9,
+                          "textAlign": "center",
+                        },
+                        undefined,
+                        Object {
+                          "textTransform": "uppercase",
+                        },
+                        Object {
+                          "color": "#6200ee",
+                          "fontFamily": "System",
+                          "fontWeight": "500",
+                        },
+                        Object {
+                          "fontFamily": "System",
+                          "fontWeight": "500",
+                        },
+                        undefined,
+                      ],
+                    ]
+                  }
+                >
+                  Reset Form
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </RCTSafeAreaView>
+</View>
+`;

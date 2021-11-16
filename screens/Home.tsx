@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { Header, wrapIcon, H2, Body1 } from '@pxblue/react-native-components';
+import { Header, wrapIcon, H2, Body1 } from '@brightlayer-ui/react-native-components';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { View, Linking, StyleSheet, ScrollView, Animated } from 'react-native';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 import { Button, Divider } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 
@@ -84,7 +84,7 @@ export const Home: React.FC = () => {
     return (
         <View style={{ flex: 1 }}>
             <Header
-                title={'PX Blue Design Patterns'}
+                title={'Brightlayer UI Design Patterns'}
                 navigation={{
                     icon: MenuIcon,
                     onPress: (): void => {
@@ -103,8 +103,8 @@ export const Home: React.FC = () => {
                     <Body1 style={styles.paragraph}>
                         A <Body1 font={'medium'}>design pattern</Body1> is a common interaction or behavior that should
                         be consistent across applications. In general, we follow most of the design patterns and
-                        behavior from the Material Design system. PX Blue design patterns are patterns that
-                        extend/modify those from Material or are specific to PX Blue applications.
+                        behavior from the Material Design system. Brightlayer UI design patterns are patterns that
+                        extend/modify those from Material or are specific to Brightlayer UI applications.
                     </Body1>
 
                     <Body1 style={styles.paragraph}>
@@ -122,7 +122,7 @@ export const Home: React.FC = () => {
                             toggleMenu();
                         }}
                     >
-                        Explore PX Blue Design Patterns
+                        Explore Brightlayer UI Design Patterns
                     </Button>
                 </Animated.View>
 
@@ -133,7 +133,9 @@ export const Home: React.FC = () => {
                         style={styles.link}
                         labelStyle={styles.linkContent}
                         onPress={(): void => {
-                            void Linking.openURL('https://pxblue.github.io/development/frameworks-mobile/react-native');
+                            void Linking.openURL(
+                                'https://brightlayer-ui.github.io/development/frameworks-mobile/react-native'
+                            );
                         }}
                     >
                         React Native Getting Started Guide
@@ -142,7 +144,7 @@ export const Home: React.FC = () => {
                         style={styles.link}
                         labelStyle={styles.linkContent}
                         onPress={(): void => {
-                            void Linking.openURL('https://pxblue.github.io/patterns');
+                            void Linking.openURL('https://brightlayer-ui.github.io/patterns');
                         }}
                     >
                         Design Pattern Descriptions
@@ -151,16 +153,16 @@ export const Home: React.FC = () => {
                         style={styles.link}
                         labelStyle={styles.linkContent}
                         onPress={(): void => {
-                            void Linking.openURL('https://pxblue-components.github.io/react-native/');
+                            void Linking.openURL('https://brightlayer-ui-components.github.io/react-native/');
                         }}
                     >
-                        PX Blue React Native Component Library
+                        Brightlayer UI React Native Component Library
                     </Button>
                     <Button
                         style={styles.link}
                         labelStyle={styles.linkContent}
                         onPress={(): void => {
-                            void Linking.openURL('https://github.com/pxblue');
+                            void Linking.openURL('https://github.com/brightlayer-ui');
                         }}
                     >
                         Visit Us on GitHub
@@ -169,7 +171,7 @@ export const Home: React.FC = () => {
                         style={styles.link}
                         labelStyle={styles.linkContent}
                         onPress={(): void => {
-                            void Linking.openURL('https://github.com/pxblue/react-design-patterns');
+                            void Linking.openURL('https://github.com/brightlayer-ui/react-design-patterns');
                         }}
                     >
                         Design Pattern Source on GitHub
@@ -178,7 +180,7 @@ export const Home: React.FC = () => {
                         style={styles.link}
                         labelStyle={styles.linkContent}
                         onPress={(): void => {
-                            void Linking.openURL('https://pxblue.github.io/roadmap');
+                            void Linking.openURL('https://brightlayer-ui.github.io/roadmap');
                         }}
                     >
                         Release Roadmap
@@ -187,7 +189,7 @@ export const Home: React.FC = () => {
                         style={styles.link}
                         labelStyle={styles.linkContent}
                         onPress={(): void => {
-                            void Linking.openURL('https://pxblue.github.io/community/contactus');
+                            void Linking.openURL('https://brightlayer-ui.github.io/community/contactus');
                         }}
                     >
                         Send Feedback or Suggestions

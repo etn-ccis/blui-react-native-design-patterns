@@ -2,8 +2,8 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
-import * as Colors from '@pxblue/colors';
-import { Subtitle2 } from '@pxblue/react-native-components';
+import * as Colors from '@brightlayer-ui/colors';
+import { Subtitle2 } from '@brightlayer-ui/react-native-components';
 
 const makeStyles = (): Record<string, any> =>
     StyleSheet.create({

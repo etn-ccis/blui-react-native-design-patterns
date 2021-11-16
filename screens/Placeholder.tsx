@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from '@pxblue/react-native-components';
+import { Header } from '@brightlayer-ui/react-native-components';
 
 type PlaceholderProps = {
     title?: string;

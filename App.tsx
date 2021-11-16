@@ -8,7 +8,7 @@
 import React from 'react';
 import { useFonts } from 'expo-font';
 import { Provider as ThemeProvider } from 'react-native-paper';
-import * as PXBThemes from '@pxblue/react-native-themes';
+import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
 import AppLoading from 'expo-app-loading';
 import { MyDrawer } from './router';
 import { NavigationContainer } from '@react-navigation/native';
@@ -25,7 +25,7 @@ const App: React.FC = () => {
         return <AppLoading />;
     }
     return (
-        <ThemeProvider theme={PXBThemes.blue}>
+        <ThemeProvider theme={BLUIThemes.blue}>
             <NavigationContainer>
                 <MyDrawer />
             </NavigationContainer>
