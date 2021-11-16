@@ -99,7 +99,11 @@ export const SortableListScreen: React.FC = () => {
                 }}
                 actionItems={[
                     {
-                        icon: isSortable ? <MatIcon name="check" /> : <MatIcon name="edit" />,
+                        icon: isSortable ? (
+                            <MatIcon name="check" color={theme.colors.textPalette.onPrimary.main} size={24} />
+                        ) : (
+                            <MatIcon name="edit" color={theme.colors.textPalette.onPrimary.main} size={24} />
+                        ),
                         onPress: (): void => {
                             toggleEdit();
                         },

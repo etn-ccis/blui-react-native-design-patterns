@@ -8,15 +8,17 @@ import { getIcon, getColor, getGradeColor, getGradeIcon } from './utilities/util
 import { HeroPlaceholder } from './components/hero-placeholder';
 import { Card, useTheme } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { Theme } from 'react-native-paper/lib/typescript/types';
+import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 
-export const getCardContent = (device: Device): JSX.Element => {
+export const getCardContent = (device: Device, theme: Theme): JSX.Element => {
     if (device.name === undefined || device.data === undefined) return <HeroPlaceholder />;
     return (
         <>
             <HeroBanner>
                 <Hero
                     label={'Grade'}
-                    icon={<MatIcon name={getGradeIcon(getIcon(device.data.heroValue))} />}
+                    icon={<BLUIIcon name={getGradeIcon(getIcon(device.data.heroValue))} />}
                     iconColor={getGradeColor(device.data.heroValue)}
                     iconSize={36}
                     ChannelValueProps={{ value: device.data.heroValue.toString(), units: '/100' }}
@@ -39,7 +41,7 @@ export const getCardContent = (device: Device): JSX.Element => {
             {device.data.channels.map((channel: ChannelItem, cind: number) => (
                 <InfoListItem
                     key={`_c${cind}`}
-                    icon={<MatIcon name={channel.icon} />}
+                    icon={<MatIcon name={channel.icon} color={theme.colors.text} size={24} />}
                     title={channel.label}
                     divider={'full'}
                     rightComponent={<ChannelValue value={channel.value} units={channel.units} />}
@@ -76,13 +78,18 @@ export const LoadingStatesScreen: React.FC = () => {
                 onIconPress={(): void => {
                     toggleMenu();
                 }}
-                actionItems={[{ icon: <MatIcon name="refresh" />, onPress: (): void => refreshData() }]}
+                actionItems={[
+                    {
+                        icon: <MatIcon name="refresh" color={theme.colors.textPalette.onPrimary.main} size={24} />,
+                        onPress: (): void => refreshData(),
+                    },
+                ]}
             />
             <ScrollView contentContainerStyle={{ padding: 16 }}>
                 {data.map((device: Device, dind: number) => (
                     // @ts-ignore new version of react-native-paper should have these type issues fixed
                     <Card key={`device${dind}`} style={{ marginBottom: 16 }}>
-                        {getCardContent(device)}
+                        {getCardContent(device, theme)}
                     </Card>
                 ))}
             </ScrollView>

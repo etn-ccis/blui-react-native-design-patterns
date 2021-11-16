@@ -41,7 +41,7 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
                 }}
                 actionItems={[
                     {
-                        icon: <MatIcon name="more-vert" />,
+                        icon: <MatIcon name="more-vert" color={theme.colors.textPalette.onPrimary.main} size={24} />,
                         onPress: (): void => {
                             setShowBottomSheet(true);
                         },
@@ -54,7 +54,13 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
                         key={index}
                         title={`${item.active ? 'ACTIVE: ' : ''}${item.details}`}
                         subtitle={formatDate(item.date)}
-                        icon={item.active ? <MatIcon name="notifications-active" /> : <MatIcon name="notifications" />}
+                        icon={
+                            item.active ? (
+                                <MatIcon name="notifications-active" size={24} />
+                            ) : (
+                                <MatIcon name="notifications" size={24} />
+                            )
+                        }
                         iconColor={item.active ? Colors.white[100] : Colors.black[500]}
                         fontColor={item.active ? Colors.red[500] : Colors.black[500]}
                         statusColor={item.active ? Colors.red[500] : Colors.white[100]}
@@ -65,19 +71,19 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
             <BottomSheetScreen show={showBottomSheet} dismissBottomSheet={(): void => setShowBottomSheet(false)}>
                 <InfoListItem
                     title={'Acknowledge All'}
-                    icon={<MatIcon name="done" />}
+                    icon={<MatIcon name="done" size={24} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-0'}
                 />
                 <InfoListItem
                     title={'Export'}
-                    icon={<MatIcon name="get-app" />}
+                    icon={<MatIcon name="get-app" size={24} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-1'}
                 />
                 <InfoListItem
                     title={'Cancel'}
-                    icon={<MatIcon name="clear" />}
+                    icon={<MatIcon name="clear" size={24} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'cancel-button'}
                 />

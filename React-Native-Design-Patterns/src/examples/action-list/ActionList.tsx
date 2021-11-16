@@ -86,8 +86,14 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                     toggleMenu();
                 }}
                 actionItems={[
-                    { icon: <MatIcon name="delete" />, onPress: deleteAll },
-                    { icon: <MatIcon name="add" />, onPress: addItem },
+                    {
+                        icon: <MatIcon name="delete" color={theme.colors.textPalette.onPrimary.main} size={24} />,
+                        onPress: deleteAll,
+                    },
+                    {
+                        icon: <MatIcon name="add" color={theme.colors.textPalette.onPrimary.main} size={24} />,
+                        onPress: addItem,
+                    },
                 ]}
             />
             {data.length ? (
@@ -135,8 +141,12 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                     style={{ justifyContent: 'flex-end', margin: 0 }}
                 >
                     <View style={{ backgroundColor: Colors.white[50] }}>
-                        <InfoListItem title={'Remove'} icon={<MatIcon name="cancel" />} onPress={onDelete} />
-                        <InfoListItem title={'Cancel'} icon={<MatIcon name="clear" />} onPress={hideActionsPanel} />
+                        <InfoListItem title={'Remove'} icon={<MatIcon name="cancel" size={24} />} onPress={onDelete} />
+                        <InfoListItem
+                            title={'Cancel'}
+                            icon={<MatIcon name="clear" size={24} />}
+                            onPress={hideActionsPanel}
+                        />
                     </View>
                 </Modal>
             </SafeAreaView>

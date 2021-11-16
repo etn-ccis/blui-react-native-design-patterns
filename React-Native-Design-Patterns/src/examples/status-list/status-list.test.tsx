@@ -20,14 +20,14 @@ const hardcodedData: InfoListItemProps[] = [
         subtitle: 'Subtitle 1',
         iconColor: 'white',
         statusColor: 'red',
-        icon: <MatIcon name="notifications" />,
+        icon: <MatIcon name="notifications" size={24} />,
     },
     {
         title: 'Item 2',
         subtitle: 'Subtitle 2',
         iconColor: 'red',
         statusColor: 'transparent',
-        icon: <MatIcon name="notifications" />,
+        icon: <MatIcon name="notifications" size={24} />,
     },
     {
         title: 'Item 3',

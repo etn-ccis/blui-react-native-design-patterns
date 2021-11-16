@@ -145,7 +145,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                 title={'Complex Bottom Sheet'}
                 actionItems={[
                     {
-                        icon: <MatIcon name="more-vert" />,
+                        icon: <MatIcon name="more-vert" color={theme.colors.textPalette.onPrimary.main} size={24} />,
                         onPress: (): void => {
                             setShowBottomSheet(true);
                         },
@@ -162,10 +162,14 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 subtitle={formatDate(item.date)}
                                 backgroundColor={Colors.white[50]}
                                 icon={
-                                    (item.type === 'alarm' && item.active && <MatIcon name="notifications-active" />) ||
-                                    (item.type === 'alarm' && !item.active && <MatIcon name="notifications" />) ||
-                                    (item.type === 'settings' && <MatIcon name="settings" />) ||
-                                    (item.type === 'session' && <MatIcon name="update" />) ||
+                                    (item.type === 'alarm' && item.active && (
+                                        <MatIcon name="notifications-active" size={24} color={Colors.white[100]} />
+                                    )) ||
+                                    (item.type === 'alarm' && !item.active && (
+                                        <MatIcon name="notifications" size={24} />
+                                    )) ||
+                                    (item.type === 'settings' && <MatIcon name="settings" size={24} />) ||
+                                    (item.type === 'session' && <MatIcon name="update" size={24} />) ||
                                     undefined
                                 }
                                 iconColor={item.active ? Colors.white[100] : undefined}
@@ -176,7 +180,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                         ))}
                     </ScrollView>
                 ) : (
-                    <EmptyState title={'No Data Found'} icon={<MatIcon name="error" />} />
+                    <EmptyState title={'No Data Found'} icon={<MatIcon name="error" size={100} />} />
                 )}
             </SafeAreaView>
             <ComplexBottomSheetScreen
@@ -189,7 +193,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                         <H6>Sort By: </H6>
                         <View style={styles.row}>
                             <IconToggle
-                                icon={<MatIcon name="access-time" />}
+                                icon={<MatIcon name="access-time" size={24} />}
                                 active={currentSort === FILTERS.TIME}
                                 label={'Time'}
                                 onPress={(): void => setCurrentSort(FILTERS.TIME)}
@@ -197,7 +201,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 {' '}
                             </IconToggle>
                             <IconToggle
-                                icon={<MatIcon name="info" />}
+                                icon={<MatIcon name="info" size={24} />}
                                 active={currentSort === FILTERS.TYPE}
                                 label={'Type'}
                                 onPress={(): void => setCurrentSort(FILTERS.TYPE)}
@@ -211,7 +215,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                         <H6>Show: </H6>
                         <View style={styles.row}>
                             <IconToggle
-                                icon={<MatIcon name="notifications-active" />}
+                                icon={<MatIcon name="notifications-active" size={24} />}
                                 active={showActiveAlarms}
                                 label={'Active Alarms'}
                                 onPress={(): void => setShowActiveAlarms(!showActiveAlarms)}
@@ -219,7 +223,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 {' '}
                             </IconToggle>
                             <IconToggle
-                                icon={<MatIcon name="notifications" />}
+                                icon={<MatIcon name="notifications" size={24} />}
                                 active={showAlarms}
                                 label={'Alarms'}
                                 onPress={(): void => setShowAlarms(!showAlarms)}
@@ -227,7 +231,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 {' '}
                             </IconToggle>
                             <IconToggle
-                                icon={<MatIcon name="settings" />}
+                                icon={<MatIcon name="settings" size={24} />}
                                 active={showEvents}
                                 label={'Settings'}
                                 onPress={(): void => setShowEvents(!showEvents)}
@@ -235,7 +239,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                                 {' '}
                             </IconToggle>
                             <IconToggle
-                                icon={<MatIcon name="update" />}
+                                icon={<MatIcon name="update" size={24} />}
                                 active={showSessions}
                                 label={'Sessions'}
                                 onPress={(): void => setShowSessions(!showSessions)}
@@ -247,7 +251,7 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
                     <Divider />
                     <InfoListItem
                         title={'Close'}
-                        icon={<MatIcon name="clear" />}
+                        icon={<MatIcon name="clear" size={24} />}
                         onPress={(): void => setShowBottomSheet(false)}
                         testID={'cancel-button'}
                     />

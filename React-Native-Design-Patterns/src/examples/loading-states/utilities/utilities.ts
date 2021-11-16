@@ -24,12 +24,12 @@ export const getGradeColor = (value: number): string => {
 export const getGradeIcon = (letter: string): string => {
     switch (letter) {
         case 'A':
-            return 'alpha-a';
+            return 'grade_a';
         case 'B':
-            return 'alpha-b';
+            return 'grade_b';
         case 'C':
-            return 'alpha-c';
+            return 'grade_c';
         default:
-            return 'alpha-a';
+            return 'grade_a';
     }
 };

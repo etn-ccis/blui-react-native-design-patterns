@@ -105,7 +105,7 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                 }}
                 actionItems={[
                     {
-                        icon: <MatIcon name="add" />,
+                        icon: <MatIcon name="add" color={theme.colors.textPalette.onPrimary.main} size={24} />,
                         onPress: (): void => {
                             addItem();
                         },
@@ -125,9 +125,9 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                                 rightComponent={<></>}
                                 icon={
                                     isSelected(item) ? (
-                                        <MatIcon name="check-box" />
+                                        <MatIcon name="check-box" size={24} />
                                     ) : (
-                                        <MatIcon name="check-box-outline-blank" />
+                                        <MatIcon name="check-box-outline-blank" size={24} />
                                     )
                                 }
                                 iconColor={isSelected(item) ? Colors.blue[500] : ''}
@@ -137,7 +137,7 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                 ) : (
                     <EmptyState
                         title={'No Data Found'}
-                        icon={<MatIcon name="error" />}
+                        icon={<MatIcon name="error" size={100} />}
                         actions={
                             <Button
                                 icon={(): JSX.Element => <MatIcon name="add" color={Colors.white[50]} size={24} />}
