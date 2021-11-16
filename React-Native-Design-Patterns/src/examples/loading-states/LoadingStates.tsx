@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { cardData, emptyData, Device, ChannelItem } from './data/cardData';
 import { getIcon, getColor, getGradeColor, getGradeIcon } from './utilities/utilities';
 import { HeroPlaceholder } from './components/hero-placeholder';
-import { Card } from 'react-native-paper';
+import { Card, useTheme } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 export const getCardContent = (device: Device): JSX.Element => {
@@ -51,6 +51,7 @@ export const getCardContent = (device: Device): JSX.Element => {
 
 export const LoadingStatesScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
+    const theme = useTheme();
     const [data, setData] = useState(emptyData);
 
     const toggleMenu = (): void => {
@@ -71,11 +72,9 @@ export const LoadingStatesScreen: React.FC = () => {
             <Header
                 testID="header"
                 title={'Loading States'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
                 actionItems={[{ icon: <MatIcon name="refresh" />, onPress: (): void => refreshData() }]}
             />

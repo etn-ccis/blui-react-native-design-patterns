@@ -7,7 +7,7 @@ import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { IconToggle } from './components/IconToggle';
 import { getAlarmList, formatDate, AlarmDataObject } from './data/alarmData';
 import { useNavigation } from '@react-navigation/native';
-import { Divider } from 'react-native-paper';
+import { Divider, useTheme } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const FILTERS = {
@@ -115,6 +115,7 @@ const alarmList = getAlarmList(20);
 
 export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
+    const theme = useTheme();
     const [showBottomSheet, setShowBottomSheet] = useState(false);
     const [currentSort, setCurrentSort] = useState('time');
     const [showAlarms, setShowAlarms] = useState(true);
@@ -137,11 +138,9 @@ export const ComplexBottomSheetAlarmsScreen: React.FC = () => {
     return (
         <>
             <Header
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
                 title={'Complex Bottom Sheet'}
                 actionItems={[

@@ -6,6 +6,7 @@ import { sampleData, Data } from '../data/data';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { useTheme } from 'react-native-paper';
 
 const styles = StyleSheet.create({
     container: {
@@ -16,6 +17,7 @@ const styles = StyleSheet.create({
 
 export const List: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
+    const theme = useTheme();
     const [query, setQuery] = useState('');
     const [results, setResults] = useState(sampleData);
     const data = sampleData;
@@ -50,11 +52,9 @@ export const List: React.FC = () => {
         <View style={styles.container}>
             <Header
                 title={'Search Bar'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
                 searchableConfig={{
                     placeholder: 'Search',

@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@brightlayer-ui/colors';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import DraggableFlatList from 'react-native-draggable-flatlist';
-import { Surface } from 'react-native-paper';
+import { Surface, useTheme } from 'react-native-paper';
 
 type ListItem = {
     name: string;
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
 
 export const SortableListScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
+    const theme = useTheme();
     const [sortableData, setSortableData] = useState(exampleData);
     const [isSortable, setIsSortable] = useState(false);
 
@@ -92,11 +93,9 @@ export const SortableListScreen: React.FC = () => {
         <View style={styles.container}>
             <Header
                 title={'Sortable List'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
                 actionItems={[
                     {

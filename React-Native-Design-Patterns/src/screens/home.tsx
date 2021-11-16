@@ -4,7 +4,7 @@ import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { View, Linking, StyleSheet, ScrollView, Animated } from 'react-native';
 import * as Colors from '@brightlayer-ui/colors';
-import { Button, Divider } from 'react-native-paper';
+import { Button, Divider, useTheme } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const styles = StyleSheet.create({
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
 
 export const Home: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
+    const theme = useTheme();
 
     const toggleMenu = (): void => {
         navigation.openDrawer();
@@ -83,11 +84,9 @@ export const Home: React.FC = () => {
         <View style={{ flex: 1 }}>
             <Header
                 title={'Brightlayer UI Design Patterns'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
             />
             <ScrollView contentContainerStyle={styles.container} style={{ flex: 1 }}>

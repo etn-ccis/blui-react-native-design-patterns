@@ -8,7 +8,7 @@ import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { ListItem, generateData, createRandomItem } from './utilities';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { SnackBar } from './components/SnackBar';
-import { IconButton, Button } from 'react-native-paper';
+import { IconButton, Button, useTheme } from 'react-native-paper';
 
 const styles = StyleSheet.create({
     container: {
@@ -54,6 +54,7 @@ export type MultiselectListProps = {
 export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => {
     const { hardcodedData } = props;
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
+    const theme = useTheme();
     const [list, setList] = useState(hardcodedData ? hardcodedData : generateData());
     const [selectedItems, setSelectedItems]: any = useState([]);
     const insets = useSafeAreaInsets();
@@ -98,15 +99,13 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
         <View style={styles.container}>
             <Header
                 title={'Multiselect List'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
                 actionItems={[
                     {
-                        icon: AddIcon,
+                        icon: <MatIcon name="add" />,
                         onPress: (): void => {
                             addItem();
                         },

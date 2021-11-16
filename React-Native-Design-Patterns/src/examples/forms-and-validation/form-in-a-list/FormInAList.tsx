@@ -5,7 +5,7 @@ import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { TextInput } from '../shared/TextInput';
-import { Card, Switch } from 'react-native-paper';
+import { Card, Switch, useTheme } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
 
 const makeStyles = (): StyleSheet.NamedStyles<{
@@ -40,6 +40,7 @@ const makeStyles = (): StyleSheet.NamedStyles<{
 export const FormInAListScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const styles = makeStyles();
+    const theme = useTheme();
     const [dimensions, setDimensions] = useState({ window: Dimensions.get('window') });
     const [ipAddress, setIPAddress] = useState('10.0.0.1');
     const [isSwitchOn, setIsSwitchOn] = useState(true);
@@ -65,11 +66,9 @@ export const FormInAListScreen: React.FC = () => {
         <View style={{ flex: 1 }}>
             <Header
                 title={'In A List'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
             />
             <SafeAreaView>

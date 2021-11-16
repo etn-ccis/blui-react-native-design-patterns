@@ -35,11 +35,9 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
         <View style={defaultStyles.container}>
             <Header
                 title={'Bottom Sheet'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
                 actionItems={[
                     {

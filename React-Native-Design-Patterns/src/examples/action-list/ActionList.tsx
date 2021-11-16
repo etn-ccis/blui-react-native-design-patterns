@@ -81,11 +81,9 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
             <Header
                 testID="header"
                 title={'Action List'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
                 actionItems={[
                     { icon: <MatIcon name="delete" />, onPress: deleteAll },

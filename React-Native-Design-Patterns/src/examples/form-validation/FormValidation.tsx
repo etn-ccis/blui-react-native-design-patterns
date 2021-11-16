@@ -246,11 +246,9 @@ export const FormValidationScreen: React.FC = () => {
         <View>
             <Header
                 title={'Form Validation'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
             />
             <ScrollView style={styles.content}>

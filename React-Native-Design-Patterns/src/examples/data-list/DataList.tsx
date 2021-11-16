@@ -4,9 +4,11 @@ import { View, FlatList, Text } from 'react-native';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { useTheme } from 'react-native-paper';
 
 export const DataListScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
+    const theme = useTheme();
 
     const data = [
         {
@@ -39,11 +41,9 @@ export const DataListScreen: React.FC = () => {
         <View>
             <Header
                 title={'Data List'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
             />
             <FlatList

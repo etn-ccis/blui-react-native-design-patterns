@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { TextInput } from '../shared/TextInput';
 import { PasswordRequirement, passwordRequirements, PasswordRequirements } from './PasswordRequirements';
-import { Button, Divider } from 'react-native-paper';
+import { Button, Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
 
 const makeStyles = (): StyleSheet.NamedStyles<{
@@ -68,6 +68,7 @@ const makeStyles = (): StyleSheet.NamedStyles<{
 export const PasswordValidationScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
     const styles = makeStyles();
+    const theme = useTheme();
     const [currentPassword, setCurrentPassword] = useState('');
     const [currentPasswordErrorText, setCurrentPasswordErrorText] = useState('');
     const [isCurrentPasswordVisible, setIsCurrentPasswordVisible] = useState(false);
@@ -179,11 +180,9 @@ export const PasswordValidationScreen: React.FC = () => {
         <View style={{ flex: 1, backgroundColor: Colors.white[50] }}>
             <Header
                 title={'Password Validation'}
-                navigation={{
-                    icon: <MatIcon name="menu" />,
-                    onPress: (): void => {
-                        toggleMenu();
-                    },
+                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                onIconPress={(): void => {
+                    toggleMenu();
                 }}
             />
             <SafeAreaView>
