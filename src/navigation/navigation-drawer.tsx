@@ -29,10 +29,6 @@ export const navGroupItems: NavItem[] = [
         itemID: ROUTES.LOADING_STATES.route,
     },
     {
-        title: ROUTES.FORM_VALIDATION.name,
-        itemID: ROUTES.FORM_VALIDATION.route,
-    },
-    {
         title: ROUTES.FORMS_AND_VALIDATION.name,
         itemID: ROUTES.FORMS_AND_VALIDATION.name,
         items: [

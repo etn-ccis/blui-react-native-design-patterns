@@ -25,9 +25,24 @@ import { StatusListScreen } from '../examples/status-list/StatusList';
 const Drawer = createDrawerNavigator();
 
 export type RootStackParamList = {
-    Home: undefined;
-    PageOne: undefined;
-    PageTwo: undefined;
+    home: undefined;
+    'collapsible-appbar': undefined;
+    'search-bar': undefined;
+    'loading-states': undefined;
+    'password-validation': undefined;
+    'fixed-length-passcode': undefined;
+    'verify-on-submit': undefined;
+    'form-in-a-list': undefined;
+    internationalization: undefined;
+    'action-list': undefined;
+    'data-list': undefined;
+    'multiselect-list': undefined;
+    'sortable-list': undefined;
+    'status-list': undefined;
+    'responsive-table': undefined;
+    bottomsheet: undefined;
+    'complex-bottomsheet': undefined;
+    'dynamic-stepper': undefined;
     NavigationDrawer: undefined;
 };
 
@@ -46,29 +61,28 @@ export const MainRouter = (): any => (
             drawerStyle={{ backgroundColor: 'transparent', width: '80%' }}
             drawerContent={(props: NavDrawerProps): ReactNode => <CustomDrawerContent {...props} />}
         >
-            <RootStack.Screen name={ROUTES.HOME.route} component={Home} />
-            <RootStack.Screen name={ROUTES.COLLAPSIBLE_APPBAR.route} component={CollapsibleAppbarScreen} />
-            <RootStack.Screen name={ROUTES.SEARCH_BAR.route} component={SearchbarScreen} />
-            <RootStack.Screen name={ROUTES.LOADING_STATES.route} component={LoadingStatesScreen} />
-            <RootStack.Screen name={ROUTES.FORM_VALIDATION.route} component={FormValidationScreen} />
-            <RootStack.Screen name={ROUTES.PASSWORD_VALIDATION.route} component={PasswordValidationScreen} />
-            <RootStack.Screen name={ROUTES.FIXED_LENGTH_PASSCODE.route} component={FixedLengthPasscodeScreen} />
-            <RootStack.Screen name={ROUTES.VERIFY_ON_SUBMIT.route} component={VerifyOnSubmitScreen} />
-            <RootStack.Screen name={ROUTES.FORM_IN_A_LIST.route} component={FormInAListScreen} />
-            <RootStack.Screen name={ROUTES.I18N.route}>
+            <RootStack.Screen name={'home'} component={Home} />
+            <RootStack.Screen name={'collapsible-appbar'} component={CollapsibleAppbarScreen} />
+            <RootStack.Screen name={'search-bar'} component={SearchbarScreen} />
+            <RootStack.Screen name={`loading-states`} component={LoadingStatesScreen} />
+            <RootStack.Screen name={'password-validation'} component={PasswordValidationScreen} />
+            <RootStack.Screen name={'fixed-length-passcode'} component={FixedLengthPasscodeScreen} />
+            <RootStack.Screen name={'verify-on-submit'} component={VerifyOnSubmitScreen} />
+            <RootStack.Screen name={'form-in-a-list'} component={FormInAListScreen} />
+            <RootStack.Screen name={'internationalization'}>
                 {(): JSX.Element => <Placeholder title={ROUTES.I18N.name} />}
             </RootStack.Screen>
-            <RootStack.Screen name={ROUTES.ACTION_LIST.route} component={ActionListScreen} />
-            <RootStack.Screen name={ROUTES.DATA_LIST.route} component={DataListScreen} />
-            <RootStack.Screen name={ROUTES.MULTISELECT_LIST.route} component={MultiselectListScreen} />
-            <RootStack.Screen name={ROUTES.SORTABLE_LIST.route} component={SortableListScreen} />
-            <RootStack.Screen name={ROUTES.STATUS_LIST.route} component={StatusListScreen} />
-            <RootStack.Screen name={ROUTES.RESPONSIVE_TABLE.route}>
+            <RootStack.Screen name={'action-list'} component={ActionListScreen} />
+            <RootStack.Screen name={'data-list'} component={DataListScreen} />
+            <RootStack.Screen name={'multiselect-list'} component={MultiselectListScreen} />
+            <RootStack.Screen name={'sortable-list'} component={SortableListScreen} />
+            <RootStack.Screen name={'status-list'} component={StatusListScreen} />
+            <RootStack.Screen name={'responsive-table'}>
                 {(): JSX.Element => <Placeholder title={ROUTES.RESPONSIVE_TABLE.name} />}
             </RootStack.Screen>
-            <RootStack.Screen name={ROUTES.COMPLEX_BOTTOMSHEET.route} component={ComplexBottomSheetAlarmsScreen} />
-            <RootStack.Screen name={ROUTES.BOTTOMSHEET.route} component={BottomSheetAlarmsScreen} />
-            <RootStack.Screen name={ROUTES.DYNAMIC_STEPPER.route}>
+            <RootStack.Screen name={'complex-bottomsheet'} component={ComplexBottomSheetAlarmsScreen} />
+            <RootStack.Screen name={'bottomsheet'} component={BottomSheetAlarmsScreen} />
+            <RootStack.Screen name={'dynamic-stepper'}>
                 {(): JSX.Element => <Placeholder title={ROUTES.DYNAMIC_STEPPER.name} />}
             </RootStack.Screen>
         </Drawer.Navigator>
