@@ -125,19 +125,22 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                                 rightComponent={<></>}
                                 icon={
                                     isSelected(item) ? (
-                                        <MatIcon name="check-box" size={24} />
+                                        <MatIcon name="check-box" size={24} color={theme.colors.primaryPalette.main} />
                                     ) : (
-                                        <MatIcon name="check-box-outline-blank" size={24} />
+                                        <MatIcon
+                                            name="check-box-outline-blank"
+                                            size={24}
+                                            color={theme.colors.textPalette.primary}
+                                        />
                                     )
                                 }
-                                iconColor={isSelected(item) ? Colors.blue[500] : ''}
                             />
                         ))}
                     </ScrollView>
                 ) : (
                     <EmptyState
                         title={'No Data Found'}
-                        icon={<MatIcon name="error" size={100} />}
+                        icon={<MatIcon name="error" size={100} color={theme.colors.textPalette.primary} />}
                         actions={
                             <Button
                                 icon={(): JSX.Element => <MatIcon name="add" color={Colors.white[50]} size={24} />}
@@ -157,11 +160,15 @@ export const MultiselectListScreen: React.FC<MultiselectListProps> = (props) => 
                     </View>
                     <View style={styles.footerIcons}>
                         <IconButton
-                            icon={(): JSX.Element => <MatIcon name="cancel" color={Colors.gray[800]} size={24} />}
+                            icon={(): JSX.Element => (
+                                <MatIcon name="cancel" color={theme.colors.textPalette.primary} size={24} />
+                            )}
                             onPress={onCancel}
                         />
                         <IconButton
-                            icon={(): JSX.Element => <MatIcon name="delete" color={Colors.gray[800]} size={24} />}
+                            icon={(): JSX.Element => (
+                                <MatIcon name="delete" color={theme.colors.textPalette.primary} size={24} />
+                            )}
                             onPress={onDelete}
                         />
                     </View>

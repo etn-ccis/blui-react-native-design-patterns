@@ -145,7 +145,9 @@ export const VerifyOnSubmitScreen: React.FC = () => {
             <EmptyState
                 title={'Success'}
                 description={'Device "123" has been added.'}
-                icon={(): JSX.Element => <MatIcon name="check-circle" color={Colors.gray[500]} size={100} />}
+                icon={(): JSX.Element => (
+                    <MatIcon name="check-circle" color={theme.colors.textPalette.primary} size={100} />
+                )}
                 actions={
                     <Button
                         icon={(): JSX.Element => <MatIcon name="add" color={Colors.blue[500]} size={24} />}

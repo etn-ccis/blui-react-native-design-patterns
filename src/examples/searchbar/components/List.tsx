@@ -67,7 +67,7 @@ export const List: React.FC = () => {
             {results.length === 0 ? (
                 <EmptyState
                     title={'0 results'}
-                    icon={<MatIcon name="error" size={100} />}
+                    icon={<MatIcon name="error" size={100} color={theme.colors.textPalette.primary} />}
                     description={'No matching presidents'}
                 />
             ) : (
@@ -79,7 +79,7 @@ export const List: React.FC = () => {
                             title={item.president}
                             subtitle={item.party}
                             info={item.tookOffice}
-                            icon={<MatIcon name="person" size={24} />}
+                            icon={<MatIcon name="person" size={24} color={theme.colors.textPalette.primary} />}
                         />
                     )}
                 />

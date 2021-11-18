@@ -110,7 +110,7 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                                 <MatIcon
                                     name="more-vert"
                                     onPress={(): void => showActionsPanel(index)}
-                                    color={Colors.black[500]}
+                                    color={theme.colors.textPalette.primary}
                                     size={24}
                                 />
                             }
@@ -141,10 +141,14 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                     style={{ justifyContent: 'flex-end', margin: 0 }}
                 >
                     <View style={{ backgroundColor: Colors.white[50] }}>
-                        <InfoListItem title={'Remove'} icon={<MatIcon name="cancel" size={24} />} onPress={onDelete} />
+                        <InfoListItem
+                            title={'Remove'}
+                            icon={<MatIcon name="cancel" size={24} color={theme.colors.textPalette.primary} />}
+                            onPress={onDelete}
+                        />
                         <InfoListItem
                             title={'Cancel'}
-                            icon={<MatIcon name="clear" size={24} />}
+                            icon={<MatIcon name="clear" size={24} color={theme.colors.textPalette.primary} />}
                             onPress={hideActionsPanel}
                         />
                     </View>

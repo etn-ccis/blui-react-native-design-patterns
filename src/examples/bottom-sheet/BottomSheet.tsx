@@ -56,9 +56,9 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
                         subtitle={formatDate(item.date)}
                         icon={
                             item.active ? (
-                                <MatIcon name="notifications-active" size={24} />
+                                <MatIcon name="notifications-active" size={24} color={Colors.white[100]} />
                             ) : (
-                                <MatIcon name="notifications" size={24} />
+                                <MatIcon name="notifications" size={24} color={theme.colors.textPalette.primary} />
                             )
                         }
                         iconColor={item.active ? Colors.white[100] : Colors.black[500]}
@@ -71,19 +71,19 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
             <BottomSheetScreen show={showBottomSheet} dismissBottomSheet={(): void => setShowBottomSheet(false)}>
                 <InfoListItem
                     title={'Acknowledge All'}
-                    icon={<MatIcon name="done" size={24} />}
+                    icon={<MatIcon name="done" size={24} color={theme.colors.textPalette.primary} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-0'}
                 />
                 <InfoListItem
                     title={'Export'}
-                    icon={<MatIcon name="get-app" size={24} />}
+                    icon={<MatIcon name="get-app" size={24} color={theme.colors.textPalette.primary} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-1'}
                 />
                 <InfoListItem
                     title={'Cancel'}
-                    icon={<MatIcon name="clear" size={24} />}
+                    icon={<MatIcon name="clear" size={24} color={theme.colors.textPalette.primary} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'cancel-button'}
                 />

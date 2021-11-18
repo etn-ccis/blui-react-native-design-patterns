@@ -77,7 +77,7 @@ export const FormInAListScreen: React.FC = () => {
                         <Card style={[styles.card, dimensions.window.width < 600 ? {} : styles.cardTablet]}>
                             <InfoListItem
                                 title={'IP Address'}
-                                icon={<MatIcon name="dns" size={24} />}
+                                icon={<MatIcon name="dns" size={24} color={theme.colors.textPalette.primary} />}
                                 divider={'partial'}
                                 backgroundColor={Colors.white[50]}
                                 rightComponent={
@@ -91,7 +91,7 @@ export const FormInAListScreen: React.FC = () => {
                             <InfoListItem
                                 title={'Insight Report'}
                                 subtitle={'Auto-report every 2 months'}
-                                icon={<MatIcon name="insights" size={24} />}
+                                icon={<MatIcon name="insights" size={24} color={theme.colors.textPalette.primary} />}
                                 backgroundColor={Colors.white[50]}
                                 rightComponent={<Switch value={isSwitchOn} onValueChange={onSwitchToggle} />}
                             />

@@ -26,8 +26,7 @@ const createInfoListItemConfig = (index: number, randomStatus: string, tag?: boo
             return {
                 title: `Item ${index}`,
                 subtitle: `Status: ${randomStatus}`,
-                icon: <MatIcon name="notifications" size={24} />,
-                iconColor: tag ? Colors.white[50] : Colors.red[500],
+                icon: <MatIcon name="notifications" size={24} color={tag ? Colors.white[50] : Colors.red[500]} />,
                 statusColor: tag ? Colors.red[500] : 'transparent',
                 rightComponent: tag ? <ListItemTag label={'NEW'} backgroundColor={Colors.red[500]} /> : undefined,
             };
@@ -35,15 +34,14 @@ const createInfoListItemConfig = (index: number, randomStatus: string, tag?: boo
             return {
                 title: `Item ${index}`,
                 subtitle: `Status: ${randomStatus}`,
-                icon: <MatIcon name="warning" size={24} />,
-                iconColor: Colors.orange[500],
+                icon: <MatIcon name="warning" size={24} color={Colors.orange[500]} />,
             };
         case 'normal':
         default:
             return {
                 title: `Item ${index}`,
                 subtitle: `Status: ${randomStatus}`,
-                icon: <MatIcon name="home" size={24} />,
+                icon: <MatIcon name="home" size={24} color={Colors.black[500]} />,
             };
     }
 };
