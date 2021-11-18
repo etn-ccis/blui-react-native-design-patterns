@@ -11,7 +11,6 @@ import { BottomSheetAlarmsScreen } from '../examples/bottom-sheet/BottomSheet';
 import { CollapsibleAppbarScreen } from '../examples/collapsible-appbar/CollapsibleAppbar';
 import { ComplexBottomSheetAlarmsScreen } from '../examples/complex-bottomsheet/ComplexBottomSheet';
 import { DataListScreen } from '../examples/data-list/DataList';
-import { FormValidationScreen } from '../examples/form-validation/FormValidation';
 import { FixedLengthPasscodeScreen } from '../examples/forms-and-validation/fixed-length-passcode/FixedLengthPasscode';
 import { FormInAListScreen } from '../examples/forms-and-validation/form-in-a-list/FormInAList';
 import { PasswordValidationScreen } from '../examples/forms-and-validation/password-validation/PasswordValidation';
