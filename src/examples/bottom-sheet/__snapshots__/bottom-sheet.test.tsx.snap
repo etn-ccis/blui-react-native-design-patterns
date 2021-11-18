@@ -17,6 +17,7 @@ exports[`Bottom Sheet Tests renders the screen 1`] = `
   scrollOffset={0}
   scrollOffsetMax={0}
   scrollTo={null}
+  statusBarTranslucent={false}
   supportedOrientations={
     Array [
       "portrait",
@@ -67,6 +68,7 @@ exports[`Bottom Sheet Tests renders the screen 1`] = `
     scrollOffset={0}
     scrollOffsetMax={0}
     scrollTo={null}
+    statusBarTranslucent={false}
     style={
       Object {
         "flex": 1,

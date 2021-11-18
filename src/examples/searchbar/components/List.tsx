@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 export const List: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
-    const theme = useTheme();
+    const theme: ReactNativePaper.Theme = useTheme();
     const [query, setQuery] = useState('');
     const [results, setResults] = useState(sampleData);
     const data = sampleData;

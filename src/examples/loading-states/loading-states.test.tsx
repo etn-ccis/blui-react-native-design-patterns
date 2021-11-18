@@ -3,6 +3,9 @@ import renderer, { ReactTestInstance } from 'react-test-renderer';
 import { LoadingStatesScreen, getCardContent } from './LoadingStates';
 import { getIcon, getColor, getGradeColor } from './utilities/utilities';
 import { red, yellow, green } from '@brightlayer-ui/colors';
+import { Provider as ThemeProvider } from 'react-native-paper';
+import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 jest.mock('@react-navigation/native', () => ({
     useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),
@@ -41,7 +44,15 @@ describe('Loading States Tests', () => {
     });
     describe('Screen', () => {
         it('renders the screen', () => {
-            const tree = renderer.create(<LoadingStatesScreen />).toJSON();
+            const tree = renderer
+                .create(
+                    <ThemeProvider theme={BLUIThemes.blue}>
+                        <SafeAreaProvider>
+                            <LoadingStatesScreen />
+                        </SafeAreaProvider>
+                    </ThemeProvider>
+                )
+                .toJSON();
             expect(tree).toMatchSnapshot();
         });
         it('returns correct content from getCardContent', () => {

@@ -4,6 +4,9 @@ import { StatusListScreen } from './StatusList';
 import { InfoListItemProps, InfoListItem } from '@brightlayer-ui/react-native-components';
 import { FlatList } from 'react-native';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
+import { Provider as ThemeProvider } from 'react-native-paper';
+import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 jest.mock('@react-navigation/native', () => ({
     useNavigation: (): any => ({ openDrawer: jest.fn(() => true) }),
@@ -49,7 +52,13 @@ const hardcodedData: InfoListItemProps[] = [
 describe('Status List Tests', () => {
     it('renders the screen', () => {
         const tree = renderer
-            .create(<StatusListScreen hardcodedData={hardcodedData} navigation={navigationMock} />)
+            .create(
+                <ThemeProvider theme={BLUIThemes.blue}>
+                    <SafeAreaProvider>
+                        <StatusListScreen hardcodedData={hardcodedData} navigation={navigationMock} />
+                    </SafeAreaProvider>
+                </ThemeProvider>
+            )
             .toJSON();
         expect(tree).toMatchSnapshot();
     });

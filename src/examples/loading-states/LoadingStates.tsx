@@ -10,7 +10,7 @@ import { Card, useTheme } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 
-export const getCardContent = (device: Device, theme: ReactNativePaper.Theme): JSX.Element => {
+export const getCardContent = (device: Device, theme?: ReactNativePaper.Theme): JSX.Element => {
     if (device.name === undefined || device.data === undefined) return <HeroPlaceholder />;
     return (
         <>
@@ -40,7 +40,7 @@ export const getCardContent = (device: Device, theme: ReactNativePaper.Theme): J
             {device.data.channels.map((channel: ChannelItem, cind: number) => (
                 <InfoListItem
                     key={`_c${cind}`}
-                    icon={<MatIcon name={channel.icon} color={theme.colors.textPalette.primary} size={24} />}
+                    icon={<MatIcon name={channel.icon} color={theme?.colors.textPalette.primary} size={24} />}
                     title={channel.label}
                     divider={'full'}
                     rightComponent={<ChannelValue value={channel.value} units={channel.units} />}
