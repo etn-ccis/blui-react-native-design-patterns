@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { StatusListScreen } from './StatusList';
-import { InfoListItemProps, InfoListItem } from '@brightlayer-ui/react-native-components';
-import { FlatList } from 'react-native';
+import { InfoListItemProps /*, InfoListItem */ } from '@brightlayer-ui/react-native-components';
+// import { FlatList } from 'react-native';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { Provider as ThemeProvider } from 'react-native-paper';
 import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
