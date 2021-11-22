@@ -66,7 +66,13 @@ export const FormInAListScreen: React.FC = () => {
         <View style={{ flex: 1 }}>
             <Header
                 title={'In A List'}
-                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                icon={
+                    <MatIcon
+                        name="menu"
+                        color={theme.colors.textPalette?.onPrimary?.main || Colors.white[50]}
+                        size={24}
+                    />
+                }
                 onIconPress={(): void => {
                     toggleMenu();
                 }}

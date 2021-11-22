@@ -9,6 +9,7 @@ import { HeroPlaceholder } from './components/hero-placeholder';
 import { Card, useTheme } from 'react-native-paper';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
+import * as Colors from '@brightlayer-ui/colors';
 
 export const getCardContent = (device: Device, theme?: ReactNativePaper.Theme): JSX.Element => {
     if (device.name === undefined || device.data === undefined) return <HeroPlaceholder />;
@@ -73,13 +74,25 @@ export const LoadingStatesScreen: React.FC = () => {
             <Header
                 testID="header"
                 title={'Loading States'}
-                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                icon={
+                    <MatIcon
+                        name="menu"
+                        color={theme.colors.textPalette?.onPrimary?.main || Colors.white[50]}
+                        size={24}
+                    />
+                }
                 onIconPress={(): void => {
                     toggleMenu();
                 }}
                 actionItems={[
                     {
-                        icon: <MatIcon name="refresh" color={theme.colors.textPalette.onPrimary.main} size={24} />,
+                        icon: (
+                            <MatIcon
+                                name="refresh"
+                                color={theme.colors.textPalette?.onPrimary?.main || Colors.white[50]}
+                                size={24}
+                            />
+                        ),
                         onPress: (): void => refreshData(),
                     },
                 ]}

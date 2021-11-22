@@ -70,7 +70,13 @@ export const SortableListScreen: React.FC = () => {
                 <InfoListItem
                     title={item.name}
                     rightComponent={<Text>{item.value}</Text>}
-                    icon={<MatIcon name="drag-handle" />}
+                    icon={
+                        <MatIcon
+                            name="drag-handle"
+                            color={theme.colors?.textPalette?.primary || theme.colors.text}
+                            size={24}
+                        />
+                    }
                     backgroundColor={Colors.white[50]}
                 />
             </Surface>
@@ -93,16 +99,30 @@ export const SortableListScreen: React.FC = () => {
         <View style={styles.container}>
             <Header
                 title={'Sortable List'}
-                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                icon={
+                    <MatIcon
+                        name="menu"
+                        color={theme.colors.textPalette?.onPrimary?.main || Colors.white[50]}
+                        size={24}
+                    />
+                }
                 onIconPress={(): void => {
                     toggleMenu();
                 }}
                 actionItems={[
                     {
                         icon: isSortable ? (
-                            <MatIcon name="check" color={theme.colors.textPalette.onPrimary.main} size={24} />
+                            <MatIcon
+                                name="check"
+                                color={theme.colors.textPalette?.onPrimary?.main || Colors.white[50]}
+                                size={24}
+                            />
                         ) : (
-                            <MatIcon name="edit" color={theme.colors.textPalette.onPrimary.main} size={24} />
+                            <MatIcon
+                                name="edit"
+                                color={theme.colors.textPalette?.onPrimary?.main || Colors.white[50]}
+                                size={24}
+                            />
                         ),
                         onPress: (): void => {
                             toggleEdit();

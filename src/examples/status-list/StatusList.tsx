@@ -80,7 +80,13 @@ export const StatusListScreen: React.FC<ActionListProps> = (props) => {
             <Header
                 testID="header"
                 title={'Status List'}
-                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                icon={
+                    <MatIcon
+                        name="menu"
+                        color={theme.colors.textPalette?.onPrimary?.main || Colors.white[50]}
+                        size={24}
+                    />
+                }
                 onIconPress={(): void => {
                     toggleMenu();
                 }}

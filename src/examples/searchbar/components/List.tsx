@@ -52,7 +52,13 @@ export const List: React.FC = () => {
         <View style={styles.container}>
             <Header
                 title={'Search Bar'}
-                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                icon={
+                    <MatIcon
+                        name="menu"
+                        color={theme.colors.textPalette?.onPrimary?.main || Colors.white[50]}
+                        size={24}
+                    />
+                }
                 onIconPress={(): void => {
                     toggleMenu();
                 }}

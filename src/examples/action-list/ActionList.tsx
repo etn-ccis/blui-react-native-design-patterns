@@ -81,17 +81,35 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
             <Header
                 testID="header"
                 title={'Action List'}
-                icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+                icon={
+                    <MatIcon
+                        name="menu"
+                        color={theme.colors?.textPalette?.onPrimary?.main || Colors.white[50]}
+                        size={24}
+                    />
+                }
                 onIconPress={(): void => {
                     toggleMenu();
                 }}
                 actionItems={[
                     {
-                        icon: <MatIcon name="delete" color={theme.colors.textPalette.onPrimary.main} size={24} />,
+                        icon: (
+                            <MatIcon
+                                name="delete"
+                                color={theme.colors?.textPalette?.onPrimary?.main || Colors.white[50]}
+                                size={24}
+                            />
+                        ),
                         onPress: deleteAll,
                     },
                     {
-                        icon: <MatIcon name="add" color={theme.colors.textPalette.onPrimary.main} size={24} />,
+                        icon: (
+                            <MatIcon
+                                name="add"
+                                color={theme.colors?.textPalette?.onPrimary?.main || Colors.white[50]}
+                                size={24}
+                            />
+                        ),
                         onPress: addItem,
                     },
                 ]}
@@ -110,7 +128,7 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                                 <MatIcon
                                     name="more-vert"
                                     onPress={(): void => showActionsPanel(index)}
-                                    color={theme.colors.textPalette.primary}
+                                    color={theme.colors?.textPalette?.primary || theme.colors.text}
                                     size={24}
                                 />
                             }
@@ -143,12 +161,12 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                     <View style={{ backgroundColor: Colors.white[50] }}>
                         <InfoListItem
                             title={'Remove'}
-                            icon={<MatIcon name="cancel" size={24} color={theme.colors.textPalette.primary} />}
+                            icon={<MatIcon name="cancel" size={24} color={theme.colors?.textPalette?.primary} />}
                             onPress={onDelete}
                         />
                         <InfoListItem
                             title={'Cancel'}
-                            icon={<MatIcon name="clear" size={24} color={theme.colors.textPalette.primary} />}
+                            icon={<MatIcon name="clear" size={24} color={theme.colors?.textPalette?.primary} />}
                             onPress={hideActionsPanel}
                         />
                     </View>

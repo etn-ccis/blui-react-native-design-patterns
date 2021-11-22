@@ -5,6 +5,7 @@ import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { useTheme } from 'react-native-paper';
+import * as Colors from '@brightlayer-ui/colors';
 
 export const CollapsibleAppbarScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
@@ -22,7 +23,9 @@ export const CollapsibleAppbarScreen: React.FC = () => {
             title={'Collapsible Appbar'}
             subtitle={'Tap to collapse/expand'}
             info={`I'm hidden when collapsed`}
-            icon={<MatIcon name="menu" color={theme.colors.textPalette.onPrimary.main} size={24} />}
+            icon={
+                <MatIcon name="menu" color={theme.colors.textPalette?.onPrimary?.main || Colors.white[50]} size={24} />
+            }
             onIconPress={(): void => {
                 toggleMenu();
             }}
