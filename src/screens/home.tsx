@@ -125,7 +125,7 @@ export const Home: React.FC = () => {
                             toggleMenu();
                         }}
                     >
-                        Explore Brightlayer UI Design Patterns
+                        Explore Design Patterns
                     </Button>
                 </Animated.View>
 
