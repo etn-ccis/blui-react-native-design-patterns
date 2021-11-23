@@ -219,6 +219,7 @@ export const PasswordValidationScreen: React.FC = () => {
                                 rightIcon={{
                                     name: !isCurrentPasswordVisible ? 'eye-off' : 'eye',
                                     onPress: (): void => setIsCurrentPasswordVisible(!isCurrentPasswordVisible),
+                                    color: theme.colors?.textPalette?.secondary || Colors.gray[500],
                                 }}
                             />
                         </View>
@@ -235,6 +236,7 @@ export const PasswordValidationScreen: React.FC = () => {
                                 rightIcon={{
                                     name: !isNewPasswordVisible ? 'eye-off' : 'eye',
                                     onPress: (): void => setIsNewPasswordVisible(!isNewPasswordVisible),
+                                    color: theme.colors?.textPalette?.secondary || Colors.gray[500],
                                 }}
                             />
                         </View>
@@ -261,6 +263,7 @@ export const PasswordValidationScreen: React.FC = () => {
                                 rightIcon={{
                                     name: !isConfirmPasswordVisible ? 'eye-off' : 'eye',
                                     onPress: (): void => setIsConfirmPasswordVisible(!isConfirmPasswordVisible),
+                                    color: theme.colors?.textPalette?.secondary || Colors.gray[500],
                                 }}
                             />
                         </View>
