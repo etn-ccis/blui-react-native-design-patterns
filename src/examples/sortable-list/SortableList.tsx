@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Header, InfoListItem } from '@brightlayer-ui/react-native-components';
-import { View, StyleSheet, TouchableOpacity, Text, FlatList } from 'react-native';
+import { Header, InfoListItem, Subtitle1 } from '@brightlayer-ui/react-native-components';
+import { View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import * as Colors from '@brightlayer-ui/colors';
@@ -69,7 +69,7 @@ export const SortableListScreen: React.FC = () => {
             <Surface style={{ elevation: isActive ? 4 : 0 }}>
                 <InfoListItem
                     title={item.name}
-                    rightComponent={<Text>{item.value}</Text>}
+                    rightComponent={<Subtitle1>{item.value}</Subtitle1>}
                     icon={
                         <MatIcon
                             name="drag-handle"
@@ -84,7 +84,7 @@ export const SortableListScreen: React.FC = () => {
     );
 
     const renderItem = ({ item }: ItemProps): JSX.Element => (
-        <InfoListItem title={item.name} rightComponent={<Text>{item.value}</Text>} hidePadding />
+        <InfoListItem title={item.name} rightComponent={<Subtitle1>{item.value}</Subtitle1>} hidePadding />
     );
 
     const toggleEdit = (): void => {
