@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Body1, Header } from '@brightlayer-ui/react-native-components';
-import { View, StyleSheet, ScrollView, ViewStyle, SafeAreaView } from 'react-native';
+import { View, StyleSheet, ViewStyle, SafeAreaView } from 'react-native';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
@@ -8,8 +8,16 @@ import { TextInput } from '../shared/TextInput';
 import { PasswordRequirement, passwordRequirements, PasswordRequirements } from './PasswordRequirements';
 import { Button, Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-const makeStyles = (): StyleSheet.NamedStyles<{
+const makeStyles = (
+    theme: ReactNativePaper.Theme,
+    insets: any
+): StyleSheet.NamedStyles<{
+    safeContainer: ViewStyle;
+    scrollContainer: ViewStyle;
+    scrollContentContainer: ViewStyle;
     section: ViewStyle;
     topDivider: ViewStyle;
     currentPasswordFormFieldWrapper: ViewStyle;
@@ -23,6 +31,19 @@ const makeStyles = (): StyleSheet.NamedStyles<{
     submitButton: ViewStyle;
 }> =>
     StyleSheet.create({
+        safeContainer: {
+            flexGrow: 1,
+            backgroundColor: theme.colors.surface,
+            marginBottom: insets.bottom,
+        },
+        scrollContainer: {
+            flex: 1,
+            alignContent: 'center',
+        },
+        scrollContentContainer: {
+            alignSelf: 'center',
+            maxWidth: 600,
+        },
         section: {
             padding: 16,
             marginBottom: 32,
@@ -67,8 +88,9 @@ const makeStyles = (): StyleSheet.NamedStyles<{
 
 export const PasswordValidationScreen: React.FC = () => {
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
-    const styles = makeStyles();
     const theme = useTheme();
+    const insets = useSafeAreaInsets();
+    const styles = makeStyles(theme, insets);
     const [currentPassword, setCurrentPassword] = useState('');
     const [currentPasswordErrorText, setCurrentPasswordErrorText] = useState('');
     const [isCurrentPasswordVisible, setIsCurrentPasswordVisible] = useState(false);
@@ -191,8 +213,11 @@ export const PasswordValidationScreen: React.FC = () => {
                     toggleMenu();
                 }}
             />
-            <SafeAreaView>
-                <ScrollView>
+            <SafeAreaView style={styles.safeContainer}>
+                <KeyboardAwareScrollView
+                    style={styles.scrollContainer}
+                    contentContainerStyle={[styles.scrollContentContainer]}
+                >
                     <View style={styles.section}>
                         <Body1>
                             Password must be at least 8 characters long, contain at least one uppercase character, one
@@ -268,7 +293,7 @@ export const PasswordValidationScreen: React.FC = () => {
                             />
                         </View>
                     </View>
-                </ScrollView>
+                </KeyboardAwareScrollView>
                 <View style={styles.buttonContainer}>
                     <Divider style={styles.bottomDivider} />
                     <Button
