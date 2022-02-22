@@ -42,7 +42,7 @@
         "@babel/runtime": "^7.12.5",
         "@brightlayer-ui/eslint-config": "^2.0.2",
         "@brightlayer-ui/prettier-config": "^1.0.2",
-        "@react-native-community/eslint-config": "^2.0.0",
+        "@react-native-community/eslint-config": "^3.0.0",
         "@types/jest": "^26.0.23",
         "@types/react-native": "^0.64.5",
         "@types/react-native-vector-icons": "^6.4.10",
