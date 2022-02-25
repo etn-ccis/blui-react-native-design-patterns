@@ -6309,10 +6309,10 @@ react-native-collapsible@^1.5.3:
   resolved "https://registry.yarnpkg.com/react-native-collapsible/-/react-native-collapsible-1.6.0.tgz#ca261ffff16914f872059bb0972e3a78c4b37f9c"
   integrity sha512-beZjdgbT9Y/Pg591Xy5XkKG20HffJiVad4n9bfcUF/f783A+tvOVXnqvbS58Lkaym93mi4jcDPMuW9Vc1t6rqg==
 
-react-native-draggable-flatlist@^2.5.0:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/react-native-draggable-flatlist/-/react-native-draggable-flatlist-2.6.2.tgz#d1445fd52e75bc4f4ebbd832a8bc4525cebb8302"
-  integrity sha512-0IBS1lgw137FDaDLccUidHXYu/6PbnIO1R0IXYVfxtNOvhFLfJyGOY526vmO72Sf/ch9yayED4+DaQWGBOqNyw==
+react-native-draggable-flatlist@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-draggable-flatlist/-/react-native-draggable-flatlist-3.0.6.tgz#51bbb6944ed67ebc3297ccbacd1f692dfd86105b"
+  integrity sha512-eyqFGpXsWU3kHVkLkjrBTqtR+a2HFfwMt5QaOIGUz47lkpKLwvq8IbPw1hKEqcDyRVk6IUnTPcwJ9NK0SGmkJw==
 
 react-native-gesture-handler@^1.10.3:
   version "1.10.3"
