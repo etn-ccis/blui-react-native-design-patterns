@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, ScrollView, View, ViewStyle } from 'react-native';
+import { StyleSheet, ScrollView, View, ViewStyle, TextStyle } from 'react-native';
 import * as Colors from '@brightlayer-ui/colors';
 import { Header, InfoListItem } from '@brightlayer-ui/react-native-components';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
@@ -13,11 +13,15 @@ const useStyles = (
     theme: ReactNativePaper.Theme
 ): StyleSheet.NamedStyles<{
     container: ViewStyle;
+    actionItem: TextStyle;
 }> =>
     StyleSheet.create({
         container: {
             flex: 1,
             backgroundColor: theme.colors.surface,
+        },
+        actionItem: {
+            minHeight: 52,
         },
     });
 
@@ -82,18 +86,21 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
             </ScrollView>
             <BottomSheetScreen show={showBottomSheet} dismissBottomSheet={(): void => setShowBottomSheet(false)}>
                 <InfoListItem
+                    style={defaultStyles.actionItem}
                     title={'Acknowledge All'}
                     icon={<MatIcon name="done" size={24} color={theme.colors.textPalette.primary} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-0'}
                 />
                 <InfoListItem
+                    style={defaultStyles.actionItem}
                     title={'Export'}
                     icon={<MatIcon name="get-app" size={24} color={theme.colors.textPalette.primary} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-1'}
                 />
                 <InfoListItem
+                    style={defaultStyles.actionItem}
                     title={'Cancel'}
                     icon={<MatIcon name="clear" size={24} color={theme.colors.textPalette.primary} />}
                     onPress={(): void => setShowBottomSheet(false)}
