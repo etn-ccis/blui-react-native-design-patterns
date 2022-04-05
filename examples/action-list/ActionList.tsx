@@ -46,6 +46,9 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
             flex: 1,
             backgroundColor: theme.colors.surface,
         },
+        actionItem: {
+            minHeight: 52,
+        },
     });
 
     const navigation = useNavigation<DrawerNavigationProp<Record<string, undefined>>>();
@@ -143,8 +146,18 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                     style={{ justifyContent: 'flex-end', margin: 0 }}
                 >
                     <View style={{ backgroundColor: Colors.white[50] }}>
-                        <InfoListItem title={'Remove'} IconClass={CancelIcon} onPress={onDelete} />
-                        <InfoListItem title={'Cancel'} IconClass={ClearIcon} onPress={hideActionsPanel} />
+                        <InfoListItem
+                            style={styles.actionItem}
+                            title={'Remove'}
+                            IconClass={CancelIcon}
+                            onPress={onDelete}
+                        />
+                        <InfoListItem
+                            style={styles.actionItem}
+                            title={'Cancel'}
+                            IconClass={ClearIcon}
+                            onPress={hideActionsPanel}
+                        />
                     </View>
                 </Modal>
             </SafeAreaView>

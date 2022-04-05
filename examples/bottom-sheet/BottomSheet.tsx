@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, ScrollView, View, ViewStyle } from 'react-native';
+import { StyleSheet, ScrollView, View, ViewStyle, TextStyle } from 'react-native';
 import * as Colors from '@pxblue/colors';
 import { Header, InfoListItem, wrapIcon } from '@pxblue/react-native-components';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -21,11 +21,15 @@ const useStyles = (
     theme: ReactNativePaper.Theme
 ): StyleSheet.NamedStyles<{
     container: ViewStyle;
+    actionItem: TextStyle;
 }> =>
     StyleSheet.create({
         container: {
             flex: 1,
             backgroundColor: theme.colors.surface,
+        },
+        actionItem: {
+            minHeight: 52,
         },
     });
 
@@ -74,18 +78,21 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
             </ScrollView>
             <BottomSheetScreen show={showBottomSheet} dismissBottomSheet={(): void => setShowBottomSheet(false)}>
                 <InfoListItem
+                    style={defaultStyles.actionItem}
                     title={'Acknowledge All'}
                     IconClass={DoneIcon}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-0'}
                 />
                 <InfoListItem
+                    style={defaultStyles.actionItem}
                     title={'Export'}
                     IconClass={GetAppIcon}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-1'}
                 />
                 <InfoListItem
+                    style={defaultStyles.actionItem}
                     title={'Cancel'}
                     IconClass={ClearIcon}
                     onPress={(): void => setShowBottomSheet(false)}
