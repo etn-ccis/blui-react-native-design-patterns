@@ -163,11 +163,13 @@ export const ActionListScreen: React.FC<ActionListProps> = (props) => {
                             title={'Remove'}
                             icon={<MatIcon name="cancel" size={24} color={theme.colors?.textPalette?.primary} />}
                             onPress={onDelete}
+                            dense
                         />
                         <InfoListItem
                             title={'Cancel'}
                             icon={<MatIcon name="clear" size={24} color={theme.colors?.textPalette?.primary} />}
                             onPress={hideActionsPanel}
+                            dense
                         />
                     </View>
                 </Modal>

@@ -86,18 +86,21 @@ export const BottomSheetAlarmsScreen: React.FC = () => {
                     icon={<MatIcon name="done" size={24} color={theme.colors.textPalette.primary} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-0'}
+                    dense
                 />
                 <InfoListItem
                     title={'Export'}
                     icon={<MatIcon name="get-app" size={24} color={theme.colors.textPalette.primary} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'menu-item-button-1'}
+                    dense
                 />
                 <InfoListItem
                     title={'Cancel'}
                     icon={<MatIcon name="clear" size={24} color={theme.colors.textPalette.primary} />}
                     onPress={(): void => setShowBottomSheet(false)}
                     testID={'cancel-button'}
+                    dense
                 />
             </BottomSheetScreen>
         </View>
