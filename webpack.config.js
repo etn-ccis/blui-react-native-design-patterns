@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path');
 
 const webpack = require('webpack');
@@ -8,7 +9,6 @@ const { presets } = require(`${appDirectory}/babel.config.js`);
 
 const compileNodeModules = [
     // Add every react-native package that needs compiling
-    // 'react-native-gesture-handler',
     '@brightlayer-ui/colors',
     '@brightlayer-ui/icons-svg',
     '@brightlayer-ui/react-native-components',
@@ -18,6 +18,7 @@ const compileNodeModules = [
     '@react-navigation/drawer',
     '@react-navigation/native',
     '@react-navigation/stack',
+    'file-loader',
     'react',
     'react-native',
     'react-native-draggable-flatlist',
@@ -54,11 +55,24 @@ const babelLoaderConfiguration = {
     },
 };
 
-const svgLoaderConfiguration = {
-    test: /\.svg$/,
+// const svgLoaderConfiguration = {
+//     test: /\.svg$/,
+//     use: [
+//         {
+//             loader: '@svgr/webpack',
+//         },
+//     ],
+// };
+
+const svgLoaderConfiguration2 = {
+    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
     use: [
         {
-            loader: '@svgr/webpack',
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]',
+                outputPath: 'assets/fonts',
+            },
         },
     ],
 };
@@ -89,7 +103,7 @@ module.exports = {
         },
     },
     module: {
-        rules: [babelLoaderConfiguration, imageLoaderConfiguration, svgLoaderConfiguration],
+        rules: [babelLoaderConfiguration, imageLoaderConfiguration, svgLoaderConfiguration2],
     },
     plugins: [
         new HtmlWebpackPlugin({
