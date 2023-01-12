@@ -165,7 +165,7 @@ export const Home: React.FC = () => {
                         style={styles.link}
                         labelStyle={styles.linkContent}
                         onPress={(): void => {
-                            void Linking.openURL('https://github.com/brightlayer-ui');
+                            void Linking.openURL('https://github.com/etn-ccis?q=blui');
                         }}
                     >
                         Visit Us on GitHub
@@ -174,7 +174,7 @@ export const Home: React.FC = () => {
                         style={styles.link}
                         labelStyle={styles.linkContent}
                         onPress={(): void => {
-                            void Linking.openURL('https://github.com/brightlayer-ui/react-design-patterns');
+                            void Linking.openURL('https://github.com/etn-ccis/blui-react-design-patterns');
                         }}
                     >
                         Design Pattern Source on GitHub
