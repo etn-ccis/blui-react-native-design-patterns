@@ -1,6 +1,6 @@
 # React Native Design Patterns
 
-[![](https://img.shields.io/circleci/project/github/brightlayer-ui/react-native-design-patterns/master.svg?style=flat)](https://circleci.com/gh/brightlayer-ui/react-native-design-patterns/tree/master)
+[![](https://img.shields.io/circleci/project/github/etn-ccis/blui-react-native-design-patterns/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-react-native-design-patterns/tree/master)
 
 This repository holds the source code examples for [Brightlayer UI design patterns](https://brightlayer-ui.github.io/patterns), written in React Native. The code is organized to make it easy to copy and paste the examples into your own projects.
 
@@ -24,8 +24,8 @@ This repository holds the source code examples for [Brightlayer UI design patter
 To run this project (with all patterns) locally, first clone the repository:
 
 ```
-git clone https://github.com/brightlayer-ui/react-native-design-patterns.git
-cd react-native-design-patterns
+git clone https://github.com/etn-ccis/blui-react-native-design-patterns.git
+cd blui-react-native-design-patterns
 ```
 
 Then you may run `yarn && yarn android` to start on an android device or `yarn && cd ios && pod install && cd .. && yarn ios` to start on an apple device.
