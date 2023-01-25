@@ -29,7 +29,7 @@
         "react-native-keyboard-aware-scroll-view": "^0.9.5",
         "react-native-modal": "^12.0.2",
         "react-native-paper": "^4.11.2",
-        "react-native-reanimated": "^1.0.0",
+        "react-native-reanimated": "^2.14.4",
         "react-native-safe-area-context": "^3.4.1",
         "react-native-screens": "^3.12.0",
         "react-native-svg": "^12.1.0",
