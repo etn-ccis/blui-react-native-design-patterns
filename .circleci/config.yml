@@ -1,9 +1,12 @@
-version: 2
+version: 2.1
+orbs:
+    codecov: codecov/codecov@3.2.2
 jobs:
     build:
         working_directory: ~/react-native-design-patterns
         docker:
             - image: cimg/node:14.19.0-browsers
+        resource_class: large
         steps:
             - checkout
             - restore_cache:
@@ -29,4 +32,32 @@ jobs:
             - run:
                   name: Unit Tests
                   command: |
-                      yarn test --maxWorkers=2
+                      yarn test --maxWorkers=2 --coverage --watchAll=false
+            - persist_to_workspace:
+                  root: .
+                  paths:
+                    - ./coverage
+    coverage_report:
+        working_directory: ~/react-native-design-patterns
+        docker:
+            - image: cimg/node:14.19.0-browsers
+        steps:
+            - checkout
+            - attach_workspace:
+                at: .
+            - codecov/upload:
+                file: './coverage/clover.xml'
+                token: CODECOV_TOKEN
+workflows:
+    version: 2
+    react-native-design-patterns:
+        jobs:
+            - build
+            - coverage_report:
+                    requires:
+                        - build
+                    filters:
+                        branches:
+                            only:
+                            - master
+                            - dev
