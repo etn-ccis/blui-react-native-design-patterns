@@ -1,6 +1,6 @@
 # React Native Design Patterns
 
-[![](https://img.shields.io/circleci/project/github/etn-ccis/blui-react-native-design-patterns/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-react-native-design-patterns/tree/master)
+[![](https://img.shields.io/circleci/project/github/etn-ccis/blui-react-native-design-patterns/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-react-native-design-patterns/tree/master) [![codecov](https://codecov.io/gh/etn-ccis/blui-react-native-design-patterns/branch/dev/graph/badge.svg?token=TGWSIUDKUA)](https://codecov.io/gh/etn-ccis/blui-react-native-design-patterns)
 
 This repository holds the source code examples for [Brightlayer UI design patterns](https://brightlayer-ui.github.io/patterns), written in React Native. The code is organized to make it easy to copy and paste the examples into your own projects.
 
