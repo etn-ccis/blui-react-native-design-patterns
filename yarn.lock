@@ -1160,10 +1160,10 @@
     "@brightlayer-ui/colors" "^3.0.0"
     color "^3.1.3"
 
-"@brightlayer-ui/react-native-vector-icons@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/react-native-vector-icons/-/react-native-vector-icons-1.4.1.tgz#e7ae70cb3ff1d3bc5e9d79c09f290707785e2917"
-  integrity sha512-bdQppmwilTvAAnwFtbx2nvTcm10aOnyqt5DxuSqhBfo8wFqxm9rZUA9IDqOEKx5pERJ7QZ9ZfXlsfLJt8j7BaA==
+"@brightlayer-ui/react-native-vector-icons@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/react-native-vector-icons/-/react-native-vector-icons-1.7.0.tgz#de14fd74595fcbb59dd37efa3efd4f9c195717d9"
+  integrity sha512-nwCEwfxZyZeZVzvYQo/4BymGvmJ+ggnSPzOW5eFYb3+1swI2PeDGNA18Edcol2gCBrvFP8NzuzyCZ2dAix30cw==
 
 "@brightlayer-ui/types@^2.0.0":
   version "2.0.0"
