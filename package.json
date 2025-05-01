@@ -52,7 +52,7 @@
         "babel-jest": "^29.4.1",
         "eslint": "^7.11.0",
         "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-react": "^7.34.2",
+        "eslint-plugin-react": "^7.37.5",
         "jest": "^27.5.1",
         "jest-transform-stub": "^2.0.0",
         "metro-react-native-babel-preset": "^0.69.0",
