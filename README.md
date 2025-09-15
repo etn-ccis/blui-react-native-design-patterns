@@ -2,6 +2,10 @@
 
 [![Build](https://github.com/etn-ccis/blui-react-native-design-patterns/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-react-native-design-patterns/actions/workflows/blui-ci.yml) [![codecov](https://codecov.io/gh/etn-ccis/blui-react-native-design-patterns/branch/dev/graph/badge.svg?token=TGWSIUDKUA)](https://codecov.io/gh/etn-ccis/blui-react-native-design-patterns)
 
+> **Important Migration Notice:**
+>
+> This repository has been migrated to a monorepo to consolidate all the React Native libraries developed by Brightlayer UI team into a single workspace. Future development and updates will now occur in [this location](https://github.com/etn-ccis/blui-react-native/tree/dev/examples/designPatterns). Please update your bookmarks and contribute to the monorepo for the latest changes.
+
 This repository holds the source code examples for [Brightlayer UI design patterns](https://brightlayer-ui.github.io/patterns), written in React Native. The code is organized to make it easy to copy and paste the examples into your own projects.
 
 ## Current Patterns
